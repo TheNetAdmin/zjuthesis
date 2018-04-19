@@ -1,0 +1,14 @@
+\makeatletter
+\newcommand{\cleardoubleemptypage}
+{
+    \clearpage
+    \if@twoside
+        \ifodd\c@page
+            % do nothing
+        \else
+            \thispagestyle{empty} ~ \newpage
+        \fi
+    \fi
+}
+
+\makeatother

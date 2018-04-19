@@ -1,0 +1,65 @@
+% Set page layout
+\geometry{
+    a4paper,
+    marginpar=0pt,
+    includeheadfoot,
+    vmargin={21mm,12mm},
+    hmargin={25mm,20mm},
+    headsep=4mm
+}
+
+% 1.5 linespread, using Microsoft Word's rule
+\linespread{1.5}
+
+% Enable subsubsection's numbering
+\setcounter{secnumdepth}{3}
+
+% Header & Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[EL]{\zihao{-5} 浙江大学本科生毕业论文（设计）}
+\fancyhead[OR]{\zihao{-5} \Title}
+\fancyfoot[OC,EC]{\zihao{-5} \thepage}
+\renewcommand{\headrulewidth}{0.6pt}
+
+\assignpagestyle{\chapter}{fancy}
+
+\fancypagestyle{index}
+{
+    \fancyhead{}
+    \fancyfoot{}
+    \fancyhead[EL]{\zihao{-5} 浙江大学本科生毕业论文（设计）}
+    \fancyhead[OR]{\zihao{-5} \Title}
+}
+\tocloftpagestyle{index}
+
+% Table of content title format
+\renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{0pt}
+
+% Set TOC layout
+\renewcommand{\cftchapfont}         {\zihao{-4}}
+\renewcommand{\cftchapleader}       {\cftdotfill{\cftchapdotsep}}
+\renewcommand{\cftchappagefont}     {}
+\renewcommand{\cftsecfont}          {\zihao{-4}}
+\renewcommand{\cftsubsecfont}       {\zihao{-4}}
+\renewcommand{\cftsubsubsecfont}    {\zihao{-4}}
+
+\renewcommand{\cftchapdotsep}       {0.5}
+\renewcommand{\cftsecdotsep}        {0.5}
+\renewcommand{\cftsubsecdotsep}     {0.5}
+\renewcommand{\cftsubsubsecdotsep}  {0.5}
+
+\renewcommand{\cftchapnumwidth}       {1.5em}
+\renewcommand{\cftsecnumwidth}        {1.5em}
+\renewcommand{\cftsubsecnumwidth}     {1.5em}
+\renewcommand{\cftsubsubsecnumwidth}  {1.5em}
+
+% Change biblography title style for `biblatex`
+\defbibheading{bibliography}[\bibname]{
+    \section{#1}
+    \markboth{#1}{#1}
+}

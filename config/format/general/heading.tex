@@ -1,0 +1,40 @@
+% ctex style settings
+\ctexset
+{
+    chapter =
+    {
+        format=\centering\zihao{3}\bfseries,
+        pagestyle=empty,
+        name={,、},
+        aftername=,
+        number=\chinese{chapter},
+        beforeskip=12pt,
+        afterskip=6pt
+    },
+    section =
+    {
+        format=\raggedright\zihao{-3}\bfseries,
+        name={,.},
+        number=\arabic{section},
+        beforeskip=13pt,
+        afterskip=13pt
+    },
+    subsection =
+    {
+        format=\raggedright\zihao{4}\bfseries,
+        name={},
+        number=\arabic{section}.\arabic{subsection},
+        beforeskip=13pt,
+        afterskip=13pt
+    },
+    subsubsection =
+    {
+        format=\raggedright\zihao{4}\bfseries,
+        name={},
+        aftername=~,
+        numbering=true,
+        number=\arabic{section}.\arabic{subsection}.\arabic{subsubsection},
+        beforeskip=0pt,
+        afterskip=0pt
+    }
+}
