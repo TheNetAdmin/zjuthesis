@@ -14,25 +14,33 @@
 % Enable subsubsection's numbering
 \setcounter{secnumdepth}{3}
 
-% Header & Footer
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
-\fancyhead[EL]{\zihao{-5} 浙江大学本科生毕业论文（设计）}
-\fancyhead[OR]{\zihao{-5} \Title}
-\fancyfoot[OC,EC]{\zihao{-5} \thepage}
-\renewcommand{\headrulewidth}{0.6pt}
-
-\assignpagestyle{\chapter}{fancy}
-
-\fancypagestyle{index}
+% Common header & footer
+\newcommand{\commonhead}
 {
-    \fancyhead{}
-    \fancyfoot{}
     \fancyhead[EL]{\zihao{-5} 浙江大学本科生毕业论文（设计）}
     \fancyhead[OR]{\zihao{-5} \Title}
 }
-\tocloftpagestyle{index}
+\renewcommand{\headrulewidth}{0.6pt}
+
+\fancypagestyle{common}
+{
+    \fancyhead{}
+    \fancyfoot{}
+    \commonhead{}
+    \fancyfoot[OC,EC]{\zihao{-5} \thepage}
+}
+\pagestyle{common}
+\assignpagestyle{\chapter}{common}
+
+% Table of content header & footer
+\fancypagestyle{toc}
+{
+    \fancyhead{}
+    \fancyfoot{}
+    \commonhead{}
+    \fancyfoot[OC,EC]{\zihao{-5}\roman{page}}
+}
+\tocloftpagestyle{toc}
 
 % Table of content title format
 \renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\bfseries}
