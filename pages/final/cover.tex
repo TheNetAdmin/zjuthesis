@@ -1,0 +1,69 @@
+\thispagestyle{empty}
+\setcounter{page}{-1}
+
+\begin{flushright}
+    {\bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{6}{\quad}}
+\end{flushright}
+
+\vskip 10mm
+
+\begin{center}
+    \includegraphics[width=0.5\paperwidth]{logo/zjuchar.pdf}
+\end{center}
+
+\begin{center}
+    \zihao{-1} \heiti \bfseries
+    \ifthenelse{\equal{\Type}{thesis}}
+    {
+        本~科~生~毕~业~论~文
+    }
+    {
+        本~科~生~毕~业~设~计
+    }
+\end{center}
+
+\vskip 20pt
+
+\begin{center}
+    \includegraphics[width=0.17\paperwidth]{logo/zju.pdf}
+\end{center}
+
+\vskip 20pt
+
+\ifthenelse{\equal{\BlindReview}{true}}
+{
+    % in blind review
+    \begin{center}
+        \bfseries \zihao{3}
+        \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
+            \fangsong
+            题目      &  \uline{\hfill \Title \hfill} \\
+            ~ & ~\\
+            学生姓名   &  \uline{\hfill} \\
+            学生学号   &  \uline{\hfill} \\
+            指导教师   &  \uline{\hfill} \\
+            年级与专业  &  \uline{\hfill} \\
+            所在学院   &  \uline{\hfill} \\
+            ~ & ~\\
+            递交日期 & \uline{\hfill \SubmitDate \hfill} \\
+        \end{tabularx}
+    \end{center}
+}
+{
+    % not in blind review
+    \begin{center}
+        \bfseries \zihao{3}
+
+        \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
+            题目      &  \uline{\hfill \Title \hfill} \\
+            ~ & ~\\
+            学生姓名   &  \uline{\hfill \StudentName \hfill} \\
+            学生学号   &  \uline{\hfill \StudentID \hfill} \\
+            指导教师   &  \uline{\hfill \AdvisorName \hfill} \\
+            年级与专业  &  \uline{\hfill \mbox{\Grade}级\Major \hfill} \\
+            所在学院   &  \uline{\hfill \Department \hfill} \\
+            ~ & ~\\
+            递交日期 & \uline{\hfill \SubmitDate \hfill} \\
+        \end{tabularx}
+    \end{center}
+}

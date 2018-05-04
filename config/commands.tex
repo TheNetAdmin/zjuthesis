@@ -1,14 +1,88 @@
+% common commands
 \makeatletter
-\newcommand{\cleardoubleemptypage}
+\newcommand{\cleardoublestylepage}[1]
 {
     \clearpage
     \if@twoside
         \ifodd\c@page
             % do nothing
         \else
-            \thispagestyle{empty} ~ \newpage
+            \thispagestyle{#1} ~
+            \newpage
+            \thispagestyle{#1}
         \fi
     \fi
 }
-
 \makeatother
+
+\newcommand{\bful}[1]{{\bfseries\uline{#1}}}
+
+\newcommand{\inputpage}[1]{\input{pages/#1}}
+
+\newcommand{\chapternonum}[1]
+{
+    \phantomsection
+    \addcontentsline{toc}{chapter}{#1}
+    \begin{center}
+        \bfseries \zihao{3} #1
+    \end{center}
+}
+
+\newcommand{\sectionnonum}[1]
+{
+    \phantomsection
+    \addcontentsline{toc}{section}{#1}
+    \begin{center}
+        \bfseries \zihao{3} #1
+    \end{center}
+}
+
+\newcommand{\signature}[1]
+{
+    \begin{flushright}
+        \bfseries \zihao{-4}
+        #1 \underline{\multido{}{5}{\quad}} \\
+        \quad 年 \quad 月 \quad 日
+    \end{flushright}
+}
+
+% `design` commands
+\newcommand{\designproposaleval}
+{
+    \begin{flushright}
+        \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c | >{\zihao{5}}c |}
+            \hline
+            成绩比例 & \makecell{开题报告 \\ （15\%）} & \makecell{外文翻译 \\ （5\%）} \\
+            \hline
+            分值 & \makecell{~\\~} & \makecell{~\\~} \\
+            \hline
+        \end{tabular}
+    \end{flushright}
+}
+
+\newcommand{\designmidcheckeval}
+{
+    \begin{flushright}
+        \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c |}
+            \hline
+            成绩比例 & \makecell{中期报告 \\ （15\%）} \\
+            \hline
+            分值 & \makecell{~\\~} \\
+            \hline
+        \end{tabular}
+    \end{flushright}
+}
+
+% `thesis` commands
+\newcommand{\thesisproposaleval}
+{
+    \begin{flushright}
+        \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c | >{\zihao{5}}c | >{\zihao{5}}c |}
+            \hline
+            成绩比例 & \makecell{文献综述 \\ （10\%）} & \makecell{开题报告 \\ （15\%）} & \makecell{外文翻译 \\ （5\%）} \\
+            \hline
+            分值 & \makecell{~\\~} & \makecell{~\\~} & \makecell{~\\~} \\
+            \hline
+        \end{tabular}
+    \end{flushright}
+}

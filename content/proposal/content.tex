@@ -1,7 +1,33 @@
-\section{项目的主要内容和技术路线}
+% Contents
+\cleardoublestylepage{empty}
+\thispagestyle{common}
+\setcounter{page}{1}
 
-\subsection{主要研究内容}
+% set as first page if inside `proposal`
+\ifthenelse{\equal{\Period}{proposal}}
+{
+    \setcounter{page}{1}
+}
+{}
 
-\subsection{技术路线}
-
-\subsection{可行性分析}
+\ifthenelse{\equal{\Type}{thesis}}
+{
+    % `thesis` content
+    \input{content/proposal/review/review}
+    \input{content/proposal/proposal/proposal}
+    \input{content/proposal/translation/translation}
+    \input{content/proposal/original/original}
+}
+{
+    \ifthenelse{\equal{\Type}{design}}
+    {
+        % `design` content
+        \input{content/proposal/proposal/proposal}
+        \input{content/proposal/translation/translation}
+        \input{content/proposal/original/original}
+        \input{content/proposal/midcheck/midcheck}
+    }
+    {
+        % otherwise, blank
+    }
+}

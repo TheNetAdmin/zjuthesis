@@ -4,15 +4,31 @@
 
 ## 简介
 
-本项目为浙江大学本科生毕业设计/论文的LaTeX模板，来源于作者自行编写的计算机学院毕业设计模板。本模板依据2018年[浙江大学本科生毕业论文（设计）编写规则](http://bksy.zju.edu.cn/attachments/2018-01/01-1517384518-1149149.pdf)编写了[通用格式](config/format/general/format.tex)，并根据[2018年浙江大学计算机学院本科生毕业论文（设计）文件和开题报告模板3](http://cspo.zju.edu.cn/cspo_bks/content.php?id=8640)编写了[计算机科学与技术专业专用格式](config/format/major/cs/format.tex)
+本项目为浙江大学本科生毕业设计/论文的LaTeX模板，来源于作者自行编写的计算机学院毕业设计模板。
+
+ - 依据[2018年浙江大学本科生毕业论文（设计）编写规则](http://bksy.zju.edu.cn/attachments/2018-01/01-1517384518-1149149.pdf)编写了[通用格式](config/format/general/format.tex)
+ - 根据[2018年浙江大学计算机学院本科生毕业论文（设计）文件和开题报告模板3](http://cspo.zju.edu.cn/cspo_bks/content.php?id=8640)编写了[计算机科学与技术专业专用格式](config/format/major/cs/format.tex)
 
 ## 使用
 
-1. 安装TexLive工具包，编译需要XeLaTeX引擎
-2. [下载](https://github.com/TheNetAdmin/zjuthesis/releases)或clone此模板
-3. 在`content`目录下编写内容
-3. 在`figure`目录下保存图片，在`reference/ref.bib`内插入文献条目
-5. 在根目录下运行命令`latexmk -xelatex -outdir=out zjutheis`即可编译LaTex到`out`目录（该目录不会被记录版本）
+1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)
+2. 安装TexLive工具包，编译需要XeLaTeX引擎
+3. 在`config/info.tex`中填写个人信息，注意其中部分信息用于控制文档的生成：
+  - Type:
+    - thesis：论文类
+    - design：设计类
+  - Period:
+    - proposal：开题报告
+    - final：最终论文/设计
+  - BlindReview：
+    - true：生成盲审用pdf（隐藏个人信息）
+    - false：生成提交用pdf
+4. 在`content`目录下编写内容
+5. 在`pages`目录下填写必要的内容，如审核评语等
+6. 在`figure`目录下保存图片，在`reference/ref.bib`内插入文献条目
+7. 在根目录下运行命令`latexmk -xelatex -outdir=out zjutheis`即可编译LaTex到`out`目录（该目录不会被记录版本）
+
+>注意：本模板默认情况下使用计算机科学与技术专用格式，如需修改，请修改文件`config/format/format.tex`
 
 ## 扩展
 

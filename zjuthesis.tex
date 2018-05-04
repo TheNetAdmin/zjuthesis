@@ -1,3 +1,7 @@
+% Zhejiang University Undergraduate Graduation Thesis/Design Template
+% Author: Zixuan Wang
+% Email : zxwang42 [at] gmail.com
+
 \documentclass[
     zihao=-4,
     heading=true,
@@ -5,9 +9,55 @@
     AutoFakeBold,
     twoside
 ]{ctexrep}
-\input{config/config.tex}
+\input{config/config}
+
+\newcommand{\inputfinal}
+{
+    % Final part
+    \newrefsection
+    \inputpage{final/cover}
+    \inputpage{final/previous}
+    \inputpage{final/toc}
+
+    \cleardoublestylepage{previous}
+    \part{毕业论文（设计）}
+
+    \input{content/final/content}
+
+    \inputpage{final/post}
+
+    % Proposal part
+    \newrefsection
+    \cleardoublestylepage{empty}
+    \part{毕业论文（设计）开题报告}
+
+    \inputpage{proposal/cover}
+    \inputpage{proposal/\Type/previous}
+
+    \input{content/proposal/content}
+
+    \inputpage{proposal/\Type/post}
+}
+
+\newcommand{\inputproposal}
+{
+    \inputpage{proposal/cover}
+    \inputpage{proposal/\Type/previous}
+    \inputpage{proposal/toc}
+
+    \input{content/proposal/content}
+
+    \inputpage{proposal/\Type/post}
+}
 
 \begin{document}
-    \input{cover/coverletter.tex}
-    \input{content/content.tex}
+
+\ifthenelse{\equal{\Period}{final}}
+{
+    \inputfinal{}
+}
+{
+    \inputproposal{}
+}
+
 \end{document}
