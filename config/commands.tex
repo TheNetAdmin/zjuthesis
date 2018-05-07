@@ -47,41 +47,47 @@
 }
 
 % `design` commands
-\newcommand{\designproposaleval}
+\DeclareDocumentCommand{\designproposaleval}{O{~} O{~}}
 {
     \begin{flushright}
         \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c | >{\zihao{5}}c |}
             \hline
-            成绩比例 & \makecell{开题报告 \\ （15\%）} & \makecell{外文翻译 \\ （5\%）} \\
+            \multirow{2}*{成绩比例} & 开题报告 & 外文翻译 \\
+            ~ & （15\%） & （5\%） \\
             \hline
-            分值 & \makecell{~\\~} & \makecell{~\\~} \\
+            \multirow{2}*{分值} & \multirow{2}*{\zihao{4}#1} & \multirow{2}*{\zihao{4}#2} \\
+            ~ & ~ & ~ \\
             \hline
         \end{tabular}
     \end{flushright}
 }
 
-\newcommand{\designmidcheckeval}
+\DeclareDocumentCommand{\designmidcheckeval}{O{~}}
 {
     \begin{flushright}
         \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c |}
             \hline
-            成绩比例 & \makecell{中期报告 \\ （15\%）} \\
+            \multirow{2}*{成绩比例} & 中期报告 \\
+            ~ & （15\%） \\
             \hline
-            分值 & \makecell{~\\~} \\
+            \multirow{2}*{分值} & \multirow{2}*{\zihao{4}#1} \\
+            ~ & ~ \\
             \hline
         \end{tabular}
     \end{flushright}
 }
 
 % `thesis` commands
-\newcommand{\thesisproposaleval}
+\DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~}}
 {
     \begin{flushright}
         \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c | >{\zihao{5}}c | >{\zihao{5}}c |}
             \hline
-            成绩比例 & \makecell{文献综述 \\ （10\%）} & \makecell{开题报告 \\ （15\%）} & \makecell{外文翻译 \\ （5\%）} \\
+            \multirow{2}*{成绩比例} & 文献综述 & 开题报告 & 外文翻译 \\
+            ~ & （10\%） & （15\%） & （5\%） \\
             \hline
-            分值 & \makecell{~\\~} & \makecell{~\\~} & \makecell{~\\~} \\
+            \multirow{2}*{分值} & \multirow{2}*{\zihao{4}#1} & \multirow{2}*{\zihao{4}#2} & \multirow{2}*{\zihao{4}#3} \\
+            ~ & ~ & ~ & ~ \\
             \hline
         \end{tabular}
     \end{flushright}
