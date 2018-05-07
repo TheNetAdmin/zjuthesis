@@ -92,3 +92,25 @@
         \end{tabular}
     \end{flushright}
 }
+
+% final report commands
+
+\DeclareDocumentCommand{\finaleval}{O{~} O{~} O{~} O{~} O{~}}
+{
+    \begin{table}[H]
+        \centering \bfseries
+        \begin{tabularx}{\textwidth}{|>{\fangsong}c
+                                     |>{\fangsong}X<{\centering}
+                                     |>{\fangsong}X<{\centering}
+                                     |>{\fangsong}X<{\centering}
+                                     |>{\fangsong}X<{\centering}
+                                     |>{\fangsong}c|}
+            \hline
+            \makecell{成绩\\比例} & \makecell{文献综述\\（10\%）}& \makecell{开题报告\\（15\%）} & \makecell{外文翻译\\（5\%）} & 毕业论文（设计）质量及答辩（70\%） & \makecell{总评\\成绩} \\
+            \hline
+            \multirow{2}*{分值} & \multirow{2}*{\zihao{4}#1} & \multirow{2}*{\zihao{4}#2} & \multirow{2}*{\zihao{4}#3} & \multirow{2}*{\zihao{4}#4} & \multirow{2}*{\zihao{4}#5} \\
+            ~ & ~ & ~ & ~ & ~ & ~ \\
+            \hline
+        \end{tabularx}
+    \end{table}
+}
