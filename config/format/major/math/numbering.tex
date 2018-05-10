@@ -1,0 +1,12 @@
+\numberwithin{equation}{section}% reset equation counter for sections
+\numberwithin{equation}{subsection}
+
+% Omit `.0` in equation numbers for non-existent subsections.
+\renewcommand*{\theequation}{%
+  \ifnum\value{subsection}=0 %
+    \thesection
+  \else
+    \thesubsection
+  \fi
+  .\arabic{equation}%
+}
