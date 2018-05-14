@@ -1,4 +1,6 @@
-\renewcommand{\thefigure}{\arabic{figure}}
-\renewcommand{\thetable}{\arabic{table}}
-\AtBeginDocument{\renewcommand{\thelstlisting}{\arabic{lstlisting}}}
 \renewcommand*{\thesection}{\arabic{section}}
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\AtBeginDocument{\renewcommand{\thelstlisting}{\thesection.\arabic{lstlisting}}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
