@@ -46,55 +46,6 @@
     \end{flushright}
 }
 
-% `design` commands
-\DeclareDocumentCommand{\designproposaleval}{O{~} O{~}}
-{
-    \begin{flushright}
-        \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c | >{\zihao{5}}c |}
-            \hline
-            \multirow{2}*{成绩比例} & 开题报告 & 外文翻译 \\
-            ~ & （15\%） & （5\%） \\
-            \hline
-            \multirow{2}*{分值} & \multirow{2}*{\zihao{4}#1} & \multirow{2}*{\zihao{4}#2} \\
-            ~ & ~ & ~ \\
-            \hline
-        \end{tabular}
-    \end{flushright}
-}
-
-\DeclareDocumentCommand{\designmidcheckeval}{O{~}}
-{
-    \begin{flushright}
-        \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c |}
-            \hline
-            \multirow{2}*{成绩比例} & 中期报告 \\
-            ~ & （10\%） \\
-            \hline
-            \multirow{2}*{分值} & \multirow{2}*{\zihao{4}#1} \\
-            ~ & ~ \\
-            \hline
-        \end{tabular}
-    \end{flushright}
-}
-
-% `thesis` commands
-\DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~}}
-{
-    \begin{flushright}
-        \begin{tabular}{| >{\zihao{4}}c | >{\zihao{5}}c | >{\zihao{5}}c | >{\zihao{5}}c |}
-            \hline
-            \multirow{2}*{成绩比例} & 文献综述 & 开题报告 & 外文翻译 \\
-            ~ & （10\%） & （15\%） & （5\%） \\
-            \hline
-            \multirow{2}*{分值} & \multirow{2}*{\zihao{4}#1} & \multirow{2}*{\zihao{4}#2} & \multirow{2}*{\zihao{4}#3} \\
-            ~ & ~ & ~ & ~ \\
-            \hline
-        \end{tabular}
-    \end{flushright}
-}
-
-% final report commands
-
 \DeclareDocumentCommand{\finaleval}{O{~} O{~} O{~} O{~} O{~}}
 {
     \begin{table}[H]
@@ -106,11 +57,112 @@
                                      |>{\fangsong}X<{\centering}
                                      |>{\fangsong}c|}
             \hline
-            \makecell{成绩\\比例} & \makecell{ \ifthenelse{\equal{\Type}{thesis}}{文献综述}{中期报告} \\（10\%）}& \makecell{开题报告\\（15\%）} & \makecell{外文翻译\\（5\%）} & 毕业论文（设计）质量及答辩（70\%） & \makecell{总评\\成绩} \\
+            \makecell{成绩\\比例}
+            & \makecell{\ifthenelse{\equal{\Type}{thesis}}{文献综述}{中期报告} \\（10\%）}
+            & \makecell{开题报告\\（15\%）}
+            & \makecell{外文翻译\\（5\%）}
+            & \ifthenelse{\equal{\Type}{thesis}}{毕业论文质量及答辩（70\%）}{毕业设计质量及答辩（70\%）}
+            & \makecell{总评\\成绩} \\
+
             \hline
-            \multirow{2}*{分值} & \multirow{2}*{\zihao{4}#1} & \multirow{2}*{\zihao{4}#2} & \multirow{2}*{\zihao{4}#3} & \multirow{2}*{\zihao{4}#4} & \multirow{2}*{\zihao{4}#5} \\
+            \multirow{2}*{分值}
+            & \multirow{2}*{\zihao{4}#1}
+            & \multirow{2}*{\zihao{4}#2}
+            & \multirow{2}*{\zihao{4}#3}
+            & \multirow{2}*{\zihao{4}#4}
+            & \multirow{2}*{\zihao{4}#5} \\
+
             ~ & ~ & ~ & ~ & ~ & ~ \\
             \hline
         \end{tabularx}
     \end{table}
+}
+
+% `design` commands
+\DeclareDocumentCommand{\designproposaleval}{O{~} O{~}}
+{
+    \begin{flushright}
+        \begin{tabular}{| >{\fangsong \zihao{4}}c
+                        | >{\fangsong \zihao{5}}c
+                        | >{\fangsong \zihao{5}}c |}
+            \hline
+            \multirow{2}*{成绩比例}
+            & 开题报告
+            & 外文翻译 \\
+
+            ~
+            & （15\%）
+            & （5\%） \\
+
+            \hline
+
+            \multirow{2}*{分值}
+            & \multirow{2}*{\zihao{4}#1}
+            & \multirow{2}*{\zihao{4}#2} \\
+            
+            ~
+            & ~
+            & ~ \\
+            \hline
+        \end{tabular}
+    \end{flushright}
+}
+
+\DeclareDocumentCommand{\designmidcheckeval}{O{~}}
+{
+    \begin{flushright}
+        \begin{tabular}{| >{\fangsong \zihao{4}}c
+                        | >{\fangsong \zihao{5}}c |}
+            \hline
+            \multirow{2}*{成绩比例}
+            & 中期报告 \\
+
+            ~
+            & （10\%） \\
+
+            \hline
+
+            \multirow{2}*{分值}
+            & \multirow{2}*{\zihao{4}#1} \\
+
+            ~
+            & ~ \\
+            \hline
+        \end{tabular}
+    \end{flushright}
+}
+
+% `thesis` commands
+\DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~}}
+{
+    \begin{flushright}
+        \begin{tabular}{| >{\fangsong \zihao{4}}c
+                        | >{\fangsong \zihao{5}}c
+                        | >{\fangsong \zihao{5}}c
+                        | >{\fangsong \zihao{5}}c |}
+            \hline
+            \multirow{2}*{成绩比例}
+            & 文献综述
+            & 开题报告
+            & 外文翻译 \\
+
+            ~
+            & （10\%）
+            & （15\%）
+            & （5\%） \\
+
+            \hline
+
+            \multirow{2}*{分值}
+            & \multirow{2}*{\zihao{4}#1}
+            & \multirow{2}*{\zihao{4}#2}
+            & \multirow{2}*{\zihao{4}#3} \\
+
+            ~
+            & ~
+            & ~
+            & ~ \\
+            \hline
+        \end{tabular}
+    \end{flushright}
 }

@@ -2,9 +2,12 @@
 
 \counterwithin*{figure}{section}
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
 \counterwithin*{table}{section}
 \renewcommand{\thetable}{\thesection.\arabic{table}}
+
 \AtBeginDocument{\counterwithin*{lstlisting}{section}}
 \AtBeginDocument{\renewcommand{\thelstlisting}{\thesection.\arabic{lstlisting}}}
+
 \counterwithin*{equation}{section}
 \renewcommand{\theequation}{\thesection-\arabic{equation}}

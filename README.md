@@ -13,34 +13,33 @@
 
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)
 2. 安装TexLive工具包，编译需要XeTeX引擎
-3. 在`config/info.tex`中填写个人信息，注意其中部分信息用于控制文档的生成：
+3. 在`zjuthesis.tex`中`\documentclass[]{zjuthesis}`部分填写个人信息，注意以下信息用于控制文档的生成：
 
-|Type|Period|BlindReview|
-|:---|:-----|:----------|
-|thesis: 论文类|proposal: 开题报告|true: 生成盲审用pdf（隐藏个人信息）|
-|design: 设计类|final: 最终论文/设计|false: 生成提交用pdf|
+|Type|Period|BlindReview|MajorFormat|
+|:---|:-----|:----------|:----------|
+|thesis: 论文类|proposal: 开题报告|true: 生成盲审用pdf（隐藏个人信息）|默认: cs|
+|design: 设计类|final: 最终论文/设计|false: 生成提交用pdf|与`config/format/major/`下目录名相同|
 
 4. 在`content`目录下编写内容
 5. 在`pages`目录下填写必要的内容，如审核评语等
 6. 在`figure`目录下保存图片，在`reference/ref.bib`内插入文献条目
 7. 在根目录下运行命令`latexmk -xelatex -outdir=out zjutheis`即可编译LaTex到`out`目录（该目录不会被记录版本）
 
->注意：本模板默认情况下使用计算机科学与技术专用格式，如需使用其他专业格式，请修改文件`config/format/format.tex`的引入规则
+>注意：本模板默认情况下使用计算机科学与技术专用格式，如需使用其他专业格式，请修改`zjuthesis.tex`中`\documentclass`部分的`\MajorFormat`
 
 ## 扩展
 
 1. 针对每个专业的扩展格式编写请新建目录`config/format/major/专业简称`，在该目录下固定新建文件`format.tex`，引入该目录下所有格式设置文件
 2. 扩展格式的`\usepackage{packagename}`尽量放在其所在子目录下的`packages.tex`内，不要放在`config/packages.tex`内，避免其他专业同学使用时产生package冲突或额外引入
-3. 最后更改`config/format/format.tex`中的引入规则，引入新扩展的格式目录下的`format.tex`即可
+3. 最后修改`zjuthesis.tex`中`\documentclass`部分的`\MajorFormat`，使用新格式的目录名即可
 
 ## Q&A
 
-1. 为何不使用`.cls`：我个人认为将所有格式写入同一文件会造成扩展与修改的困难，面对一个.cls中几百行上千行的代码，即使有注释也很难进行正确的修改和扩展。所以我将所有格式以及命令定义都放入`config`文件夹内，并以文件名区分其负责的格式内容。虽然这样带来了大量的文件引入，但相对来讲更易于定位代码和进行扩展
-2. 没有我所在专业的格式：由于个人精力有限，难以查阅并编写各系具体要求的格式，如果同学们有相关需求，可以：
+1. 没有我所在专业的格式：由于个人精力有限，难以查阅并编写各系具体要求的格式，如果同学们有相关需求，可以：
     - 在Github上提出issue，附上模板格式要求
     - 发送邮件到我邮箱（zxwang42 [at] gmail.com），附上模板格式要求与样例文件
     - **在Github上提出Pull Request，贡献你编写的代码**
-3. 其他问题请在Github issue提出或使用邮件与我联系
+2. 其他问题请在Github issue提出或使用邮件与我联系
 
 ## 开源许可
 

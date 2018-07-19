@@ -4,13 +4,19 @@
 % Update: https://github.com/TheNetAdmin/zjuthesis/releases
 
 \documentclass[
-    zihao=-4,
-    heading=true,
-    UTF8,
-    AutoFakeBold,
-    twoside
-]{ctexrep}
-\input{config/config}
+    StudentName = 姓名,
+    StudentID   = 学号,
+    AdvisorName = 指导教师,
+    Grade       = 2014,   % only the year, no `级`
+    Major       = 专业,
+    Department  = 学院,
+    Title       = 毕业论文/设计题目,
+    SubmitDate  = 递交日期,
+    MajorFormat = cs,
+    Type        = design, % `thesis` or `design`
+    Period      = final,  % `final`  or `proposal`
+    BlindReview = false   % `true`   or `false`
+]{config/zjuthesis}
 
 \newcommand{\inputfinal}
 {
@@ -21,8 +27,9 @@
     \inputpage{final/toc}
 
     \cleardoublestylepage{previous}
-    \part{毕业论文（设计）}
-
+    \ifthenelse{\equal{\Type}{design}}
+        {\part{毕业设计}}
+        {\part{毕业论文}}
     \input{content/final/content}
 
     \inputpage{final/post}
@@ -30,25 +37,23 @@
     % Proposal part
     \newrefsection
     \cleardoublestylepage{empty}
-    \part{毕业论文（设计）开题报告}
+    \ifthenelse{\equal{\Type}{design}}
+        {\part{毕业设计开题报告}}
+        {\part{毕业论文开题报告}}
 
     \inputpage{proposal/cover}
-    \inputpage{proposal/\Type/previous}
-
+    \inputpage{proposal/previous}
     \input{content/proposal/content}
-
-    \inputpage{proposal/\Type/post}
+    \inputpage{proposal/post}
 }
 
 \newcommand{\inputproposal}
 {
     \inputpage{proposal/cover}
-    \inputpage{proposal/\Type/previous}
+    \inputpage{proposal/previous}
     \inputpage{proposal/toc}
-
     \input{content/proposal/content}
-
-    \inputpage{proposal/\Type/post}
+    \inputpage{proposal/post}
 }
 
 \begin{document}
