@@ -1,0 +1,36 @@
+\renewcommand{\lstlistingname}{代码}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+\usepackage{listings}
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    tabsize=4,
+    extendedchars=true,
+    breaklines=true,
+    keywordstyle=\color{red},
+    frame=b,
+    escapeinside=``,
+    keywordstyle=[1]\textbf,
+    keywordstyle=[2]\textbf,
+    keywordstyle=[3]\textbf,
+    keywordstyle=[4]\textbf,
+    showspaces=false,
+    showtabs=false,
+    xleftmargin=17pt,
+    framexleftmargin=17pt,
+    framexrightmargin=5pt,
+    framexbottommargin=4pt,
+    commentstyle=\color{green},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    showstringspaces=false
+}
+\lstloadlanguages{
+    C,
+    C++,
+    Python,
+    Java
+}
