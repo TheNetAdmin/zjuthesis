@@ -11,7 +11,7 @@
 
 ## 使用
 
-> 注意：本模板默认情况下使用计算机科学与技术专用格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `\MajorFormat`
+> 注意：本模板默认情况下使用计算机科学与技术专用格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
 
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)
 2. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装所需的镜像文件可以选用浙江大学开源镜像站提供的[镜像](https://mirrors.zju.edu.cn/CTAN/systems/texlive/Images/)以便在校内网下更快下载。
@@ -31,7 +31,7 @@
 
 1. 针对每个专业的扩展格式编写请新建目录 `config/format/major/专业简称` ，在该目录下固定新建文件 `format.tex`，引入该目录下所有格式设置文件
 2. 扩展格式的 `\usepackage{packagename}` 尽量放在其所在子目录下的 `packages.tex` 内，不要放在 `config/packages.tex` 内，避免其他专业同学使用时产生package冲突或额外引入
-3. 最后修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `\MajorFormat` ，使用新格式的目录名即可
+3. 最后修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat` ，使用新格式的目录名即可
 
 ## Q & A
 
