@@ -41,7 +41,10 @@
     - 在 Github 上提出 issue，附上模板格式要求
     - 发送邮件到我邮箱 (zxwang42 [at] gmail.com)，附上模板格式要求与样例文件
     - **在 Github 上提出 Pull Request，贡献你编写的代码**
-1. 其他问题请在 [Github issue](./issues/) 提出或使用邮件与我联系
+1. Q: latexmk 编译不通过？
+
+   A: 可以先尝试执行 `tlmgr update --self --all` 更新整个 TexLive，然后重新编译。因为直接安装的 TexLive 并不包含所有最新版本的宏包，一些旧版宏包的 BUG 可能会影响编译。
+1. 其他问题请在 [Github issue](./issues/) 提出，或使用邮件与我联系（邮箱见上方）。
 
 ## 开源许可
 
