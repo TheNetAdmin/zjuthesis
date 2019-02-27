@@ -33,6 +33,11 @@
 2. 扩展格式的 `\usepackage{packagename}` 尽量放在其所在子目录下的 `packages.tex` 内，不要放在 `config/packages.tex` 内，避免其他专业同学使用时产生 package 冲突或额外引入
 3. 最后修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat` ，使用新格式的目录名即可
 
+## Slide 模板
+
+1. 这是之前分享在浙大云盘的一个 Slide 模板，现在转移到 GitHub 方便同学们连同 LaTeX 模板一起下载:
+   https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide
+
 ## Q & A
 
 1. Q: 没有我所在专业的格式？
