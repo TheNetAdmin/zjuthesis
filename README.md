@@ -11,7 +11,9 @@
 
 ## 使用
 
-> 注意：本模板默认情况下使用计算机科学与技术专用格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
+> 注意：
+> - TeX Live 套件会在每年的 4 月左右进行版本升级，但有时候新版本会有一些和旧版不兼容的问题。我在 2019 新版发布后会尽快测试兼容性，但还是推荐各位同学使用 2018 版本以确保兼容性
+> - 本模板默认情况下使用计算机科学与技术专用格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
 
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)
 2. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装所需的镜像文件可以选用浙江大学开源镜像站提供的[镜像](https://mirrors.zju.edu.cn/CTAN/systems/texlive/Images/)以便在校内网下更快下载。
