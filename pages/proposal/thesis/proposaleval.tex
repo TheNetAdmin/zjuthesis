@@ -1,5 +1,30 @@
 \cleardoublestylepage{empty}
 
+\ifthenelse{\equal{\MajorFormat}{cs}}
+{
+    \chapternonum{毕业论文（设计）文献综述和开题报告考核}
+    \bfseries
+
+    {
+        \zihao{4}
+        \noindent 导师对开题报告、外文翻译和文献综述的评语及成绩评定：
+    }
+
+
+    \vspace{50mm}
+    \thesisproposaleval[10][15][5]
+    \signature{导师签名}
+
+    {
+        \zihao{4}
+        \noindent 学院盲审专家对开题报告、外文翻译和文献综述的评语及成绩评定：
+    }
+
+
+    \mbox{} \vfill
+    \thesisproposaleval
+    \signature{开题报告审核负责人（签名/签章）}
+}
 {
     \chapternonum{毕业论文（设计）文献综述和开题报告考核}
     \bfseries
