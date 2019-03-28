@@ -54,7 +54,7 @@
 
 1. Q: pdf 文字复制得到乱码？
 
-   A: 这是因为 Windows 自带的宋体没有粗体，所以在本模板中使用了伪粗体（config/zjuthesis.cls:\PassOptionsToPackage{AutoFakeBold}{xeCJK}），这样可以保证观感一致性。
+   A: 这是因为 Windows 自带的宋体没有粗体，所以在本模板中使用了伪粗体（config/zjuthesis.cls:`\PassOptionsToPackage{AutoFakeBold}{xeCJK}`），这样可以保证观感一致性。
    
    如果大家有对查重的要求，请删除这一行，并手动指定粗体字体，比如使用楷体作为本模板的‘粗体’，这也是一种常见的解决方案。
    
