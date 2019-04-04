@@ -69,7 +69,7 @@
    
    如果需要了解具体发生了什么，请查阅 zjuthesis.log ，在文件内搜索 warning 和 error ，看一下是否有字体相关的报错。
    
-1. 其他问题请在 [Github issue](./issues/) 提出，或使用邮件与我联系（邮箱见上方）。
+1. 其他问题请在 [Github issue](./issues/) 提出，或使用邮件与我联系（邮箱见上方Q1）。
 
 ## 开源许可
 
