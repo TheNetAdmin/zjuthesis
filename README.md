@@ -62,6 +62,12 @@
    当然 Office 对字体伪粗体问题有更好的解决方式，毕竟人家是收钱的嘛……
    
    相关讨论见：https://github.com/CTeX-org/ctex-kit/issues/353
+
+1. Q: 某些 pdf 阅读器(如 Chrome )打开看不到中文，或者中文乱码
+
+   A: 可能是 LaTeX 没有正确嵌入字体，最简单的解决方案是用没有乱码的 pdf 阅读器打开->打印->打印成 pdf ，然后尝试用有问题的阅读器打开，看是否仍有问题。
+   
+   如果需要了解具体发生了什么，请查阅 zjuthesis.log ，在文件内搜索 warning 和 error ，看一下是否有字体相关的报错。
    
 1. 其他问题请在 [Github issue](./issues/) 提出，或使用邮件与我联系（邮箱见上方）。
 
