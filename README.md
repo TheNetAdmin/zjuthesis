@@ -76,6 +76,10 @@
       由于字体存在版权问题，还请大家自行设置字体。
        
       如果编译超时（不显示 pdf 也不报错），请尝试注释中文字体设置（位于 `config/format/general/font.tex` 以及 `config/foramt/major/.../font.tex`），然后重新编译，应该就可以了。编译超时可能是缺失字体导致的，请大家自行上传字体并设置字体路径。
+
+1. Q: 怎么配合 vscode 使用？
+
+   A: 参见[这里](./issues/11)
    
 1. 其他问题请在 [Github issue](./issues/) 提出，或使用邮件与我联系（邮箱见上方Q1）。
 
