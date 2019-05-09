@@ -79,9 +79,9 @@
 
 1. Q: 怎么配合 vscode 使用？
 
-   A: 参见[这里](./issues/11)
+   A: 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
    
-1. 其他问题请在 [Github issue](./issues/) 提出，或使用邮件与我联系（邮箱见上方Q1）。
+1. 其他问题请在 [Github issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出，或使用邮件与我联系（邮箱见上方Q1）。
 
 ## 开源许可
 
