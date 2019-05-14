@@ -12,7 +12,7 @@
 ## 使用
 
 > 注意：
-> - 本模板已经兼容 TeX Live 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 Tex Live 的同学尽快升级2019版本
+> - 本模板已经兼容 TeX Live 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 Tex Live 的同学尽快升级 2019 版本
 > - 本模板默认情况下使用计算机科学与技术专用格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
 
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)
