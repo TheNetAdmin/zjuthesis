@@ -4,16 +4,19 @@
 
 ## 简介
 
-本项目为浙江大学本科生毕业设计/论文的 LaTeX 模板，来源于作者自行编写的计算机学院毕业设计模板：
+本项目为浙江大学本科生毕业设计/论文的 LaTeX 模板，来源于作者自行编写的计算机学院毕业设计。
 
-- [通用格式](config/format/general/format.tex)：[2018年浙江大学本科生毕业论文（设计）编写规则](http://bksy.zju.edu.cn/attachments/2018-01/01-1517384518-1149149.pdf)
-- [计算机科学与技术专业格式](config/format/major/cs/format.tex)：[2018年浙江大学计算机学院本科生毕业论文（设计）文件和开题报告模板3](http://cspo.zju.edu.cn/cspo_bks/content.php?id=8640)
+|格式|参考文档|
+|:-|:-|
+| [通用格式](config/format/general/format.tex) | [2018年浙江大学本科生毕业论文（设计）编写规则](http://bksy.zju.edu.cn/attachments/2018-01/01-1517384518-1149149.pdf)|
+| [计算机科学与技术专业格式](config/format/major/cs/format.tex) | [2018年浙江大学计算机学院本科生毕业论文（设计）文件和开题报告模板3](http://cspo.zju.edu.cn/cspo_bks/content.php?id=8640)|
 
 ## 使用
 
 > 注意：
 > - 本模板已经兼容 TeX Live 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 Tex Live 的同学尽快升级 2019 版本
 > - 本模板默认情况下使用计算机科学与技术专用格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
+> - 计算机专业的部分页面与学校通用格式不同，如果你不是计算机专业的同学，请使用非计算机专业的模板
 
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)
 2. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装所需的镜像文件可以选用浙江大学开源镜像站提供的[镜像](https://mirrors.zju.edu.cn/CTAN/systems/texlive/Images/)以便在校内网下更快下载。
@@ -48,24 +51,37 @@
     - 在 Github 上提出 issue，附上模板格式要求
     - 发送邮件到我邮箱 (zxwang42 [at] gmail.com)，附上模板格式要求与样例文件
     - **在 Github 上提出 Pull Request，贡献你编写的代码**
+    
 1. Q: latexmk 编译不通过？
 
    A: 可以先尝试执行 `tlmgr update --self --all` 更新整个 TexLive，然后重新编译。因为直接安装的 TexLive 并不包含所有最新版本的宏包，一些旧版宏包的 BUG 可能会影响编译。
+
+1. Q: 如何配合查重？
+
+   A: 貌似目前查重工具对 LaTeX 生成的 pdf 支持比较差，主要有两点
+      1) 伪粗体会造成乱码；
+      2) LaTeX 生成的 pdf 默认采用了 UTF-8 的编码，而查重工具对这种编码支持不好，可能会认为是 GBK 之类的编码，从而造成大量乱码；
+      
+      第一点可以通过升级到 TeX Live 2019 解决。
+      
+      第二点暂时没有特别好的解决方法，如果有同学有相关经验的话，可以 issue 留言或者邮件告知我，我会更新 README。
 
 1. Q: pdf 文字复制得到乱码？
 
    A: 最新的解决方法是升级 TeX Live 2019 版本，此版本似乎不会产生中文复制乱码的问题
 
-   A: 这是因为 Windows 自带的宋体没有粗体，所以在本模板中使用了伪粗体（config/zjuthesis.cls:`\PassOptionsToPackage{AutoFakeBold}{xeCJK}`），这样可以保证观感一致性。
-   
-   如果大家有对查重的要求，请删除这一行，并手动指定粗体字体，比如使用楷体作为本模板的‘粗体’，这也是一种常见的解决方案。
-   
-   要想彻底解决这个问题，只能换用有真正粗体版本的字体，目前为止我并没有找到仿宋对应的粗体版本。
-   当然 Office 对字体伪粗体问题有更好的解决方式，毕竟人家是收钱的嘛……
+   > 如果你在用 TeX Live 2018 及以前的版本：
+   >
+   > 这是因为 Windows 自带的宋体没有粗体，所以在本模板中使用了伪粗体（config/zjuthesis.cls:`\PassOptionsToPackage{AutoFakeBold}{xeCJK}`），这样可以保证观感一致性。
+   >
+   > 如果大家有对查重的要求，请删除这一行，并手动指定粗体字体，比如使用楷体作为本模板的‘粗体’，这也是一种常见的解决方案。
+   >
+   > 要想彻底解决这个问题，只能换用有真正粗体版本的字体，目前为止我并没有找到仿宋对应的粗体版本。
+   > 当然 Office 对字体伪粗体问题有更好的解决方式，毕竟人家是收钱的嘛……
    
    相关讨论见：https://github.com/CTeX-org/ctex-kit/issues/353
 
-1. Q: **某些 pdf 阅读器(如 Chrome )打开看不到中文，或者中文乱码**
+1. Q: 某些 pdf 阅读器(如 Chrome )打开看不到中文，或者中文乱码
 
    A: 可能是 LaTeX 没有正确嵌入字体，最简单的解决方案是用没有乱码的 pdf 阅读器打开->打印->打印成 pdf ，然后尝试用有问题的阅读器打开，看是否仍有问题。
    
