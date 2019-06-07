@@ -11,6 +11,8 @@
 | [通用格式](config/format/general/format.tex) | [2018年浙江大学本科生毕业论文（设计）编写规则](http://bksy.zju.edu.cn/attachments/2018-01/01-1517384518-1149149.pdf)|
 | [计算机科学与技术专业格式](config/format/major/cs/format.tex) | [2018年浙江大学计算机学院本科生毕业论文（设计）文件和开题报告模板3](http://cspo.zju.edu.cn/cspo_bks/content.php?id=8640)|
 
+CC98校内讨论贴：http://cc98.org/topic/4762356
+
 ## 使用
 
 > 注意：
