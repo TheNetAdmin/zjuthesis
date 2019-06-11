@@ -45,6 +45,6 @@ for major in ${main_majors[@]}; do
     done
 done
 
-for major in ${sample_majors}; do
+for major in ${sample_majors[@]}; do
     build $major "thesis" "final" "false"
 done

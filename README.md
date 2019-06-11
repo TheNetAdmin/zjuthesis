@@ -1,6 +1,7 @@
 # 浙江大学毕业设计/论文模板
 
-![ZJUTHESIS](https://img.shields.io/badge/ZJUTHESIS-Template-blue.svg)
+![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)
+![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)
 ![TravisCI](https://travis-ci.org/TheNetAdmin/zjuthesis.svg?branch=master)
 
 ## 简介
@@ -13,11 +14,13 @@ CC98校内讨论贴：http://cc98.org/topic/4762356
 
 > 注意：
 >
-> - 本模板已经兼容 TeX Live 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 Tex Live 的同学尽快升级 2019 版本
+> - 本模板已经兼容 TeXLive 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 TexLive 的同学尽快升级 2019 版本
 > - 本模板默认情况下使用 `general` 格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板
 
-1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)
+1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)，
+   每个专业模板都有预览 pdf 文件，可以单独下载查看。
+   模板代码请下载 `.tar.gz` 或 `.zip` 文件，两者均可。
 1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装所需的镜像文件可以选用浙江大学开源镜像站提供的[镜像](https://mirrors.zju.edu.cn/CTAN/systems/texlive/Images/)以便在校内网下更快下载。
 1. 在 `zjuthesis.tex` 中 `\documentclass[]{zjuthesis}` 部分填写个人信息，注意以下信息用于控制文档的生成：
 
@@ -53,7 +56,8 @@ CC98校内讨论贴：http://cc98.org/topic/4762356
 ## Slide 模板
 
 1. 这是之前分享在浙大云盘的一个 Slide 模板，现在转移到 GitHub 方便同学们连同 LaTeX 模板一起下载:
-   https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide
+
+   - [Github 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
 
 ## Q & A
 
@@ -70,28 +74,31 @@ CC98校内讨论贴：http://cc98.org/topic/4762356
 
 1. Q: 如何配合查重？
 
-   A: 貌似目前查重工具对 LaTeX 生成的 pdf 支持比较差，主要有两点
-      1) 伪粗体会造成乱码；
-      2) LaTeX 生成的 pdf 默认采用了 UTF-8 的编码，而查重工具对这种编码支持不好，可能会认为是 GBK 之类的编码，从而造成大量乱码；
+   A: 目前查重工具对 LaTeX 生成的 pdf 支持比较差，主要有两点：
 
-      第一点可以通过升级到 TeX Live 2019 解决。
+      1) LaTeX 伪粗体会造成乱码；
+      2) LaTeX 生成的 pdf 默认采用了 UTF-8 的编码，而查重工具对这种编码支持不好，可能会认为是 GBK 之类的编码，无法读取正确的中文字符；
 
-      第二点暂时没有特别好的解决方法，如果有同学有相关经验的话，可以 issue 留言或者邮件告知我，我会更新 README。
+      第一点可以通过升级到 TeXLive 2019 解决。
+
+      第二点暂时没有特别好的解决方法。
+      如果有同学有相关经验的话，可以 issue 留言或者邮件告知我，我会更新 README。
 
 1. Q: pdf 文字复制得到乱码？
 
-   A: 最新的解决方法是升级 TeX Live 2019 版本，此版本似乎不会产生中文复制乱码的问题
+   A: 最新的解决方法是升级 TeXLive 2019 版本，此版本似乎不会产生中文复制乱码的问题
 
-   > 如果你在用 TeX Live 2018 及以前的版本：
+   > 如果你在用 TeXLive 2018 及以前的版本：
    >
-   > 这是因为 Windows 自带的宋体没有粗体，所以在本模板中使用了伪粗体（config/zjuthesis.cls:`\PassOptionsToPackage{AutoFakeBold}{xeCJK}`），这样可以保证观感一致性。
+   > 这是因为 Windows 自带的仿宋没有粗体，所以本模板使用了伪粗体：
+   >`config/zjuthesis.cls` => `\PassOptionsToPackage{AutoFakeBold}{xeCJK}`
    >
-   > 如果大家有对查重的要求，请删除这一行，并手动指定粗体字体，比如使用楷体作为本模板的‘粗体’，这也是一种常见的解决方案。
+   > 如果大家有对查重的要求，可以删除这一行，并手动指定粗体字体，比如使用楷体作为本模板的‘粗体’，这也是一种常见的解决方案。
    >
    > 要想彻底解决这个问题，只能换用有真正粗体版本的字体，目前为止我并没有找到仿宋对应的粗体版本。
-   > 当然 Office 对字体伪粗体问题有更好的解决方式，毕竟人家是收钱的嘛……
+   > Office 对字体伪粗体问题有更好的解决方式，毕竟人家是收钱的嘛……
    >
-   > 相关讨论见：https://github.com/CTeX-org/ctex-kit/issues/353
+   > 相关讨论见：[CTeX GitHub Issue](https://github.com/CTeX-org/ctex-kit/issues/353)
 
 1. Q: 某些 pdf 阅读器(如 Chrome )打开看不到中文，或者中文乱码
 
