@@ -8,6 +8,9 @@ wget -c -q --show-progress https://raw.githubusercontent.com/Haixing-Hu/latex-ch
 echo "Getting TimesNewRoman.ttf"
 wget -c -q --show-progress https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRoman.ttf
 
+pwd
+ls -la
+
 # change fonts
 format_dir=config/format
 font_specs=("$format_dir/general/fonts.tex"
