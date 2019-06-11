@@ -39,12 +39,12 @@
             \fangsong
             题目      &  \uline{\hfill \Title \hfill} \\
             ~ & ~\\
-            \ifthenelse{\equal{\MajorFormat}{cs}}
-            {
+            \ifthenelse{\equal{\MajorFormat}{cs}}%
+            {%
                 学生姓名 & \uline{\hfill} \\
                 学生学号 & \uline{\hfill} \\
             }
-            {
+            {%
                 姓名与学号 & \uline{\hfill} \\
             }
             指导教师   &  \uline{\hfill} \\
@@ -63,12 +63,12 @@
         \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
             题目      &  \uline{\hfill \Title \hfill} \\
             ~ & ~\\
-            \ifthenelse{\equal{\MajorFormat}{cs}}
-            {
+            \ifthenelse{\equal{\MajorFormat}{cs}}%
+            {%
                 学生姓名 & \uline{\hfill \StudentName \hfill} \\
                 学生学号 & \uline{\hfill \StudentID \hfill} \\
             }
-            {
+            {%
                 姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
             }
             指导教师   &  \uline{\hfill \AdvisorName \hfill} \\
