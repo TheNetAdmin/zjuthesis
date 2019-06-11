@@ -1,6 +1,7 @@
 # 浙江大学毕业设计/论文模板
 
 ![ZJUTHESIS](https://img.shields.io/badge/ZJUTHESIS-Template-blue.svg)
+![TravisCI](https://travis-ci.org/TheNetAdmin/zjuthesis.svg?branch=master)
 
 ## 简介
 
