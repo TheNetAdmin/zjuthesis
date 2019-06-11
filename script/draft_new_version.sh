@@ -3,6 +3,12 @@
 old_ver=$(perl -lne 'print $1 if /([0-9]+\.[0-9]+\.[0-9]+)/' config/version.tex)
 new_ver=$1
 
+if [ -z $new_ver ]
+then
+  echo "No new version specified"
+  exit 1
+fi
+
 echo "$old_ver ==> $new_ver"
 echo "Press any key to proceed"
 read
