@@ -1,6 +1,8 @@
 ### This project's output files ###
 out/*
+dist/*
 /*.pdf
+/*.ttf
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
