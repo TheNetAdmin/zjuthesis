@@ -3,7 +3,8 @@ language: generic
 services: docker
 
 script:
-- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/repo,type=bind adnrv/texlive:full /repo/script/ci/build_all.sh
+  - script/ci/setup.sh
+  - docker run --mount src=$TRAVIS_BUILD_DIR/,target=/repo,type=bind adnrv/texlive:full /repo/script/ci/build_all.sh
 
 deploy:
   provider: releases

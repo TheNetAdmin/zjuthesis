@@ -28,8 +28,6 @@ project_dir="$( cd "$(dirname "$0")" ; pwd -P )"/../../
 echo "CD $project_dir"
 cd $project_dir
 
-source script/ci/setup.sh
-
 main_majors=("general" "cs")
 sample_majors=("isee" "math" "physics")
 types=("design" "thesis")
