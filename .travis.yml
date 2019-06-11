@@ -14,3 +14,4 @@ deploy:
   file: dist/*.pdf
   on:
     repo: TheNetAdmin/zjuthesis
+    tags: true
