@@ -13,7 +13,7 @@ function build() {
     sed -i -r "s/BlindReview\s*=\s*.*/BlindReview = $4,/" $texfile
 
     echo -e "Build major[$1]\ttype[$2]\tperiod[$3]\tblind[$4]"
-    latexmk -xelatex -outdir=out -quiet >out/$1-$2-$3-$4.log 2>&1
+    latexmk -xelatex -outdir=out
 
     blind_suffix=""
     if [ $4 == "true" ]
