@@ -22,3 +22,5 @@ git commit
 echo "Press any key to tag current commit"
 read
 git tag -a "v$new_ver"
+git push
+git push --tags
