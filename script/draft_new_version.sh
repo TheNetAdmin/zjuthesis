@@ -16,9 +16,6 @@ read
 echo "Update config/version.tex"
 sed -r -i "s/[0-9]+\.[0-9]+\.[0-9]+/$new_ver/" config/version.tex || true
 cat config/version.tex
-echo "Press any key to proceed"
-read
-
 git add config/version.tex
 git commit
 
