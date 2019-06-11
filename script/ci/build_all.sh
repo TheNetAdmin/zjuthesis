@@ -24,6 +24,11 @@ function build() {
     mv out/zjuthesis.pdf dist/zjuthesis-$1-$2-$3$blind_suffix.pdf
 }
 
+project_dir="$( cd "$(dirname "$0")" ; pwd -P )"/../../
+echo "CD $project_dir"
+cd $project_dir
+
+source script/ci/setup.sh
 
 main_majors=("general" "cs")
 sample_majors=("isee" "math" "physics")
