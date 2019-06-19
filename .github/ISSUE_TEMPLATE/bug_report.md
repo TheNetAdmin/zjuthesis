@@ -31,11 +31,11 @@ assignees: TheNetAdmin
  - Tex套件: [e.g. Texlive/Miktex]
  - Tex套件版本: [e.g. 2019]
  - XeLaTex版本: (请附上`xelatex --version`命令的所有输出)
-  > e.g.
-  > XeTeX 3.14159265-2.6-0.999991 (TeX Live 2019)
-  > kpathsea version 6.3.1
-  > Copyright 2019 SIL International, Jonathan Kew and Khaled Hosny.
-  > ...
+   > e.g.
+   > XeTeX 3.14159265-2.6-0.999991 (TeX Live 2019)
+   > kpathsea version 6.3.1
+   > Copyright 2019 SIL International, Jonathan Kew and Khaled Hosny.
+   > ...
 
 **其他信息**
 其他你认为有帮助的信息
