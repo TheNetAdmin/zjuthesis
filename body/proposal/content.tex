@@ -14,19 +14,19 @@
 \ifthenelse{\equal{\Type}{thesis}}
 {
     % `thesis` content
-    \input{content/proposal/review/review}
-    \input{content/proposal/proposal/proposal}
-    \input{content/proposal/translation/translation}
-    \input{content/proposal/original/original}
+    \input{body/proposal/review/review}
+    \input{body/proposal/proposal/proposal}
+    \input{body/proposal/translation/translation}
+    \input{body/proposal/original/original}
 }
 {
     \ifthenelse{\equal{\Type}{design}}
     {
         % `design` content
-        \input{content/proposal/proposal/proposal}
-        \input{content/proposal/translation/translation}
-        \input{content/proposal/original/original}
-        \input{content/proposal/midcheck/midcheck}
+        \input{body/proposal/proposal/proposal}
+        \input{body/proposal/translation/translation}
+        \input{body/proposal/original/original}
+        \input{body/proposal/midcheck/midcheck}
     }
     {
         % otherwise, blank
