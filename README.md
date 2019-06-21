@@ -60,6 +60,23 @@
    - [Github 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
    - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide)（国内网络用这个链接下载比较快）
 
+## 高级使用教程
+
+如果你熟悉 git 的用法，希望用 git 来管理自己的论文，并且保持最新的样式，可以采用如下方法：
+
+1. fork 本 repo，必要的话可以设置为 private
+    >如果你不想使用 GitHub，可以直接 git clone 本 repo 并同步到其他的 git repo 中。
+    >但一定要保持原有的 commit，并且设置好指向原始 repo 的 remote url，这样才能进行后续的样式更新。
+1. 新开 branch，比如 mythesis，在这个 branch 上编写论文内容
+1. 需要与最新样式同步时：
+    1. 先切换到 master 分支，从原始 repo 执行 git pull
+    1. 然后切换到论文分支，将其 rebase 到 master 分支最新的 commit，并逐步修复 conflict
+    1. git push 到你的 repo 中
+1. 然后在论文分支继续编写内容
+
+这样你的论文内容总是与样式分离，可以分别更新
+
+
 ## Q & A
 
 1. Q: 没有我所在专业的格式？
