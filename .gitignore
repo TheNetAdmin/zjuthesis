@@ -2,7 +2,7 @@
 out/*
 dist/*
 /*.pdf
-/*.ttf
+/*.ttf*
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
