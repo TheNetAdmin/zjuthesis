@@ -92,9 +92,11 @@
 
 1. Q: 如何配合查重？
 
-   A: 目前查重工具对 LaTeX 生成的 pdf 支持比较差，主要有两点：
+   A: 详情见[issue讨论](https://github.com/TheNetAdmin/zjuthesis/issues/14)
+      
+      目前查重工具对 LaTeX 生成的 pdf 支持比较差，主要有两点：
 
-      1) LaTeX 伪粗体会造成乱码；
+      1) XeTeX 伪粗体会导致复制时得到乱码；
       2) LaTeX 生成的 pdf 默认采用了 UTF-8 的编码，而查重工具对这种编码支持不好，可能会认为是 GBK 之类的编码，无法读取正确的中文字符；
 
       第一点可以通过升级到 TeXLive 2019 解决。
