@@ -26,7 +26,7 @@
 
     | Type           | Period               | BlindReview                         | MajorFormat                          |
     | :------------- | :------------------- | :---------------------------------- | :----------------------------------- |
-    | thesis: 论文类 | proposal: 开题报告   | true: 生成盲审用pdf（隐藏个人信息） | 默认: cs                             |
+    | thesis: 论文类 | proposal: 开题报告   | true: 生成盲审用pdf（隐藏个人信息） | 默认: general                        |
     | design: 设计类 | final: 最终论文/设计 | false: 生成提交用pdf                | 与 `config/format/major/` 下目录名相同 |
 
 1. 在 `body` 目录下编写内容
