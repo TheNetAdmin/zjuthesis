@@ -70,7 +70,8 @@
     >但一定要保持原有的 commit，并且设置好指向原始 repo 的 remote url，这样才能进行后续的样式更新。
 1. 新开 branch，比如 mythesis，在这个 branch 上编写论文内容
 1. 需要与最新样式同步时：
-    1. 先切换到 master 分支，从原始 repo 执行 git pull
+    1. 先 commit 论文分支
+    1. 切换到 master 分支，从原始 repo 执行 git pull
     1. 然后切换到论文分支，将其 rebase 到 master 分支最新的 commit，并逐步修复 conflict
     1. git push 到你的 repo 中
 1. 然后在论文分支继续编写内容
