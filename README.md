@@ -33,7 +33,7 @@
 1. 在 `body` 目录下编写内容
 1. 在 `pages` 目录下填写必要的内容，如审核评语等
 1. 在 `figure` 目录下保存图片，在 `body/ref.bib` 内插入文献条目
-1. 在根目录下运行命令 `latexmk -xelatex -outdir=out zjuthesis` 即可编译 TeX 文件到 `out` 目录（该目录不会被记录版本）
+1. 在根目录下运行命令 `latexmk`（或者 `latexmk -xelatex -outdir=out zjuthesis`）即可编译 pdf 文件到 `out` 目录（该目录不会被记录版本）
 
 ## 扩展
 
