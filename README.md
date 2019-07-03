@@ -68,7 +68,7 @@
 1. fork 本 repo，必要的话可以设置为 private
     >如果你不想使用 GitHub，可以直接 git clone 本 repo 并同步到其他的 git repo 中。
     >但一定要保持原有的 commit，并且设置好指向原始 repo 的 remote url，这样才能进行后续的样式更新。
-1. 新开 branch，比如 mythesis，在这个 branch 上编写论文内容
+1. 新开 branch，在这个 branch 上编写论文内容
 1. 需要与最新样式同步时：
     1. 先 commit 论文分支
     1. 切换到 master 分支，从原始 repo 执行 git pull
