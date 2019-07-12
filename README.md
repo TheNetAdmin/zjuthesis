@@ -51,14 +51,14 @@
    | physics | 物理           |
 
 1. 经过两年的使用，现在尚未发现某个专业模板的格式与校级模板有很大出入。
-   所以这里列出的大多数专业模板主要提供了方便各专业使用的宏。
+   这里列出的大多数专业模板主要提供了方便各专业使用的宏。
    但**计算机学院**的模板使用的封面和评分页与校级模板有所不同，使用时请注意切换。
 
 ## Slide 模板
 
 1. 这是之前分享在浙大云盘的一个 Slide 模板，现在转移到 GitHub 方便同学们连同 LaTeX 模板一起下载:
 
-   - [Github 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
+   - [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
    - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide)（国内网络用这个链接下载比较快）
 
 ## 高级使用教程
@@ -84,9 +84,9 @@
 1. Q: 没有我所在专业的格式？
 
    A: 由于个人精力有限，难以查阅并编写各系具体要求的格式，如果同学们有相关需求，可以：
+    - **在 Github 上提出 Pull Request，贡献你编写的代码**
     - 在 Github 上提出 issue，附上模板格式要求
     - 发送邮件到我邮箱 (zxwang42 [at] gmail.com)，附上模板格式要求与样例文件
-    - **在 Github 上提出 Pull Request，贡献你编写的代码**
 
 1. Q: latexmk 编译不通过？
 
@@ -140,7 +140,9 @@
 
    A: 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
 
-1. 其他问题请在 [Github issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
+1. 其他问题请在 [GitHub issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
+   
+   请各位同学遇到问题尽量在 GitHub issue 里提出，这样方便有同样问题的同学查询。
 
 ## 开源许可
 
