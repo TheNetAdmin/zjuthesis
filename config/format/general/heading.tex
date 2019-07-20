@@ -1,45 +1,92 @@
 % ctex style settings
-\ctexset
+\ifthenelse{\equal{\Degree}{bachelor}}
 {
-    part =
+    \ctexset
     {
-        format=\centering\zihao{-0}\bfseries,
-        nameformat=\centering\heiti\fontsize{48}{48}\bfseries,
-    },
-    chapter =
+        part =
+        {
+            format=\centering\zihao{-0}\bfseries,
+            nameformat=\centering\heiti\fontsize{48}{48}\bfseries,
+        },
+        chapter =
+        {
+            format=\centering\zihao{3}\bfseries,
+            name={,、},
+            aftername=,
+            number=\chinese{chapter},
+            beforeskip=12pt,
+            afterskip=6pt
+        },
+        section =
+        {
+            format=\raggedright\zihao{3}\bfseries,
+            name={},
+            number=\arabic{section},
+            beforeskip=13pt,
+            afterskip=13pt
+        },
+        subsection =
+        {
+            format=\raggedright\zihao{-3}\bfseries,
+            name={},
+            number=\arabic{section}.\arabic{subsection},
+            beforeskip=13pt,
+            afterskip=13pt
+        },
+        subsubsection =
+        {
+            format=\raggedright\zihao{4}\bfseries,
+            name={},
+            aftername=~,
+            numbering=true,
+            number=\arabic{section}.\arabic{subsection}.\arabic{subsubsection},
+            beforeskip=0pt,
+            afterskip=0pt
+        }
+    }
+}
+{
+    \ctexset
     {
-        format=\centering\zihao{3}\bfseries,
-        name={,、},
-        aftername=,
-        number=\chinese{chapter},
-        beforeskip=12pt,
-        afterskip=6pt
-    },
-    section =
-    {
-        format=\raggedright\zihao{3}\bfseries,
-        name={},
-        number=\arabic{section},
-        beforeskip=13pt,
-        afterskip=13pt
-    },
-    subsection =
-    {
-        format=\raggedright\zihao{-3}\bfseries,
-        name={},
-        number=\arabic{section}.\arabic{subsection},
-        beforeskip=13pt,
-        afterskip=13pt
-    },
-    subsubsection =
-    {
-        format=\raggedright\zihao{4}\bfseries,
-        name={},
-        aftername=~,
-        numbering=true,
-        number=\arabic{section}.\arabic{subsection}.\arabic{subsubsection},
-        beforeskip=0pt,
-        afterskip=0pt
+        part =
+        {
+            format=\centering\zihao{-0}\bfseries,
+            nameformat=\centering\heiti\fontsize{48}{48}\bfseries,
+        },
+        chapter =
+        {
+            format=\raggedright\zihao{-3}\bfseries,
+            name={},
+            number=\arabic{chapter},
+            beforeskip=12pt,
+            afterskip=6pt
+        },
+        section =
+        {
+            format=\raggedright\zihao{4}\bfseries,
+            name={},
+            number=\arabic{chapter}.\arabic{section},
+            beforeskip=13pt,
+            afterskip=13pt
+        },
+        subsection =
+        {
+            format=\raggedright\zihao{-4}\bfseries,
+            name={},
+            number=\arabic{chapter}.\arabic{section}.\arabic{subsection},
+            beforeskip=13pt,
+            afterskip=13pt
+        },
+        subsubsection =
+        {
+            format=\raggedright\zihao{-4},
+            name={},
+            aftername=~,
+            numbering=true,
+            number=\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection},
+            beforeskip=0pt,
+            afterskip=0pt
+        }
     }
 }
 
@@ -47,3 +94,13 @@
 \makeatletter
 \@addtoreset{chapter}{part}
 \makeatother
+
+\ifthenelse{\equal{\Degree}{bachelor}}
+{
+    \renewcommand{\contentsname}{目录}
+}
+{
+    \renewcommand{\contentsname}{目 \quad 次}
+    \renewcommand{\listfigurename}{}
+    \renewcommand{\listtablename}{}
+}

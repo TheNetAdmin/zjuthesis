@@ -20,24 +20,50 @@
 \newcommand{\inputpage}[1]{\input{./page/\Degree/#1}}
 \newcommand{\inputbody}[1]{\input{./body/\Degree/#1}}
 
-\newcommand{\chapternonum}[1]
+\ifthenelse{\equal{\Degree}{bachelor}}
 {
-    \phantomsection
-    \addcontentsline{toc}{chapter}{#1}
-    \begin{center}
-        \bfseries \zihao{3} #1
-    \end{center}
+    \newcommand{\chapternonum}[1]
+    {
+        \phantomsection
+        \addcontentsline{toc}{chapter}{#1}
+        \begin{center}
+            \bfseries \zihao{3} #1
+        \end{center}
+    }
+
+    \newcommand{\sectionnonum}[1]
+    {
+        \phantomsection
+        \addcontentsline{toc}{section}{#1}
+        \begin{center}
+            \bfseries \zihao{3} #1
+        \end{center}
+    }
+}
+{
+    \newcommand{\chapternonum}[1]
+    {
+        \phantomsection
+        \addcontentsline{toc}{chapter}{#1}
+        \markboth{#1}{#1}
+        \begin{flushleft}
+            \bfseries \zihao{-3} #1
+        \end{flushleft}
+    }
+
+    \newcommand{\sectionnonum}[1]
+    {
+        \phantomsection
+        \addcontentsline{toc}{section}{#1}
+        \markboth{#1}{#1}
+        \begin{flushleft}
+            \bfseries \zihao{4} #1
+        \end{flushleft}
+    }
 }
 
-\newcommand{\sectionnonum}[1]
+\ifthenelse{\equal{\Degree}{bachelor}}
 {
-    \phantomsection
-    \addcontentsline{toc}{section}{#1}
-    \begin{center}
-        \bfseries \zihao{3} #1
-    \end{center}
-}
-
 \newcommand{\signature}[1]
 {
     \begin{flushright}
@@ -167,3 +193,5 @@
         \end{tabular}
     \end{flushright}
 }
+}
+{}

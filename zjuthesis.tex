@@ -13,10 +13,13 @@
     Title       = 毕业论文/设计题目,
     SubmitDate  = 递交日期,
     MajorFormat = general,
-    Degree      = bachelor, % 'bachelor' or 'master'
-    Type        = design,   % 'thesis'   or 'design'
+    Degree      = master,   % 'bachelor' or 'master'
+    Type        = thesis,   % 'thesis'   or 'design' or 'equal'(only for master)
     Period      = final,    % 'proposal' or 'final'
-    BlindReview = false     % 'false'    or 'true'
+    BlindReview = false,    % 'false'    or 'true'
+    % Below only for 'master'
+    Topic           = 研究方向,
+    ColaboratorName = 合作导师
 ]{config/zjuthesis}
 
 \newcommand{\inputfinal}
@@ -57,14 +60,58 @@
     \inputpage{proposal/post}
 }
 
+\newcommand{\inputmaster}
+{
+    \inputpage{cover}
+    \inputpage{title}
+    \inputpage{title-eng}
+    \inputpage{auth-claim}
+    \cleardoublestylepage{cover}
+    
+    % Previous part
+    \pagenumbering{Roman}
+    \thispagestyle{previous}
+    \pagestyle{previous}
+    \setcounter{page}{1}
+    
+    \inputbody{previous/correction}
+    \inputbody{previous/thanksto}
+    \inputbody{previous/preface}
+    \inputbody{previous/abstract}
+    \inputbody{previous/lof}
+    \inputbody{previous/term}
+    
+    % Table of contents
+    \inputpage{toc}
+    \cleardoublestylepage{plain}
+    
+    % Main contents
+    \thispagestyle{common}
+    \pagestyle{common}
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+    \inputbody{content}
+
+    % Post part
+    \inputbody{post/ref}
+    \inputbody{post/appendix}
+    \inputbody{post/cv}
+}
+
 \begin{document}
 
-\ifthenelse{\equal{\Period}{final}}
+\ifthenelse{\equal{\Degree}{bachelor}}
 {
-    \inputfinal{}
+    \ifthenelse{\equal{\Period}{final}}
+    {
+        \inputfinal{}
+    }
+    {
+        \inputproposal{}
+    }
 }
 {
-    \inputproposal{}
+    \inputmaster{}
 }
-
 \end{document}
