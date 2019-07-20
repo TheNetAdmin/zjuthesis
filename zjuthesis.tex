@@ -7,15 +7,16 @@
     StudentName = 姓名,
     StudentID   = 学号,
     AdvisorName = 指导教师,
-    Grade       = 2014,   % only the year, no `级`
+    Grade       = 2014,     % only the year, no '级'
     Major       = 专业,
     Department  = 学院,
     Title       = 毕业论文/设计题目,
     SubmitDate  = 递交日期,
     MajorFormat = general,
-    Type        = design, % `thesis` or `design`
-    Period      = final,  % `final`  or `proposal`
-    BlindReview = false   % `true`   or `false`
+    Degree      = bachelor, % 'bachelor' or 'master'
+    Type        = design,   % 'thesis'   or 'design'
+    Period      = final,    % 'proposal' or 'final'
+    BlindReview = false     % 'false'    or 'true'
 ]{config/zjuthesis}
 
 \newcommand{\inputfinal}
@@ -30,7 +31,7 @@
     \ifthenelse{\equal{\Type}{design}}
         {\part{毕业设计}}
         {\part{毕业论文}}
-    \input{body/final/content}
+    \inputbody{final/content}
 
     \inputpage{final/post}
 
@@ -43,7 +44,7 @@
 
     \inputpage{proposal/cover}
     \inputpage{proposal/previous}
-    \input{body/proposal/content}
+    \inputbody{proposal/content}
     \inputpage{proposal/post}
 }
 
@@ -52,7 +53,7 @@
     \inputpage{proposal/cover}
     \inputpage{proposal/previous}
     \inputpage{proposal/toc}
-    \input{body/proposal/content}
+    \inputbody{proposal/content}
     \inputpage{proposal/post}
 }
 

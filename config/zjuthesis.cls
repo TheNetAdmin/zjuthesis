@@ -16,6 +16,7 @@
 \DeclareStringOption{Department}
 \DeclareStringOption{Title}
 \DeclareStringOption{SubmitDate}
+\DeclareStringOption[bachelor]{Degree}
 \DeclareStringOption[cs]{MajorFormat}
 \DeclareStringOption[thesis]{Type}
 \DeclareStringOption[proposal]{Period}
