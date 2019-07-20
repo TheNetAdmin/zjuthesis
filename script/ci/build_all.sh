@@ -18,7 +18,7 @@ function build() {
     latexmk -xelatex -outdir=out
 
     blind_suffix=""
-    if [ $4 == "true" ]
+    if [ $5 == "true" ]
     then
         blind_suffix="-blind"
     fi
