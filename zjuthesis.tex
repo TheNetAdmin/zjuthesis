@@ -13,11 +13,11 @@
     Title       = 毕业论文/设计题目,
     SubmitDate  = 递交日期,
     MajorFormat = general,
-    Degree      = master,   % 'bachelor' or 'master'
-    Type        = thesis,   % 'thesis'   or 'design' or 'equal'(only for master)
+    Degree      = graduate,   % 'bachelor' or 'graduate'
+    Type        = thesis,   % 'thesis'   or 'design' or 'equal'(only for graduate)
     Period      = final,    % 'proposal' or 'final'
     BlindReview = false,    % 'false'    or 'true'
-    % Below only for 'master'
+    % Below only for 'graduate'
     Topic           = 研究方向,
     ColaboratorName = 合作导师
 ]{config/zjuthesis}
@@ -60,7 +60,7 @@
     \inputpage{proposal/post}
 }
 
-\newcommand{\inputmaster}
+\newcommand{\inputgraduate}
 {
     \inputpage{cover}
     \inputpage{title}
@@ -112,6 +112,6 @@
     }
 }
 {
-    \inputmaster{}
+    \inputgraduate{}
 }
 \end{document}
