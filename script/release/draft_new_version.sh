@@ -5,7 +5,8 @@ new_ver=$1
 
 if [ -z $new_ver ]
 then
-  echo "No new version specified"
+  echo "No new version specified, current version $old_ver"
+  echo "Usage: $0 version_number(without leading 'v')"
   exit 1
 fi
 
@@ -17,7 +18,7 @@ echo "Update config/version.tex"
 sed -r -i "s/[0-9]+\.[0-9]+\.[0-9]+/$new_ver/" config/version.tex || true
 cat config/version.tex
 git add config/version.tex
-git commit
+git commit -a
 
 echo "Press any key to tag current commit"
 read
