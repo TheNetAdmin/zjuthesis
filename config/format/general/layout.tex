@@ -1,5 +1,5 @@
 % Set page layout
-\ifthenelse{\equal{\Degree}{bachelor}}
+\ifthenelse{\equal{\Degree}{undergraduate}}
 {
     \geometry{
         a4paper,
@@ -40,7 +40,7 @@
     \renewcommand{\headrulewidth}{0pt}
 }
 
-\ifthenelse{\equal{\Degree}{bachelor}}
+\ifthenelse{\equal{\Degree}{undergraduate}}
 {
     % Common header & footer
     \newcommand{\commonhead}
@@ -108,7 +108,7 @@
 }
 
 % TOC title format
-\ifthenelse{\equal{\Degree}{bachelor}}
+\ifthenelse{\equal{\Degree}{undergraduate}}
 {
     \renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\bfseries}
 }
@@ -148,7 +148,7 @@
 \renewcommand{\cftsubsecnumwidth}     {1.5em}
 \renewcommand{\cftsubsubsecnumwidth}  {1.5em}
 
-\ifthenelse{\equal{\Degree}{bachelor}}
+\ifthenelse{\equal{\Degree}{undergraduate}}
 {
     \setlength{\cftchapindent}      {0em}
     \setlength{\cftsecindent}       {2em}
@@ -164,7 +164,7 @@
 }
 
 % Change biblography title style for `biblatex`
-\ifthenelse{\equal{\Degree}{bachelor}}
+\ifthenelse{\equal{\Degree}{undergraduate}}
 {
     \defbibheading{bibliography}[\bibname]{
         \section{#1}

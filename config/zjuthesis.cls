@@ -16,7 +16,7 @@
 \DeclareStringOption{Department}
 \DeclareStringOption{Title}
 \DeclareStringOption{SubmitDate}
-\DeclareStringOption[bachelor]{Degree}
+\DeclareStringOption[undergraduate]{Degree}
 \DeclareStringOption[cs]{MajorFormat}
 \DeclareStringOption[thesis]{Type}
 \DeclareStringOption[proposal]{Period}
@@ -37,7 +37,7 @@
 
 \input{config/packages}
 
-\ifthenelse{\equal{\Degree}{bachelor}}
+\ifthenelse{\equal{\Degree}{undergraduate}}
 {
     \newcommand{\TitleTypeName}{浙江大学本科生毕业论文（设计）}
 }
