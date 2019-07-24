@@ -20,7 +20,7 @@
 1. 在 `zjuthesis.tex` 中 `\documentclass[]{zjuthesis}` 部分填写个人信息，注意以下信息用于控制文档的生成：
 
    1. `Degree` 为 `undergraduate` 时，编译本科生论文：
-   
+
     | Type           | Period               | BlindReview                         | MajorFormat                          |
     | :------------- | :------------------- | :---------------------------------- | :----------------------------------- |
     | thesis: 论文类  | proposal: 开题报告   | true: 生成盲审用pdf（隐藏个人信息） | 默认: general                        |
@@ -88,7 +88,6 @@
 
 这样你的论文内容总是与样式分离，可以分别更新
 
-
 ## Q & A
 
 1. Q: 没有我所在专业的格式？
@@ -104,7 +103,7 @@
 1. Q: 如何配合查重？
 
    A: 详情见[issue讨论](https://github.com/TheNetAdmin/zjuthesis/issues/14)
-      
+
       目前查重工具对 LaTeX 生成的 pdf 支持比较差，主要有两点：
 
       1) XeTeX 伪粗体会导致复制时得到乱码；
@@ -150,7 +149,7 @@
    A: 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
 
 1. 其他问题请在 [GitHub issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
-   
+
    请各位同学遇到问题尽量在 GitHub issue 里提出，这样方便有同样问题的同学查询。
 
 ## 开源许可
