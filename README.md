@@ -7,17 +7,11 @@
 
 ## 简介
 
-本项目为浙江大学本科生毕业设计/论文的 LaTeX 模板，来源于作者的计算机学院毕业设计。
+本项目为浙江大学毕业设计/论文的 LaTeX 模板，包含本科生、硕士生与博士生模板。
 
 [CC98校内讨论贴](http://cc98.org/topic/4762356)
 
 ## 使用
-
-> 注意：
->
-> - 本模板已经兼容 TeXLive 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 TexLive 的同学尽快升级 2019 版本
-> - 本模板默认情况下使用 `general` 格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
-> - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板
 
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)，
    每个专业模板都有预览 pdf 文件，可以单独下载查看。
@@ -29,20 +23,26 @@
    
     | Type           | Period               | BlindReview                         | MajorFormat                          |
     | :------------- | :------------------- | :---------------------------------- | :----------------------------------- |
-    | thesis: 论文类 | proposal: 开题报告   | true: 生成盲审用pdf（隐藏个人信息） | 默认: general                        |
-    | design: 设计类 | final: 最终论文/设计 | false: 生成提交用pdf                | 与 `config/format/major/` 下目录名相同 |
-   1. `Degree` 为 `graduate` 时，编译研究生/博士生论文：
+    | thesis: 论文类  | proposal: 开题报告   | true: 生成盲审用pdf（隐藏个人信息） | 默认: general                        |
+    | design: 设计类  | final: 最终论文/设计 | false: 生成提交用pdf                | 与 `config/format/major/` 下目录名相同 |
+   1. `Degree` 为 `graduate` 时，编译硕士生/博士生论文：
 
     | Type               | BlindReview                         | MajorFormat                          |
     | :-------------     | :---------------------------------- | :----------------------------------- |
-    | thesis: 学术论文    |true: 生成盲审用pdf（隐藏个人信息） | 默认: general                        |
-    | design: 专业学术论文| false: 生成提交用pdf                | 与 `config/format/major/` 下目录名相同 |
+    | thesis: 学术论文    |true: 生成盲审用pdf（隐藏个人信息）       | 默认: general                        |
+    | design: 专业学术论文| false: 生成提交用pdf                   | 与 `config/format/major/` 下目录名相同 |
     | equal: 同等学力论文 | |
 
 1. 在 `body` 目录下编写内容
 1. 在 `pages` 目录下填写必要的内容，如审核评语等
 1. 在 `figure` 目录下保存图片，在 `body/ref.bib` 内插入文献条目
 1. 在根目录下运行命令 `latexmk`（或者 `latexmk -xelatex -outdir=out zjuthesis`）即可编译 pdf 文件到 `out` 目录（该目录不会被记录版本）
+
+> 注意：
+>
+> - 本模板已经兼容 TeXLive 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 TexLive 的同学尽快升级 2019 版本
+> - 本模板默认情况下使用 `general` 格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
+> - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板
 
 ## 扩展
 
@@ -59,9 +59,10 @@
    | math    | 数学           |
    | physics | 物理           |
 
-1. 经过两年的使用，现在尚未发现某个专业模板的格式与校级模板有很大出入。
-   这里列出的大多数专业模板主要提供了方便各专业使用的宏。
-   但**计算机学院**的模板使用的封面和评分页与校级模板有所不同，使用时请注意切换。
+1. 经过两年的使用，本模板的 `general` 模板可以满足大多数学院的要求。
+   目前只有**计算机学院**的模板使用的封面和评分页与校级模板有所不同，
+   使用时请注意切换；
+   其他的专业模板只是提供了方便各专业使用的宏，没有额外的版面设置。
 
 ## Slide 模板
 
