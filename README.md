@@ -19,13 +19,14 @@
 1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装所需的镜像文件可以选用浙江大学开源镜像站提供的[镜像](https://mirrors.zju.edu.cn/CTAN/systems/texlive/Images/)以便在校内网下更快下载。
 1. 在 `zjuthesis.tex` 中 `\documentclass[]{zjuthesis}` 部分填写个人信息，注意以下信息用于控制文档的生成：
 
-   1. `Degree` 为 `undergraduate` 时，编译本科生论文：
+   - `Degree` 为 `undergraduate` 时，编译本科生论文：
 
     | Type           | Period               | BlindReview                         | MajorFormat                          |
     | :------------- | :------------------- | :---------------------------------- | :----------------------------------- |
     | thesis: 论文类  | proposal: 开题报告   | true: 生成盲审用pdf（隐藏个人信息） | 默认: general                        |
     | design: 设计类  | final: 最终论文/设计 | false: 生成提交用pdf                | 与 `config/format/major/` 下目录名相同 |
-   1. `Degree` 为 `graduate` 时，编译硕士生/博士生论文：
+   
+   - `Degree` 为 `graduate` 时，编译硕士生/博士生论文：
 
     | Type               | BlindReview                         | MajorFormat                          |
     | :-------------     | :---------------------------------- | :----------------------------------- |
