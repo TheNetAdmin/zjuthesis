@@ -17,7 +17,7 @@
 \DeclareStringOption{Title}
 \DeclareStringOption{SubmitDate}
 \DeclareStringOption[undergraduate]{Degree}
-\DeclareStringOption[cs]{MajorFormat}
+\DeclareStringOption[general]{MajorFormat}
 \DeclareStringOption[thesis]{Type}
 \DeclareStringOption[proposal]{Period}
 \DeclareStringOption[false]{BlindReview}
