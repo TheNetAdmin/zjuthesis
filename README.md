@@ -7,6 +7,9 @@
 
 ## 简介
 
+> NOTE:
+> If you are interested in English template, please discuss more details [here](https://github.com/TheNetAdmin/zjuthesis/issues/15) 
+
 本项目为浙江大学毕业设计/论文的 LaTeX 模板，包含本科生、硕士生与博士生模板。
 
 [CC98校内讨论贴](http://cc98.org/topic/4762356)
