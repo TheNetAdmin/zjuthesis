@@ -143,6 +143,8 @@
 1. Q: 怎么在 Overleaf 上使用？
 
    A: 下载本模板并在 Overleaf 上上传 .zip 文件，选择使用 XeLatex 编译器。
+   
+      上传后请删除 `.latexmkrc` 文件，否则编译会失败而且不报任何错误。
 
       由于字体存在版权问题，还请大家自行上传字体，并修改中文字体设置（位于 `config/format/general/font.tex` 以及 `config/foramt/major/.../font.tex`）。修改过程可参考本仓库中的 `script/ci/setup.sh` 脚本。
 
