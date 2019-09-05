@@ -151,7 +151,7 @@
 
       由于字体存在版权问题，还请大家自行上传字体，并修改中文字体设置（位于 `config/format/general/font.tex` 以及 `config/foramt/major/.../font.tex`）。修改过程可参考本仓库中的 `script/ci/setup.sh` 脚本。
 
-      如果编译超时（不显示 pdf 也不报错），请尝试注释中文字体设置（代码位置见上一段），然后重新编译，应该就可以了。编译超时可能是缺失字体导致的，请大家自行上传字体并设置字体路径。
+      如果编译超时（不显示 pdf 也不报错），请尝试注释中文字体设置（代码位置见上一段），然后重新编译。编译超时可能是缺失字体导致的，请大家自行上传字体并设置字体路径。
       
       我会不定期更新一下 [Overleaf 模板](https://www.overleaf.com/latex/templates/zhe-jiang-da-xue-bi-ye-she-ji-slash-lun-wen-mo-ban-zjuthesis/kzcgmdyvkjxj)，但想用最新模板的同学请自行上传并设置。
       
