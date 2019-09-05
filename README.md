@@ -44,7 +44,7 @@
 
 > 注意：
 >
-> - 本模板已经兼容 TeXLive 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 TexLive 的同学尽快升级 2019 版本
+> - 本模板已经兼容 TeXLive 2019，并且这个版本复制伪粗体文字不会产生乱码，建议单独使用 TeXLive 的同学尽快升级 2019 版本
 > - 本模板默认情况下使用 `general` 格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板
 
@@ -105,7 +105,7 @@
 
 1. Q: latexmk 编译不通过？
 
-   A: 可以先尝试执行 `tlmgr update --self --all` 更新整个 TexLive，然后重新编译。因为直接安装的 TexLive 并不包含所有最新版本的宏包，一些旧版宏包的 BUG 可能会影响编译。
+   A: 可以先尝试执行 `tlmgr update --self --all` 更新整个 TeXLive，然后重新编译。因为直接安装的 TeXLive 并不包含所有最新版本的宏包，一些旧版宏包的 BUG 可能会影响编译。
 
 1. Q: 如何配合查重？
 
@@ -155,7 +155,7 @@
       
       我会不定期更新一下 [Overleaf 模板](https://www.overleaf.com/latex/templates/zhe-jiang-da-xue-bi-ye-she-ji-slash-lun-wen-mo-ban-zjuthesis/kzcgmdyvkjxj)，但想用最新模板的同学请自行上传并设置。
       
-      **注意：Overleaf 还在使用 TexLive 2017，但前文提到的乱码问题在 2019 版才得以解决，所以请同学们务必使用 TexLive 2019 进行最终提交版的编译。**
+      **注意：Overleaf 还在使用 TeXLive 2017，但前文提到的乱码问题在 2019 版才得以解决，所以请同学们务必使用 TeXLive 2019 进行最终提交版的编译。**
 
 1. Q: 怎么配合 vscode 使用？
 
