@@ -51,7 +51,10 @@
 ## 扩展
 
 1. 针对每个专业的扩展格式编写请新建目录 `config/format/major/专业简称` ，在该目录下固定新建文件 `format.tex`，引入该目录下所有格式设置文件
-1. 扩展格式的 `\usepackage{packagename}` 尽量放在其所在子目录下的 `packages.tex` 内，不要放在 `config/packages.tex` 内，避免其他专业同学使用时产生 package 冲突或额外引入
+1. 扩展格式的 `\usepackage{packagename}` 尽量放在其所在子目录下的 `packages.tex` 内，不要放在 `config/packages.tex` 内。
+   
+   这样可以避免其他专业同学使用时产生 package 冲突或额外引入。
+   同时由于 XeTeX 编译速度很慢，减少不必要的 package 可以提高编译效率。样例模板使用了 Tikz package，如果大家写论文时不需要这个红包，可以将其删除。
 1. 最后修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat` ，使用新格式的目录名即可
 1. 现在支持的专业模板如下
 
@@ -149,10 +152,24 @@
       由于字体存在版权问题，还请大家自行上传字体，并修改中文字体设置（位于 `config/format/general/font.tex` 以及 `config/foramt/major/.../font.tex`）。修改过程可参考本仓库中的 `script/ci/setup.sh` 脚本。
 
       如果编译超时（不显示 pdf 也不报错），请尝试注释中文字体设置（代码位置见上一段），然后重新编译，应该就可以了。编译超时可能是缺失字体导致的，请大家自行上传字体并设置字体路径。
+      
+      我会不定期更新一下 [Overleaf 模板](https://www.overleaf.com/latex/templates/zhe-jiang-da-xue-bi-ye-she-ji-slash-lun-wen-mo-ban-zjuthesis/kzcgmdyvkjxj)，但想用最新模板的同学请自行上传并设置。
+      
+      **注意：Overleaf 还在使用 TexLive 2017，但前文提到的乱码问题在 2019 版才得以解决，所以请同学们务必使用 TexLive 2019 进行最终提交版的编译。**
 
 1. Q: 怎么配合 vscode 使用？
 
    A: 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
+   
+   > 在本模板加入 latexmkrc 文件后，vscode 的 LaTeX 插件本应当开箱即用的，因为它的默认编译命令就是 latexmk。
+   >
+   > 但当前的插件维护者都是英文语系用户，所以他们强制指定了 pdfLatex 为 latexmk 的引擎，导致该插件不兼容 XeLatex 代码。
+   >
+   > 我和维护者在 GitHub issue 上争论了很久，但他们的结论仍旧是 “这个功能根本不重要”……
+   > （最有趣的是插件作者是中国人，看样子是不怎么用自家插件咯？）
+   > 希望能有好心人提个 PR 给他们，造福各位中文用户。
+   >
+   > 现阶段还需要同学们使用上文提到的 recipe 来编译。
 
 1. 其他问题请在 [GitHub issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
 
