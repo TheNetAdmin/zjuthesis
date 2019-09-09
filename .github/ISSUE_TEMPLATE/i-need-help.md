@@ -1,8 +1,8 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: "[BUG]"
-labels: bug
+name: I need help
+about: Having some trouble using the template
+title: ''
+labels: help wanted
 assignees: ''
 
 ---
@@ -24,17 +24,20 @@ assignees: ''
 **重现步骤**
 如何重现你遇到的问题：
 
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+1. 修改了哪里
+2. 使用什么命令编译
+3. 产生了什么错误/输出结果哪里不对
+4.
 
-**预期结果**
-经过以上步骤，预期得到的结果
+请附上修改过的文件/工程
+
+如果无法编译，请额外附上 log 文件，位于 out/zjuthesis.log
 
 **截图**
-重现步骤与预期结果的截图
-如果方便的话，也请附上其他有帮助的截图
+
+- 重现步骤的截图
+- 输出结果的截图
+- 如果方便的话，也请附上其他有帮助的截图
 
 **环境**
  - zjuthesis版本: [e.g. v3.0.0 或 3c8a471(commit id)]
