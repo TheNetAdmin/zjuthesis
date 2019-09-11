@@ -163,6 +163,22 @@
     \setlength{\cftbeforechapskip}  {0em}
 }
 
+% graduate template listoffigures/tables
+\ifthenelse{\equal{\Degree}{graduate}}
+{
+    % listoffigures
+    \newlength{\listoffiguresnamelen}
+    \renewcommand{\cftfigpresnum}{\figurename\enspace}
+    \settowidth{\listoffiguresnamelen}{\cftfigpresnum\cftfigaftersnum}
+    \addtolength{\cftfignumwidth}{\listoffiguresnamelen}
+    % listoftables
+    \newlength{\listoftablesnamelen}
+    \renewcommand{\cfttabpresnum}{\tablename\enspace}
+    \settowidth{\listoftablesnamelen}{\cfttabpresnum\cfttabaftersnum}
+    \addtolength{\cfttabnumwidth}{\listoftablesnamelen}
+}
+{}
+
 % Change biblography title style for `biblatex`
 \ifthenelse{\equal{\Degree}{undergraduate}}
 {
