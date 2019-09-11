@@ -1,6 +1,6 @@
 # 浙江大学毕业设计/论文模板
 
-![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)
+[![Financial Contributors on Open Collective](https://opencollective.com/zjuthesis/all/badge.svg?label=financial+contributors)](https://opencollective.com/zjuthesis) ![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)
 ![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)
 ![GitHub All Releases](https://img.shields.io/github/downloads/thenetadmin/zjuthesis/total.svg?color=blue&style=popout)
 ![TravisCI](https://travis-ci.org/TheNetAdmin/zjuthesis.svg?branch=master)
@@ -180,3 +180,33 @@
 本项目代码部分基于MIT协议开源
 
 学校标志与学校文件的版权归浙江大学所有
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/TheNetAdmin/zjuthesis/graphs/contributors"><img src="https://opencollective.com/zjuthesis/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/zjuthesis/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/zjuthesis"><img src="https://opencollective.com/zjuthesis/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/zjuthesis/contribute)]
+
+<a href="https://opencollective.com/zjuthesis/organization/0/website"><img src="https://opencollective.com/zjuthesis/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/1/website"><img src="https://opencollective.com/zjuthesis/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/2/website"><img src="https://opencollective.com/zjuthesis/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/3/website"><img src="https://opencollective.com/zjuthesis/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/4/website"><img src="https://opencollective.com/zjuthesis/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/5/website"><img src="https://opencollective.com/zjuthesis/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/6/website"><img src="https://opencollective.com/zjuthesis/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/7/website"><img src="https://opencollective.com/zjuthesis/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/8/website"><img src="https://opencollective.com/zjuthesis/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/zjuthesis/organization/9/website"><img src="https://opencollective.com/zjuthesis/organization/9/avatar.svg"></a>
