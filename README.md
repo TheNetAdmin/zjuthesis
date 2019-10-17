@@ -100,8 +100,8 @@
 1. Q: 没有我所在专业的格式？
 
    A: 由于个人精力有限，难以查阅并编写各系具体要求的格式，如果同学们有相关需求，可以：
-    - **在 Github 上提出 Pull Request，贡献你编写的代码**
-    - 在 Github 上提出 issue，附上模板格式要求
+    - **在 GitHub 上提出 Pull Request，贡献你编写的代码**
+    - 在 GitHub 上提出 issue，附上模板格式要求
 
 1. Q: latexmk 编译不通过？
 
