@@ -38,7 +38,7 @@ assignees: ''
 
 **环境**
  - zjuthesis版本: [e.g. v3.0.0 或 3c8a471(commit id)]
-- zjuthesis基础设置
+- zjuthesis基础设置 **请将如下代码替换为你的`\documentclass`代码，注意隐藏个人信息**
 ```
 \documentclass[
     StudentName = 姓名,
