@@ -17,11 +17,12 @@
 
 \newcommand{\bful}[1]{{\bfseries\uline{#1}}}
 
-\newcommand{\inputpage}[1]{\input{./page/\Degree/#1}}
-\newcommand{\inputbody}[1]{\input{./body/\Degree/#1}}
-
 \ifthenelse{\equal{\Degree}{undergraduate}}
 {
+    % undergraduate
+    \newcommand{\inputpage}[1]{\input{./page/undergraduate/#1}}
+    \newcommand{\inputbody}[1]{\input{./body/undergraduate/#1}}
+
     \newcommand{\chapternonum}[1]
     {
         \phantomsection
@@ -41,6 +42,55 @@
     }
 }
 {
+    % graduate
+    \newcommand{\checkandinput}[2]
+    {
+        % Directory structure:
+        % graduate/undergraduate            [Degree     ] [required        ]
+        % |-- master/doctor                 [GradLevel  ] [optional        ]
+        %     |-- general/cs/math/...       [MajorFormat] [optional        ]
+        %         |-- cover.tex/toc.tex/... [TeX Files  ] [template defined]
+        %
+        % Search from bottom-level to top-level:
+        % E.g:
+        %     With such dir:
+        %     graduate
+        %     |-- cover.tex
+        %     |-- toc.tex
+        %     |-- abstract.tex
+        %     |-- master
+        %         |-- toc.tex
+        %         |-- math
+        %             |-- abstract.tex
+        %     The input files are:
+        %         graduate/cover.tex
+        %         graduate/master/toc.tex
+        %         graduate/master/math/abstract.tex
+        \IfFileExists{./#1/graduate/\GradLevel/\MajorFormat/#2}
+        {
+            \input{./#1/graduate/\GradLevel/\MajorFormat/#2}
+        }
+        {
+            \IfFileExists{./#1/graduate/\GradLevel/#2}
+            {
+                \input{./#1/graduate/\GradLevel/#2}
+            }
+            {
+                \input{./#1/graduate/#2}
+            }
+        }
+    }
+
+    \newcommand{\inputpage}[1]
+    {
+        \checkandinput{page}{#1}
+    }
+        
+    \newcommand{\inputbody}[1]
+    {
+        \checkandinput{body}{#1}
+    }
+
     \newcommand{\chapternonum}[1]
     {
         \phantomsection

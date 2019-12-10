@@ -21,7 +21,9 @@
 \DeclareStringOption[thesis]{Type}
 \DeclareStringOption[proposal]{Period}
 \DeclareStringOption[false]{BlindReview}
+\DeclareStringOption[chinese]{Language}
 
+\DeclareStringOption[doctor]{GradLevel}
 \DeclareStringOption{ColaboratorName}
 \DeclareStringOption{Topic}
 

@@ -17,7 +17,9 @@
     Type        = thesis,          % 'thesis'   or 'design' or 'equal'(only for graduate)
     Period      = final,           % 'proposal' or 'final'
     BlindReview = false,           % 'false'    or 'true'
+    Language    = chinese,         % 'chinese'  or 'english'
     % Below only for 'graduate'
+    GradLevel       = master,      % 'master' or 'doctor'
     Topic           = 研究方向,
     ColaboratorName = 合作导师
 ]{config/zjuthesis}
@@ -81,6 +83,7 @@
     
     % Table of contents
     \inputpage{lof}
+    \inputpage{lot}
     \inputpage{loterm}
     \inputpage{toc}
     \cleardoublestylepage{plain}
