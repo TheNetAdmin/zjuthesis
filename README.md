@@ -159,16 +159,10 @@
 
 1. Q: 怎么配合 vscode 使用？
 
-   A: 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
-   
-   > 在本模板加入 latexmkrc 文件后，vscode 的 LaTeX 插件本应当开箱即用的，因为它的默认编译命令就是 latexmk。
-   >
-   > 但当前的插件维护者都是英文语系用户，所以他们强制指定了 pdfLatex 为 latexmk 的引擎，导致该插件不兼容 XeLatex 代码。
-   >
-   > 我和维护者在 GitHub issue 上争论了很久，但他们的结论仍旧是 “这个功能根本不重要”……
-   > 希望能有好心人提个 PR 给他们，造福各位中文用户。
-   >
-   > 现阶段还需要同学们使用上文提到的 recipe 来编译。
+   A: 有两种方式
+     1. 用 vscode 打开根目录下的 zjuthesis.tex 文件，Ctrl+Shift+P 打开命令窗口，`LaTeX Workshop: Build with recipe` -> `latexmk (latexmkrc)`
+     2. 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
+
 
 1. 其他问题请在 [GitHub issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
 
