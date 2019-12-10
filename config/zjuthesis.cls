@@ -41,21 +41,37 @@
 
 \ifthenelse{\equal{\Degree}{undergraduate}}
 {
-    \newcommand{\TitleTypeName}{浙江大学本科生毕业论文（设计）}
-}
-{
+    % undergraduate
     \ifthenelse{\equal{\Type}{thesis}}
-    {%
-        \newcommand{\TitleTypeName}{浙江大学博（硕）士学位论文}
+    {
+        \newcommand{\TitleTypeName}{浙江大学本科生毕业论文}
     }
     {
-    \ifthenelse{\equal{\Type}{design}}
-    {%
-        \newcommand{\TitleTypeName}{浙江大学博（硕）士专业学位论文}
+        \newcommand{\TitleTypeName}{浙江大学本科生毕业设计}
     }
-    {%
-        \newcommand{\TitleTypeName}{同等学力申请浙江大学博（硕）士学位论文}
+}
+{
+    % graduate
+    \ifthenelse{\equal{\GradLevel}{doctor}}
+    {
+        % doctor
+        \ifthenelse{\equal{\Type}{thesis}}
+        {
+            \newcommand{\TitleTypeName}{浙江大学博士专业学位论文}
+        }
+        {
+            \newcommand{\TitleTypeName}{同等学力申请浙江大学博士学位论文}
+        }
     }
+    {
+        % master
+        \ifthenelse{\equal{\Type}{thesis}}
+        {
+            \newcommand{\TitleTypeName}{浙江大学硕士专业学位论文}
+        }
+        {
+            \newcommand{\TitleTypeName}{同等学力申请浙江大学硕士学位论文}
+        }
     }
 }
 
