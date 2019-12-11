@@ -12,8 +12,8 @@
     Department  = 学院,
     Title       = 毕业论文/设计题目,
     SubmitDate  = 递交日期,
-    MajorFormat = general,
-    Degree      = undergraduate,   % 'undergraduate' or 'graduate'
+    MajorFormat = cs,
+    Degree      = graduate,   % 'undergraduate' or 'graduate'
     Type        = thesis,          % 'thesis'   or 'design' or 'equal'(only for graduate)
     Period      = final,           % 'proposal' or 'final'
     BlindReview = false,           % 'false'    or 'true'
@@ -65,10 +65,6 @@
 \newcommand{\inputgraduate}
 {
     \inputpage{cover}
-    \inputpage{title}
-    \inputpage{title-eng}
-    \inputpage{auth-claim}
-    \cleardoublestylepage{cover}
     
     % Previous part
     \pagenumbering{Roman}

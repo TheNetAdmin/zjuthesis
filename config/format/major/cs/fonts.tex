@@ -1,1 +1,8 @@
 \setCJKmainfont{FangSong}
+
+% CS master thesis use SongTi as default font, weird...
+\ifthenelse{\equal{\Degree}{graduate} \AND \equal{\GradLevel}{master}}
+{
+    \setCJKmainfont{SimSun}
+}
+{}
