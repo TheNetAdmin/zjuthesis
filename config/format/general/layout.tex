@@ -144,20 +144,10 @@
 \renewcommand{\cftsubsecnumwidth}     {1.5em}
 \renewcommand{\cftsubsubsecnumwidth}  {1.5em}
 
-\ifthenelse{\equal{\Degree}{undergraduate}}
-{
-    \setlength{\cftchapindent}      {0em}
-    \setlength{\cftsecindent}       {2em}
-    \setlength{\cftsubsecindent}    {4em}
-    \setlength{\cftsubsubsecindent} {6em}
-}
-{
-    \setlength{\cftchapindent}      {0em}
-    \setlength{\cftsecindent}       {0em}
-    \setlength{\cftsubsecindent}    {0em}
-    \setlength{\cftsubsubsecindent} {0em}
-    \setlength{\cftbeforechapskip}  {0em}
-}
+\setlength{\cftchapindent}      {0em}
+\setlength{\cftsecindent}       {2em}
+\setlength{\cftsubsecindent}    {4em}
+\setlength{\cftsubsubsecindent} {6em}
 
 % graduate template listoffigures/tables
 \ifthenelse{\equal{\Degree}{graduate}}
