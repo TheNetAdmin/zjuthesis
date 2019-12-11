@@ -3,8 +3,8 @@
     \fancypagestyle{previous}
     {
         \fancyhead{}
-        \fancyhead[L]{\zihao{-5}\TitleTypeName}
-        \fancyhead[R]{\zihao{-5}\leftmark}
+        \fancyhead[L]{\zihao{-5} \TitleTypeName}
+        \fancyhead[R]{\zihao{-5} \leftmark}
         \renewcommand{\headrulewidth}{1pt}
 
         \fancyfoot{}
@@ -16,5 +16,15 @@
         \fancyfoot{}
         \fancyfoot[C]{\zihao{-5} \thepage}
     }
+
+    \tocloftpagestyle{previous}
+    \renewcommand{\cfttoctitlefont} {\hfill\zihao{-2}\heiti}\renewcommand{\cftaftertoctitle}{\hfill}
+    \renewcommand{\cftloftitlefont} {\hfill\zihao{-2}\heiti}\renewcommand{\cftafterloftitle}{\hfill}
+    \renewcommand{\cftlottitlefont} {\hfill\zihao{-2}\heiti}\renewcommand{\cftafterlottitle}{\hfill}
+    \renewcommand{\cftchapfont}     {\zihao{-4}\heiti}
+    \setlength{\cftchapindent}      {0em}
+    \setlength{\cftsecindent}       {0em}
+    \setlength{\cftsubsecindent}    {1em}
+    \setlength{\cftsubsubsecindent} {2em}
 }
 {}

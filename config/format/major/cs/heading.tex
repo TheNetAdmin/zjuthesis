@@ -51,9 +51,11 @@
         \phantomsection
         \addcontentsline{toc}{chapter}{#1}
         \markboth{#1}{#1}
-        \begin{center}
-            \heiti \zihao{-2} #1
-        \end{center}
+        \chapter*{#1}
     }
+
+    \renewcommand{\contentsname}    {目录}
+    \renewcommand{\listfigurename}  {图目录}
+    \renewcommand{\listtablename}   {表目录}
 }
 {}
