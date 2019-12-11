@@ -65,26 +65,13 @@
 \newcommand{\inputgraduate}
 {
     \inputpage{cover}
-    
-    % Previous part
-    \pagenumbering{Roman}
-    \thispagestyle{previous}
-    \pagestyle{previous}
-    \setcounter{page}{1}
-    
-    \inputbody{previous/correction}
-    \inputbody{previous/thanksto}
-    \inputbody{previous/preface}
-    \inputbody{previous/abstract}
+    \inputpage{previous}
     
     % Table of contents
-    \inputpage{lof}
-    \inputpage{lot}
-    \inputpage{loterm}
     \inputpage{toc}
-    \cleardoublestylepage{plain}
     
     % Main contents
+    \cleardoublepage
     \thispagestyle{common}
     \pagestyle{common}
     \pagenumbering{arabic}

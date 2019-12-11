@@ -28,54 +28,27 @@
         具体说明参照 GitHub 主页。
 \end{itemize}
 
+\zhlipsum[1-2][name=xiangyu]
+
 \section{节标题}
 
-如\autoref{fig:a-figure}所示，这是一张由TIKZ\cite{tikz}包画出的图片，
-我们也可以用includegraphics来插入现有的jpg等格式的图片，
-如\autoref{fig:zju-logo}。
+我们可以用includegraphics来插入现有的jpg等格式的图片，
+如\autoref{fig:zju-logo}所示。
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}[thick,help lines/.style={thin,draw=black!50}]
-        \def\A{\textcolor{input}{$A$}} \def\B{\textcolor{input}{$B$}}
-        \def\C{\textcolor{output}{$C$}} \def\D{$D$}
-        \def\E{$E$}
-
-        \colorlet{input}{blue!80!black} \colorlet{output}{red!70!black}
-        \colorlet{triangle}{orange}
-
-        \coordinate [label=left:\A] (A) at ($ (0,0) + .1*(rand,rand) $);
-        \coordinate [label=right:\B] (B) at ($ (1.25,0.25) + .1*(rand,rand) $);
-
-        \draw [input] (A) -- (B);
-
-        \node [name path=D,help lines,draw,label=left:\D] (D) at (A) [circle through=(B)] {};
-        \node [name path=E,help lines,draw,label=right:\E] (E) at (B) [circle through=(A)] {};
-
-        \path [name intersections={of=D and E,by={[label=above:\C]C}}];
-
-        \draw [output] (A) -- (C) -- (B);
-
-        \foreach \point in {A,B,C}
-            \fill [black,opacity=.5] (\point) circle (2pt);
-
-        \begin{pgfonlayer}{background}
-            \fill[triangle!80] (A) -- (C) -- (B) -- cycle;
-        \end{pgfonlayer}
-    \end{tikzpicture}
-
-    \caption{\label{fig:a-figure}这是一张图片}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.4\linewidth]{logo/zju}
+    \includegraphics[width=.3\linewidth]{logo/zju}
     \caption{\label{fig:zju-logo}浙江大学LOGO}
 \end{figure}
 
+
+\subsection{小节标题}
+
+\zhlipsum[1-2][name=xiangyu]
+
 \par 如\autoref{tab:sample}所示，这是一张自动调节列宽的表格。
 
-\begin{table}[ht]
+\begin{table}[htbp]
     \caption{\label{tab:sample}自动调节列宽的表格}
     \begin{tabularx}{\linewidth}{c|X<{\centering}}
         \hline
@@ -86,6 +59,7 @@
     \end{tabularx}
 \end{table}
 
+
 \par 如\autoref{equ:sample}，这是一个公式
 
 \begin{equation}
@@ -93,7 +67,6 @@
     A=\overbrace{(a+b+c)+\underbrace{i(d+e+f)}_{\text{虚数}}}^{\text{复数}}
 \end{equation}
 
+\chapter{另一章}
 
-\section{小节标题}
-
-\subsection{小小节标题}
+% \zhlipsum[1-5][name=xiangyu]

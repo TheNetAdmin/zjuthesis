@@ -1,0 +1,59 @@
+\ifthenelse{\equal{\Degree}{graduate} \AND \equal{\GradLevel}{master}}
+{
+    \ctexset
+    {
+        part =
+        {
+            format=\centering\zihao{-0}\bfseries,
+            nameformat=\centering\heiti\fontsize{48}{48}\bfseries,
+        },
+        chapter =
+        {
+            format=\centering\zihao{-2}\bfseries,
+            name={第, 章},
+            number=\arabic{chapter},
+            beforeskip=18pt,
+            afterskip=18pt,
+            fixskip=true
+        },
+        section =
+        {
+            format=\raggedright\zihao{-3}\bfseries,
+            name={},
+            number=\arabic{chapter}.\arabic{section},
+            beforeskip=5pt,
+            afterskip=0pt,
+            fixskip=true
+        },
+        subsection =
+        {
+            format=\raggedright\zihao{4}\bfseries,
+            name={},
+            number=\arabic{chapter}.\arabic{section}.\arabic{subsection},
+            beforeskip=5pt,
+            afterskip=0pt,
+            fixskip=true
+        },
+        subsubsection =
+        {
+            format=\raggedright\zihao{-4},
+            name={},
+            aftername=~,
+            numbering=true,
+            number=\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection},
+            beforeskip=0pt,
+            afterskip=0pt
+        }
+    }
+
+    \renewcommand{\chapternonum}[1]
+    {
+        \phantomsection
+        \addcontentsline{toc}{chapter}{#1}
+        \markboth{#1}{#1}
+        \begin{center}
+            \heiti \zihao{-2} #1
+        \end{center}
+    }
+}
+{}

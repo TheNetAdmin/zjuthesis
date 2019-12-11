@@ -1,0 +1,20 @@
+\ifthenelse{\equal{\Degree}{graduate} \AND \equal{\GradLevel}{master}}
+{
+    \fancypagestyle{previous}
+    {
+        \fancyhead{}
+        \fancyhead[L]{\zihao{-5}\TitleTypeName}
+        \fancyhead[R]{\zihao{-5}\leftmark}
+        \renewcommand{\headrulewidth}{1pt}
+
+        \fancyfoot{}
+        \fancyfoot[C]{\zihao{-5} \thepage}
+    }
+    \fancypagestyle{common}
+    {
+        \commonhead{}
+        \fancyfoot{}
+        \fancyfoot[C]{\zihao{-5} \thepage}
+    }
+}
+{}
