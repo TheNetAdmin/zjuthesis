@@ -34,7 +34,7 @@
     zihao=-4,
     heading=true,
     UTF8,
-    % twoside
+    twoside
 ]{ctexrep}
 
 \input{config/packages}

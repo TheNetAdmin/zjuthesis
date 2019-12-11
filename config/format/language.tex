@@ -1,10 +1,29 @@
-\ifthenelse{\equal{Language}{english} \AND \equal{Degree}{graduate}}
+\ifthenelse{\equal{\Language}{english} \AND \equal{\Degree}{graduate}}
 {
     % English template format
-    % TOC LOF LOT
+    \ctexset
+    {
+        chapter =
+        {
+            format=\centering\zihao{-3}\bfseries,
+            name={Chapter~, .},
+            number=\arabic{chapter},
+            beforeskip=12pt,
+            afterskip=6pt
+        },
+        figurename    = {Figure},
+        tablename     = {Table},
+        abstractname  = {Abstract},
+        appendixname  = {Appendix},
+        proofname     = {Proof}
+    }
+
     \renewcommand{\contentsname}    {List of Contents}
     \renewcommand{\listfigurename}  {List of Figures}
     \renewcommand{\listtablename}   {List of Tables}
+    \addtolength{\cftfignumwidth}{1em}
+    \addtolength{\cfttabnumwidth}{1em}
+
     \renewcommand{\inputpage}[1]
     {
         \IfFileExists{./page/graduate-eng/#1}
@@ -15,6 +34,7 @@
             \checkandinput{page}{#1}
         }
     }
+
     \renewcommand{\inputbody}[1]
     {
         \IfFileExists{./body/graduate-eng/#1}
@@ -25,6 +45,44 @@
             \input{./body/graduate/#1}
         }
     }
+
+    \renewcommand{\chapternonum}[1]
+    {
+        \phantomsection
+        \addcontentsline{toc}{chapter}{#1}
+        \markboth{#1}{#1}
+        \chapter*{#1}
+    }
+
+    \fancypagestyle{previous}
+    {
+        \fancyhead{}
+        \fancyfoot{}
+    }
+
+    \fancypagestyle{common}
+    {
+        \fancyhead[L]{\includegraphics[height=3em]{logo/zju.pdf}\zihao{5} \leftmark}
+        \fancyfoot[C]{\zihao{-5}\thepage}
+        \renewcommand{\headrulewidth}{0.6pt}
+    }
+
+    \def\equationautorefname        {Equation}
+    \def\footnoteautorefname        {Footnote}
+    \def\figureautorefname          {Figure}
+    \def\tableautorefname           {Table}
+    \def\partautorefname            {Part}
+    \def\chapterautorefname         {Chapter}
+    \def\sectionautorefname         {Section}
+    \def\subsectionautorefname      {Subsection}
+    \def\subsubsectionautorefname   {Subsubsection}
+    \def\paragraphautorefname       {Paragraph}
+    \def\subparagraphautorefname    {Subparagraph}
+    \def\appendixautorefname        {Appendix}
+    \def\FancyVerbLineautorefname   {Line}
+    \def\theoremautorefname         {Theorem}
+    \def\listoffigures              {Code}
+    \def\lstlistingname             {Code}
 }
 {
 

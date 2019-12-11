@@ -104,14 +104,9 @@
 }
 
 % TOC title format
-\ifthenelse{\equal{\Degree}{undergraduate}}
-{
-    \renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\bfseries}
-}
-{
-    \renewcommand{\cfttoctitlefont}{\hfill\zihao{3}}
-}
-\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\bfseries}\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\zihao{3}\bfseries}\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\zihao{3}\bfseries}\renewcommand{\cftafterlottitle}{\hfill}
 
 \setlength{\cftbeforetoctitleskip}{0pt}
 \setlength{\cftaftertoctitleskip}{0pt}
@@ -167,6 +162,7 @@
     \renewcommand{\cftfigpresnum}{\figurename\enspace}
     \settowidth{\listoffiguresnamelen}{\cftfigpresnum\cftfigaftersnum}
     \addtolength{\cftfignumwidth}{\listoffiguresnamelen}
+
     % listoftables
     \newlength{\listoftablesnamelen}
     \renewcommand{\cfttabpresnum}{\tablename\enspace}
