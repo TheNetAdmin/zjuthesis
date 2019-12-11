@@ -1,0 +1,31 @@
+\ifthenelse{\equal{Language}{english} \AND \equal{Degree}{graduate}}
+{
+    % English template format
+    % TOC LOF LOT
+    \renewcommand{\contentsname}    {List of Contents}
+    \renewcommand{\listfigurename}  {List of Figures}
+    \renewcommand{\listtablename}   {List of Tables}
+    \renewcommand{\inputpage}[1]
+    {
+        \IfFileExists{./page/graduate-eng/#1}
+        {
+            \input{./page/graduate-eng/#1}
+        }
+        {
+            \checkandinput{page}{#1}
+        }
+    }
+    \renewcommand{\inputbody}[1]
+    {
+        \IfFileExists{./body/graduate-eng/#1}
+        {
+            \input{./body/graduate-eng/#1}
+        }
+        {
+            \input{./body/graduate/#1}
+        }
+    }
+}
+{
+
+}

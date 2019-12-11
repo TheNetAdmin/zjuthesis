@@ -15,8 +15,8 @@
         a4paper,
         marginpar=0pt,
         includeheadfoot,
-        vmargin={3.0cm, 3.0cm},
-        hmargin={3.1cm, 3.1cm},
+        vmargin={2.0cm, 2.0cm},
+        hmargin={2.5cm, 2.5cm},
         headsep=4mm
     }
 }
@@ -144,10 +144,20 @@
 \renewcommand{\cftsubsecnumwidth}     {1.5em}
 \renewcommand{\cftsubsubsecnumwidth}  {1.5em}
 
-\setlength{\cftchapindent}      {0em}
-\setlength{\cftsecindent}       {2em}
-\setlength{\cftsubsecindent}    {4em}
-\setlength{\cftsubsubsecindent} {6em}
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{
+    \setlength{\cftchapindent}      {0em}
+    \setlength{\cftsecindent}       {2em}
+    \setlength{\cftsubsecindent}    {4em}
+    \setlength{\cftsubsubsecindent} {6em}
+}
+{
+    \setlength{\cftchapindent}      {0em}
+    \setlength{\cftsecindent}       {2em}
+    \setlength{\cftsubsecindent}    {4em}
+    \setlength{\cftsubsubsecindent} {6em}
+    \setlength{\cftbeforechapskip}  {0em}
+}
 
 % graduate template listoffigures/tables
 \ifthenelse{\equal{\Degree}{graduate}}
