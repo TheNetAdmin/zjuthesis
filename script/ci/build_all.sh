@@ -30,7 +30,7 @@ function build() {
     grad_suffix=""
     if [ $1 == "graduate" ]
     then
-        grad_suffix="-master"
+        grad_suffix="-$6"
     fi
 
     lang_suffix=""
@@ -57,7 +57,7 @@ periods=("final" "proposal")
 
 mkdir -p dist
 
-build $degree "general" "thesis" "final" "true"
+build $degree "general" "thesis" "final" "true" "doctor" "chinese"
 
 for major in ${main_majors[@]}; do
     for period in ${periods[@]}; do
