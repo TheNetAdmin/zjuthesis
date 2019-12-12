@@ -18,7 +18,7 @@ function build() {
     sed -i -r "s/GradLevel\s*=\s*.*/GradLevel = $6,/" $texfile
     sed -i -r "s/Language\s*=\s*.*/Language = $7,/" $texfile
 
-    echo -e "Build degree[$1]\tmajor[$2]\ttype[$3]\tperiod[$4]\tblind[$5]\tgrad_level[%6]\tlanguage[$7"
+    echo -e "Build degree[$1]\tmajor[$2]\ttype[$3]\tperiod[$4]\tblind[$5]\tgrad_level[%6]\tlanguage[$7]"
     latexmk -xelatex -outdir=out
 
     blind_suffix=""
@@ -39,7 +39,7 @@ function build() {
         lang_suffix="-english"
     fi
 
-    mv out/zjuthesis.pdf dist/zjuthesis-$1-$2$grad_suffix-$3-$4$blind_suffix$lang_siffix.pdf
+    mv out/zjuthesis.pdf dist/zjuthesis-$1-$2$grad_suffix-$3-$4$blind_suffix$lang_suffix.pdf
 }
 
 project_dir="$( cd "$(dirname "$0")" ; pwd -P )"/../../
