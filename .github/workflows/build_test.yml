@@ -1,0 +1,47 @@
+name: Build Tests
+
+on: [push]
+
+jobs:
+  build_undergrad:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v1
+    - name: Download Fonts
+      run: ./script/ci/setup.sh
+    - name: Pull TexLive Docker
+      uses: docker://adnrv/texlive:full
+    - name: Build Test in Docker
+      run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
+    - name: Upload Output Files
+      uses: actions/upload-artifact@v1
+      with:
+        name: dist
+        path: dist
+    - name: Upload Log Files
+      uses: actions/upload-artifact@v1
+      with:
+        name: out-ci
+        path: out-ci
+  build_grad:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v1
+    - name: Download Fonts
+      run: ./script/ci/setup.sh
+    - name: Pull TexLive Docker
+      uses: docker://adnrv/texlive:full
+    - name: Build Test in Docker
+      run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
+    - name: Upload Output Files
+      uses: actions/upload-artifact@v1
+      with:
+        name: dist
+        path: dist
+    - name: Upload Log Files
+      uses: actions/upload-artifact@v1
+      with:
+        name: out-ci
+        path: out-ci
