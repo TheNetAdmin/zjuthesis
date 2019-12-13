@@ -1,5 +1,6 @@
 ### This project's output files ###
 out/*
+out-*/*
 dist/*
 /*.pdf
 /*.ttf*
