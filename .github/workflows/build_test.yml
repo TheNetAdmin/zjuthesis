@@ -12,5 +12,5 @@ jobs:
     - name: Download Fonts
       run: ./script/ci/setup.sh
     - name: Build Test in Docker
-      run: docker run --mount src=$GITHUB_WORKSPACE/zjuthesis/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/build_all.sh
+      run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/build_all.sh
   
