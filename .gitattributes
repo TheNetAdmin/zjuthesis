@@ -1,6 +1,8 @@
 # GIT ARCHIVE EXPORT
 dist           export-ignore
 out            export-ignore
+out-ci         export-ignore
+TODO.md        export-ignore
 script         export-ignore
 .git           export-ignore
 .github        export-ignore
