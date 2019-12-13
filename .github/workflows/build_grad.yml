@@ -15,7 +15,7 @@ jobs:
     - name: Build Test in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
     - name: Upload Output Files
-      run: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v1
       with:
         name: dist
         path: dist
