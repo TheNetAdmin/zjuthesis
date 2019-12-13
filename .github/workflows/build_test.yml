@@ -1,0 +1,20 @@
+name: Build Test
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Download Fonts
+      run: ./script/ci/setup.sh
+    - name: Build Test in Docker
+      env:
+        HOST_BUILD_DIR: .
+        GUEST_BUILD_DIR: /zjuthesis
+        GUEST_BUILD_SCRIP: /zjuthesis/script/ci/build_all.sh
+      run: docker run --mount src=$HOST_BUILD_DIR/,target=$GUEST_BUILD_DIR,type=bind adnrv/texlive:full $GUEST_BUILD_SCRIPT
+  
