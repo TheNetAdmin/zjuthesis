@@ -3,6 +3,7 @@ name: Build Tests
 on: [push]
 
 jobs:
+
   build_undergrad:
     runs-on: ubuntu-latest
     steps:
@@ -24,6 +25,7 @@ jobs:
       with:
         name: out-ci
         path: out-ci
+
   build_grad:
     runs-on: ubuntu-latest
     steps:
