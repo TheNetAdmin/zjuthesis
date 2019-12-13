@@ -5,8 +5,10 @@ project_path=$this_path/../../../
 
 source $this_path/build_zjuthesis.sh
 
-echo "CD $project_dir"
-cd $project_dir
+echo "CD $project_path"
+cd $project_path
+
+mkdir -p dist
 
 degree="graduate"
 types=("design" "thesis" "equal")

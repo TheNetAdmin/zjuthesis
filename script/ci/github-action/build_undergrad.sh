@@ -5,8 +5,8 @@ project_path=$this_path/../../../
 
 source $this_path/build_zjuthesis.sh
 
-echo "CD $project_dir"
-cd $project_dir
+echo "CD $project_path"
+cd $project_path
 
 degree="undergraduate"
 main_majors=("general" "cs")

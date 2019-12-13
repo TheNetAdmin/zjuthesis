@@ -19,4 +19,9 @@ jobs:
       with:
         name: dist
         path: dist
-  
+    - name: Upload Log Files
+      uses: actions/upload-artifact@v1
+      with:
+        name: out-ci
+        path: out-ci
+

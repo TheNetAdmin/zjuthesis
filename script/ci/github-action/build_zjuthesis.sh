@@ -27,7 +27,7 @@ function build_zjuthesis() {
         "\n\tgrad_level [$6]" \
         "\n\tlanguage   [$7]"
     local build_suffix=$1-$2$grad_suffix-$3-$4$blind_suffix$lang_suffix
-    local out_path=out-$build_suffix
+    local out_path=out-ci/$build_suffix
     latexmk -xelatex -outdir=$out_path
 
     blind_suffix=""
