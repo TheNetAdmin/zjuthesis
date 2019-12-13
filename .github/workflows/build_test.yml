@@ -11,6 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Download Fonts
       run: ./script/ci/setup.sh
+    - uses: docker://adnrv/texlive:full
     - name: Build Test in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/build_all.sh
   
