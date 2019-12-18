@@ -8,6 +8,7 @@ script         export-ignore
 .github        export-ignore
 .travis.yml    export-ignore
 *.ttf*         export-ignore
+*.ttc*         export-ignore
 .gitattributes export-ignore
 
 # TEX FILES
