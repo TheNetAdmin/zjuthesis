@@ -5,6 +5,9 @@ on:
     tags: 
       - '*'
 
+env:
+  code_tag: ${GITHUB_REF#refs/tags/}
+
 # TODO: use `cache` from previous test build jobs
 jobs:
   release_code:
@@ -12,18 +15,38 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v1
+    
     - name: Pack Release Code
       run: ./script/release/package_release.sh dist
+    
     - name: Download Fonts
       run: ./script/ci/setup.sh
+    
     - name: Pull TexLive Docker
       uses: docker://adnrv/texlive:full
+    
     - name: Build Undergrad in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
+    
     - name: Build Grad in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
+    
+    - name: Print Info
+      run: echo ${code_tag}
+      
     - name: Release Code and Sample Files
+      if: "!contains(code_tag, 'rc')"
       uses: ncipollo/release-action@v1.4.0
       with:
         artifacts: "dist/*.pdf,dist/*.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
+        allowUpdates: true
+    
+    - name: Pre-Release Code and Sample Files
+      if: "contains(code_tag, 'rc')"
+      uses: ncipollo/release-action@v1.4.0
+      with:
+        artifacts: "dist/*.pdf,dist/*.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        allowUpdates: true
+        prelease: true
