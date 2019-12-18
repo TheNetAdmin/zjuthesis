@@ -2,18 +2,17 @@
 dist           export-ignore
 out            export-ignore
 out-ci         export-ignore
-TODO.md        export-ignore
 script         export-ignore
 .git           export-ignore
 .github        export-ignore
-.travis.yml    export-ignore
 *.ttf*         export-ignore
 *.ttc*         export-ignore
 .gitattributes export-ignore
 
-# TEX FILES
+# Text FILES
 *.tex   text eol=lf
 *.bib   text eol=lf
+*.md    text eol=lf
 
 ## GRAPHICS
 *.ai   binary
