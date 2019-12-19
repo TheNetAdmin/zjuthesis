@@ -3,7 +3,7 @@
 ![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)
 ![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)
 ![GitHub All Releases](https://img.shields.io/github/downloads/thenetadmin/zjuthesis/total.svg?color=blue&style=popout)
-![TravisCI](https://travis-ci.org/TheNetAdmin/zjuthesis.svg?branch=master)
+![GithubAction](https://github.com/TheNetAdmin/zjuthesis/workflows/Build%20Tests/badge.svg)
 
 ## 简介
 
