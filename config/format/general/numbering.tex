@@ -1,3 +1,6 @@
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{
+
 \renewcommand*{\thesection}{\arabic{section}}
 
 \counterwithin*{figure}{section}
@@ -11,3 +14,20 @@
 
 \counterwithin*{equation}{section}
 \renewcommand{\theequation}{\thesection-\arabic{equation}}
+
+}
+{
+
+\counterwithin*{figure}{chapter}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+\counterwithin*{table}{chapter}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
+\AtBeginDocument{\counterwithin*{lstlisting}{chapter}}
+\AtBeginDocument{\renewcommand{\thelstlisting}{\arabic{chapter}.\arabic{lstlisting}}}
+
+\counterwithin*{equation}{chapter}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
+
+}
