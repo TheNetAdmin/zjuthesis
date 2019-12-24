@@ -13,7 +13,7 @@ This is a LaTeX template for Zhejiang University graduation thesis/design.
 It comes with undergraduate and graduate (master and phd) template.
 It also comes with an English template for graduate students.
 
-[CC98校内讨论贴](http://cc98.org/topic/4762356)
+[CC98校内讨论贴](https://www.cc98.org/topic/4762356)
 
 ## 使用
 
