@@ -59,6 +59,7 @@
         \commonhead{}
         \fancyfoot{}
         \fancyfoot[OC,EC]{\zihao{-5}\Roman{page}}
+        \pagenumbering{Roman}
     }
 }
 {
@@ -171,3 +172,33 @@
 }
 {}
 
+\newcommand{\coverstyle}
+{
+    \pagestyle{empty}
+}
+
+\newcommand{\prevstyle}
+{
+    \cleardoublepage{}
+    \thispagestyle{previous}
+    \pagestyle{previous}
+    \pagenumbering{Roman}
+    \setcounter{page}{1}
+    \numberingstyle{}
+}
+
+\newcommand{\bodystyle}
+{
+    \cleardoublepage{}
+    \thispagestyle{common}
+    \pagestyle{common}
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+}
+
+\newcommand{\poststyle}
+{
+    \cleardoublepage{}
+    \thispagestyle{empty}
+    \pagestyle{empty}
+}

@@ -23,17 +23,26 @@
     \counterwithin*{table}{chapter}
     \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
 
-    \AtBeginDocument{\counterwithin*{lstlisting}{chapter}}
-    \AtBeginDocument{\renewcommand{\thelstlisting}{\arabic{chapter}.\arabic{lstlisting}}}
+    \counterwithin*{lstlisting}{chapter}
+    \renewcommand{\thelstlisting}{\arabic{chapter}.\arabic{lstlisting}}
 
     \counterwithin*{equation}{chapter}
     \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 }
 
-\ifthenelse{\equal{\Degree}{undergraduate}}
+\newcommand{\numberingstyle}
 {
-    \AtBeginDocument{\sectionmajornumbering}
-}
-{
-    \AtBeginDocument{\chaptermajornumbering}
+    \ifthenelse{\equal{\Degree}{undergraduate}}
+    {
+        \ifthenelse{\equal{\undergradcurrstage}{proposal}}
+        {
+            \chaptermajornumbering
+        }
+        {
+            \sectionmajornumbering
+        }
+    }
+    {
+        \chaptermajornumbering
+    }
 }

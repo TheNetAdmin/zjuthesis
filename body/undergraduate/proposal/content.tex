@@ -1,15 +1,4 @@
-% Contents
-\cleardoublestylepage{empty}
-\thispagestyle{common}
-\pagestyle{common}
-\setcounter{page}{1}
-
-% FIXME: set as first page if inside `proposal`
-\ifthenelse{\equal{\Period}{proposal}}
-{
-    \setcounter{page}{1}
-}
-{}
+\cleardoublepage
 
 \ifthenelse{\equal{\Type}{thesis}}
 {
@@ -29,6 +18,6 @@
         \inputbody{proposal/midcheck/midcheck}
     }
     {
-        % otherwise, blank
+        % Wrong Input
     }
 }
