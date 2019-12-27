@@ -1,33 +1,39 @@
+\newcommand{\sectionmajornumbering}
+{
+    % \renewcommand*{\thesection}{\arabic{section}}
+
+    \counterwithin*{figure}{section}
+    \renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+    \counterwithin*{table}{section}
+    \renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+
+    \counterwithin*{lstlisting}{section}
+    \renewcommand{\thelstlisting}{\arabic{section}.\arabic{lstlisting}}
+
+    \counterwithin*{equation}{section}
+    \renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
+}
+
+\newcommand{\chaptermajornumbering}
+{
+    \counterwithin*{figure}{chapter}
+    \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+    \counterwithin*{table}{chapter}
+    \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
+    \AtBeginDocument{\counterwithin*{lstlisting}{chapter}}
+    \AtBeginDocument{\renewcommand{\thelstlisting}{\arabic{chapter}.\arabic{lstlisting}}}
+
+    \counterwithin*{equation}{chapter}
+    \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
+}
+
 \ifthenelse{\equal{\Degree}{undergraduate}}
 {
-
-\renewcommand*{\thesection}{\arabic{section}}
-
-\counterwithin*{figure}{section}
-\renewcommand{\thefigure}{\thesection.\arabic{figure}}
-
-\counterwithin*{table}{section}
-\renewcommand{\thetable}{\thesection.\arabic{table}}
-
-\AtBeginDocument{\counterwithin*{lstlisting}{section}}
-\AtBeginDocument{\renewcommand{\thelstlisting}{\thesection.\arabic{lstlisting}}}
-
-\counterwithin*{equation}{section}
-\renewcommand{\theequation}{\thesection-\arabic{equation}}
-
+    \AtBeginDocument{\sectionmajornumbering}
 }
 {
-
-\counterwithin*{figure}{chapter}
-\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
-
-\counterwithin*{table}{chapter}
-\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
-
-\AtBeginDocument{\counterwithin*{lstlisting}{chapter}}
-\AtBeginDocument{\renewcommand{\thelstlisting}{\arabic{chapter}.\arabic{lstlisting}}}
-
-\counterwithin*{equation}{chapter}
-\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
-
+    \AtBeginDocument{\chaptermajornumbering}
 }

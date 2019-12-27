@@ -68,7 +68,8 @@ please open a new issue and discuss the details and requirements.
 1. 扩展格式的 `\usepackage{packagename}` 尽量放在其所在子目录下的 `packages.tex` 内，不要放在 `config/packages.tex` 内。
    
    这样可以避免其他专业同学使用时产生 package 冲突或额外引入。
-   同时由于 XeTeX 编译速度很慢，减少不必要的 package 可以提高编译效率。样例模板使用了 Tikz package，如果大家写论文时不需要这个包，可以将其删除。
+   同时由于 XeTeX 编译速度很慢，减少不必要的 package 可以提高编译效率。
+
 1. 最后修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat` ，使用新格式的目录名即可
 1. 现在支持的专业模板如下
 
