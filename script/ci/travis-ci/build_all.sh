@@ -75,7 +75,7 @@ done
 # Build graduate
 
 degree="graduate"
-types=("design" "thesis" "equal")
+types=("design" "thesis")
 
 build $degree "general" "thesis" "final" "true" "doctor" "chinese"
 

@@ -36,7 +36,6 @@ It also comes with an English template for graduate students.
    | :------------------- | :----------------------------------- | :------------------------------------- | :----------- |
    | thesis: 学术论文     | true: 生成盲审用 pdf（隐藏个人信息） | 默认: general                          | master: 硕士 |
    | design: 专业学术论文 | false: 生成提交用 pdf                | 与 `config/format/major/` 下目录名相同 | doctor: 博士 |
-   | equal: 同等学力论文  |                                      |                                        |
 
 1. 在 `body` 目录下编写内容
 1. 在 `pages` 目录下填写必要的内容，如审核评语等

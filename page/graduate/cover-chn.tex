@@ -29,13 +29,7 @@
         博士/硕士专业学位论文
     }
     {%
-    \ifthenelse{\equal{\Type}{equal}}
-    {%
-        同等学力申请博士/硕士学位论文
-    }
-    {%
         标题错误，请检查论文类别是否正确
-    }
     }
     }
 \end{center}
@@ -66,12 +60,8 @@
         \ifthenelse{\equal{\BlindReview}{true}}%
         {%
             申请人姓名： & \uline{\hfill} \\
-            指导教师： & \uline{\hfill} \\
-            \ifthenelse{\equal{\Type}{equal}}
-            {}
-            {%
-                合作导师：   &  \uline{\hfill} \\
-            }
+            指导教师：   & \uline{\hfill} \\
+            合作导师：   &  \uline{\hfill} \\
             \ifthenelse{\equal{\Type}{design}}
             {%
                 专业学位类别：  &  \uline{\hfill} \\
@@ -81,22 +71,12 @@
                 学科(专业)：  &  \uline{\hfill} \\
                 研究方向：  &  \uline{\hfill} \\
             }
-            \ifthenelse{\equal{\Type}{equal}}
-            {%
-                申请人单位：   &  \uline{\hfill} \\
-            }
-            {%
-                所在学院：   &  \uline{\hfill} \\
-            }
+            所在学院：   &  \uline{\hfill} \\
         }
         {%
             申请人姓名： & \uline{\hfill \StudentName \hfill} \\
-            指导教师： & \uline{\hfill \AdvisorName \hfill} \\
-            \ifthenelse{\equal{\Type}{equal}}
-            {}
-            {%
-                合作导师：   &  \uline{\hfill \ColaboratorName \hfill} \\
-            }
+            指导教师：   & \uline{\hfill \AdvisorName \hfill} \\
+            合作导师：   &  \uline{\hfill \ColaboratorName \hfill} \\
             \ifthenelse{\equal{\Type}{design}}
             {%
                 专业学位类别：  &  \uline{\hfill \Major \hfill} \\
@@ -106,13 +86,7 @@
                 学科(专业)：  &  \uline{\hfill \Major \hfill} \\
                 研究方向：  &  \uline{\hfill \Topic \hfill} \\
             }
-            \ifthenelse{\equal{\Type}{equal}}
-            {%
-                申请人单位：   &  \uline{\hfill \Department \hfill} \\
-            }
-            {%
-                所在学院：   &  \uline{\hfill \Department \hfill} \\
-            }
+            所在学院：   &  \uline{\hfill \Department \hfill} \\
         }
     \end{tabularx}
 \end{center}

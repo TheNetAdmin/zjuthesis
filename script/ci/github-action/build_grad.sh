@@ -11,7 +11,7 @@ cd $project_path
 mkdir -p dist
 
 degree="graduate"
-types=("design" "thesis" "equal")
+types=("design" "thesis")
 
 build_zjuthesis $degree "general" "thesis" "final" "true" "doctor" "chinese"
 

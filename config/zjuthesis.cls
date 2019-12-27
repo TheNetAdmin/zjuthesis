@@ -61,10 +61,6 @@
             \newcommand{\TitleTypeName}{浙江大学博士学位论文}
             \newcommand{\TitleTypeNameCover}{博士学位论文}
         }
-        {
-            % equal
-            \newcommand{\TitleTypeName}{同等学力申请浙江大学博士学位论文}
-        }
     }
     {
         % master
@@ -73,10 +69,6 @@
             % thesis or design
             \newcommand{\TitleTypeName}{浙江大学硕士学位论文}
             \newcommand{\TitleTypeNameCover}{硕士学位论文}
-        }
-        {
-            % equal
-            \newcommand{\TitleTypeName}{同等学力申请浙江大学硕士学位论文}
         }
     }
 }
