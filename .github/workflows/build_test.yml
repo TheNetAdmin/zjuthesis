@@ -6,8 +6,7 @@ on:
       - ".github/**"
       - "script/**"
       - ".git**"
-      - "README.md"
-      - "LICENSE"
+      - "**/*.md"
 #     paths: 
 #       - "**/*.tex"
 #       - "**/*.cls"
