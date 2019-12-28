@@ -4,6 +4,7 @@
 ![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)
 ![GitHub All Releases](https://img.shields.io/github/downloads/thenetadmin/zjuthesis/total.svg?color=blue&style=popout)
 ![GithubAction](https://github.com/TheNetAdmin/zjuthesis/workflows/Build%20Tests/badge.svg)
+[![Gitter](https://badges.gitter.im/zjuthesis/community.svg)](https://gitter.im/zjuthesis/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## 简介
 
@@ -111,6 +112,10 @@ please open a new issue and discuss the details and requirements.
 这样你的论文内容总是与样式分离，可以分别更新
 
 ## Q & A
+
+1. Q: 聊天室/群？
+
+   A: [![Gitter](https://badges.gitter.im/zjuthesis/community.svg)](https://gitter.im/zjuthesis/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 1. Q: 没有我所在专业的格式？
 
