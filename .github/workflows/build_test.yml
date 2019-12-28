@@ -6,16 +6,7 @@ on:
       - ".github/**"
       - "script/**"
       - ".git**"
-      - "**/*.md"
-#     paths: 
-#       - "**/*.tex"
-#       - "**/*.cls"
-#       - "**/*.bib"
-#       - "body/**"
-#       - "config/**"
-#       - "figure/**"
-#       - "page/**"
-#       - ".latexmkrc"
+      - "**.md"
 
 jobs:
 
