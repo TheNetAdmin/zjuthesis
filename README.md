@@ -4,6 +4,7 @@
 ![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)
 ![GitHub All Releases](https://img.shields.io/github/downloads/thenetadmin/zjuthesis/total.svg?color=blue&style=popout)
 ![GithubAction](https://github.com/TheNetAdmin/zjuthesis/workflows/Build%20Tests/badge.svg)
+[![Gitter](https://badges.gitter.im/zjuthesis/community.svg)](https://gitter.im/zjuthesis/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## 简介
 
@@ -112,6 +113,10 @@ please open a new issue and discuss the details and requirements.
 
 ## Q & A
 
+1. Q: 聊天室/群？
+
+   A: [![Gitter](https://badges.gitter.im/zjuthesis/community.svg)](https://gitter.im/zjuthesis/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 1. Q: 没有我所在专业的格式？
 
    A: 由于个人精力有限，难以查阅并编写各系具体要求的格式，如果同学们有相关需求，可以：
@@ -186,7 +191,7 @@ please open a new issue and discuss the details and requirements.
    1. 用 vscode 打开根目录下的 zjuthesis.tex 文件，Ctrl+Shift+P 打开命令窗口，`LaTeX Workshop: Build with recipe` => `latexmk (latexmkrc)`
    2. 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
 
-1) 其他问题请在 [GitHub issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
+1. 其他问题请在 [GitHub issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
 
    请各位同学遇到问题尽量在 GitHub issue 里提出，这样方便有同样问题的同学查询。
 
