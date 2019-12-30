@@ -1,1 +1,7 @@
+title: zjuthesis
+description: 浙江大学毕业设计/论文 LaTeX 模板
 theme: jekyll-theme-slate
+show_downloads: false
+github:
+  zip_url: https://github.com/TheNetAdmin/zjuthesis/releases/latest
+  tar_url: https://github.com/TheNetAdmin/zjuthesis/releases/latest
