@@ -64,3 +64,5 @@ jobs:
     steps:
       - name: Pass on [ci skip]
         run: echo ci skip by git commit
+      - name: Current version
+        run: echo ${GITHUB_REF#refs/tags/}
