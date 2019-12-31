@@ -35,7 +35,7 @@ jobs:
       run: echo ${code_tag}
       
     - name: Release Code and Sample Files
-      if: "!contains(${GITHUB_REF##refs/tags/}, 'rc')"
+      if: "!contains(github.ref, 'rc')"
       uses: ncipollo/release-action@v1.4.0
       with:
         artifacts: "dist/*.pdf,dist/*.zip"
@@ -43,7 +43,7 @@ jobs:
         allowUpdates: true
     
     - name: Pre-Release Code and Sample Files
-      if: "contains(${GITHUB_REF##refs/tags/}, 'rc')"
+      if: "contains(github.ref, 'rc')"
       uses: ncipollo/release-action@v1.4.0
       with:
         artifacts: "dist/*.pdf,dist/*.zip"
