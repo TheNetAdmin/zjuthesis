@@ -26,10 +26,7 @@ function build_zjuthesis() {
         "\n\tblind      [$5]" \
         "\n\tgrad_level [$6]" \
         "\n\tlanguage   [$7]"
-    local build_suffix=$1-$2$grad_suffix-$3-$4$blind_suffix$lang_suffix
-    local out_path=out-ci/$build_suffix
-    latexmk -xelatex -outdir=$out_path
-
+    
     blind_suffix=""
     if [ $5 == "true" ]
     then
@@ -47,6 +44,10 @@ function build_zjuthesis() {
     then
         lang_suffix="-english"
     fi
+    
+    local build_suffix=$1-$2$grad_suffix-$3-$4$blind_suffix$lang_suffix
+    local out_path=out-ci/$build_suffix
+    latexmk -xelatex -outdir=$out_path
 
     cp $out_path/zjuthesis.pdf dist/zjuthesis-$build_suffix.pdf
 }
