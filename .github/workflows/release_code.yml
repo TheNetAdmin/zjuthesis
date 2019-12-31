@@ -5,9 +5,6 @@ on:
     tags: 
       - '*'
 
-env:
-  code_tag: ${GITHUB_REF#refs/tags/}
-
 # TODO: use `cache` from previous test build jobs
 jobs:
   release_code:
@@ -19,6 +16,13 @@ jobs:
     - name: Pack Release Code
       run: ./script/release/package_release.sh dist
     
+    - name: Current version
+      run: echo $GITHUB_REF
+
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
     - name: Download Fonts
       run: ./script/ci/setup.sh
     
@@ -35,7 +39,7 @@ jobs:
       run: echo ${code_tag}
       
     - name: Release Code and Sample Files
-      if: "!contains(code_tag, 'rc')"
+      if: "!contains(${{ steps.get_version.outputs.VERSION }}, 'rc')"
       uses: ncipollo/release-action@v1.4.0
       with:
         artifacts: "dist/*.pdf,dist/*.zip"
@@ -43,7 +47,7 @@ jobs:
         allowUpdates: true
     
     - name: Pre-Release Code and Sample Files
-      if: "contains(code_tag, 'rc')"
+      if: "contains(${{ steps.get_version.outputs.VERSION }}, 'rc')"
       uses: ncipollo/release-action@v1.4.0
       with:
         artifacts: "dist/*.pdf,dist/*.zip"
