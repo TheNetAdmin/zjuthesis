@@ -49,4 +49,4 @@ jobs:
         artifacts: "dist/*.pdf,dist/*.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: true
-        prelease: true
+        prerelease: true
