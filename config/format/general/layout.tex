@@ -140,18 +140,16 @@
 \renewcommand{\cftsubsecnumwidth}     {1.5em}
 \renewcommand{\cftsubsubsecnumwidth}  {1.5em}
 
+\setlength{\cftchapindent}      {0em}
+\setlength{\cftsecindent}       {2em}
+\setlength{\cftsubsecindent}    {4em}
+\setlength{\cftsubsubsecindent} {6em}
+
 \ifthenelse{\equal{\Degree}{undergraduate}}
 {
-    \setlength{\cftchapindent}      {0em}
-    \setlength{\cftsecindent}       {2em}
-    \setlength{\cftsubsecindent}    {4em}
-    \setlength{\cftsubsubsecindent} {6em}
+    %
 }
 {
-    \setlength{\cftchapindent}      {0em}
-    \setlength{\cftsecindent}       {2em}
-    \setlength{\cftsubsecindent}    {4em}
-    \setlength{\cftsubsubsecindent} {6em}
     \setlength{\cftbeforechapskip}  {0em}
 }
 

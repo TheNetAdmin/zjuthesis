@@ -1,6 +1,6 @@
 #!/bin/bash
 
-old_ver=$(perl -lne 'print $1 if /([0-9]+\.[0-9]+\.[0-9]+)/' config/version.tex)
+old_ver=$(perl -lne 'print $1 if /([0-9]+\.[0-9]+\.[0-9]+[-\drc]*)/' config/version.tex)
 new_ver=$1
 
 if [ -z $new_ver ]

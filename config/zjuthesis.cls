@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{zjuthesis}
     [Zhejiang University Thesis and Design Template, Zixuan Wang zxwang42@gmail.com]
+\input{config/version}
+\message{zjuthesis version: \zjuthesisversion}
 
 \RequirePackage{kvoptions}
 
@@ -15,6 +17,7 @@
 \DeclareStringOption{Major}
 \DeclareStringOption{Department}
 \DeclareStringOption{Title}
+\DeclareStringOption{TitleEng}
 \DeclareStringOption{SubmitDate}
 \DeclareStringOption[undergraduate]{Degree}
 \DeclareStringOption[general]{MajorFormat}
@@ -61,14 +64,20 @@
             \newcommand{\TitleTypeName}{浙江大学博士学位论文}
             \newcommand{\TitleTypeNameCover}{博士学位论文}
         }
+        {}
     }
     {
         % master
-        \ifthenelse{\equal{\Type}{thesis} \OR \equal{\Type}{design}}
+        \ifthenelse{\equal{\Type}{thesis}}
         {
-            % thesis or design
+            % thesis
             \newcommand{\TitleTypeName}{浙江大学硕士学位论文}
             \newcommand{\TitleTypeNameCover}{硕士学位论文}
+        }
+        {
+            % design
+            \newcommand{\TitleTypeName}{浙江大学硕士专业学位论文}
+            \newcommand{\TitleTypeNameCover}{硕士专业学位论文}
         }
     }
 }
@@ -76,4 +85,3 @@
 \input{config/path}
 \input{config/commands}
 \input{config/format/format}
-\input{config/version}

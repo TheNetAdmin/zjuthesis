@@ -19,19 +19,7 @@
 
 \begin{center}
     \zihao{-1} \songti%
-    \ifthenelse{\equal{\Type}{thesis}}
-    {%
-        博士/硕士学位论文
-    }
-    {
-    \ifthenelse{\equal{\Type}{design}}
-    {%
-        博士/硕士专业学位论文
-    }
-    {%
-        标题错误，请检查论文类别是否正确
-    }
-    }
+    \TitleTypeNameCover
 \end{center}
 
 \vskip 20pt
@@ -45,9 +33,9 @@
 \begin{center}
     \bfseries \zihao{-2}
     \begin{tabularx}{.8\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
-        中文论文题目：      &  \uline{\hfill} \\
+        中文论文题目：      &  \uline{\hfill \Title{} \hfill} \\
                           &  \uline{\hfill} \\
-        英文论文题目：      &  \uline{\hfill} \\
+        英文论文题目：      &  \uline{\hfill \TitleEng{} \hfill} \\
                           &  \uline{\hfill} \\
     \end{tabularx}
 \end{center}
