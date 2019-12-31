@@ -18,6 +18,8 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v1
+    - name: Current version
+      run: echo ${GITHUB_REF#refs/tags/}
     - name: Download Fonts
       run: ./script/ci/setup.sh
     - name: Pull TexLive Docker
@@ -41,6 +43,8 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v1
+    - name: Current version
+      run: echo ${GITHUB_REF#refs/tags/}
     - name: Download Fonts
       run: ./script/ci/setup.sh
     - name: Pull TexLive Docker
