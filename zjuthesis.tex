@@ -43,12 +43,12 @@
         \inputpage{final/previous}
         \inputpage{final/toc}
 
+        \bodystyle
         \cleardoublepage
         \ifthenelse{\equal{\Type}{design}}
             {\part{毕业设计}}
             {\part{毕业论文}}
         
-        \bodystyle
         \inputbody{final/content}
 
         \poststyle
@@ -58,12 +58,12 @@
         \renewcommand{\undergradcurrstage}{proposal}
         \newrefsection
 
+        \coverstyle
         \cleardoublepage
         \ifthenelse{\equal{\Type}{design}}
             {\part{毕业设计开题报告}}
             {\part{毕业论文开题报告}}
 
-        \coverstyle
         \inputpage{proposal/cover}
         \inputpage{proposal/previous}
         
