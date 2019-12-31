@@ -19,11 +19,9 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v1
     - name: Current version
-      run: echo ${GITHUB_REF#refs/tags/}
+      run: echo $GITHUB_REF
     - name: Download Fonts
       run: ./script/ci/setup.sh
-    - name: Pull TexLive Docker
-      uses: docker://adnrv/texlive:full
     - name: Build Test in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
     - name: Upload Output Files
@@ -44,11 +42,9 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v1
     - name: Current version
-      run: echo ${GITHUB_REF#refs/tags/}
+      run: echo $GITHUB_REF
     - name: Download Fonts
       run: ./script/ci/setup.sh
-    - name: Pull TexLive Docker
-      uses: docker://adnrv/texlive:full
     - name: Build Test in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
     - name: Upload Output Files
@@ -69,4 +65,4 @@ jobs:
       - name: Pass on [ci skip]
         run: echo ci skip by git commit
       - name: Current version
-        run: echo ${GITHUB_REF#refs/tags/}
+        run: echo ${GITHUB_REF}
