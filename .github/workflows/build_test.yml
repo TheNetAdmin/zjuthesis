@@ -9,6 +9,8 @@ on:
       - "**.md"
       - "docs/**"
       - "**/*.md"
+    tags-ignore:
+      - "**"
 
 jobs:
 
