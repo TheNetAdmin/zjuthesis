@@ -197,6 +197,13 @@
 \newcommand{\poststyle}
 {
     \cleardoublepage{}
-    \thispagestyle{empty}
-    \pagestyle{empty}
+    \ifthenelse{\equal{\Degree}{graduate}}
+    {
+        \thispagestyle{common}
+        \pagestyle{common}
+    }
+    {
+        \thispagestyle{empty}
+        \pagestyle{empty}
+    }
 }
