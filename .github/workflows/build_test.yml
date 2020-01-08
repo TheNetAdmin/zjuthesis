@@ -9,6 +9,7 @@ on:
       - "**.md"
       - "docs/**"
       - "**/*.md"
+      - "LICENSE"
 
 jobs:
 
