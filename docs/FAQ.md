@@ -1,5 +1,8 @@
 # FAQ
 
+
+## 常见问题
+
 1. Q: 聊天室/群？
 
    A: [![Gitter](https://badges.gitter.im/zjuthesis/community.svg)](https://gitter.im/zjuthesis/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
@@ -10,16 +13,6 @@
 
    - **在 GitHub 上提出 Pull Request，贡献你编写的代码**
    - 在 GitHub 上提出 issue，附上模板格式要求
-
-1. Q: latexmk 编译不通过？
-
-   A: 可以先尝试执行 `tlmgr update --self --all` 更新整个 TeXLive，然后重新编译。因为直接安装的 TeXLive 并不包含所有最新版本的宏包，一些旧版宏包的 BUG 可能会影响编译。
-
-1. Q: 参考文献编译有问题？
-
-   A: 如果你的参考文献没有出现在 pdf 中，请尝试使用 `latexmk` 命令编译，或者使用 `biber` 命令编译参考文献。
-   LaTeX 的参考文献需要额外编译一次，单独的 `xelatex` 并不会编译参考文献。
-   不过 `latexmk` 会追踪参考文献内容变化，并自动编译参考文献，所以建议大家使用 `latexmk` 来编译文档。
 
 1. Q: 如何配合查重？
 
@@ -57,6 +50,30 @@
 
    如果需要了解具体发生了什么，请查阅 zjuthesis.log ，在文件内搜索 warning 和 error ，看一下是否有字体相关的报错。
 
+## 编译
+
+1. Q: latexmk 编译不通过？
+
+   A: 可以先尝试执行 `tlmgr update --self --all` 更新整个 TeXLive，然后重新编译。因为直接安装的 TeXLive 并不包含所有最新版本的宏包，一些旧版宏包的 BUG 可能会影响编译。
+
+## 参考文献与引用
+
+1. Q: 参考文献编译有问题？
+
+   A: 如果你的参考文献没有出现在 pdf 中，请尝试使用 `latexmk` 命令编译，或者使用 `biber` 命令编译参考文献。
+   LaTeX 的参考文献需要额外编译一次，单独的 `xelatex` 并不会编译参考文献。
+   不过 `latexmk` 会追踪参考文献内容变化，并自动编译参考文献，所以建议大家使用 `latexmk` 来编译文档。
+   
+1. Q: 非上标引用？
+
+   A: 使用 `\parencite{}` 而非 `\cite{}`，参考 [GitHub Issue](https://github.com/TheNetAdmin/zjuthesis/issues/34) 讨论。
+   
+1. Q: 参考文献作者姓名为何是全大写的？
+
+   A: 这是 `gb7714-2015` 标准规定的，参考 [GitHub Issue](https://github.com/TheNetAdmin/zjuthesis/issues/23) 讨论。
+
+## 工具使用
+
 1. Q: 怎么在 Overleaf 上使用？
 
    A: 下载本模板并在 Overleaf 上上传 .zip 文件，选择使用 XeLatex 编译器。
@@ -77,6 +94,8 @@
 
    1. 用 vscode 打开根目录下的 zjuthesis.tex 文件，Ctrl+Shift+P 打开命令窗口，`LaTeX Workshop: Build with recipe` => `latexmk (latexmkrc)`
    2. 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
+
+## 其他
 
 1. 其他问题请在 [GitHub issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
 
