@@ -78,8 +78,6 @@
    1. 用 vscode 打开根目录下的 zjuthesis.tex 文件，Ctrl+Shift+P 打开命令窗口，`LaTeX Workshop: Build with recipe` => `latexmk (latexmkrc)`
    2. 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
 
-1. 更多文档请查阅 [项目首页](https://thenetadmin.github.io/zjuthesis)
-
 1. 其他问题请在 [GitHub issue](https://github.com/TheNetAdmin/zjuthesis/issues/) 提出。
 
    请各位同学遇到问题尽量在 GitHub issue 里提出，这样方便有同样问题的同学查询。
