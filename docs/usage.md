@@ -1,20 +1,4 @@
-# 浙江大学毕业设计/论文 LaTeX 模板
-
-![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)
-![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)
-![GitHub All Releases](https://img.shields.io/github/downloads/thenetadmin/zjuthesis/total.svg?color=blue&style=popout)
-![GithubAction](https://github.com/TheNetAdmin/zjuthesis/workflows/Build%20Tests/badge.svg)
-[![Gitter](https://badges.gitter.im/zjuthesis/community.svg)](https://gitter.im/zjuthesis/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-## 简介
-
-本项目为浙江大学毕业设计/论文的 LaTeX 模板，包含本科生、硕士生与博士生模板，以及英文硕博士模板。
-
-This is a LaTeX template for Zhejiang University graduation thesis/design.
-It provides undergraduate and graduate (master and phd) template.
-It also provides an English template for graduate students.
-
-[CC98 校内讨论贴](https://www.cc98.org/topic/4762356)
+# 使用手册
 
 ## 使用
 
@@ -49,7 +33,7 @@ It also provides an English template for graduate students.
 > - 本模板默认情况下使用 `general` 格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板
 
-## English Template Usage
+## For English graduate template user
 
 Set `\documentclass` fields:
 
@@ -65,12 +49,26 @@ This template only comes with English graduate student template,
 if you are interested in English undergraduate template,
 please open a new issue and discuss the details and requirements.
 
-## 参考文档
+## Slide 模板
 
-常见问题与解决方案请参考[FAQ](./docs/FAQ.md)，模板使用请参考[使用手册](./docs/usage.md)，模板修改与二次开发请参考[开发手册](./docs/develop.md)。
+1. 这是之前分享在浙大云盘的一个 Slide 模板，现在转移到 GitHub 方便同学们连同 LaTeX 模板一起下载:
 
-## 开源许可
+   - [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
+   - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide)（国内网络用这个链接下载比较快）
 
-本项目代码部分基于 MIT 协议开源
+## 高级使用教程
 
-学校标志与学校文件的版权归浙江大学所有
+如果你熟悉 git 的用法，希望用 git 来管理自己的论文，并且保持最新的样式，可以采用如下方法：
+
+1. fork 本 repo，必要的话可以设置为 private
+   > 如果你不想使用 GitHub，可以直接 git clone 本 repo 并同步到其他的 git repo 中。
+   > 但一定要保持原有的 commit，并且设置好指向原始 repo 的 remote url，这样才能进行后续的样式更新。
+1. 新开 branch，在这个 branch 上编写论文内容
+1. 需要与最新样式同步时：
+   1. 先 commit 论文分支
+   1. 切换到 master 分支，从原始 repo 执行 git pull
+   1. 然后切换到论文分支，将其 rebase 到 master 分支最新的 commit，并逐步修复 conflict
+   1. git push 到你的 repo 中
+1. 然后在论文分支继续编写内容
+
+这样你的论文内容总是与样式分离，可以分别更新
