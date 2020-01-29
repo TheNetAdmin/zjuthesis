@@ -1,13 +1,15 @@
 # GIT ARCHIVE EXPORT
-dist           export-ignore
-out            export-ignore
-out-ci         export-ignore
-script         export-ignore
-.git           export-ignore
-.github        export-ignore
-*.ttf*         export-ignore
-*.ttc*         export-ignore
-.gitattributes export-ignore
+dist             export-ignore
+out              export-ignore
+out-ci           export-ignore
+script           export-ignore
+.git             export-ignore
+.github          export-ignore
+*.ttf*           export-ignore
+*.ttc*           export-ignore
+.gitattributes   export-ignore
+docs/_config.yml export-ignore
+docs/index.md    export-ignore
 
 # Text FILES
 *.tex   text eol=lf
