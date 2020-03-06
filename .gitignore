@@ -5,6 +5,8 @@ dist/*
 /*.pdf
 /*.ttf*
 /*.ttc*
+*.ttf*
+*.ttc*
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
