@@ -32,11 +32,12 @@ assignees: ''
 
 **环境**
 
+|项目|内容|
 |:-|:-|
-|操作系统 |[e.g. Linux/Windows/MacOS]|
-|Tex套件 |[e.g. Texlive/Miktex]|
-|Tex套件版本 |[e.g. 2019]|
-|zjuthesis.log |[使用命令行编译一遍，然后将 out/zjuthesis.log 文件附在此 issue 内]|
+| 操作系统 | [e.g. Linux/Windows/MacOS] |
+| Tex套件 | [e.g. Texlive/Miktex] |
+| Tex套件版本 | [e.g. 2019] |
+| zjuthesis.log | [使用命令行编译一遍，然后将 out/zjuthesis.log 附在此issue] |
 
 **其他信息**
 其他你认为有帮助的信息
