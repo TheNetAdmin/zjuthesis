@@ -2,7 +2,7 @@
 \ProvidesClass{zjuthesis}
     [Zhejiang University Thesis and Design Template, Zixuan Wang zxwang42@gmail.com]
 \input{config/version}
-\message{zjuthesis version: \zjuthesisversion}
+\wlog{zjuthesis version: \zjuthesisversion}
 
 \RequirePackage{kvoptions}
 
@@ -31,6 +31,14 @@
 \DeclareStringOption{Topic}
 
 \ProcessKeyvalOptions*
+
+\wlog{Degree: {\Degree}}
+\wlog{MajorFormat: {\MajorFormat}}
+\wlog{Type: {\Type}}
+\wlog{Period: {\Period}}
+\wlog{BlindReview: {\BlindReview}}
+\wlog{Language: {\Language}}
+\wlog{GradLevel: {\GradLevel}}
 
 \PassOptionsToPackage{AutoFakeBold}{xeCJK}
 \LoadClass[
