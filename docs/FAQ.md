@@ -92,7 +92,7 @@
 
 1. Q: 怎么配合 vscode 使用？
 
-   A: 有两种方式
+   A: 有两种方式（推荐第一种方式，因为不需要新建配置文件）
 
    1. 用 vscode 打开根目录下的 zjuthesis.tex 文件，Ctrl+Shift+P 打开命令窗口，`LaTeX Workshop: Build with recipe` => `latexmk (latexmkrc)`
    2. 参见[这里](https://github.com/TheNetAdmin/zjuthesis/issues/11)
