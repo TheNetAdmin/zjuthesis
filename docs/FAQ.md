@@ -72,7 +72,7 @@
 
    A: 这是 `gb7714-2015` 标准规定的，参考 [GitHub Issue](https://github.com/TheNetAdmin/zjuthesis/issues/23) 讨论。
    
-   如果需要“非全大写”姓名格式，请在引用 `biblatex` 包时指定 `config/packages.tex`，详见 [GitHub Issue](https://github.com/TheNetAdmin/zjuthesis/issues/23#issuecomment-602129192) 讨论。
+   如果需要“非全大写”姓名格式，请在引用 `biblatex` 包时指定 `gbnamefmt=lowercase`，详见 [GitHub Issue](https://github.com/TheNetAdmin/zjuthesis/issues/23#issuecomment-602129192) 讨论。
 
 ## 工具使用
 
