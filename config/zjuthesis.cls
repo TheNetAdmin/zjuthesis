@@ -43,7 +43,6 @@
 \PassOptionsToPackage{AutoFakeBold}{xeCJK}
 \LoadClass[
     zihao=-4,
-    heading=true,
     UTF8,
     twoside
 ]{ctexrep}
