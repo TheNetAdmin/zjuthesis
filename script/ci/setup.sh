@@ -22,6 +22,6 @@ font_specs=("$format_dir/general/fonts.tex"
 for font_spec in ${font_specs[@]}; do
     echo "Updating $font_spec"
     sed -i 's/{Times New Roman}/{TimesNewRoman.ttf}/' $font_spec
-    sed -i 's/{FangSong}/{FangSong.ttf}/' $font_spec
+    sed -i 's/{\\FangSongFontName}/{FangSong.ttf}/' $font_spec
     sed -i 's/{SimSun}/{SimSun.ttc}/' $font_spec
 done
