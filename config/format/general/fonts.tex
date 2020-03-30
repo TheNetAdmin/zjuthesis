@@ -1,3 +1,16 @@
-\setCJKmainfont{FangSong}
+\newcommand{\FangSongFontName}{FangSong}
+\ExplSyntaxOn
+\cs_generate_variant:Nn \tl_if_eq:nnTF {Vn}
+
+\tl_if_eq:VnTF \g__ctex_fontset_tl {mac}
+    { % macOS
+        \renewcommand{\FangSongFontName}{STFangsong}
+    }
+    { % Windows or Linux or Other OS
+        \renewcommand{\FangSongFontName}{FangSong}
+    }
+\ExplSyntaxOff
+
+\setCJKmainfont{\FangSongFontName}
 \setmainfont{Times New Roman}
 \renewcommand{\bibfont}{\zihao{5}\songti}
