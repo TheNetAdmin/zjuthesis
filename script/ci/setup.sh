@@ -15,8 +15,9 @@ ls -la
 
 # change fonts
 format_dir=config/format
-font_specs=("$format_dir/general/fonts.tex"
-            "$format_dir/major/cs/fonts.tex"
+font_specs=(
+    "$format_dir/general/fonts.tex"
+    "$format_dir/major/cs/fonts.tex"
 )
 
 for font_spec in ${font_specs[@]}; do

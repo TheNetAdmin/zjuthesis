@@ -2,8 +2,18 @@
 
 % ctex package stores one of "windows", "mac", and "fandol" in \g__ctex_fontset_tl
 \ifthenelse{\equal{\csname g__ctex_fontset_tl\endcsname}{mac}}
-{ % macOS
+{   % macOS
+
+    % FangSong
+    %   Use system default fangsong font, no need for additional installation
     \renewcommand{\FangSongFontName}{STFangsong}
+
+    % SongTi
+    %   Fix sontti font invocation in `ctex` package, to enable bold font
+    %   Detailes in: https://github.com/TheNetAdmin/zjuthesis/issues/48
+    %   Similar implementation: https://github.com/xueruini/thuthesis/blob/a86b0824da527268645571cc5fe3096d65a665b3/thuthesis.dtx#L1447-L1461
+    \setCJKfamilyfont{zhsong}{Songti SC}
+    \renewcommand*{\songti}{\CJKfamily{zhsong}}
 }
 {}
 
