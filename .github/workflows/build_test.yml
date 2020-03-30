@@ -4,7 +4,6 @@ on:
   push:
     paths-ignore:
       - ".github/**"
-      - "script/**"
       - ".git**"
       - "**.md"
       - "docs/**"
