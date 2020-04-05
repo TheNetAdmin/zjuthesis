@@ -40,6 +40,7 @@
 \wlog{Language: {\Language}}
 \wlog{GradLevel: {\GradLevel}}
 
+\PassOptionsToPackage{no-math}{fontspec}
 \PassOptionsToPackage{AutoFakeBold}{xeCJK}
 \LoadClass[
     zihao=-4,
