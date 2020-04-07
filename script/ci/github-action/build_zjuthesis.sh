@@ -45,7 +45,7 @@ function build_zjuthesis() {
         lang_suffix="-english"
     fi
     
-    local build_suffix=$1-$2$grad_suffix-$3-$4$blind_suffix$lang_suffix
+    local build_suffix=$1$grad_suffix-$2-$3-$4$blind_suffix$lang_suffix
     local out_path=out-ci/$build_suffix
     latexmk -xelatex -outdir=$out_path
 
