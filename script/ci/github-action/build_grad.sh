@@ -11,13 +11,10 @@ cd $project_path
 mkdir -p dist
 
 degree="graduate"
-types=("design" "thesis")
-
-build_zjuthesis $degree "general" "thesis" "final" "true" "doctor" "chinese"
-
-for type in ${types[@]}; do
-    build_zjuthesis $degree "general" $type "final" "false" "doctor" "chinese"
-done
 
 build_zjuthesis $degree "cs"      "thesis" "final" "false" "master" "chinese"
+build_zjuthesis $degree "general" "thesis" "final" "false" "master" "chinese"
+
+build_zjuthesis $degree "general" "thesis" "final" "true"  "doctor" "chinese"
+build_zjuthesis $degree "general" "thesis" "final" "false" "doctor" "chinese"
 build_zjuthesis $degree "general" "thesis" "final" "false" "doctor" "english"

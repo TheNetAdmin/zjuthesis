@@ -16,6 +16,8 @@ periods=("final" "proposal")
 
 mkdir -p dist
 
+# The last two arugments "doctor" and "chinese" takes no effect for "undergraduate"
+# Should improve the build_zjuthesis.sh::build_zjuthesis function
 build_zjuthesis $degree "general" "thesis" "final" "true" "doctor" "chinese"
 
 for major in ${main_majors[@]}; do
