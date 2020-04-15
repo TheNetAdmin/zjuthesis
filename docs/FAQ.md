@@ -88,7 +88,7 @@
 
    我会不定期更新一下 [Overleaf 模板](https://www.overleaf.com/latex/templates/zhe-jiang-da-xue-bi-ye-she-ji-slash-lun-wen-mo-ban-zjuthesis/kzcgmdyvkjxj)，但想用最新模板的同学请自行上传并设置。
 
-   **注意：Overleaf 还在使用 TeXLive 2017，但前文提到的乱码问题在 2019 版才得以解决，所以请同学们务必使用 TeXLive 2019 进行最终提交版的编译。**
+   **注意：Overleaf 默认使用 TeXLive 2017，但前文提到的乱码问题在 2019 版才得以解决，所以请同学们务必切换到 Overleaf 的 TeXLive 2019 版本 进行最终提交版的编译（Menu -> TeX Live version -> 2019）。**
 
 1. Q: 怎么配合 vscode 使用？
 
