@@ -49,7 +49,7 @@ This template only comes with English graduate student template,
 if you are interested in English undergraduate template,
 please open a new issue and discuss the details and requirements.
 
-## Slide 模板
+## Slides 模板
 
 1. 这是之前分享在浙大云盘的一个 Slide 模板，现在转移到 GitHub 方便同学们连同 LaTeX 模板一起下载:
 
