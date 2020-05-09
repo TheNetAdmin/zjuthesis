@@ -69,10 +69,10 @@ please open a new issue and discuss the details and requirements.
 
 ## Slides 模板
 
-这是作者用于毕业答辩的一个 Slide 模板，现在转移到 GitHub/Gitee 方便同学们连同 LaTeX 模板一起下载:
+这是作者用于毕业答辩的一个 Slides 模板，现在转移到 GitHub/Gitee 方便同学们连同 LaTeX 模板一起下载:
 
    - [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
-   - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide)（国内网络用这个链接下载比较快）
+   - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide) 国内网络用这个链接下载比较快
 
 ## 参考文档
 
