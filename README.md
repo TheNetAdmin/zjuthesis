@@ -1,4 +1,4 @@
-# 浙江大学毕业设计/论文 LaTeX 模板
+# 浙江大学学位论文 LaTeX 模板
 
 [![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)](https://thenetadmin.github.io/zjuthesis)
 [![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)](https://github.com/TheNetAdmin/zjuthesis/releases/latest)
@@ -9,7 +9,7 @@
 
 ## 简介
 
-本项目为浙江大学毕业设计/论文的 LaTeX 模板，包含本科生、硕士生与博士生模板，以及英文硕博士模板。
+本项目为浙江大学学位论文的 LaTeX 模板，包含本科生、硕士生与博士生模板，以及英文硕博士模板。
 
 This is a LaTeX template for Zhejiang University graduation thesis/design.
 It provides undergraduate and graduate (master and phd) template.
