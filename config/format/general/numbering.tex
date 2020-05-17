@@ -30,6 +30,21 @@
     \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 }
 
+\newcommand{\appendixmajornumbering}
+{
+    \counterwithin*{figure}{subsection}
+    \renewcommand{\thefigure}{\Alph{subsection}.\arabic{figure}}
+
+    \counterwithin*{table}{subsection}
+    \renewcommand{\thetable}{\Alph{subsection}.\arabic{table}}
+
+    \counterwithin*{lstlisting}{subsection}
+    \renewcommand{\thelstlisting}{\Alph{subsection}.\arabic{lstlisting}}
+
+    \counterwithin*{equation}{subsection}
+    \renewcommand{\theequation}{\Alph{subsection}-\arabic{equation}}
+}
+
 \newcommand{\numberingstyle}
 {
     \ifthenelse{\equal{\Degree}{undergraduate}}
