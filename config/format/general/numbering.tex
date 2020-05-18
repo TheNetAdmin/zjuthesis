@@ -30,8 +30,10 @@
     \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 }
 
-\newcommand{\appendixmajornumbering}
+\newcommand{\appendixsubsecmajornumbering}
 {
+    \ctexset{subsection/number = \Alph{subsection}}
+
     \counterwithin*{figure}{subsection}
     \renewcommand{\thefigure}{\Alph{subsection}.\arabic{figure}}
 
@@ -43,6 +45,23 @@
 
     \counterwithin*{equation}{subsection}
     \renewcommand{\theequation}{\Alph{subsection}-\arabic{equation}}
+}
+
+\newcommand{\appendixsecmajornumbering}
+{
+    \ctexset{section/number = \Alph{section}}
+
+    \counterwithin*{figure}{section}
+    \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+
+    \counterwithin*{table}{section}
+    \renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+
+    \counterwithin*{lstlisting}{section}
+    \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
+
+    \counterwithin*{equation}{section}
+    \renewcommand{\theequation}{\Alph{section}-\arabic{equation}}
 }
 
 \newcommand{\numberingstyle}
