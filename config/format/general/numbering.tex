@@ -32,7 +32,10 @@
 
 \newcommand{\appendixsubsecmajornumbering}
 {
-    \ctexset{subsection/number = \Alph{subsection}}
+    \ctexset{
+        subsection/number = \Alph{subsection},
+        subsubsection/number = \Alph{subsection}.\arabic{subsubsection}
+    }
 
     \counterwithin*{figure}{subsection}
     \renewcommand{\thefigure}{\Alph{subsection}.\arabic{figure}}
@@ -49,7 +52,10 @@
 
 \newcommand{\appendixsecmajornumbering}
 {
-    \ctexset{section/number = \Alph{section}}
+    \ctexset{
+        section/number = \Alph{section},
+        subsection/number = \Alph{section}.\arabic{subsection}
+    }
 
     \counterwithin*{figure}{section}
     \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
