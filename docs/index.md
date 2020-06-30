@@ -23,6 +23,6 @@ It also provides an English template for graduate students.
 
 ## 开源许可
 
-本项目代码部分基于 MIT 协议开源
+本项目代码基于 MIT 协议开源
 
 学校标志与学校文件的版权归浙江大学所有

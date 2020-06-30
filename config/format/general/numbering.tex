@@ -30,6 +30,46 @@
     \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 }
 
+\newcommand{\appendixsubsecmajornumbering}
+{
+    \ctexset{
+        subsection/number = \Alph{subsection},
+        subsubsection/number = \Alph{subsection}.\arabic{subsubsection}
+    }
+
+    \counterwithin*{figure}{subsection}
+    \renewcommand{\thefigure}{\Alph{subsection}.\arabic{figure}}
+
+    \counterwithin*{table}{subsection}
+    \renewcommand{\thetable}{\Alph{subsection}.\arabic{table}}
+
+    \counterwithin*{lstlisting}{subsection}
+    \renewcommand{\thelstlisting}{\Alph{subsection}.\arabic{lstlisting}}
+
+    \counterwithin*{equation}{subsection}
+    \renewcommand{\theequation}{\Alph{subsection}-\arabic{equation}}
+}
+
+\newcommand{\appendixsecmajornumbering}
+{
+    \ctexset{
+        section/number = \Alph{section},
+        subsection/number = \Alph{section}.\arabic{subsection}
+    }
+
+    \counterwithin*{figure}{section}
+    \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+
+    \counterwithin*{table}{section}
+    \renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+
+    \counterwithin*{lstlisting}{section}
+    \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
+
+    \counterwithin*{equation}{section}
+    \renewcommand{\theequation}{\Alph{section}-\arabic{equation}}
+}
+
 \newcommand{\numberingstyle}
 {
     \ifthenelse{\equal{\Degree}{undergraduate}}

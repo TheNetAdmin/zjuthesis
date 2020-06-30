@@ -1,4 +1,4 @@
-# 浙江大学毕业设计/论文 LaTeX 模板
+# 浙江大学学位论文 LaTeX 模板
 
 [![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)](https://thenetadmin.github.io/zjuthesis)
 [![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)](https://github.com/TheNetAdmin/zjuthesis/releases/latest)
@@ -9,7 +9,7 @@
 
 ## 简介
 
-本项目为浙江大学毕业设计/论文的 LaTeX 模板，包含本科生、硕士生与博士生模板，以及英文硕博士模板。
+本项目为浙江大学学位论文的 LaTeX 模板，包含本科生、硕士生与博士生模板，以及英文硕博士模板。
 
 This is a LaTeX template for Zhejiang University graduation thesis/design.
 It provides undergraduate and graduate (master and phd) template.
@@ -83,12 +83,20 @@ After installing TexLive and downloading zjuthesis code, you can start to write 
 2. Update the thesis content under `body/graduate` directory, put your figures and graphs under `figure` directory, update special pages (e.g. thesis cover) under `page/graduate-eng` directory, put your biblography in `body/ref.bib`.
 3. To compile the zjuthesis template, open a command prompt (Windows) or terminal (MacOS/Linux), navigate the zjuthesis root directory, execute `latexmk` command. `latexmk` can compile the whole zjuthesis template including updating contents and biblography.
 
+
+## Slides 模板
+
+这是作者用于毕业答辩的一个 Slides 模板，现在转移到 GitHub/Gitee 方便同学们连同 LaTeX 模板一起下载:
+
+   - [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
+   - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide) 国内网络用这个链接下载比较快
+
 ## 参考文档
 
 常见问题与解决方案请参考[FAQ](./docs/FAQ.md)，模板使用请参考[使用手册](./docs/usage.md)，模板修改与二次开发请参考[开发手册](./docs/develop.md)。
 
 ## 开源许可
 
-本项目代码部分基于 MIT 协议开源
+本项目代码基于 MIT 协议开源
 
 学校标志与学校文件的版权归浙江大学所有

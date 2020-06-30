@@ -2,7 +2,7 @@
 name: I need help
 about: Having some trouble using the template
 title: ''
-labels: help wanted
+labels: I need help
 assignees: ''
 
 ---
