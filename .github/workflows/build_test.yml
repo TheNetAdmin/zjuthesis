@@ -58,6 +58,17 @@ jobs:
         name: out-ci
         path: out-ci
 
+  overleaf_update:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, '[ci skip]')"
+    steps:
+    - name: Install Python packages
+      run: pip3 install pexpect click
+    - name: Clone Overleaf Repo
+      run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} clone
+    - name: Check result
+      run: ls -la ./zjuthesis
+
   ci_skip:
     runs-on: [ubuntu-latest]
     if: "contains(github.event.head_commit.message, '[ci skip]')"
