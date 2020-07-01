@@ -29,6 +29,7 @@ def clone(ctx):
         child.logfile = logfile
         child.expect(pexpect.EOF)
         child.close()
+
     with open('pexpect_clone.log', 'r') as logfile:
         print(logfile.read())
 
@@ -48,6 +49,7 @@ def push(ctx):
         child.logfile = logfile
         child.expect(pexpect.EOF)
         child.close()
+
     with open('pexpect_push.log', 'r') as logfile:
         print(logfile.read())
 
