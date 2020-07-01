@@ -5,6 +5,7 @@ import pathlib
 import subprocess
 import os
 
+
 @click.group()
 @click.argument('git_id')
 @click.argument('output_dir')
@@ -18,10 +19,12 @@ def overleaf(ctx, git_id, output_dir, username, password):
     ctx.obj['username'] = username
     ctx.obj['password'] = password
 
+
 @overleaf.command()
 @click.pass_context
 def clone(ctx):
-    git_clone_cmd = 'git clone https://git.overleaf.com/' + ctx.obj['git_id'] + " " + ctx.obj['output_dir']
+    git_clone_cmd = 'git clone https://git.overleaf.com/' + \
+        ctx.obj['git_id'] + " " + ctx.obj['output_dir']
     print(git_clone_cmd)
     with open('pexpect_clone.log', 'w') as logfile:
         child = pexpect.spawnu(git_clone_cmd, timeout=30)
@@ -35,6 +38,7 @@ def clone(ctx):
 
     with open('pexpect_clone.log', 'r') as logfile:
         print(logfile.read())
+
 
 @overleaf.command()
 @click.pass_context
@@ -54,6 +58,7 @@ def push(ctx):
 
     with open('pexpect_push.log', 'r') as logfile:
         print(logfile.read())
+
 
 @overleaf.command()
 @click.pass_context
@@ -90,16 +95,18 @@ def update(ctx):
             else:
                 shutil.copy(file, path/file.name)
 
-    result = subprocess.run(['git', 'describe', '--always'], stdout=subprocess.PIPE)
+    result = subprocess.run(
+        ['git', 'describe', '--always'], stdout=subprocess.PIPE)
     commit_id = result.stdout.decode('utf-8')
     print(commit_id)
     with open(path / 'config' / 'version.tex', 'a') as f:
         f.write('% Commit ID: ' + commit_id)
-        
+
     os.chdir(ctx.obj['output_dir'])
     result = subprocess.run(['git', 'add', '*'], stdout=subprocess.PIPE)
     print(result.stdout.decode('utf-8'))
-    result = subprocess.run(['git', 'commit', '-am', '"Update to ' + commit_id + '"'], stdout=subprocess.PIPE)
+    result = subprocess.run(
+        ['git', 'commit', '-am', '"Update to ' + commit_id + '"'], stdout=subprocess.PIPE)
     print(result.stdout.decode('utf-8'))
 
 
