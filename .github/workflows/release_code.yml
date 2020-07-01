@@ -13,10 +13,10 @@ jobs:
       uses: actions/checkout@v1
     
     - name: Pack Release Code
-      run: ./script/release/package_release.sh dist
+      run: bash ./script/release/package_release.sh dist
 
     - name: Pack Release Overleaf Code
-      run: ./script/release/package_overleaf.sh dist
+      run: bash ./script/release/package_overleaf.sh dist
     
     - name: Current version
       run: echo $GITHUB_REF
