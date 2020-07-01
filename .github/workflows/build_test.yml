@@ -62,6 +62,10 @@ jobs:
     runs-on: ubuntu-latest
     if: "contains(github.event.head_commit.message, '[ci skip]')"
     steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v1
+    - name: Current version
+      run: echo $GITHUB_REF
     - name: Install Python packages
       run: pip3 install pexpect click
     - name: Clone Overleaf Repo
