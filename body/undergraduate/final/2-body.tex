@@ -30,7 +30,7 @@
 
 \begin{table}[ht]
     \caption{\label{tab:sample}自动调节列宽的表格}
-    \begin{tabularx}{\linewidth}{c|X<{\centering}}
+    \begin{tabularx}{\linewidth}{|c|X<{\centering}|}
         \hline
         第一列 & 第二列 \\ \hline
         xxx & xxx \\ \hline
@@ -64,9 +64,19 @@ int main(int argc, char *argv[])
 }
 \end{lstlisting}
 
-\subsection{另一节}
+\subsection{关于字体}
 
+英文字体通常提供了粗体和斜体的组合，中文字体通常没有粗体或斜体，本模板使用了 `AutoFakeBold' 来实现中文伪粗体，但不提供中文斜体，如~\autoref{tab:font-examples}所示。
 
-\begin{equation}
-    E=mc^2
-\end{equation}
+\begin{table}
+    \centering
+    \caption{一些字体示例}
+    \label{tab:font-examples}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        ~   & 常规 & 粗体 \\ \hline
+        常规 & Regular 常规 & {\bfseries Bold 粗体} \\ \hline
+        斜体 & {\itshape Italic 无斜体} & {\bfseries \itshape BoldItalic 粗体无斜体} \\ \hline
+    \end{tabular}
+
+\end{table}
