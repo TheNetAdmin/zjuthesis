@@ -70,6 +70,10 @@ jobs:
       run: pip3 install pexpect click
     - name: Clone Overleaf Repo
       run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} clone
+    - name: Update Overleaf Repo
+      run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} update
+    - name: Push Overleaf Repo
+      run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} push
     - name: Check result
       run: ls -la ./zjuthesis
 

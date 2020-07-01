@@ -95,11 +95,19 @@ def update(ctx):
     print(commit_id)
     with open(path / 'config' / 'version.tex', 'a') as f:
         f.write('% Commit ID: ' + commit_id)
+<<<<<<< HEAD
         
     os.chdir(ctx.obj['output_dir'])
     result = subprocess.run(['git', 'add', '*'], stdout=subprocess.PIPE)
     print(result.stdout.decode('utf-8'))
     result = subprocess.run(['git', 'commit', '-am', '"Update to ' + commit_id + '"'], stdout=subprocess.PIPE)
+=======
+
+    os.chdir(ctx.obj['output_dir'])
+    result = subprocess.run(['git', 'add', '*'], stdout=subprocess.PIPE)
+    print(result.stdout.decode('utf-8'))
+    result = subprocess.run(['git', 'commit', '-am', 'Update to ' + commit_id], stdout=subprocess.PIPE)
+>>>>>>> 57f5a9f... [ci skip] Setup script for Overleaf
     print(result.stdout.decode('utf-8'))
 
 
