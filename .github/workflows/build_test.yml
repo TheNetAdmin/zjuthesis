@@ -9,6 +9,8 @@ on:
       - "docs/**"
       - "**/*.md"
       - "LICENSE"
+    tags-ignore: 
+      - '*'
 
 jobs:
 
