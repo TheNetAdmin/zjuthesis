@@ -11,17 +11,18 @@ then
 fi
 
 echo "$old_ver ==> $new_ver"
-echo "Press any key to proceed"
+echo Commit message: "Bump to $new_ver"
+echo "Press any key to proceed (no changes made so far)"
 read
 
 echo "Update config/version.tex"
 sed -r -i "s/[0-9]+\.[0-9]+\.[0-9]+[0-9rc\-]*/$new_ver/" config/version.tex || true
 cat config/version.tex
 git add config/version.tex
-git commit -a
+git commit -am "Bump to $new_ver"
 
 echo "Press any key to tag current commit"
 read
-git tag -a "v$new_ver"
+git tag -a "v$new_ver" -m "Bump to $new_ver"
 git push
 git push --tags
