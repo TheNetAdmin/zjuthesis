@@ -21,6 +21,21 @@ It also provides an English template for graduate students.
 
 ## 使用
 
+zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
+   - Overleaf 是一个线上 LaTeX 编辑器，可以在不安装任何工具的情况下编写 LaTeX 文档，同时也可以和其他人共享文档，共同编辑。
+   - 本地编译比 Overleaf 更快，而且本地编译可以使用 Git 来记录版本 (Overleaf 的版本记录功能需要订阅)。推荐有能力的同学设置本地编译环境，并推荐使用 Visual Studio Code 配合 LaTeX workshop 插件 (vscode 使用方式见[FAQ](./docs/FAQ.md))。
+
+### Overleaf
+
+1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases) 中的 `zjuthesis-overleaf-v*.*.*.zip` 文件。
+1. 在 Overleaf 中上传这个 .zip 压缩文件以创建一个新 Overleaf 项目。
+1. 在 Overleaf 界面左上角点击 "Menu"，选择 "Compiler" 为 "XeLaTeX"，选择 "TeX Live version" 为 "2019" 或者更新的版本。
+1. 参照 Overleaf 项目中 `fonts/README.md` 的说明下载所需字体，并上传到 `fonts` 文件夹中。
+1. 使用 Overleaf 编译。
+1. 选择专业模板与毕业学位的方式参见下文 "本地编译"。
+
+### 本地编译
+
 1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装所需的镜像文件可以选用浙江大学开源镜像站提供的[镜像](https://mirrors.zju.edu.cn/CTAN/systems/texlive/Images/)以便在校内网下更快下载。
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)，
    每个专业模板都有预览 pdf 文件，可以单独下载查看。
