@@ -66,6 +66,10 @@ jobs:
       uses: actions/checkout@v1
     - name: Current version
       run: echo $GITHUB_REF
+    - name: Git setup username
+      run: git config --global user.name "TheNetAdmin"
+    - name: Git setup email
+      run: git config --global user.email "zxwang42@gmail.com"
     - name: Install Python packages
       run: pip3 install pexpect click
     - name: Clone Overleaf Repo
