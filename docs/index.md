@@ -21,6 +21,8 @@ It also provides an English template for graduate students.
 
 常见问题与解决方案请参考[FAQ](./FAQ.html)，模板使用请参考[使用手册](./usage.html)，模板修改与二次开发请参考[开发手册](./develop.html)。
 
+Please visit [FAQ](./FAQ.html) for common questions and solutions, [Usage Manual](./usage.html) for detailed usage, [Developer Manual](./develop.html) for customization and development.
+
 ## 开源许可
 
 本项目代码基于 MIT 协议开源
