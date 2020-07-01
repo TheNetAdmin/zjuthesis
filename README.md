@@ -55,7 +55,7 @@ It also provides an English template for graduate students.
 ## English Template Usage
 
 The English zjuthesis currently only provides graduate student templates (i.e. master and PhD templates).
-If you are undergraduate student and wish to use English zjuthesis, please open a new GitHub issue or chat with me on [Gitter](https://gitter.im/zjuthesis/community).
+If you are undergraduate student and wish to use English zjuthesis, please open an new GitHub issue or chat with me on [Gitter](https://gitter.im/zjuthesis/community).
 
 ### Install TexLive and Chinese Fonts, Download zjuthesis
 
