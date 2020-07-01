@@ -8,6 +8,9 @@ dist/*
 *.ttf*
 *.ttc*
 
+### Overleaf repo dir ###
+/zjuthesis/*
+
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.aux
