@@ -37,6 +37,8 @@
         subsubsection/number = \Alph{subsection}.\arabic{subsubsection}
     }
 
+    \stepcounter{section}
+
     \counterwithin*{figure}{subsection}
     \renewcommand{\thefigure}{\Alph{subsection}.\arabic{figure}}
 
@@ -56,6 +58,8 @@
         section/number = \Alph{section},
         subsection/number = \Alph{section}.\arabic{subsection}
     }
+
+    \stepcounter{chapter}
 
     \counterwithin*{figure}{section}
     \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
