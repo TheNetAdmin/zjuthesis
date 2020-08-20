@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# 浙江大学毕业设计/论文 LaTeX 模板
+# 浙江大学学位论文 LaTeX 模板
 ![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)
 ![GitHub release](https://img.shields.io/github/release/TheNetAdmin/zjuthesis.svg?label=version&style=popout)
 ![GitHub All Releases](https://img.shields.io/github/downloads/thenetadmin/zjuthesis/total.svg?color=blue&style=popout)
