@@ -70,7 +70,8 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 
 > 注意：
 >
-> - 本模板已经兼容 TeXLive 2020。TeXLive 2019 之前的版本复制伪粗体文字会产生乱码，建议单独使用 TeXLive 的同学尽快升级至 2019 或更新的版本
+> - 如果你使用 Mac OS 10.15 及以上版本，并且 TexLive 中的 ctex 包版本低于 2.5，会产生[宋体字体判断问题](https://github.com/TheNetAdmin/zjuthesis/issues/79)，导致编译得到的 pdf 中字体出现误差。要解决这个问题，可以将 ctex 包升级到 2.5 以上，或者临时在 ctex 包的选项中加入 `fontset=macnew`，详见 [issue  79](https://github.com/TheNetAdmin/zjuthesis/issues/79)。
+> - 本模板已经兼容 TeXLive 2020。TeXLive 2018 以及之前的版本复制伪粗体文字会产生乱码，建议单独使用 TeXLive 的同学尽快升级至 2019 或更新的版本
 > - 本模板默认情况下使用 `general` 格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板
 
