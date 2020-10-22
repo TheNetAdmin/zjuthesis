@@ -1,23 +1,26 @@
 #!/bin/bash
 
+set -e
+
 echo "Setup fonts"
 
 # get fonts
 mkdir -p fonts
 pushd fonts
 echo "Getting TimesNewRoman fonts"
-wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRoman.ttf
-wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanBold.ttf
-wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanItalic.ttf
-wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanBoldItalic.ttf
+wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRoman.ttf
+wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanBold.ttf
+wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanItalic.ttf
+wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanBoldItalic.ttf
 echo "Getting FangSong fonts"
-wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/FangSong.ttf
+wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/FangSong.ttf
 echo "Getting SimSun fonts"
-wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E5%AE%8B%E4%BD%93/SimSun.ttc
+wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E5%AE%8B%E4%BD%93/SimSun.ttc
 echo "Getting SimHei fonts"
-wget https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E9%BB%91%E4%BD%93/SimHei.ttf
+wget -c https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E9%BB%91%E4%BD%93/SimHei.ttf
 echo "Getting SimKai fonts"
-wget https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E6%A5%B7%E4%BD%93/Kaiti.ttf
+#wget -c https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E6%A5%B7%E4%BD%93/Kaiti.ttf
+wget -c https://raw.githubusercontent.com/Halfish/lstm-ctc-ocr/master/fonts/simkai.ttf
 popd
 
 pwd
@@ -38,11 +41,11 @@ for font_spec in ${font_specs[@]}; do
     #    \setCJKmainfont[...]{...}
     # to:
     #    \setCJKmainfont[..., Path=./fonts/]{...}
-    sed -rie 's/(\\setcjkmainfont.*?)]/\1, Path=.\/fonts\/]/gi' $font_spec
+    sed -ri 's/(\\setcjkmainfont.*?)]/\1, Path=.\/fonts\/]/gi' $font_spec
 
     # Change all the lines like:
     #    \setCJKfamilyfont{...}{...}[...]
     # to:
     #    \setCJKfamilyfont{...}{...}[..., Path=./fonts/]
-    sed -rie 's/(\\setcjkfamilyfont.*?)]/\1, Path=.\/fonts\/]/gi' $font_spec
+    sed -ri 's/(\\setcjkfamilyfont.*?)]/\1, Path=.\/fonts\/]/gi' $font_spec
 done
