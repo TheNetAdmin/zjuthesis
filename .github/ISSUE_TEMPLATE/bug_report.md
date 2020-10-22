@@ -33,9 +33,11 @@ assignees: ''
 - [ ] TeXLive 2019
 - [ ] TeXLive 2018 或更早的版本
 - [ ] MikTex
-- [ ] Overleaf
 
-**zjuthesis 版本**
+**TeX Compiler**
+
+- [ ] XeTeX
+- [ ] LuaTeX版本**
 
 <!-- 请在下方填入zjuthesis版本号，可在 config 目录下的 version.tex 中找到 -->
 

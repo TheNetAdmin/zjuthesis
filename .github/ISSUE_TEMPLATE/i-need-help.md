@@ -33,7 +33,11 @@ assignees: ''
 - [ ] TeXLive 2019
 - [ ] TeXLive 2018 或更早的版本
 - [ ] MikTex
-- [ ] Overleaf
+
+**TeX Compiler**
+
+- [ ] XeTeX
+- [ ] LuaTeX
 
 **zjuthesis 版本**
 
