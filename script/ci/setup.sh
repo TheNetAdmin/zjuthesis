@@ -5,15 +5,19 @@ echo "Setup fonts"
 # get fonts
 mkdir -p fonts
 pushd fonts
-echo "Getting FangSong fonts"
-wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/FangSong.ttf
 echo "Getting TimesNewRoman fonts"
 wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRoman.ttf
 wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanBold.ttf
 wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanItalic.ttf
 wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/english/Serif/TimesNewRomanBoldItalic.ttf
+echo "Getting FangSong fonts"
+wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/FangSong.ttf
 echo "Getting SimSun fonts"
 wget https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E5%AE%8B%E4%BD%93/SimSun.ttc
+echo "Getting SimHei fonts"
+wget https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E9%BB%91%E4%BD%93/SimHei.ttf
+echo "Getting SimKai fonts"
+wget https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E6%A5%B7%E4%BD%93/Kaiti.ttf
 popd
 
 pwd
@@ -28,7 +32,17 @@ font_specs=(
 
 for font_spec in ${font_specs[@]}; do
     echo "Updating $font_spec"
-    sed -i 's/{Times New Roman}/[Path=.\/fonts\/, BoldFont={*Bold}, ItalicFont={*Italic}, BoldItalicFont={*BoldItalic}]{TimesNewRoman}/' $font_spec
-    sed -i 's/setCJKmainfont{\\FangSongFontName}/setCJKmainfont[Path=.\/fonts\/]{FangSong}/' $font_spec
-    sed -i 's/{SimSun}/[Path=.\/fonts\/]{SimSun}/' $font_spec
+    sed -i "s/\\setmainfont{Times New Roman}/\\setmainfont[Path=.\/fonts\/, BoldFont={*Bold}, ItalicFont={*Italic}, BoldItalicFont={*BoldItalic}]{TimesNewRoman}/" $font_spec
+
+    # Change all the lines like:
+    #    \setCJKmainfont[...]{...}
+    # to:
+    #    \setCJKmainfont[..., Path=./fonts/]{...}
+    sed -rne 's/(\\setcjkmainfont.*?)]/\1, Path=.\/fonts\/]/gip' fonts.tex
+
+    # Change all the lines like:
+    #    \setCJKfamilyfont{...}{...}[...]
+    # to:
+    #    \setCJKfamilyfont{...}{...}[..., Path=./fonts/]
+    sed -rne 's/(\\setcjkfamilyfont.*?)]/\1, Path=.\/fonts\/]/gip' fonts.tex
 done

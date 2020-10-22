@@ -42,7 +42,6 @@
 
 \PassOptionsToPackage{no-math}{fontspec}
 \PassOptionsToPackage{AutoFakeBold}{xeCJK}
-\PassOptionsToPackage{AutoFakeBold}{luatexja}
 \LoadClass[
     zihao=-4,
     UTF8,
