@@ -38,11 +38,11 @@ for font_spec in ${font_specs[@]}; do
     #    \setCJKmainfont[...]{...}
     # to:
     #    \setCJKmainfont[..., Path=./fonts/]{...}
-    sed -rne 's/(\\setcjkmainfont.*?)]/\1, Path=.\/fonts\/]/gip' fonts.tex
+    sed -rie 's/(\\setcjkmainfont.*?)]/\1, Path=.\/fonts\/]/gi' $font_spec
 
     # Change all the lines like:
     #    \setCJKfamilyfont{...}{...}[...]
     # to:
     #    \setCJKfamilyfont{...}{...}[..., Path=./fonts/]
-    sed -rne 's/(\\setcjkfamilyfont.*?)]/\1, Path=.\/fonts\/]/gip' fonts.tex
+    sed -rie 's/(\\setcjkfamilyfont.*?)]/\1, Path=.\/fonts\/]/gi' $font_spec
 done
