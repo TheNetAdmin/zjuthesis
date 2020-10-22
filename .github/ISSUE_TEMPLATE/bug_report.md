@@ -29,7 +29,8 @@ assignees: ''
 
 **TeX套件**
 
-- [ ] TeXLive 2019 或更新的版本
+- [ ] TeXLive 2020 或更新的版本
+- [ ] TeXLive 2019
 - [ ] TeXLive 2018 或更早的版本
 - [ ] MikTex
 - [ ] Overleaf
