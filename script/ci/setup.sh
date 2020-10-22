@@ -32,7 +32,7 @@ font_specs=(
 
 for font_spec in ${font_specs[@]}; do
     echo "Updating $font_spec"
-    sed -i "s/\\setmainfont{Times New Roman}/\\setmainfont[Path=.\/fonts\/, BoldFont={*Bold}, ItalicFont={*Italic}, BoldItalicFont={*BoldItalic}]{TimesNewRoman}/" $font_spec
+    sed -i "s/setmainfont{Times New Roman}/setmainfont[Path=.\/fonts\/, BoldFont={*Bold}, ItalicFont={*Italic}, BoldItalicFont={*BoldItalic}]{TimesNewRoman}/g" $font_spec
 
     # Change all the lines like:
     #    \setCJKmainfont[...]{...}
