@@ -2,7 +2,7 @@
 
 ver=$(git describe --abbrev=0 --dirty)
 dir=$1
-pkgname=zjuthesis-overleaf-$ver
+pkgname=zjuthesis-$ver-overleaf
 
 if [ -z $dir ]
 then

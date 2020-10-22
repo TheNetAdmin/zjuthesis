@@ -15,9 +15,13 @@
     %   Similar implementation: https://github.com/xueruini/thuthesis/blob/a86b0824da527268645571cc5fe3096d65a665b3/thuthesis.dtx#L1447-L1461
     \setCJKfamilyfont{zhsong}{Songti SC}
     \renewcommand*{\songti}{\CJKfamily{zhsong}}
-}
-{}
+    }
+    {}
+    
+\setCJKmainfont[AutoFakeBold={4}]{\FangSongFontName}
+\setCJKfamilyfont{zhfs}{\FangSongFontName}[AutoFakeBold={4}]
+\setCJKfamilyfont{zhhei}{SimHei}[AutoFakeBold={4}]
+\setCJKfamilyfont{zhsong}{SimSun}[AutoFakeBold={4}]
 
-\setCJKmainfont{\FangSongFontName}
 \setmainfont{Times New Roman}
 \renewcommand{\bibfont}{\zihao{5}\songti}
