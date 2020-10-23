@@ -27,7 +27,7 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 
 ### Overleaf
 
-1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases) 中的 `zjuthesis-overleaf-v*.*.*.zip` 文件。
+1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases) 中的 `zjuthesis-v*.*.*-overleaf.zip` 文件。
 1. 在 Overleaf 中上传这个 .zip 压缩文件以创建一个新 Overleaf 项目。
 1. 在 Overleaf 界面左上角点击 "Menu"
    - 选择 "Compiler" 为 "XeLaTeX"
