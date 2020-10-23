@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git pull
+
 old_ver=$(perl -lne 'print $1 if /([0-9]+\.[0-9]+\.[0-9]+[\-\drc]*)/' config/version.tex)
 new_ver=$1
 
