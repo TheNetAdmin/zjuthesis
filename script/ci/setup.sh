@@ -19,7 +19,7 @@ wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/
 echo "Getting SimHei fonts"
 wget -c https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E9%BB%91%E4%BD%93/SimHei.ttf
 echo "Getting SimKai fonts"
-#wget -c https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E6%A5%B7%E4%BD%93/Kaiti.ttf
+wget -c https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E6%A5%B7%E4%BD%93/Kaiti.ttf
 wget -c https://raw.githubusercontent.com/Halfish/lstm-ctc-ocr/master/fonts/simkai.ttf
 popd
 
