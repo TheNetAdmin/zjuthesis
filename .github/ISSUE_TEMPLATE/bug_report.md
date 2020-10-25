@@ -37,7 +37,7 @@ assignees: ''
 **TeX Compiler**
 
 - [ ] XeTeX
-- [ ] LuaTeX版本**
+- [ ] LuaTeX版本
 
 <!-- 请在下方填入zjuthesis版本号，可在 config 目录下的 version.tex 中找到 -->
 
