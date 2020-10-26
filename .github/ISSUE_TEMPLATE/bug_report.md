@@ -39,12 +39,26 @@ assignees: ''
 - [ ] XeTeX
 - [ ] LuaTeX
 
-**zjuthesis 版本**
+**zjuthesis**
 
-<!-- 请在下方填入zjuthesis版本号，可在 config 目录下的 version.tex 中找到 -->
+<!-- 请在下方填入 zjuthesis 版本号，可在 config 目录下的 version.tex 中找到 -->
 
 版本号：
 
+<!-- 请在下方填入 zjuthesis 模板选项，可在 zjuthess.tex 的 \documentclass 内找到 -->
+
+Degree:
+  - [ ] graduate
+    - [ ] master
+    - [ ] doctor
+  - [ ] undergraduate
+
+Major:
+  - [ ] general
+  - [ ] cs
+  - [ ] isee
+  - [ ] math
+  - [ ] physics
 **编译日志**
 
 <!-- 使用命令行编译一遍，然后将 out/zjuthesis.log 文件附在下方 -->
