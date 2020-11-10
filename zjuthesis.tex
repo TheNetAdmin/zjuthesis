@@ -14,6 +14,10 @@
 %   4. If you don't know how to use GitHub, you can visit the online chat room 
 %      or send me an email
 
+\makeatletter
+\def\input@path{{./config}}
+\makeatother
+
 \documentclass[
     StudentName     = 姓名,
     StudentID       = 学号,
@@ -24,7 +28,7 @@
     Title           = 毕业论文/设计题目,
     SubmitDate      = 递交日期,
     MajorFormat     = general,
-    Degree          = undergraduate,   % 'undergraduate' or 'graduate'
+    Degree          = graduate,   % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
     Period          = final,           % 'proposal' or 'final'
     BlindReview     = false,           % 'false'    or 'true'
@@ -34,7 +38,7 @@
     Topic           = 研究方向,
     ColaboratorName = 合作导师,
     TitleEng        = {{Graduation Thesis Title}}
-]{./config/zjuthesis}
+]{zjuthesis}
 
 \newcommand{\inputundergraduate}
 {
