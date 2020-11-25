@@ -1,0 +1,16 @@
+\ifthenelse{\equal{\PrintFilePath}{true}}{
+    \usepackage{currfile}
+    \usepackage{background}
+    \backgroundsetup{
+        color=gray,
+        position=current page.west,
+        angle=90,
+        nodeanchor=west,
+        vshift=-5mm,
+        hshift=-20mm,
+        opacity=1,
+        scale=1.75,
+        contents={\texttt{\currfilepath{}}}
+    }
+}
+{}

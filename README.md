@@ -60,14 +60,20 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
    | :--------- | :-----------------------------------| :------------------------------------ |
    | Type       | thesis: 学术论文                     | design: 专业学术论文                    |
    | BlindReview| true: 生成盲审用 pdf（隐藏个人信息）   | false: 生成提交用 pdf                   |
-   | MajorFormat| 默认: general                        | 与 `config/format/major/` 下目录名相同  |
+   | MajorFormat| general: 默认模板                    | 与 `config/format/major/` 下目录名相同  |
    | GradLevel  | master: 硕士                         | doctor: 博士                           |
 
+   - Debug 相关设置
+
+   | Field         | Option 1                              | Option 2                              |
+   | :------------ | :------------------------------------ | :------------------------------------ |
+   | PrintFilePath | true: 在每页侧边打印该页对应 TeX 文件路径 | false: 不打印此输出                    |
+
 1. 在 `body` 目录下编写内容
-2. 在 `pages` 目录下填写必要的内容，如审核评语等
-3. 在 `figure` 目录下保存图片，在 `body/ref.bib` 内插入文献条目
-4. 在根目录下运行命令 `latexmk`（或者 `latexmk -xelatex -outdir=out zjuthesis`）即可使用 XeTeX 编译 pdf 文件到 `out` 目录（该目录不会被记录版本）
-5. 如需使用 LuaTeX 编译，可运行命令 `latexmk -pdflua -outdir=out`
+1. 在 `pages` 目录下填写必要的内容，如审核评语等
+1. 在 `figure` 目录下保存图片，在 `body/ref.bib` 内插入文献条目
+1. 在根目录下运行命令 `latexmk`（或者 `latexmk -xelatex -outdir=out zjuthesis`）即可使用 XeTeX 编译 pdf 文件到 `out` 目录（该目录不会被记录版本）
+1. 如需使用 LuaTeX 编译，可运行命令 `latexmk -pdflua -outdir=out`
 
 > 注意：
 >
@@ -104,13 +110,13 @@ After installing TexLive and downloading zjuthesis code, you can start to write 
    |Language   |english         |
    |GradLevel  |master or doctor|
 
-2. Update the thesis content under `body/graduate` directory, put your figures and graphs under `figure` directory, update special pages (e.g. thesis cover) under `page/graduate-eng` directory, put your biblography in `body/ref.bib`.
-3. To compile the zjuthesis template, open a command prompt (Windows) or terminal (MacOS/Linux), navigate the zjuthesis root directory, execute `latexmk` command. `latexmk` can compile the whole zjuthesis template including updating contents and biblography.
+1. Update the thesis content under `body/graduate` directory, put your figures and graphs under `figure` directory, update special pages (e.g. thesis cover) under `page/graduate-eng` directory, put your biblography in `body/ref.bib`.
+1. To compile the zjuthesis template, open a command prompt (Windows) or terminal (MacOS/Linux), navigate the zjuthesis root directory, execute `latexmk` command. `latexmk` can compile the whole zjuthesis template including updating contents and biblography.
 
 
 ## Slides 模板
 
-这是作者用于毕业答辩的一个 Slides 模板，现在转移到 GitHub/Gitee 方便同学们连同 LaTeX 模板一起下载:
+这是作者用于毕业答辩的一个 Slides 模板 (Microsoft PowerPoint 模板)，现在转移到 GitHub/Gitee 方便同学们连同 LaTeX 模板一起下载:
 
    - [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
    - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide) 国内网络用这个链接下载比较快

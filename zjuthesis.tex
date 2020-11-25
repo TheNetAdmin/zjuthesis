@@ -15,13 +15,17 @@
 %      or send me an email
 
 \documentclass[
+    % Debugging
+    % PrintFilePath: print tex file path for each page,
+    %                helpful if you want to locate the tex file of a page
+    PrintFilePath   = false,
+    % Thesis Info
     StudentName     = 姓名,
     StudentID       = 学号,
     AdvisorName     = 指导教师,
     Grade           = 2014,            % only the year, no '级'
     Major           = 专业,
     Department      = 学院,
-    Title           = 毕业论文/设计题目,
     SubmitDate      = 递交日期,
     MajorFormat     = general,
     Degree          = undergraduate,   % 'undergraduate' or 'graduate'
@@ -29,10 +33,12 @@
     Period          = final,           % 'proposal' or 'final'
     BlindReview     = false,           % 'false'    or 'true'
     Language        = chinese,         % 'chinese'  or 'english'
-    % Below only for 'graduate'
+    % Graduate Thesis Info
     GradLevel       = master,          % 'master' or 'doctor'
     Topic           = 研究方向,
     ColaboratorName = 合作导师,
+    % Title
+    Title           = 毕业论文/设计题目,
     TitleEng        = {{Graduation Thesis Title}}
 ]{zjuthesis}
 

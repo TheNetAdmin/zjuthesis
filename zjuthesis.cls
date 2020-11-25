@@ -16,6 +16,7 @@
 \DeclareStringOption{Grade}
 \DeclareStringOption{Major}
 \DeclareStringOption{Department}
+\DeclareStringOption{Topic}
 \DeclareStringOption{Title}
 \DeclareStringOption{TitleEng}
 \DeclareStringOption{SubmitDate}
@@ -23,12 +24,11 @@
 \DeclareStringOption[general]{MajorFormat}
 \DeclareStringOption[thesis]{Type}
 \DeclareStringOption[proposal]{Period}
-\DeclareStringOption[false]{BlindReview}
 \DeclareStringOption[chinese]{Language}
-
 \DeclareStringOption[doctor]{GradLevel}
 \DeclareStringOption{ColaboratorName}
-\DeclareStringOption{Topic}
+\DeclareStringOption[false]{BlindReview}
+\DeclareStringOption[false]{PrintFilePath}
 
 \ProcessKeyvalOptions*
 
@@ -39,6 +39,7 @@
 \wlog{BlindReview: {\BlindReview}}
 \wlog{Language: {\Language}}
 \wlog{GradLevel: {\GradLevel}}
+\wlog{PrintFilePath: {\PrintFilePath}}
 
 \PassOptionsToPackage{no-math}{fontspec}
 \PassOptionsToPackage{AutoFakeBold}{xeCJK}
