@@ -11,7 +11,7 @@ cd $project_path
 degree="undergraduate"
 main_majors=("general" "cs")
 sample_majors=("isee" "math" "physics")
-types=("design" "thesis")
+types=("thesis")
 periods=("final" "proposal")
 
 mkdir -p dist
@@ -27,6 +27,9 @@ for major in ${main_majors[@]}; do
         done
     done
 done
+
+build_zjuthesis $degree "cs" "design" "proposal" "false" "doctor" "chinese"
+build_zjuthesis $degree "cs" "design" "final"    "false" "doctor" "chinese"
 
 for major in ${sample_majors[@]}; do
     build_zjuthesis $degree $major "thesis" "final" "false" "doctor" "chinese"
