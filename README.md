@@ -133,7 +133,8 @@ After installing TexLive and downloading zjuthesis code, you can start to write 
 或者也可以帮我[买杯咖啡](./docs/funding.md)。
 
 本项目提供了 LaTeX 模板，但并不负责教会用户使用各种 LaTeX 工具与环境。
-与相关工具和环境的问题请先自行上网搜索解决方案，在本项目的 GitHub Issue 里也已经有很多相关内容，请务必查阅之后再开新的 Issue。
+与工具和环境有关的问题请先自行上网搜索解决方案。
+在本项目的 GitHub Issue 里也已经有很多相关内容，请务必查阅之后再开新的 Issue。
 
 ## 开源许可
 
