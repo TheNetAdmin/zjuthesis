@@ -125,6 +125,16 @@ After installing TexLive and downloading zjuthesis code, you can start to write 
 
 常见问题与解决方案请参考[FAQ](./docs/FAQ.md)，模板使用请参考[使用手册](./docs/usage.md)，模板修改与二次开发请参考[开发手册](./docs/develop.md)。
 
+## 贡献
+
+对本项目最好的贡献方式是在 GitHub Issue 里提交你发现的 BUG，或者贡献 Pull Request。
+如果你不熟悉 GitHub 的运作方式，也可以通过邮件联系我，联系方式位于 `zjuthesis.tex` 顶部。
+
+或者也可以帮我[买杯咖啡](./docs/funding.md)。
+
+本项目提供了 LaTeX 模板，但并不负责教会用户使用各种 LaTeX 工具与环境。
+与相关工具和环境的问题请先自行上网搜索解决方案，在本项目的 GitHub Issue 里也已经有很多相关内容，请务必查阅之后再开新的 Issue。
+
 ## 开源许可
 
 本项目代码基于 MIT 协议开源
