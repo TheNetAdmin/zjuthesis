@@ -27,20 +27,14 @@
     {
         \phantomsection
         \addcontentsline{toc}{chapter}{#1}
-        \begin{center}
-            \bfseries \zihao{3} #1
-        \end{center}
-        \setcounter{section}{0}
+        \chapter*{#1}
     }
 
     \newcommand{\sectionnonum}[1]
     {
         \phantomsection
         \addcontentsline{toc}{section}{#1}
-        \begin{center}
-            \bfseries \zihao{3} #1
-        \end{center}
-        \setcounter{subsection}{0}
+        \section*{#1}
     }
 }
 {
@@ -99,9 +93,7 @@
         \phantomsection
         \addcontentsline{toc}{chapter}{#1}
         \markboth{#1}{#1}
-        \begin{flushleft}
-            \bfseries \zihao{-3} #1
-        \end{flushleft}
+        \chapter*{#1}
     }
 
     \newcommand{\sectionnonum}[1]
@@ -109,9 +101,7 @@
         \phantomsection
         \addcontentsline{toc}{section}{#1}
         \markboth{#1}{#1}
-        \begin{flushleft}
-            \bfseries \zihao{4} #1
-        \end{flushleft}
+        \section*{#1}
     }
 }
 
