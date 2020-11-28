@@ -95,7 +95,6 @@
 
 % Set default page styles
 \pagestyle{common}
-\assignpagestyle{\chapter}{common}
 \tocloftpagestyle{previous}
 
 % TOC side pane fixup
@@ -171,6 +170,7 @@
 \newcommand{\prevstyle}
 {
     \cleardoublepage{}
+    \assignpagestyle{\chapter}{previous}
     \thispagestyle{previous}
     \pagestyle{previous}
     \pagenumbering{Roman}
@@ -181,6 +181,7 @@
 \newcommand{\bodystyle}
 {
     \cleardoublepage{}
+    \assignpagestyle{\chapter}{common}
     \thispagestyle{common}
     \pagestyle{common}
     \pagenumbering{arabic}
@@ -192,10 +193,12 @@
     \cleardoublepage{}
     \ifthenelse{\equal{\Degree}{graduate}}
     {
+        \assignpagestyle{\chapter}{common}
         \thispagestyle{common}
         \pagestyle{common}
     }
     {
+        \assignpagestyle{\chapter}{empty}
         \thispagestyle{empty}
         \pagestyle{empty}
     }
