@@ -51,7 +51,7 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
    |Type        | thesis: 论文类                       | design: 设计类                         |
    |Period      | proposal: 开题报告                   | final: 最终论文/设计                    |
    |BlindReview | true: 生成盲审用 pdf（隐藏个人信息）   | false: 生成提交用 pdf                   |
-   |MajorFormat | 默认: general                        | 与 `config/format/major/` 下目录名相同  |
+   |MajorFormat | general: 默认模板                    | 与 `config/format/major/` 下目录名相同  |
 
    - `Degree` 为 `graduate` 时，编译硕士生/博士生论文：
 
@@ -79,40 +79,11 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 >
 > - 如果你使用 Mac OS 10.15 及以上版本，并且 TexLive 中的 ctex 包版本低于 2.5，会产生[宋体字体判断问题](https://github.com/TheNetAdmin/zjuthesis/issues/79)，导致编译得到的 pdf 中字体出现误差。要解决这个问题，可以将 ctex 包升级到 2.5 以上，或者临时在 ctex 包的选项中加入 `fontset=macnew`，详见 [issue  79](https://github.com/TheNetAdmin/zjuthesis/issues/79)。
 > - 本模板已经兼容 TeXLive 2020。TeXLive 2018 以及之前的版本复制伪粗体文字会产生乱码，建议单独使用 TeXLive 的同学尽快升级至 2019 或更新的版本
-> - 本模板默认情况下使用 `general` 格式，如需使用其他专业格式，请修改 `zjuthesis.tex` 中 `\documentclass` 部分的 `MajorFormat`
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板
 
 ## English Template Usage
 
-The English zjuthesis currently only provides graduate student templates (i.e. master and PhD templates).
-If you are undergraduate student and wish to use English zjuthesis, please open an new GitHub issue or chat with me on [Gitter](https://gitter.im/zjuthesis/community).
-
-### Install TexLive and Chinese Fonts, Download zjuthesis
-
-1. Install TexLive toolchain, zjuthesis relies on XeTeX engine provided by TexLive. You may visit [official TexLive website](https://www.tug.org/texlive/) for installation instructions, or visit TexLive mirror provided by [Zhejiang University Open Source Mirror Site](https://mirrors.zju.edu.cn/CTAN/systems/texlive/Images/) for better download speed with ZJU on-campus network.
-1. Install several Chinese fonts if you are using English Windows/MacOS:
-   1. For Windows: install 仿宋 font (FangSong) and 宋体 font (STSong and SimSun), or you can [install fonts for all languages](https://answers.microsoft.com/en-us/windows/forum/windows_10-start-winpc/some-fonts-are-missing-after-upgrade/95839dfa-0df2-4bc0-875a-fd6b57e61fe4) which includes all the fonts required.
-   1. For MacOS: install 仿宋 font (STFangSong) and 宋体 font (Songti SC).
-1. Download [zjuthesis template code](https://github.com/TheNetAdmin/zjuthesis/releases). The code is named as `zjuthesis-v*.*.*.zip`. You may also download the PDF files with `-english` in filename for preview.
-
-
-### Usage
-
-After installing TexLive and downloading zjuthesis code, you can start to write your thesis:
-
-1. Open `zjuthesis.tex` file in template code, set `\documentclass` fields as follows (remember to set `Degree = graduate` and `Language = english`, all settings are case sensitive):
-
-   |Field      |Value           |
-   |:----------|:---------------|
-   |Degree     |graduate        |
-   |Type       |thesis or design|
-   |MajorFormat|general         |
-   |Language   |english         |
-   |GradLevel  |master or doctor|
-
-1. Update the thesis content under `body/graduate` directory, put your figures and graphs under `figure` directory, update special pages (e.g. thesis cover) under `page/graduate-eng` directory, put your biblography in `body/ref.bib`.
-1. To compile the zjuthesis template, open a command prompt (Windows) or terminal (MacOS/Linux), navigate the zjuthesis root directory, execute `latexmk` command. `latexmk` can compile the whole zjuthesis template including updating contents and biblography.
-
+See [English template user manual](./docs/english.md)
 
 ## Slides 模板
 
@@ -133,8 +104,9 @@ After installing TexLive and downloading zjuthesis code, you can start to write 
 或者也可以帮我[买杯咖啡](./docs/funding.md)。
 
 本项目提供了 LaTeX 模板，但并不负责教会用户使用各种 LaTeX 工具与环境。
-与工具和环境有关的问题请先自行上网搜索解决方案。
-在本项目的 GitHub Issue 里也已经有很多相关内容，请务必查阅之后再开新的 Issue。
+与工具和环境有关的问题（例如 TeXStudio 如何处理参考文献）请先自行上网搜索解决方案。
+在本项目的 GitHub Issue 里也已经有很多相关内容，可以进行查阅。
+本项目只处理使用命令行 `latexmk` 命令编译后产生的问题，不处理使用其他工具（如 TeXStudio）产生的问题。
 
 ## 开源许可
 
