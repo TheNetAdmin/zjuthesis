@@ -1,7 +1,7 @@
 ---
 name: Enhancement
 about: Suggesting new enhancements for the template
-title: "[Enhancement]"
+title: ''
 labels: enhancement
 assignees: ''
 
