@@ -14,6 +14,7 @@
 This is a LaTeX template for Zhejiang University graduation thesis/design.
 It provides undergraduate and graduate (master and phd) template.
 It also provides an English template for graduate students.
+See [English template user manual](./docs/english.md) for more details.
 
 [CC98 校内讨论贴](https://www.cc98.org/topic/4762356)
 
@@ -81,9 +82,6 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 > - 本模板已经兼容 TeXLive 2020。TeXLive 2018 以及之前的版本复制伪粗体文字会产生乱码，建议单独使用 TeXLive 的同学尽快升级至 2019 或更新的版本
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板
 
-## English Template Usage
-
-See [English template user manual](./docs/english.md)
 
 ## Slides 模板
 
