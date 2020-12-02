@@ -39,6 +39,9 @@ You need to download all the font files (.ttf/.ttc) mentioned in above script:
   - TimesNewRomanItalic.ttf
   - TimesNewRomanBoldItalic.ttf
   - SimSun.ttc
+  - SimHei.ttf
+  - Kaiti.ttf
+  - simkai.ttf
 
 Download these fonts to your local computer and upload them to this folder (fonts/).
 EOF
