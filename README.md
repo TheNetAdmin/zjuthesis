@@ -43,6 +43,7 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)，
    每个专业模板都有预览 pdf 文件，可以单独下载查看。
    模板代码请下载 `zjuthesis-v*.*.*.zip` 文件。
+   （如果你在用 Clone 或者 Fork 得到的代码，请切换到最新的 release tag，避免 master 分支上的不稳定更新破环你的论文的样式）
 1. 在 `zjuthesis.tex` 中 `\documentclass[]{zjuthesis}` 部分填写个人信息，其中以下信息用于控制文档的生成：
 
    - `Degree` 为 `undergraduate` 时，编译本科生论文：
