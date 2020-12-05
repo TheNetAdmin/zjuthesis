@@ -27,14 +27,20 @@
     {
         \phantomsection
         \addcontentsline{toc}{chapter}{#1}
-        \chapter*{#1}
+        \begin{center}
+            \bfseries \zihao{3} #1	
+        \end{center}	
+        \setcounter{section}{0}
     }
 
     \newcommand{\sectionnonum}[1]
     {
         \phantomsection
         \addcontentsline{toc}{section}{#1}
-        \section*{#1}
+        \begin{center}
+            \bfseries \zihao{3} #1	
+        \end{center}	
+        \setcounter{subsection}{0}
     }
 }
 {
