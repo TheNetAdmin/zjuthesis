@@ -5,7 +5,7 @@
 [![GitHub All Releases](https://img.shields.io/github/downloads/thenetadmin/zjuthesis/total.svg?color=blue&style=popout)](https://github.com/TheNetAdmin/zjuthesis/releases/latest)
 [![Commit Since Latest Release](https://img.shields.io/github/commits-since/TheNetAdmin/zjuthesis/latest.svg)](https://github.com/TheNetAdmin/zjuthesis/commits/master)
 ![GithubAction](https://github.com/TheNetAdmin/zjuthesis/workflows/Build%20Tests/badge.svg)
-[![Gitter](https://badges.gitter.im/zjuthesis/community.svg)](https://gitter.im/zjuthesis/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![GitHub Discussion](https://img.shields.io/badge/github-discussion-blue)](https://github.com/TheNetAdmin/zjuthesis/discussions)
 
 ## 简介
 
@@ -19,6 +19,8 @@ See [English template user manual](./docs/english.md) for more details.
 [CC98 校内讨论贴](https://www.cc98.org/topic/4762356)
 
 [Gitter 聊天室](https://gitter.im/zjuthesis/community)
+
+[GitHub 讨论版](https://github.com/TheNetAdmin/zjuthesis/discussions) 这是 GitHub 最近推出的讨论版功能，以后会用这个替代 Gitter 聊天室
 
 ## 使用
 
