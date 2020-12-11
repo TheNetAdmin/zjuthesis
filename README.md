@@ -30,21 +30,21 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 
 ### Overleaf
 
-1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases) 中的 `zjuthesis-v*.*.*-overleaf.zip` 文件。
-1. 在 Overleaf 中上传这个 .zip 压缩文件以创建一个新 Overleaf 项目。
+1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases) 中的 `zjuthesis-v*.*.*-overleaf.zip` 文件
+1. 在 Overleaf 中上传这个 .zip 压缩文件以创建一个新 Overleaf 项目
 1. 在 Overleaf 界面左上角点击 "Menu"
    - 选择 "Compiler" 为 "XeLaTeX"
-   - 选择 "TeX Live version" 为 "2019" 或者更新的版本。
-1. 参照 Overleaf 项目中 `fonts/README.md` 的说明下载所需字体，并上传到 `fonts` 文件夹中。
-1. 使用 Overleaf 编译。
-   - 选择专业模板与毕业学位的方式参见下文 "本地编译"。
+   - 选择 "TeX Live version" 为 "2019" 或者更新的版本
+1. 参照 Overleaf 项目中 `fonts/README.md` 的说明下载所需字体，并上传到 `fonts` 文件夹中
+1. 使用 Overleaf 编译
+   - 选择专业模板与毕业学位的方式参见下文 "本地编译"
 
 ### 本地编译
 
-1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。
+1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)，
    每个专业模板都有预览 pdf 文件，可以单独下载查看。
-   模板代码请下载 `zjuthesis-v*.*.*.zip` 文件。
+   模板代码请下载 `zjuthesis-v*.*.*.zip` 文件
    （如果你在用 Clone 或者 Fork 得到的代码，请切换到最新的 release tag，避免 master 分支上的不稳定更新破环你的论文的样式）
 1. 在 `zjuthesis.tex` 中 `\documentclass[]{zjuthesis}` 部分填写个人信息，其中以下信息用于控制文档的生成：
 
