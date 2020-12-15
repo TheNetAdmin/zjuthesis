@@ -74,7 +74,7 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 1. 在 `body` 目录下编写内容
 1. 在 `pages` 目录下填写必要的内容，如审核评语等
 1. 在 `figure` 目录下保存图片，在 `body/ref.bib` 内插入文献条目
-1. 在根目录下运行命令 `latexmk`（或者 `latexmk -xelatex -outdir=out zjuthesis`）即可使用 XeTeX 编译 pdf 文件到 `out` 目录（该目录不会被记录版本）
+1. 在根目录下运行命令 `latexmk`（或者 `latexmk -xelatex -outdir=out zjuthesis`）即可使用 XeTeX 编译 pdf 文件到 `out` 目录（该目录不会被记录版本）。**请务必使用此 `latexmk` 命令进行编译（除非你已经了解 LaTeX 的工作机制），否则你可能遇到参考文献无法显示等问题**
 1. 如需使用 LuaTeX 编译，可运行命令 `latexmk -pdflua -outdir=out`
 
 > 注意：
