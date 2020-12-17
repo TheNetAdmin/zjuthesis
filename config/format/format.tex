@@ -1,3 +1,34 @@
-\input{config/format/general/format}
-\input{config/format/major/\MajorFormat/format}
-\input{config/format/language}
+% \input{config/format/general/format}
+% \input{config/format/major/\MajorFormat/format}
+
+\newcommand{\inputformat}[1]
+{
+    % For each format file `xxx.tex', do the following (the order matters):
+    %   1. Input config/format/general/xxx.tex            if exists
+    %   2. Input config/format/major/\MajorFormat/xxx.tex if exists
+
+    \IfFileExists{config/format/general/#1}
+    {
+        \input{config/format/general/#1}
+    }{}
+
+    \IfFileExists{config/format/major/\MajorFormat/#1}
+    {
+        \input{config/format/major/\MajorFormat/#1}
+    }{}
+
+}
+
+\inputformat{packages}
+\inputformat{commands}
+\inputformat{caption}
+\inputformat{geometry}
+\inputformat{layout}
+\inputformat{heading}
+\inputformat{fonts}
+\inputformat{reference}
+\inputformat{tables}
+\inputformat{numbering}
+\inputformat{debugging}
+\inputformat{language}
+\inputformat{code}
