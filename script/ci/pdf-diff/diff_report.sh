@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Install Python package diff-pdf-visually"
+pip3 install diff-pdf-visually
+
 echo "Downloading standard baseline pdf files"
 bash ./script/ci/pdf-diff/download_standard_pdf.sh
 
