@@ -30,7 +30,7 @@ for fname in $(ls ../dist); do
     if [[ -f ../out/standard/$fname ]]; then
         cp ../out/standard/$fname $fbase/std-$fname
         pushd $fbase
-        python -m diff_pdf_visually -v cur-$fname std-$fname >$fbase.log
+        python3 -m diff_pdf_visually -v cur-$fname std-$fname >$fbase.log
         echo $? >>../report.txt
         popd
     else
