@@ -13,8 +13,8 @@ mkdir -p dist
 degree="graduate"
 
 build_zjuthesis $degree "cs"      "thesis" "final" "false" "master" "chinese"
-# build_zjuthesis $degree "general" "thesis" "final" "false" "master" "chinese"
+build_zjuthesis $degree "general" "thesis" "final" "false" "master" "chinese"
 
-# build_zjuthesis $degree "general" "thesis" "final" "true"  "doctor" "chinese"
-# build_zjuthesis $degree "general" "thesis" "final" "false" "doctor" "chinese"
-# build_zjuthesis $degree "general" "thesis" "final" "false" "doctor" "english"
+build_zjuthesis $degree "general" "thesis" "final" "true"  "doctor" "chinese"
+build_zjuthesis $degree "general" "thesis" "final" "false" "doctor" "chinese"
+build_zjuthesis $degree "general" "thesis" "final" "false" "doctor" "english"
