@@ -11,7 +11,9 @@ if ! [ -x "$(command -v pdftocairo)" ]; then
 fi
 
 echo "Downloading standard baseline pdf files"
-bash ./script/ci/pdf-diff/download_standard_pdf.sh
+if ! [[ -d out/standard ]]; then
+    bash ./script/ci/pdf-diff/download_standard_pdf.sh
+fi
 
 echo "Start comparing and generating pdf diff report"
 mkdir -p diff
