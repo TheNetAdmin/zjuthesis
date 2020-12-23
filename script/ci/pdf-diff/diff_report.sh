@@ -5,6 +5,11 @@ set -x
 echo "Install Python package diff-pdf-visually"
 pip3 install diff-pdf-visually
 
+echo "Install pdftocairo if not exists"
+if ! [ -x "$(command -v pdftocairo)" ]; then
+    apt install pdftocairo
+fi
+
 echo "Downloading standard baseline pdf files"
 bash ./script/ci/pdf-diff/download_standard_pdf.sh
 
