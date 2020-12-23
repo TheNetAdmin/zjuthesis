@@ -3,7 +3,7 @@ name: Build Tests
 on:
   push:
     paths-ignore:
-      - ".github/*"
+      - ".github/**"
       - ".gitattributes"
       - ".gitignore"
       - "LICENSE"
