@@ -9,14 +9,21 @@ on:
       - "docs/**"
       - "**/*.md"
       - "LICENSE"
-#    tags-ignore: 
-#      - '*'
 
 jobs:
 
+  ci_skip:
+    runs-on: [ubuntu-latest]
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    steps:
+      - name: Pass on [ci skip]
+        run: echo ci skip by git commit
+      - name: Current version
+        run: echo ${GITHUB_REF}
+
   build_undergrad:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    needs: [ci_skip]
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v1
@@ -39,7 +46,8 @@ jobs:
 
   build_grad:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    # if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    needs: [ci_skip]
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v1
@@ -62,7 +70,7 @@ jobs:
 
   overleaf_update:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    needs: [build_grad, build_undergrad]
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v1
@@ -83,11 +91,3 @@ jobs:
     - name: Check result
       run: ls -la ./zjuthesis
 
-  ci_skip:
-    runs-on: [ubuntu-latest]
-    if: "contains(github.event.head_commit.message, '[ci skip]')"
-    steps:
-      - name: Pass on [ci skip]
-        run: echo ci skip by git commit
-      - name: Current version
-        run: echo ${GITHUB_REF}
