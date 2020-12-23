@@ -90,7 +90,7 @@ jobs:
   overleaf_update:
     runs-on: ubuntu-latest
     needs: [build_grad, build_undergrad]
-    if: "contains(github.repo, 'TheNetAdmin')"
+    if: "contains(github.repository_owner, 'TheNetAdmin')"
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v1
