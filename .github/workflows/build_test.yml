@@ -3,7 +3,7 @@ name: Build Tests
 on:
   push:
     paths-ignore:
-      - ".git**"
+      # - ".git**"
       - "**.md"
       - "docs/**"
       - "**/*.md"
