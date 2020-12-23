@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 echo "Install Python package diff-pdf-visually"
 pip3 install diff-pdf-visually
 
