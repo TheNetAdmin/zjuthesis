@@ -36,4 +36,7 @@ done
 popd
 
 result=$(cat diff/report.txt | cut -d ' ' -f 2 | paste -sd+ - | bc)
-exit $result
+if [[ $result -ne 0 ]]; then
+    echo "Some pdf diff checks failed, see GitHub artifact for details"
+    exit 1
+fi
