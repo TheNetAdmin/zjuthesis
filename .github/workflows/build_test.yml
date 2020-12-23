@@ -38,19 +38,19 @@ jobs:
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
       with:
-        name: dist
+        name: dist-undergrad
         path: dist
     - name: Upload Log Files
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
       with:
-        name: out-ci
+        name: out-ci-undergrad
         path: out-ci
     - name: Upload PDF Diff Files
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
       with:
-        name: diff
+        name: diff-undergrad
         path: diff
 
   build_grad:
@@ -72,19 +72,19 @@ jobs:
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
       with:
-        name: dist
+        name: dist-grad
         path: dist
     - name: Upload Log Files
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
       with:
-        name: out-ci
+        name: out-ci-grad
         path: out-ci
     - name: Upload PDF Diff Files
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
       with:
-        name: diff
+        name: diff-grad
         path: diff
 
   overleaf_update:
