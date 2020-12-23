@@ -7,7 +7,7 @@ pip3 install diff-pdf-visually
 
 echo "Install pdftocairo if not exists"
 if ! [ -x "$(command -v pdftocairo)" ]; then
-    sudo apt install pdftocairo
+    sudo apt install poppler-utils
 fi
 
 echo "Downloading standard baseline pdf files"
