@@ -29,6 +29,7 @@ touch report.txt
 # 3: standard baseline pdf is missing
 
 for fname in $(ls ../dist/*.pdf); do
+    fname=$(basename $fname)
     fbase=${fname%.*}
     echo Checking $fbase
     echo -n "$fbase: " >>report.txt
