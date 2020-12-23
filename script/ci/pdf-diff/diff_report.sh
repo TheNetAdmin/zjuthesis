@@ -28,7 +28,7 @@ touch report.txt
 # 2: two pdf files has significant visually mismatch
 # 3: standard baseline pdf is missing
 
-for fname in $(ls ../dist); do
+for fname in $(ls ../dist/*.pdf); do
     fbase=${fname%.*}
     echo Checking $fbase
     echo -n "$fbase: " >>report.txt
