@@ -2,6 +2,7 @@
 out/*
 out-*/*
 dist/*
+diff/*
 /*.pdf
 /*.ttf*
 /*.ttc*
