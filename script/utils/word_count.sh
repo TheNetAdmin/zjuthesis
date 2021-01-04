@@ -10,11 +10,11 @@ fi
 cat out/zjuthesis.fls                 \
     | uniq                            \
     | grep body                       \
-    | grep -v content                 \
-    | grep -v thanksto                \
-    | grep -v review                  \
-    | grep -v original                \
-    | grep -v cv                      \
+    | grep -v content.tex             \
+    | grep -v thanksto.tex            \
+    | grep -v review.tex              \
+    | grep -v original.tex            \
+    | grep -v cv.tex                  \
     | cut -d ' ' -f 2                 \
     | awk '{ print "\\input{"$1"}" }' \
     > out/zjuthesis.wordcnt           \
