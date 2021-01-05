@@ -107,7 +107,9 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 本项目提供了 LaTeX 模板，但并不负责教会用户使用各种 LaTeX 工具与环境。
 与工具和环境有关的问题（例如 TeXStudio 如何处理参考文献）请先自行上网搜索解决方案。
 在本项目的 GitHub Issue 里也已经有很多相关内容可供查阅。
-本项目只处理使用命令行 `latexmk` 命令编译后产生的问题，不处理使用其他工具（如 TeXStudio）产生的问题。
+当以上尝试均失败后，可到本项目的 [GitHub Discussion](https://github.com/TheNetAdmin/zjuthesis/discussions) 板块进行讨论。
+
+本项目的 Issue 板块只处理使用命令行 `latexmk` 命令编译后产生的问题，不处理使用其他工具（如 TeXStudio）产生的问题。
 
 ## 开源许可
 
