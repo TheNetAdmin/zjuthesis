@@ -29,6 +29,7 @@
 \DeclareStringOption{ColaboratorName}
 \DeclareStringOption[false]{BlindReview}
 \DeclareStringOption[false]{PrintFilePath}
+\DeclareStringOption[true]{TwoSide}
 
 \ProcessKeyvalOptions*
 
@@ -43,11 +44,23 @@
 
 \PassOptionsToPackage{no-math}{fontspec}
 \PassOptionsToPackage{AutoFakeBold}{xeCJK}
-\LoadClass[
-    zihao=-4,
-    UTF8,
-    twoside
-]{ctexrep}
+
+\usepackage{xifthen}
+
+\ifthenelse{\equal{\TwoSide}{true}}
+{
+    \LoadClass[
+        zihao=-4,
+        UTF8,
+        twoside
+    ]{ctexrep}
+}
+{
+    \LoadClass[
+        zihao=-4,
+        UTF8
+    ]{ctexrep}
+}
 
 \input{config/packages}
 
