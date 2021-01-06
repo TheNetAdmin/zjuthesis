@@ -1,0 +1,14 @@
+% ctex style settings
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{}
+{
+    % https://github.com/TheNetAdmin/zjuthesis/issues/119
+    \ctexset
+    {
+        chapter = 
+        {
+            format=\centering\zihao{-2}\bfseries,
+            name={第,章}
+        }
+    }
+}

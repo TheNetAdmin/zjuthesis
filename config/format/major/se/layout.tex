@@ -1,0 +1,15 @@
+
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{}
+{
+    \fancypagestyle{previous}
+    {
+        \commonhead{}
+        \fancyfoot{}
+        \fancyfoot[OC,EC]{\zihao{5}\thepage}
+    }
+
+    % Reduce line spacing in toc
+    % TODO: is there any better way to set single line spacing in `tocloft'?
+    \setlength{\cftparskip}{-5pt}
+}
