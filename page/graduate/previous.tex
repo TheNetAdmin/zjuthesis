@@ -6,6 +6,11 @@
 \setcounter{page}{1}
 
 \inputpage{correction}
-\inputpage{thanksto}
+\ifthenelse{\equal{\BlindReview}{true}}
+{
+}
+{
+    \inputpage{thanksto}
+}
 \inputpage{preface}
 \inputpage{abstract}
