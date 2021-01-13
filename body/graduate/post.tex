@@ -1,4 +1,9 @@
 
     \inputbody{post/ref}
     \inputbody{post/appendix}
-    \inputbody{post/cv}
+    \ifthenelse{\equal{\BlindReview}{true}}
+    {
+    }
+    {
+        \inputbody{post/cv}
+    }
