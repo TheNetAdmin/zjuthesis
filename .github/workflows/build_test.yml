@@ -34,8 +34,8 @@ jobs:
       run: ./script/ci/setup.sh
     - name: Build Test in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
-    - name: PDF Diff
-      run: bash script/ci/pdf-diff/diff_report.sh
+    # - name: PDF Diff
+    #   run: bash script/ci/pdf-diff/diff_report.sh
     - name: Upload Output Files
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
@@ -67,8 +67,8 @@ jobs:
       run: ./script/ci/setup.sh
     - name: Build Test in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
-    - name: PDF Diff
-      run: bash script/ci/pdf-diff/diff_report.sh
+    # - name: PDF Diff
+    #   run: bash script/ci/pdf-diff/diff_report.sh
     - name: Upload Output Files
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
