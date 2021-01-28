@@ -56,7 +56,9 @@
 
    A: 可以先尝试执行 `tlmgr update --self --all` 更新整个 TeXLive，然后重新编译。因为直接安装的 TeXLive 并不包含所有最新版本的宏包，一些旧版宏包的 BUG 可能会影响编译。
 
-## 参考文献与引用
+## 格式
+
+### 参考文献与引用
 
 1. Q: 参考文献编译有问题？
 
@@ -73,6 +75,15 @@
    A: 这是 `gb7714-2015` 标准规定的，参考 [GitHub Issue](https://github.com/TheNetAdmin/zjuthesis/issues/23) 讨论。
    
    如果需要“非全大写”姓名格式，请在引用 `biblatex` 包时指定 `gbnamefmt=lowercase`，详见 [GitHub Issue](https://github.com/TheNetAdmin/zjuthesis/issues/23#issuecomment-602129192) 讨论。
+
+### 页眉与页脚
+
+1. Q: 如何定制页眉页脚（包括页码）？
+
+   A: 页眉页脚的设定主要位于 `config/format/***/layout.tex` 下，请参考 `fancyhdr` 宏包文档修改如下设定
+      - `\fancypagestyle{common}`：正文页眉页脚设定
+      - `\fancypagestyle{previous}`：前置页面页眉页脚设定
+      - 同时如有必要请修改 `\prevstyle`，`\bodystyle` 和 `\poststyle` 命令的设定
 
 ## 工具使用
 
