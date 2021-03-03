@@ -95,6 +95,13 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
    - [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
    - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide) 国内网络用这个链接下载比较快
 
+[HGGshiwo](https://github.com/HGGshiwo) 同学于 2021 年开发了基于 Beamer 的 Slides 模板，有兴趣的同学可以参考如下几个 repo ：
+
+   - [Formal](https://github.com/HGGshiwo/BeamerthemeFormal) (内含对其他几个 Beamer 模板的简介)
+   - [Brief](https://github.com/HGGshiwo/BeamerthemeBrief)
+   - [Mixture](https://github.com/HGGshiwo/BeamerthemeMixture)
+   - [Classical](https://github.com/HGGshiwo/BeamerthemeClassical)
+
 ## 参考文档
 
 常见问题与解决方案请参考[FAQ](./docs/FAQ.md)，模板使用请参考[使用手册](./docs/usage.md)，模板修改与二次开发请参考[开发手册](./docs/develop.md)。
