@@ -38,6 +38,7 @@
     % TODO: how to switch to \section* without breaking current formats?
     \newcommand{\chapternonum}[1]
     {
+        \cleardoublepage
         \phantomsection
         \addcontentsline{toc}{chapter}{#1}
         \begin{center}
@@ -48,6 +49,7 @@
 
     \newcommand{\sectionnonum}[1]
     {
+        \cleardoublepage
         \phantomsection
         \addcontentsline{toc}{section}{#1}
         \begin{center}
@@ -109,6 +111,7 @@
 
     \newcommand{\chapternonum}[1]
     {
+        \cleardoublepage
         \phantomsection
         \addcontentsline{toc}{chapter}{#1}
         \markboth{#1}{#1}
