@@ -48,12 +48,12 @@ jobs:
       with:
         name: out-ci-undergrad
         path: out-ci
-    - name: Upload PDF Diff Files
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v1
-      with:
-        name: diff-undergrad
-        path: diff
+    # - name: Upload PDF Diff Files
+    #   if: ${{ always() }}
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: diff-undergrad
+    #     path: diff
 
   build_grad:
     runs-on: ubuntu-latest
@@ -81,12 +81,12 @@ jobs:
       with:
         name: out-ci-grad
         path: out-ci
-    - name: Upload PDF Diff Files
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v1
-      with:
-        name: diff-grad
-        path: diff
+    # - name: Upload PDF Diff Files
+    #   if: ${{ always() }}
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: diff-grad
+    #     path: diff
 
   overleaf_update:
     runs-on: ubuntu-latest
