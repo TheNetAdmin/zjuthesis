@@ -52,7 +52,8 @@
     \LoadClass[
         zihao=-4,
         UTF8,
-        twoside
+        twoside,
+        openright
     ]{ctexrep}
 }
 {
