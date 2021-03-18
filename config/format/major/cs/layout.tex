@@ -27,4 +27,17 @@
     \setlength{\cftsubsecindent}    {1em}
     \setlength{\cftsubsubsecindent} {2em}
 }
-{}
+{
+    \ifthenelse{\equal}{\Period}{proposal}
+    {
+        \ifthenelse{\equal}{\Type}{thesis}
+        {
+            \renewcommand{\cftchapfont}         {\bfseries\zihao{-4}}
+            \renewcommand{\cftsecfont}          {\bfseries\zihao{-4}}
+            \renewcommand{\cftsubsecfont}       {\zihao{-4}}
+            \renewcommand{\cftsubsubsecfont}    {\zihao{-4}}
+        }
+        {}
+    }
+    {}
+}
