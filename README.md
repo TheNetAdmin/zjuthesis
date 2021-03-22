@@ -77,7 +77,7 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 1. 在根目录下运行命令 `latexmk`（或者 `latexmk -xelatex -outdir=out zjuthesis`）即可使用 XeTeX 编译 pdf 文件到 `out` 目录（该目录不会被记录版本）。**请务必使用此 `latexmk` 命令进行编译（除非你已经了解 LaTeX 的工作机制），否则你可能遇到参考文献无法显示等问题**
 1. 如需使用 LuaTeX 编译，可运行命令 `latexmk -pdflua -outdir=out`
 
-> 注意：
+> **注意**
 >
 > - 每年的三月底四月初会有 TeXLive 的版本升级，届时本模板会根据 TeXLive 的更新做出一定的修改，请在提交最终论文前查看并应用本模板的更新。
 > - 如果你使用 Mac OS 10.15 及以上版本，并且 TexLive 中的 ctex 包版本低于 2.5，会产生[宋体字体判断问题](https://github.com/TheNetAdmin/zjuthesis/issues/79)，导致编译得到的 pdf 中字体出现误差。要解决这个问题，可以将 ctex 包升级到 2.5 以上，或者临时在 ctex 包的选项中加入 `fontset=macnew`，详见 [issue  79](https://github.com/TheNetAdmin/zjuthesis/issues/79)。
@@ -91,12 +91,12 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 
 ## Slides 模板
 
-这是作者用于毕业答辩的一个 Slides 模板 (Microsoft PowerPoint 模板)，现在转移到 GitHub/Gitee 方便同学们连同 LaTeX 模板一起下载:
+这是作者用于毕业答辩的一个 Slides 模板 (Microsoft PowerPoint 模板)，现在转移到 GitHub/Gitee 方便同学们连同 LaTeX 模板一起下载
 
    - [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
    - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide) 国内网络用这个链接下载比较快
 
-[HGGshiwo](https://github.com/HGGshiwo) 同学于 2021 年开发了基于 Beamer 的 Slides 模板，有兴趣的同学可以参考如下几个 repo ：
+[HGGshiwo](https://github.com/HGGshiwo) 同学于 2021 年开发了基于 Beamer 的 Slides 模板，有兴趣的同学可以参考如下几个 repo
 
    - [Formal](https://github.com/HGGshiwo/BeamerthemeFormal) (内含对其他几个 Beamer 模板的简介)
    - [Brief](https://github.com/HGGshiwo/BeamerthemeBrief)
