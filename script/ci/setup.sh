@@ -1,9 +1,10 @@
 #!/bin/bash
 
 set -e
+set -x
 
 this_path="$(dirname "$(realpath "$0")")"
-project_path=$this_path/../../../
+project_path="$(realpath "$this_path/../../")"
 
 echo "Setup fonts"
 
