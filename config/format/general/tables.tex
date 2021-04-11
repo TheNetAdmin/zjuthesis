@@ -1,9 +1,11 @@
 % Vertical align for tabularx cells
 \renewcommand{\tabularxcolumn}[1]{m{#1}}
 
-% Font type inside table
-\AtBeginEnvironment{tabular}{\songti}
-\AtBeginEnvironment{tabularx}{\songti}
+\newcommand{\tablefontstyle}{
+    % Font type inside table
+    \AtBeginEnvironment{tabular}{\songti}
+    \AtBeginEnvironment{tabularx}{\songti}
+}
 
 % Fix bold text bug, see:
 %   - GitHub zjuthesis: #24, #134
