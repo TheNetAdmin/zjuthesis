@@ -4,3 +4,9 @@
 % Font type inside table
 \AtBeginEnvironment{tabular}{\songti}
 \AtBeginEnvironment{tabularx}{\songti}
+
+% Fix bold text bug, see:
+%   - GitHub zjuthesis: #24, #134
+%   - GitHub ctex-kit :  #546
+\AtBeginEnvironment{table*}{\special{pdf:code q}}
+\AtEndEnvironment{table*}{\special{pdf:code Q}}
