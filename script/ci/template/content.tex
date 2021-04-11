@@ -1,0 +1,87 @@
+\chapter{一个 Chapter}
+
+\zhlipsum[1-2][name=zhufu]
+
+\section{一个 Section}
+
+\zhlipsum[3-4][name=zhufu]
+
+\subsection{一个 Subsection}
+
+\zhlipsum[5-6][name=zhufu]
+
+\subsubsection{一个 Subsubsection}
+
+\zhlipsum[7-8][name=zhufu]
+
+\section{另一个 Section}
+
+\lipsum
+
+\chapter{另一个 Chapter}
+
+
+\par 我们可以用includegraphics来插入现有的jpg等格式的图片，如\autoref{fig:zju-logo}。
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=.4\linewidth]{logo/zju}
+    \caption{\label{fig:zju-logo}浙江大学LOGO}
+\end{figure}
+
+\par 如\autoref{tab:sample}所示，这是一张自动调节列宽的表格。
+
+\begin{table}[ht]
+    \caption{\label{tab:sample}自动调节列宽的表格}
+    \begin{tabularx}{\linewidth}{|c|X<{\centering}|}
+        \hline
+        第一列 & 第二列 \\ \hline
+        xxx & xxx \\ \hline
+        xxx & xxx \\ \hline
+        xxx & xxx \\ \hline
+    \end{tabularx}
+\end{table}
+
+\par 如\autoref{equ:sample}，这是一个公式
+
+\begin{equation}
+    \label{equ:sample}
+    A=\overbrace{(a+b+c)+\underbrace{i(d+e+f)}_{\text{虚数}}}^{\text{复数}}
+\end{equation}
+
+\par 如\autoref{code:sample}所示，这是一段代码。
+计算机学院的代码样式可能与其他专业不同，
+如有需要，可以从计算机学院专业模板中复制相关的代码样式设定。
+
+\begin{lstlisting}[%
+    language={C},
+    caption={simple.c},
+    label={code:sample}
+]
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    printf("Hello, zjuthesis\n");
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{关于字体}
+
+英文字体通常提供了粗体和斜体的组合，中文字体通常没有粗体或斜体，本模板使用了 `AutoFakeBold' 来实现中文伪粗体，但不提供中文斜体，如\autoref{tab:font-examples}所示。
+
+\begin{table}
+    \centering
+    \caption{一些字体示例}
+    \label{tab:font-examples}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        字体            & 常规             & 粗体                       & 斜体                      & 粗斜体                                \\ \hline
+        Times New Roman & Regular         & {\bfseries          Bold} & {\itshape         Italic} & {\bfseries \itshape      BoldItalic} \\ \hline
+        仿宋            & {\fangsong 常规} & {\fangsong \bfseries 粗体} & {\fangsong \itshape 斜体} & {\fangsong \bfseries \itshape 粗斜体} \\ \hline
+        宋体            & {\songti   常规} & {\songti   \bfseries 粗体} & {\songti   \itshape 斜体} & {\songti   \bfseries \itshape 粗斜体} \\ \hline
+        黑体            & {\heiti    常规} & {\heiti    \bfseries 粗体} & {\heiti    \itshape 斜体} & {\heiti    \bfseries \itshape 粗斜体} \\ \hline
+        楷体            & {\kaishu   常规} & {\kaishu   \bfseries 粗体} & {\kaishu   \itshape 斜体} & {\kaishu   \bfseries \itshape 粗斜体} \\ \hline
+    \end{tabular}
+\end{table}

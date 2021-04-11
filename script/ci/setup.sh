@@ -2,6 +2,9 @@
 
 set -e
 
+this_path="$(dirname "$(realpath "$0")")"
+project_path=$this_path/../../../
+
 echo "Setup fonts"
 
 # get fonts
@@ -49,3 +52,10 @@ for font_spec in ${font_specs[@]}; do
     #    \setCJKfamilyfont{...}{...}[..., Path=./fonts/]
     sed -ri 's/(\\setcjkfamilyfont.*?)]/\1, Path=.\/fonts\/]/gi' $font_spec
 done
+
+echo "\usepackage{lipsum}" >> "$format_dir/packages.tex"
+echo "\usepackage{zhlipsum}" >> "$format_dir/packages.tex"
+
+cp $this_path/template/content.tex $project_path/body/graduate/content.tex
+cp $this_path/template/content.tex $project_path/body/undergraduate/final/content.tex
+cp $this_path/template/content.tex $project_path/body/undergraduate/proposal/content.tex
