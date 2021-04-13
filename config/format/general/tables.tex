@@ -3,8 +3,9 @@
 
 \newcommand{\tablefontstyle}{
     % Font type inside table
-    \AtBeginEnvironment{tabular}{\songti}
-    \AtBeginEnvironment{tabularx}{\songti}
+    \makeatletter
+    \appto{\@floatboxreset}{\songti}
+    \makeatother
 }
 
 % Fix bold text bug, see:
