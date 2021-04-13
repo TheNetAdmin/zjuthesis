@@ -34,8 +34,6 @@ jobs:
       run: ./script/ci/setup.sh
     - name: Build Test in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
-    # - name: PDF Diff
-    #   run: bash script/ci/pdf-diff/diff_report.sh
     - name: Upload Output Files
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
@@ -48,12 +46,6 @@ jobs:
       with:
         name: out-ci-undergrad
         path: out-ci
-    # - name: Upload PDF Diff Files
-    #   if: ${{ always() }}
-    #   uses: actions/upload-artifact@v1
-    #   with:
-    #     name: diff-undergrad
-    #     path: diff
 
   build_grad:
     runs-on: ubuntu-latest
@@ -67,8 +59,6 @@ jobs:
       run: ./script/ci/setup.sh
     - name: Build Test in Docker
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
-    # - name: PDF Diff
-    #   run: bash script/ci/pdf-diff/diff_report.sh
     - name: Upload Output Files
       if: ${{ always() }}
       uses: actions/upload-artifact@v1
@@ -81,16 +71,35 @@ jobs:
       with:
         name: out-ci-grad
         path: out-ci
-    # - name: Upload PDF Diff Files
-    #   if: ${{ always() }}
-    #   uses: actions/upload-artifact@v1
-    #   with:
-    #     name: diff-grad
-    #     path: diff
+
+  diff_pdf:
+    runs-on: ubuntu-latest
+    needs: [build_grad, build_undergrad]
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v1
+    - name: Current version
+      run: echo $GITHUB_REF
+    - name: Download Artifacts
+      uses: actions/download-artifact@v2
+    - name: Move Artifacts
+      run: |
+        mkdir -p dist
+        mv dist-grad/*.pdf dist/ 
+        mv dist-undergrad/*.pdf dist/ 
+    - name: PDF Diff
+      run: bash script/ci/pdf-diff/diff_report.sh
+    - name: Upload PDF Diff Files
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v1
+      with:
+        name: pdf-diff
+        path: diff
+    
 
   overleaf_update:
     runs-on: ubuntu-latest
-    needs: [build_grad, build_undergrad]
+    needs: [diff_pdf]
     if: "contains(github.repository_owner, 'TheNetAdmin')"
     steps:
     - name: Checkout Repo
