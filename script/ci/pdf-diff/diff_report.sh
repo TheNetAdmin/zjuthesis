@@ -18,7 +18,7 @@ fi
 echo "Start comparing and generating pdf diff report"
 mkdir -p diff
 
-pushd diff
+pushd diff || exit 1
 
 rm -f report.txt
 touch report.txt
@@ -29,24 +29,24 @@ touch report.txt
 # 3: standard baseline pdf is missing
 
 for fname in $(ls ../dist/*.pdf); do
-    fname=$(basename $fname)
+    fname=$(basename "$fname")
     fbase=${fname%.*}
-    echo Checking $fbase
+    echo Checking "$fbase"
     echo -n "$fbase: " >>report.txt
-    mkdir -p $fbase
-    cp ../dist/$fname         $fbase/cur-$fname
+    mkdir -p "$fbase"
+    cp "../dist/$fname" "$fbase/cur-$fname"
     if [[ -f ../out/standard/$fname ]]; then
-        cp ../out/standard/$fname $fbase/std-$fname
-        pushd $fbase
-        python3 -m diff_pdf_visually -v cur-$fname std-$fname >$fbase.log
+        cp "../out/standard/$fname" "$fbase/std-$fname"
+        pushd "$fbase" || exit 1
+        python3 -m diff_pdf_visually -v "cur-$fname" "std-$fname" >"$fbase.log"
         echo $? >>../report.txt
-        popd
+        popd || exit 1
     else
         echo "3" >>report.txt
     fi
 done
 
-popd
+popd || exit 1
 
 result=$(cat diff/report.txt | cut -d ' ' -f 2 | paste -sd+ - | bc)
 if [[ $result -ne 0 ]]; then
