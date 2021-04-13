@@ -17,14 +17,14 @@ fi
 
 mkdir -p $dir
 
-bash ./script/ci/setup.sh
+bash ./script/ci/setup.sh fonts
 rm -f .gitignore
 rm -f .latexmkrc
 
 rm -rf fonts
 mkdir -p fonts
-pushd fonts
-cat <<EOF>README.md
+pushd fonts || exit 1
+cat <<EOF >README.md
 # Setup fonts
 
 You have to manually upload the fonts here.
@@ -45,12 +45,13 @@ You need to download all the font files (.ttf/.ttc) mentioned in above script:
 
 Download these fonts to your local computer and upload them to this folder (fonts/).
 EOF
-popd
+popd || exit 1
+
 git add fonts/README.md
 
 echo "Packaging $dir/$pkgname.zip"
-stash_name=`git stash create`
-git archive --format=zip -o $dir/$pkgname.zip $stash_name
+stash_name=$(git stash create)
+git archive --format=zip -o "$dir/$pkgname.zip" "$stash_name"
 
 echo "Reverse changes"
 git stash pop
