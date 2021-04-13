@@ -1,12 +1,10 @@
 % Vertical align for tabularx cells
 \renewcommand{\tabularxcolumn}[1]{m{#1}}
 
-\newcommand{\tablefontstyle}{
-    % Font type inside table
-    \makeatletter
-    \appto{\@floatboxreset}{\songti}
-    \makeatother
-}
+% Font type inside float
+\makeatletter
+\appto{\@floatboxreset}{\songti}
+\makeatother
 
 % Fix bold text bug, see:
 %   - GitHub zjuthesis: #24, #134, #158
