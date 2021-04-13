@@ -47,13 +47,22 @@
         \setcounter{section}{0}
     }
 
-    \newcommand{\sectionnonum}[1]
+    \newcommand{\sectionnonum}[2][openright]
     {
-        \cleardoublepage
+
+        \ifthenelse{\equal{\TwoSide}{true}}{
+            \ifthenelse{\equal{#1}{openright}}
+                {\cleardoublepage}
+                {\ifthenelse{\equal{#1}{openany}}{\clearpage}{}}
+        }{
+            \ifthenelse{\equal{#1}{openright}}
+                {\clearpage}
+                {\ifthenelse{\equal{#1}{openany}}{\clearpage}{}}
+        }
         \phantomsection
-        \addcontentsline{toc}{section}{#1}
+        \addcontentsline{toc}{section}{#2}
         \begin{center}
-            \bfseries \zihao{3} #1	
+            \bfseries \zihao{3} #2	
         \end{center}	
         \setcounter{subsection}{0}
     }
