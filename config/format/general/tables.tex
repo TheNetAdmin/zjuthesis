@@ -8,7 +8,9 @@
 }
 
 % Fix bold text bug, see:
-%   - GitHub zjuthesis: #24, #134
+%   - GitHub zjuthesis: #24, #134, #158
 %   - GitHub ctex-kit :  #546
-\AtBeginEnvironment{table*}{\special{pdf:code q}}
-\AtEndEnvironment{table*}{\special{pdf:code Q}}
+\makeatletter
+\appto{\@floatboxreset}{\special{pdf:code q}}
+\preto{\@endfloatbox}{\special{pdf:code Q}}
+\makeatother
