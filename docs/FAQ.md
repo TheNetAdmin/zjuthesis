@@ -58,6 +58,13 @@
 
 ## 格式
 
+### 封面
+
+1. Q: 封面的标题太长，无法居中/无法换行/垂直间距有问题 [#52](https://github.com/TheNetAdmin/zjuthesis/issues/52) [#161](https://github.com/TheNetAdmin/zjuthesis/issues/161)
+
+   A: 封面的标题都位于表格环境，无法在换行的同时保证表格对齐。
+   解决方法是手动换行：在标题页的 TeX 文件内，在标题表格内手动加几行，在每一行输入相应标题的一部分。
+
 ### 参考文献与引用
 
 1. Q: 参考文献编译有问题？
