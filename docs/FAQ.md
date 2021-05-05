@@ -3,10 +3,6 @@
 
 ## 常见问题
 
-1. Q: 聊天室/群？
-
-   A: [![Gitter](https://badges.gitter.im/zjuthesis/community.svg)](https://gitter.im/zjuthesis/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 1. Q: 没有我所在专业的格式？
 
    A: 由于个人精力有限，难以查阅并编写各系具体要求的格式，如果同学们有相关需求，可以：
