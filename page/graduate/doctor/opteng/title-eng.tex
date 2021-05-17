@@ -1,0 +1,78 @@
+\cleardoublepage
+
+{
+\begin{center}
+    % Chinese zihao{3} == English 16pt
+    \bfseries \zihao{3}
+    \begin{tabularx}{.8\textwidth}{X<{\centering}}
+        \uline{\hfill \TitleEng{} \hfill} \\
+        \uline{\hfill}
+    \end{tabularx}
+\end{center}
+
+\vskip 6pt
+
+\begin{center}
+    \includegraphics[width=0.105\paperwidth]{logo/zju.pdf}
+\end{center}
+
+\vskip 14pt
+
+\begin{center}
+\begin{spacing}{1.3}
+    \bfseries \zihao{3}
+    \begin{tabularx}{.7\textwidth}{r X<{\centering}}
+        Author's signature：      &  \uline{\hfill} \\
+        Supervisor's signature：  &  \uline{\hfill} \\
+    \end{tabularx}
+\end{spacing}
+\end{center}
+
+\vskip 10pt
+
+\begin{center}
+    \zihao{4}
+    \begin{tabularx}{.65\paperwidth}{r X<{\centering}}
+        \ifthenelse{\equal{\BlindReview}{true}}%
+        {% For blind review
+            External reviewers:  & \uline{\hfill Anonymous \hfill} \\
+            ~                    & \uline{\hfill Anonymous \hfill} \\
+            ~                    & \uline{\hfill Anonymous \hfill} \\
+            ~                    & \uline{\hfill Anonymous \hfill} \\
+            ~                    & \uline{\hfill Anonymous \hfill} \\
+        }
+        {% For submission
+            External reviewers:  & \uline{\hfill Name \hfill} \\
+            ~                    & \uline{\hfill Name \hfill} \\
+            ~                    & \uline{\hfill Name \hfill} \\
+            ~                    & \uline{\hfill Name \hfill} \\
+            ~                    & \uline{\hfill Name \hfill} \\
+        }
+    \end{tabularx}
+\end{center}
+
+\vskip 14pt
+
+\begin{center}
+    \zihao{4}
+    \begin{tabularx}{.65\paperwidth}{l X<{\centering}}
+        \multicolumn{2}{l}{Examining Committee Chairperson:}        \\
+        \parbox{\widthof{External reviewers:}}{~} &  \uline{\hfill} \\
+        \multicolumn{2}{l}{Examining Committee Members:}            \\
+        \parbox{\widthof{External reviewers:}}{~} &  \uline{\hfill} \\
+        \parbox{\widthof{External reviewers:}}{~} &  \uline{\hfill} \\
+        \parbox{\widthof{External reviewers:}}{~} &  \uline{\hfill} \\
+        \parbox{\widthof{External reviewers:}}{~} &  \uline{\hfill} \\
+        \parbox{\widthof{External reviewers:}}{~} &  \uline{\hfill} \\
+    \end{tabularx}
+\end{center}
+
+\vskip 14pt
+
+\begin{flushright}
+    \zihao{-3}
+    \begin{tabularx}{.6\textwidth}{l X<{\centering}}
+        Date of oral defence: & \uline{\hfill}
+    \end{tabularx}
+\end{flushright}
+}

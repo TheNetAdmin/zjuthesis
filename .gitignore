@@ -8,6 +8,8 @@ diff/*
 /*.ttc*
 *.ttf*
 *.ttc*
+*.nlg
+*.nls
 
 ### Overleaf repo dir ###
 /zjuthesis/*
