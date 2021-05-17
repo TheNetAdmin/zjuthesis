@@ -1,0 +1,23 @@
+\renewcommand{\commonhead}
+{
+    \fancyhead{}
+    \fancyhead[EC]{\zihao{-5} \TitleTypeName}
+    \fancyhead[OC]{\zihao{-5} \leftmark}
+    \renewcommand{\headrulewidth}{0.6pt}
+}
+
+% Disable float layout
+\raggedbottom
+
+% Term Table
+\makenomenclature
+
+% TOC: chapter level font bold style
+\renewcommand{\cftchapfont}         {\zihao{-4}\bfseries}
+% TOD: sec-subsec-subsubsec level no indent
+\setlength{\cftsecindent}           {0em}
+\setlength{\cftsubsecindent}        {0em}
+\setlength{\cftsubsubsecindent}     {0em}
+
+% SI unit font
+\sisetup{mode=text}

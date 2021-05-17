@@ -1,0 +1,96 @@
+\thispagestyle{cover}
+
+\begin{center}
+    \zihao{-4} \songti
+    \begin{tabularx}{\textwidth}{l l >{\raggedleft}X l}
+        分类号：           & \uline{\hfill \quad TN27 \quad \hfill}  &
+        单位代码：         & \uline{\hfill \quad 10335 \quad \hfill} \\
+        密{\quad}级：      & \uline{\hfill 无（或注明密级与保密期限） \hfill} &
+        \ifthenelse{\equal{\BlindReview}{true}}
+        {学{\quad\quad}号： & \uline{\hfill}}% For blind review
+        {学{\quad\quad}号： & \uline{\hfill 1xx3xxxx \hfill}}% For submission
+    \end{tabularx}
+\end{center}
+
+
+\begin{center}
+    \includegraphics[width=0.3\paperwidth]{logo/zjuchar.pdf}
+\end{center}
+
+\vspace{-40pt}
+
+\begin{center}
+    \zihao{-1} \songti%
+    \TitleTypeNameCover
+\end{center}
+
+\vskip 6pt
+
+\begin{center}
+    \includegraphics[width=0.105\paperwidth]{logo/zju.pdf}
+\end{center}
+
+\vskip 15pt
+
+\begin{center}
+    \bfseries \zihao{-2}
+    \begin{tabularx}{.8\textwidth}{>{\songti}l >{\fangsong}X<{\centering}}
+        % If titles are too long for one row, please manually hardcode them in
+        % multiple lines, as the english title example here.
+        中文论文题目：      &  \uline{\hfill \fangsong \Title{} \hfill} \\
+					      &  \uline{\hfill} \\
+        英文论文题目：      &  \uline{\hfill A Very Long Graduation \hfill} \\
+                           &  \uline{\hfill Thesis Title for Optics \hfill} \\
+                           &  \uline{\hfill Engineering Major \hfill} \\
+    \end{tabularx}
+\end{center}
+
+\vskip 15pt
+
+\begin{center}
+\begin{spacing}{1.8}
+    \zihao{4}
+    \begin{tabularx}{.6\textwidth}{>{\songti}l >{\fangsong}X<{\centering}}
+        \ifthenelse{\equal{\BlindReview}{true}}%
+        {%
+            申请人姓名： & \uline{\hfill} \\
+            指导教师：   & \uline{\hfill} \\
+            合作导师：   & \uline{\hfill} \\
+            \ifthenelse{\equal{\Type}{design}}
+            {%
+                专业学位类别：  &  \uline{\hfill} \\
+                专业学位领域：  &  \uline{\hfill} \\
+            }
+            {%
+                专业名称：  &  \uline{\hfill} \\
+                研究方向：  &  \uline{\hfill} \\
+            }
+            所在学院：   &  \uline{\hfill} \\
+        }
+        {%
+            申请人姓名： & \uline{\hfill \StudentName \hfill} \\
+            指导教师：   & \uline{\hfill \AdvisorName \hfill} \\
+            合作导师：   & \uline{\hfill \ColaboratorName \hfill} \\
+            \ifthenelse{\equal{\Type}{design}}
+            {%
+                专业学位类别：  &  \uline{\hfill \Major \hfill} \\
+                专业学位领域：  &  \uline{\hfill \Topic \hfill} \\
+            }
+            {%
+                专业名称：  &  \uline{\hfill \Major \hfill} \\
+                研究方向：  &  \uline{\hfill \Topic \hfill} \\
+            }
+            所在学院：   &  \uline{\hfill \Department \hfill} \\
+        }
+    \end{tabularx}
+\end{spacing}
+\end{center}
+
+\vskip 10pt
+
+\begin{center}
+    \zihao{-3} \bfseries
+    \begin{tabularx}{.5\textwidth}{>{\songti}l >{\songti}X<{\centering}}
+        论文提交日期 & \underline{\SubmitDate}
+    \end{tabularx}
+\end{center}
