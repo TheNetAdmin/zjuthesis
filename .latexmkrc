@@ -2,7 +2,7 @@ $out_dir="out";
 $pdf_mode=5;
 $xelatex="xelatex -synctex=1";
 $xdvipdfmx="xdvipdfmx -q -E -o %D %O %S";
-$clean_ext = 'thm bbl hd loe xdv run.xml';
+$clean_ext = 'thm bbl hd loe xdv run.xml nlg nls';
 $makeindex = 'makeindex -s gind.ist %O -o %D %S';
 
 # Custom dependency and function for nomencl package 

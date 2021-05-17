@@ -1,13 +1,7 @@
-% 设置强调内容的格式
+% emph style
 \DeclareTextFontCommand{\emph}{\bfseries\em}
 
-% 插入对应专业的body和post
-\renewcommand{\inputbody}[1]
-{
-    \checkandinput{body}{#1}
-}
-
-% 正文内的居中标题格式，用于作者简历等。（字号为小3号）
+% Chapter title style, in main content
 \newcommand{\chaptercenter}[1]
 {
     \phantomsection
@@ -21,7 +15,7 @@
     \hspace*{1.5em}
 }
 
-% previous page中的居中标题格式，用于致谢、摘要等。（字号为3号）
+% Chapter title style, in previous part
 \newcommand{\chapterprev}[1]
 {
     \phantomsection
@@ -35,9 +29,9 @@
     \hspace*{1.5em}
 }
 
-% 更改术语表标题并居中显示
+% Term Table title, centered
 \renewcommand{\nomname}{\makebox[\linewidth]{缩写、符号清单、术语表}}
-% 中文术语表
+% Term Table style
 \newcommand{\nomdescr}[1]{
     \parbox[t]{8.5cm}{\linespread{1}\raggedright\strut #1 \strut}
 }
@@ -52,6 +46,6 @@
 }
 \setlength{\nomitemsep}{2pt}
 
-% 数学公式
+% Equations
 \newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
 \newcommand{\argmax}{\mathop{\mathrm{arg\,max}}}

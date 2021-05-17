@@ -1,7 +1,3 @@
-% 行距设置
-\linespread{1.5}
-
-% 更改为奇偶页眉（偶数页为“浙江大学XX学位论文”，奇数页为章标题）
 \renewcommand{\commonhead}
 {
     \fancyhead{}
@@ -9,26 +5,19 @@
     \fancyhead[OC]{\zihao{-5} \leftmark}
     \renewcommand{\headrulewidth}{0.6pt}
 }
-% 去除页眉的章标号，只保留标题
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
-% 禁止浮动段落排版
+% Disable float layout
 \raggedbottom
 
-% 图表与正文间距
-%\setlength{\intextsep}{5pt}
-
-% 添加术语表
+% Term Table
 \makenomenclature
-% 设置术语表中缩写栏的宽度
-%\setlength{\nomlabelwidth}{2cm}
 
-% 目次中的一级标题加粗
+% TOC: chapter level font bold style
 \renewcommand{\cftchapfont}         {\zihao{-4}\bfseries}
-% 目次中的二级、三级标题不需要缩进
-\setlength{\cftsecindent}       {0em}
-\setlength{\cftsubsecindent}    {0em}
-\setlength{\cftsubsubsecindent} {0em}
+% TOD: sec-subsec-subsubsec level no indent
+\setlength{\cftsecindent}           {0em}
+\setlength{\cftsubsecindent}        {0em}
+\setlength{\cftsubsubsecindent}     {0em}
 
-% 单位字体
+% SI unit font
 \sisetup{mode=text}
