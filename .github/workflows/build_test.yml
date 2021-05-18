@@ -10,6 +10,9 @@ on:
       - "docs/**"
       - "**.md"
       - "**/*.md"
+  pull_request:
+    branches:
+      - main
 
 jobs:
 
