@@ -33,10 +33,10 @@
 \renewcommand{\nomname}{\makebox[\linewidth]{缩写、符号清单、术语表}}
 % Term Table style
 \newcommand{\nomdescr}[1]{
-    \parbox[t]{8.5cm}{\linespread{1}\raggedright\strut #1 \strut}
+    \parbox[t]{8.5cm}{\linespreadsingle{}\raggedright\strut #1 \strut}
 }
 \newcommand{\nomdescrchn}[1]{
-    \hfill\parbox[t]{5cm}{\linespread{1}\strut #1 \strut}\ignorespaces
+    \hfill\parbox[t]{5cm}{\linespreadsingle{}\strut #1 \strut}\ignorespaces
 }
 \newcommand{\nomchn}[4][]{
     \nomenclature[#1]{#2}{
