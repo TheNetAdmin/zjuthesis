@@ -40,4 +40,20 @@
         {}
     }
     {}
+
+    \appto{\bodystyle}{
+        \ifthenelse{\equal{\undergradcurrstage}{final}}
+        {
+            \defbibheading{bibliography}[\bibname]{
+                \sectionnonum{#1}
+                \markboth{#1}{#1}
+            }
+        }
+        {
+            \defbibheading{bibliography}[\bibname]{
+                \section{#1}
+                \markboth{#1}{#1}
+            }
+        }
+    }
 }
