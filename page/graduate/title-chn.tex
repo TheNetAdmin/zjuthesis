@@ -3,8 +3,17 @@
 \begin{center}
     \bfseries \zihao{-2}
     \begin{tabularx}{.8\textwidth}{>{\fangsong}X<{\centering}}
-        \uline{\hfill \Title \hfill} \\
-        \uline{\hfill}
+        \ifthenelse{\equal{\TitleLines}{1}}
+        {
+            % TitleLines == 1
+            \uline{\hfill \fangsong \Title{} \hfill} \\
+            \uline{\hfill} \\
+        }
+        {
+            % TitleLines == 2
+            \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+            \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+        }
     \end{tabularx}
 \end{center}
 

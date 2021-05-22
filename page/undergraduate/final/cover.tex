@@ -30,6 +30,23 @@
 
 \vskip 20pt
 
+% Define multi line title
+\ifthenelse{\equal{\TitleLines}{1}}
+{
+    % TitleLines == 1
+    \newcommand{\CoverTitle}{
+        题目      &  \uline{\hfill \Title{} \hfill} \\
+        ~ & ~\\
+    }
+}
+{
+    % TitleLines == 2
+    \newcommand{\CoverTitle}{
+        题目      &  \uline{\hfill \TitleLineOne{} \hfill} \\
+        ~        & \uline{\hfill \TitleLineTwo{} \hfill} \\
+    }
+}
+
 \ifthenelse{\equal{\BlindReview}{true}}
 {
     % in blind review
@@ -37,8 +54,7 @@
         \bfseries \zihao{3}
         \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
             \fangsong
-            题目      &  \uline{\hfill \Title \hfill} \\
-            ~ & ~\\
+            \CoverTitle
             \ifthenelse{\equal{\MajorFormat}{cs}}%
             {%
                 学生姓名 & \uline{\hfill} \\
@@ -59,10 +75,8 @@
     % not in blind review
     \begin{center}
         \bfseries \zihao{3}
-
         \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
-            题目      &  \uline{\hfill \Title \hfill} \\
-            ~ & ~\\
+            \CoverTitle
             \ifthenelse{\equal{\MajorFormat}{cs}}%
             {%
                 学生姓名 & \uline{\hfill \StudentName \hfill} \\

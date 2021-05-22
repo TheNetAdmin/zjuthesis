@@ -5,8 +5,17 @@
     % Chinese zihao{3} == English 16pt
     \bfseries \zihao{3}
     \begin{tabularx}{.8\textwidth}{X<{\centering}}
-        \uline{\hfill \TitleEng{} \hfill} \\
-        \uline{\hfill}
+        \ifthenelse{\equal{\TitleEngLines}{1}}
+        {
+            % TitleEngLines == 1
+            \uline{\hfill \TitleEng{} \hfill} \\
+            \uline{\hfill} \\
+        }
+        {
+            % TitleEngLines == 2
+            \uline{\hfill \TitleEngLineOne{} \hfill} \\
+            \uline{\hfill \TitleEngLineTwo{} \hfill} \\
+        }
     \end{tabularx}
 \end{center}
 

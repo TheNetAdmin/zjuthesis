@@ -30,15 +30,38 @@
 
 \vskip 20pt
 
+% Define multi line title
+
+
+
 \begin{center}
     \bfseries \zihao{-2}
     \begin{tabularx}{.8\textwidth}{>{\fangsong}l X<{\centering}}
         % If titles are too long for one row, please manually hardcode them in
         % multiple lines, as the english title example here.
-        中文论文题目：      &  \uline{\hfill \fangsong \Title{} \hfill} \\
-                          &  \uline{\hfill} \\
-        英文论文题目：      &  \uline{\hfill A Very Long Graduation \hfill} \\
-                          &  \uline{\hfill Thesis Title           \hfill} \\
+        \ifthenelse{\equal{\TitleLines}{1}}
+        {
+            % TitleLines == 1
+            中文论文题目：&  \uline{\hfill \fangsong \Title{} \hfill} \\
+            ~ & \uline{\hfill} \\
+        }
+        {
+            % TitleLines == 2
+            中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+            ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+        }
+
+        \ifthenelse{\equal{\TitleEngLines}{1}}
+        {
+            % TitleEngLines == 1
+            英文论文题目：&  \uline{\hfill \TitleEng{} \hfill} \\
+            ~ & \uline{\hfill} \\
+        }
+        {
+            % TitleEngLines == 2
+            英文论文题目：&  \uline{\hfill \TitleEngLineOne{} \hfill} \\
+            ~            & \uline{\hfill \TitleEngLineTwo{} \hfill} \\
+        }
     \end{tabularx}
 \end{center}
 
