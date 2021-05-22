@@ -32,14 +32,14 @@
     {
         \commonhead{}
         \fancyfoot{}
-        \fancyfoot[OC,EC]{\zihao{-5} \thepage}
+        \fancyfoot[C]{\zihao{-5} \thepage}
     }
     % Previous part header & footer
     \fancypagestyle{previous}
     {
         \commonhead{}
         \fancyfoot{}
-        \fancyfoot[OC,EC]{\zihao{-5}\thepage}
+        \fancyfoot[C]{\zihao{-5}\thepage}
     }
 }
 {
@@ -55,13 +55,21 @@
     {
         \commonhead{}
         \fancyfoot{}
-        \fancyfoot[OR,EL]{\zihao{-5} \thepage}
+        \ifthenelse{\equal{\TwoSide}{true}}{
+            \fancyfoot[OR,EL]{\zihao{-5} \thepage}
+        }{
+            \fancyfoot[C]{\zihao{-5} \thepage}            
+        }
     }
     \fancypagestyle{previous}
     {
         \fancyhead{}
         \fancyfoot{}
-        \fancyfoot[OR,EL]{\zihao{-5}\thepage}
+        \ifthenelse{\equal{\TwoSide}{true}}{
+            \fancyfoot[OR,EL]{\zihao{-5} \thepage}
+        }{
+            \fancyfoot[C]{\zihao{-5} \thepage}            
+        }
         \renewcommand{\headrulewidth}{0pt}
     }
 }
