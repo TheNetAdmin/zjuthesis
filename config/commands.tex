@@ -4,26 +4,10 @@
 {
     % TwoSide settings
     % Use default `\cleardoublepage'
-    \makeatletter
-    \newcommand{\cleardoublestylepage}[1]
-    {
-        \clearpage
-        \if@twoside
-            \ifodd\c@page
-                % do nothing
-            \else
-                \thispagestyle{#1} ~
-                \newpage
-                \thispagestyle{#1}
-            \fi
-        \fi
-    }
-    \makeatother
 }
 {
     % OneSide settings
     \renewcommand{\cleardoublepage}{\clearpage}
-    \newcommand{\cleardoublestylepage}[1]{\clearpage}
 }
 
 \newcommand{\bful}[1]{{\bfseries\uline{#1}}}
