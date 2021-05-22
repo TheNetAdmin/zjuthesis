@@ -14,6 +14,10 @@ diff/*
 ### Overleaf repo dir ###
 /zjuthesis/*
 
+### Never use png/jpg LOGO ###
+figure/logo/*.png
+figure/logo/*.jpg
+
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.aux
