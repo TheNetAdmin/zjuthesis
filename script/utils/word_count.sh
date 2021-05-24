@@ -13,6 +13,7 @@ cat out/zjuthesis.fls                 \
     | grep .tex                       \
     | grep -v content.tex             \
     | grep -v thanksto.tex            \
+    | grep -v acknowledgement.tex     \
     | grep -v review.tex              \
     | grep -v original.tex            \
     | grep -v cv.tex                  \
