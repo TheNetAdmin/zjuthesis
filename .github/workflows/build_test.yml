@@ -121,3 +121,22 @@ jobs:
     - name: Check result
       run: ls -la ./zjuthesis
 
+  gitee_sync:
+    runs-on: ubuntu-latest
+    needs: [diff_pdf]
+    if: "contains(github.repository_owner, 'TheNetAdmin')"
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v1
+    - name: Current version
+      run: echo $GITHUB_REF
+    - name: Sync to Gitee
+      uses: Yikun/hub-mirror-action@v1.1
+      with:
+        src: github/TheNetAdmin
+        dst: gitee/netadmin
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token: ${{ secrets.GITEE_TOKEN }}
+        static_list: "zjuthesis"
+        
+
