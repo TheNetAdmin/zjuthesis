@@ -11,7 +11,6 @@ cat out/zjuthesis.fls                 \
     | uniq                            \
     | grep body                       \
     | grep .tex                       \
-    | grep -v content.tex             \
     | grep -v thanksto.tex            \
     | grep -v acknowledgement.tex     \
     | grep -v review.tex              \
