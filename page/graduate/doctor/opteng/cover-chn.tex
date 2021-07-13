@@ -30,7 +30,13 @@
     \includegraphics[width=0.105\paperwidth]{logo/zju.pdf}
 \end{center}
 
-\vskip 15pt
+\ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+{
+    \vskip 10pt
+}
+{
+    \vskip 15pt
+}
 
 \begin{center}
     \bfseries \zihao{-2}
@@ -45,7 +51,13 @@
     \end{tabularx}
 \end{center}
 
-\vskip 15pt
+\ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+{
+    \vskip 10pt
+}
+{
+    \vskip 15pt
+}
 
 \begin{center}
 \begin{spacing}{1.8}
@@ -80,7 +92,14 @@
                 专业名称：  &  \uline{\hfill \Major \hfill} \\
                 研究方向：  &  \uline{\hfill \Topic \hfill} \\
             }
-            所在学院：   &  \uline{\hfill \Department \hfill} \\
+            所在学院：   \ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+                        {
+                            &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                            &  \uline{\hfill \DepartmentLineTwo \hfill} \\
+                        }
+                        {
+                            &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                        }
         }
     \end{tabularx}
 \end{spacing}

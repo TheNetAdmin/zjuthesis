@@ -22,13 +22,25 @@
     \TitleTypeNameCover
 \end{center}
 
-\vskip 20pt
+\ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+{
+    \vskip 10pt
+}
+{
+    \vskip 20pt
+}
 
 \begin{center}
     \includegraphics[width=0.15\paperwidth]{logo/zju.pdf}
 \end{center}
 
-\vskip 20pt
+\ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+{
+    \vskip 10pt
+}
+{
+    \vskip 20pt
+}
 
 % Define multi line title
 
@@ -65,7 +77,13 @@
     \end{tabularx}
 \end{center}
 
-\vskip 20pt
+\ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+{
+    \vskip 10pt
+}
+{
+    \vskip 20pt
+}
 
 \begin{center}
     \zihao{4}
@@ -99,12 +117,25 @@
                 学科(专业)：  &  \uline{\hfill \Major \hfill} \\
                 研究方向：  &  \uline{\hfill \Topic \hfill} \\
             }
-            所在学院：   &  \uline{\hfill \Department \hfill} \\
+            所在学院：   \ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+                        {
+                            &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                            &  \uline{\hfill \DepartmentLineTwo \hfill} \\
+                        }
+                        {
+                        &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                        }
         }
     \end{tabularx}
 \end{center}
 
-\vskip 15pt
+\ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+{
+    \vskip 10pt
+}
+{
+    \vskip 15pt
+}
 
 \begin{center}
     \zihao{-3} \bfseries

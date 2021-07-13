@@ -15,7 +15,9 @@
 \DeclareStringOption{AdvisorName}
 \DeclareStringOption{Grade}
 \DeclareStringOption{Major}
-\DeclareStringOption{Department}
+\DeclareStringOption[false]{DepartmentInTwoLine}
+\DeclareStringOption{DepartmentLineOne}
+\DeclareStringOption{DepartmentLineTwo}
 \DeclareStringOption{Topic}
 \DeclareStringOption{Title}
 \DeclareStringOption{TitleEng}
