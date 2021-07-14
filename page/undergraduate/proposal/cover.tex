@@ -68,7 +68,14 @@
                 姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
                 指导教师   & \uline{\hfill \AdvisorName \hfill}            \\
                 年级与专业 & \uline{\hfill \mbox{\Grade}级\Major \hfill}   \\
-                所在学院   & \uline{\hfill \Department \hfill}             \\
+                \ifthenelse{\equal{\DepartmentLines}{1}}
+                {%   DepartmentLines == 1
+                所在学院    &  \uline{\hfill \Department \hfill} \\
+                }
+                {%   DepartmentLines == 2
+                所在学院    &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                            &  \uline{\hfill \DepartmentLineTwo \hfill} \\
+                }
             }
         \end{tabularx}
     \end{center}

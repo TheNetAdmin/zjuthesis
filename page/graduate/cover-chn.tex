@@ -22,13 +22,29 @@
     \TitleTypeNameCover
 \end{center}
 
-\vskip 20pt
+\ifthenelse{\equal{\DepartmentLines}{1}}
+{
+    %   DepartmentLines == 1
+    \vskip 20pt
+}
+{
+    %   DepartmentLines == 2
+    \vskip 10pt
+}
 
 \begin{center}
     \includegraphics[width=0.15\paperwidth]{logo/zju.pdf}
 \end{center}
 
-\vskip 20pt
+\ifthenelse{\equal{\DepartmentLines}{1}}
+{
+    %   DepartmentLines == 1
+    \vskip 20pt
+}
+{
+    %   DepartmentLines == 2
+    \vskip 10pt
+}
 
 % Define multi line title
 
@@ -65,7 +81,15 @@
     \end{tabularx}
 \end{center}
 
-\vskip 20pt
+\ifthenelse{\equal{\DepartmentLines}{1}}
+{
+    %   DepartmentLines == 1
+    \vskip 20pt
+}
+{
+    %   DepartmentLines == 2
+    \vskip 10pt
+}
 
 \begin{center}
     \zihao{4}
@@ -99,12 +123,27 @@
                 学科(专业)：  &  \uline{\hfill \Major \hfill} \\
                 研究方向：  &  \uline{\hfill \Topic \hfill} \\
             }
+            \ifthenelse{\equal{\DepartmentLines}{1}}
+            {%   DepartmentLines == 1
             所在学院：   &  \uline{\hfill \Department \hfill} \\
+            }
+            {%   DepartmentLines == 2
+            所在学院：   &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                        &  \uline{\hfill \DepartmentLineTwo \hfill} \\
+            }
         }
     \end{tabularx}
 \end{center}
 
-\vskip 15pt
+\ifthenelse{\equal{\DepartmentLines}{1}}
+{
+    %   DepartmentLines == 1
+    \vskip 15pt
+}
+{
+    %   DepartmentLines == 2
+    \vskip 10pt
+}
 
 \begin{center}
     \zihao{-3} \bfseries
