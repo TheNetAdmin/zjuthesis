@@ -47,14 +47,12 @@
             ~               & \uline{\hfill \ColaboratorName \hfill} \\
             Subject:        & \uline{\hfill \Major \hfill} \\
             \ifthenelse{\equal{\DepartmentLines}{1}}
-            {
-                %   DepartmentLines == 1
-                College:     &  \uline{\hfill \Department \hfill} \\
+            {%   DepartmentLines == 1
+            College:     &  \uline{\hfill \Department \hfill} \\
             }
-            {
-                %   DepartmentLines == 2
-                College:     &  \uline{\hfill \DepartmentLineOne \hfill} \\
-                            &  \uline{\hfill \DepartmentLineTwo \hfill} \\
+            {%   DepartmentLines == 2
+            College:     &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                        &  \uline{\hfill \DepartmentLineTwo \hfill} \\
             }
             Submitted Date: & \uline{\hfill}
         }
