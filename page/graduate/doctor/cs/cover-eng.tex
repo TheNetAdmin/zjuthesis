@@ -46,14 +46,16 @@
             Supervisor:     & \uline{\hfill \AdvisorName \hfill} \\
             ~               & \uline{\hfill \ColaboratorName \hfill} \\
             Subject:        & \uline{\hfill \Major \hfill} \\
-            College:        \ifthenelse{\equal{\DepartmentInTwoLine}{true}}
-                            {
-                                &  \uline{\hfill \DepartmentLineOne \hfill} \\
-                                &  \uline{\hfill \DepartmentLineTwo \hfill} \\
-                            }
-                            {
-                                &  \uline{\hfill \DepartmentLineOne \hfill} \\
-                            }
+            \ifthenelse{\equal{\DepartmentLines}{1}}
+            {
+                %   DepartmentLines == 1
+                College:     &  \uline{\hfill \Department \hfill} \\
+            }
+            {
+                %   DepartmentLines == 2
+                College:     &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                            &  \uline{\hfill \DepartmentLineTwo \hfill} \\
+            }
             Submitted Date: & \uline{\hfill}
         }
     \end{tabularx}

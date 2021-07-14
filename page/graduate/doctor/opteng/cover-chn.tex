@@ -30,12 +30,14 @@
     \includegraphics[width=0.105\paperwidth]{logo/zju.pdf}
 \end{center}
 
-\ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+\ifthenelse{\equal{\DepartmentLines}{1}}
 {
-    \vskip 10pt
+    %   DepartmentLines == 1
+    \vskip 15pt
 }
 {
-    \vskip 15pt
+    %   DepartmentLines == 2
+    \vskip 10pt
 }
 
 \begin{center}
@@ -51,12 +53,14 @@
     \end{tabularx}
 \end{center}
 
-\ifthenelse{\equal{\DepartmentInTwoLine}{true}}
+\ifthenelse{\equal{\DepartmentLines}{1}}
 {
-    \vskip 10pt
+    %   DepartmentLines == 1
+    \vskip 15pt
 }
 {
-    \vskip 15pt
+    %   DepartmentLines == 2
+    \vskip 10pt
 }
 
 \begin{center}
@@ -92,14 +96,16 @@
                 专业名称：  &  \uline{\hfill \Major \hfill} \\
                 研究方向：  &  \uline{\hfill \Topic \hfill} \\
             }
-            所在学院：   \ifthenelse{\equal{\DepartmentInTwoLine}{true}}
-                        {
-                            &  \uline{\hfill \DepartmentLineOne \hfill} \\
+            \ifthenelse{\equal{\DepartmentLines}{1}}
+            {
+                %   DepartmentLines == 1
+                所在学院：   &  \uline{\hfill \Department \hfill} \\
+            }
+            {
+                %   DepartmentLines == 2
+                所在学院：   &  \uline{\hfill \DepartmentLineOne \hfill} \\
                             &  \uline{\hfill \DepartmentLineTwo \hfill} \\
-                        }
-                        {
-                            &  \uline{\hfill \DepartmentLineOne \hfill} \\
-                        }
+            }
         }
     \end{tabularx}
 \end{spacing}

@@ -15,38 +15,38 @@
 
 \documentclass[
     % Debugging Settings
-    PrintFilePath           = false,            % print tex file path for each page
+    PrintFilePath   = false,            % print tex file path for each page
     % Layout Settings
-    TwoSide                 = true,             % set to false if don't need empty pages
+    TwoSide         = true,             % set to false if don't need empty pages
     % Thesis Info
-    StudentName             = 姓名,
-    StudentID               = 学号,
-    AdvisorName             = 指导教师,
-    Grade                   = 2014,             % only the year, no '级'
-    Major                   = 专业,
-    % Department Info
-    DepartmentInTwoLine     = true,             %   set it true if department name needs to be displayed in two lines.
-    DepartmentLineOne       = 学院,             %   the department info here will always be displayed.
-    DepartmentLineTwo       = 学院第二行,       %   the department info here will only be displayed if DepartmentInTwoLine set to true.
-    SubmitDate              = 递交日期,
-    MajorFormat             = general,
-    Degree                  = undergraduate,    % 'undergraduate' or 'graduate'
-    Type                    = thesis,          % 'thesis'   or 'design'
-    Period                  = final,           % 'proposal' or 'final'
-    BlindReview             = false,           % 'false'    or 'true'
-    Language                = chinese,         % 'chinese'  or 'english'
+    StudentName     = 姓名,
+    StudentID       = 学号,
+    AdvisorName     = 指导教师,
+    Grade           = 2014,            % only the year, no '级'
+    Major           = 专业,
+    Department      = 学院,
+    SubmitDate      = 递交日期,
+    MajorFormat     = general,
+    Degree          = undergraduate,   % 'undergraduate' or 'graduate'
+    Type            = thesis,          % 'thesis'   or 'design'
+    Period          = final,           % 'proposal' or 'final'
+    BlindReview     = false,           % 'false'    or 'true'
+    Language        = chinese,         % 'chinese'  or 'english'
     % Graduate Thesis Info
-    GradLevel               = master,          % 'master' or 'doctor'
-    Topic                   = 研究方向,
-    ColaboratorName         = 合作导师,
+    GradLevel       = master,          % 'master' or 'doctor'
+    Topic           = 研究方向,
+    ColaboratorName = 合作导师,
     % Title
-    Title                   = 毕业论文/设计题目,
-    TitleEng                = {{Graduation Thesis Title}}
+    Title           = 毕业论文/设计题目,
+    TitleEng        = {{Graduation Thesis Title}}
 ]{zjuthesis}
 
 %% Uncomment the following lines if you need multi line titles on cover pages
 % \titletwolines{毕业论文题目第一行}{毕业论文题目第二行}
 % \titleengtwolines{English Title Line One}{Englisht Title Line Two}
+
+%% Uncomment the following lines if you need multi line department names on cover pages
+% \departmenttwolines{学院名第一行}{学院名第二行}
 
 \newcommand{\inputundergraduate}
 {
