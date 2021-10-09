@@ -74,6 +74,7 @@ jobs:
 
   diff_pdf:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     needs: [build_grad, build_undergrad]
     steps:
     - name: Checkout Repo
