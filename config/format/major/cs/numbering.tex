@@ -1,40 +1,44 @@
 \ifthenelse{\equal{\Degree}{graduate}}
 {
-    \renewcommand{\chaptermajornumbering}
+    \ifthenelse{\equal{\GradLevel}{doctor}}
     {
-        \counterwithin*{figure}{chapter}
-        \renewcommand{\thefigure}{\arabic{chapter}-\arabic{figure}}
-    
-        \counterwithin*{table}{chapter}
-        \renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}
-    
-        \counterwithin*{lstlisting}{chapter}
-        \renewcommand{\thelstlisting}{\arabic{chapter}-\arabic{lstlisting}}
-    
-        \counterwithin*{equation}{chapter}
-        \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
-    }
-    \renewcommand{\appendixsecmajornumbering}
-    {
-        \ctexset{
-            section/number = \Alph{section},
-            subsection/number = \Alph{section}.\arabic{subsection}
+        \renewcommand{\chaptermajornumbering}
+        {
+            \counterwithin*{figure}{chapter}
+            \renewcommand{\thefigure}{\arabic{chapter}-\arabic{figure}}
+        
+            \counterwithin*{table}{chapter}
+            \renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}
+        
+            \counterwithin*{lstlisting}{chapter}
+            \renewcommand{\thelstlisting}{\arabic{chapter}-\arabic{lstlisting}}
+        
+            \counterwithin*{equation}{chapter}
+            \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
         }
+        \renewcommand{\appendixsecmajornumbering}
+        {
+            \ctexset{
+                section/number = \Alph{section},
+                subsection/number = \Alph{section}.\arabic{subsection}
+            }
 
-        % Fix hyperref link for sections in appendix
-        \stepcounter{chapter}
+            % Fix hyperref link for sections in appendix
+            \stepcounter{chapter}
 
-        \counterwithin*{figure}{section}
-        \renewcommand{\thefigure}{\Alph{section}-\arabic{figure}}
+            \counterwithin*{figure}{section}
+            \renewcommand{\thefigure}{\Alph{section}-\arabic{figure}}
 
-        \counterwithin*{table}{section}
-        \renewcommand{\thetable}{\Alph{section}-\arabic{table}}
+            \counterwithin*{table}{section}
+            \renewcommand{\thetable}{\Alph{section}-\arabic{table}}
 
-        \counterwithin*{lstlisting}{section}
-        \renewcommand{\thelstlisting}{\Alph{section}-\arabic{lstlisting}}
+            \counterwithin*{lstlisting}{section}
+            \renewcommand{\thelstlisting}{\Alph{section}-\arabic{lstlisting}}
 
-        \counterwithin*{equation}{section}
-        \renewcommand{\theequation}{\Alph{section}-\arabic{equation}}
+            \counterwithin*{equation}{section}
+            \renewcommand{\theequation}{\Alph{section}-\arabic{equation}}
+        }
     }
+    {}
 }
 {}
