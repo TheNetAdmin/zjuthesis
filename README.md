@@ -12,7 +12,7 @@
 本项目为浙江大学学位论文的 LaTeX 模板，包含本科生、硕士生与博士生模板，以及英文硕博士模板。
 
 This is a LaTeX template for Zhejiang University graduation thesis/design.
-It provides undergraduate and graduate (master and doctor) template.
+It provides undergraduate and graduate (master and doctor) templates.
 It also provides an English template for graduate students.
 See [English template user manual](./docs/english.md) for more details.
 
@@ -81,7 +81,7 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 >
 > - 每年的三月底四月初会有 TeXLive 的版本升级，届时本模板会根据 TeXLive 的更新做出一定的修改，请在提交最终论文前查看并应用本模板的更新。
 > - 如果你使用 Mac OS 10.15 及以上版本，并且 TexLive 中的 ctex 包版本低于 2.5，会产生[宋体字体判断问题](https://github.com/TheNetAdmin/zjuthesis/issues/79)，导致编译得到的 pdf 中字体出现误差。要解决这个问题，可以将 ctex 包升级到 2.5 以上，或者临时在 ctex 包的选项中加入 `fontset=macnew`，详见 [issue  79](https://github.com/TheNetAdmin/zjuthesis/issues/79)。
-> - 本模板已经兼容 TeXLive 2021。TeXLive 2018 以及之前的版本复制伪粗体文字会产生乱码，建议单独使用 TeXLive 的同学使用最新版 TeXLive, 或者至 2019 或更新的版本。
+> - 本模板已经兼容 TeXLive 2021。TeXLive 2018 以及之前的版本复制伪粗体文字会产生乱码，建议使用本地 TeXLive 的同学使用最新版 TeXLive。
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板。
 
 ### 字数统计
