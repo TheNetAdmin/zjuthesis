@@ -9,6 +9,8 @@ out-ci           export-ignore
 .gitattributes   export-ignore
 docs/_config.yml export-ignore
 docs/index.md    export-ignore
+script/ci        export-ignore
+script/release   export-ignore
 
 # Text FILES
 *.tex   text eol=lf
