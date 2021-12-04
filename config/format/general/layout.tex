@@ -47,8 +47,8 @@
     \newcommand{\commonhead}
     {
         \fancyhead{}
-        \fancyhead[L]{\zihao{-5} \TitleTypeName}
-        \fancyhead[R]{\zihao{-5} \leftmark}
+        \fancyhead[L]{\zihao{-5} \songti \TitleTypeName}
+        \fancyhead[R]{\zihao{-5} \songti \leftmark}
         \renewcommand{\headrulewidth}{0.6pt}
     }
     \fancypagestyle{common}
@@ -56,9 +56,9 @@
         \commonhead{}
         \fancyfoot{}
         \ifthenelse{\equal{\TwoSide}{true}}{
-            \fancyfoot[OR,EL]{\zihao{-5} \thepage}
+            \fancyfoot[OR,EL]{\zihao{-5} \songti \thepage}
         }{
-            \fancyfoot[C]{\zihao{-5} \thepage}            
+            \fancyfoot[C]{\zihao{-5} \songti \thepage}            
         }
     }
     \fancypagestyle{previous}
@@ -66,9 +66,9 @@
         \fancyhead{}
         \fancyfoot{}
         \ifthenelse{\equal{\TwoSide}{true}}{
-            \fancyfoot[OR,EL]{\zihao{-5} \thepage}
+            \fancyfoot[OR,EL]{\zihao{-5} \songti \thepage}
         }{
-            \fancyfoot[C]{\zihao{-5} \thepage}            
+            \fancyfoot[C]{\zihao{-5} \songti \thepage}            
         }
         \renewcommand{\headrulewidth}{0pt}
     }
