@@ -107,6 +107,8 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 
 常见问题与解决方案请参考[FAQ](./docs/FAQ.md)，模板使用请参考[使用手册](./docs/usage.md)，模板修改与二次开发请参考[开发手册](./docs/develop.md)。
 
+本模板所使用的各专业规范文件请参考 [zjuthesis-std](https://github.com/thenetadmin/zjuthesis-std)。
+
 ## 贡献
 
 对本项目最好的贡献方式是在 GitHub Issue 里提交你发现的 BUG，或者贡献 Pull Request。
