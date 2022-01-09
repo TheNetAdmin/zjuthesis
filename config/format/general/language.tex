@@ -8,7 +8,7 @@
             format=\centering\zihao{-3}\bfseries,
             name={Chapter~, .},
             number=\arabic{chapter},
-            beforeskip=12pt,
+            beforeskip=0pt,
             afterskip=6pt
         },
         figurename    = {Figure},
@@ -16,6 +16,15 @@
         abstractname  = {Abstract},
         appendixname  = {Appendix},
         proofname     = {Proof}
+    }
+
+    \geometry{
+        a4paper,
+        marginpar=0pt,
+        includeheadfoot,
+        vmargin={1.0cm, 2.0cm},
+        hmargin={2.5cm, 2.5cm},
+        head=4em
     }
 
     \renewcommand{\contentsname}    {List of Contents}
