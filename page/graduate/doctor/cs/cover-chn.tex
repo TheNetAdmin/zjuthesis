@@ -32,11 +32,26 @@
 
 \begin{center}
     \begin{tabularx}{.85\textwidth}{>{\songti\zihao{2}}l >{\songti\zihao{-2}}X<{\centering}}
-        论文题目      &  \uline{\hfill \Title{} \hfill} \\
+        \ifthenelse{\equal{\TitleLines}{1}}
+        {
+            % TitleLines == 1
+            论文题目：&  \uline{\hfill \Title{} \hfill} \\
+        }
+        {
+            % TitleLines == 2
+            论文题目：&  \uline{\hfill \TitleLineOne{} \hfill} \\
+            ~        &  \uline{\hfill \TitleLineTwo{} \hfill} \\
+        }
     \end{tabularx}
 \end{center}
 
-\vskip 15pt
+\ifthenelse{\equal{\TitleLines}{1}}
+{
+    \vskip 15pt
+}
+{
+    \vskip 5pt
+}
 
 \begin{center}
     \zihao{3}

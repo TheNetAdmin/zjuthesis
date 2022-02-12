@@ -22,11 +22,26 @@
 
 \begin{center}
     \begin{tabularx}{.85\textwidth}{>{\songti\zihao{2}}l >{\songti\zihao{-2}}X<{\centering}}
-        TITLE:      &  \uline{\hfill \TitleEng{} \hfill} \\
-    \end{tabularx}
+        \ifthenelse{\equal{\TitleEngLines}{1}}
+        {
+            % TitleEngLines == 1
+            TITLE: & \uline{\hfill \TitleEng{} \hfill} \\
+            }
+            {
+                % TitleEngLines == 2
+                TITLE: & \uline{\hfill \TitleEngLineOne{} \hfill} \\
+                ~      & \uline{\hfill \TitleEngLineTwo{} \hfill} \\
+                }
+            \end{tabularx}
 \end{center}
 
-\vskip 45pt
+\ifthenelse{\equal{\TitleEngLines}{1}}
+{
+    \vskip 45pt
+}
+{
+    \vskip 35pt
+}
 
 \begin{center}
     \zihao{-2}
