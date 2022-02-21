@@ -15,7 +15,7 @@ body:
         - Linux
         - Docker
         - Overleaf
-    - type: dropdown
+  - type: dropdown
     id: tex_info
     validations:
       required: true
@@ -146,7 +146,7 @@ body:
         Tip:
           - 请先单击此文本框，然后再拖拽图片到此文本框
           - 或者使用 Ctrl-C 复制图片，然后在此文本框内 Ctrl-V 粘贴
-    - type: textarea
+  - type: textarea
     id: problem_other_info
     attributes:
       label: 其他信息
