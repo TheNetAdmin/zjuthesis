@@ -146,8 +146,8 @@ body:
       description: |
         遇到的问题的截图，如果方便的话，也请附上其他有帮助的截图。
         Tip:
-          - 请先单击此文本框，然后再拖拽图片到此文本框
-          - 或者使用 Ctrl-C 复制图片，然后在此文本框内 Ctrl-V 粘贴
+        - 请先单击此文本框，然后再拖拽图片到此文本框
+        - 或者使用 Ctrl-C 复制图片，然后在此文本框内 Ctrl-V 粘贴
   - type: textarea
     id: problem_other_info
     attributes:
