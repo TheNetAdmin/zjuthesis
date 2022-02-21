@@ -1,6 +1,6 @@
-name: Bug Report
-description: File a bug report
-labels: ["bug"]
+name: I Need Help
+description: Having some trouble using the template
+labels: ["I need help"]
 body:
   - type: dropdown
     id: os_info
