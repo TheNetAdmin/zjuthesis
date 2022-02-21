@@ -137,7 +137,7 @@ body:
         % 可使用多个代码框，分别填写不同文件内的代码
         % 注明代码所在文件
         ```
-    - type: textarea
+  - type: textarea
     id: problem_screenshot
     attributes:
       label: 截图
