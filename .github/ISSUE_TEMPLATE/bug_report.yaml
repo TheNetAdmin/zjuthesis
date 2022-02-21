@@ -1,0 +1,154 @@
+name: Bug Report
+description: File a bug report
+title: ""
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: os_info
+    validations:
+      required: true
+    attributes:
+      label: 操作系统
+      options:
+        - Windows
+        - MacOS
+        - Linux
+        - Docker
+        - Overleaf
+    - type: dropdown
+    id: tex_info
+    validations:
+      required: true
+    attributes:
+      label: TeX 套件
+      options:
+        - TeXLive 2021 或更新的版本
+        - TeXLive 2020
+        - TeXLive 2019 或更早的版本
+        - MikTex
+  - type: dropdown
+    id: tex_compiler_info
+    validations:
+      required: true
+    attributes:
+      label: TeX Compiler
+      options:
+        - XeTeX
+        - LuaTeX
+  - type: input
+    id: zjuthesis_version
+    validations:
+      required: true
+    attributes:
+      label: zjuthesis 版本号
+      placeholder: v*.*.*
+  - type: dropdoown
+    id: zjuthesis_majorformat_info
+    validations:
+      required: true
+    attributes:
+      label: MajorFormat
+      description: zjuthesis 的 MajorFormat 选项，可在 zjuthess.tex 的 \documentclass 内找到。
+      options:
+        - general
+        - cs
+        - isee
+        - math
+        - opteng
+        - physics
+        - se
+        - 其他（请在问题描述中标明）
+  - type: dropdoown
+    id: zjuthesis_degree_info
+    validations:
+      required: true
+    attributes:
+      label: Degree
+      description: zjuthesis 的 Degree 选项，可在 zjuthess.tex 的 \documentclass 内找到。
+      options:
+        - graduate
+        - undergraduate
+  - type: dropdoown
+    id: zjuthesis_type_info
+    validations:
+      required: true
+    attributes:
+      label: Type
+      description: zjuthesis 的 Type 选项，可在 zjuthess.tex 的 \documentclass 内找到。
+      options:
+        - thesis
+        - design
+  - type: dropdoown
+    id: zjuthesis_period_info
+    validations:
+      required: true
+    attributes:
+      label: Period
+      description: zjuthesis 的 Period 选项，可在 zjuthess.tex 的 \documentclass 内找到。
+      options:
+        - final
+        - proposal
+  - type: dropdoown
+    id: zjuthesis_blindreview_info
+    validations:
+      required: true
+    attributes:
+      label: BlineReview
+      description: zjuthesis 的 BlineReview 选项，可在 zjuthess.tex 的 \documentclass 内找到。
+      options:
+        - true
+        - false
+  - type: dropdoown
+    id: zjuthesis_gradlevel_info
+    validations:
+      required: true
+    attributes:
+      label: GradLevel
+      description: zjuthesis 的 GradLevel 选项，可在 zjuthess.tex 的 \documentclass 内找到。
+      options:
+        - master
+        - doctor
+  - type: textarea
+    id: zjuthesis_logs
+    attributes:
+      label: 编译日志
+      description: 使用命令行编译一遍，然后将 out/zjuthesis.log 文件内容粘贴到此处。此文本框会自动转化为代码框，所以无需使用 ``` 来标识代码，直接粘贴文件内容到此处即可。
+      render: log
+  - type: textarea
+    id: problem_desc
+    validations:
+      required: true
+    attributes:
+      label: 遇到的问题
+      description: 请简要描述你遇到的问题。
+      placeholder: |
+        1. 修改模板内的...文件
+        2. 使用...设定进行编译
+        3. 遇到了...问题，显示了...错误输出
+        4. 但预期应该得到...正确输出
+  - type: textarea
+    id: problem_code
+    attributes:
+      label: 代码
+      description: 在下面的文本框里填写可以重现你遇到的问题的代码。
+      placeholder: |
+        ```TeX
+        % 可以重现你遇到的问题的代码
+        % 可使用多个代码框，分别填写不同文件内的代码
+        % 注明代码所在文件
+        ```
+    - type: textarea
+    id: problem_screenshot
+    attributes:
+      label: 截图
+      description: |
+        遇到的问题的截图，如果方便的话，也请附上其他有帮助的截图。
+        Tip:
+          - 请先单击此文本框，然后再拖拽图片到此文本框
+          - 或者使用 Ctrl-C 复制图片，然后在此文本框内 Ctrl-V 粘贴
+    - type: textarea
+    id: problem_other_info
+    attributes:
+      label: 其他信息
+      description: |
+        其他你认为有帮助的信息，比如修改过后的代码
