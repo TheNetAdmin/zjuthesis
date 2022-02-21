@@ -1,6 +1,5 @@
 name: Bug Report
 description: File a bug report
-title: ""
 labels: ["bug"]
 body:
   - type: dropdown
@@ -96,8 +95,8 @@ body:
       label: BlineReview
       description: zjuthesis 的 BlineReview 选项，可在 zjuthess.tex 的 \documentclass 内找到。
       options:
-        - true
-        - false
+        - "true"
+        - "false"
   - type: dropdown
     id: zjuthesis_gradlevel_info
     validations:
