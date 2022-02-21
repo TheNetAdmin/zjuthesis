@@ -115,7 +115,7 @@ body:
     validations:
       required: true
     attributes:
-      label: 遇到的问题
+      label: 问题描述
       description: 请简要描述你遇到的问题。
       placeholder: |
         1. 修改模板内的...文件
