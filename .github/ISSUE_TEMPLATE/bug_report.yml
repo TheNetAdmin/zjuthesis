@@ -42,7 +42,7 @@ body:
     attributes:
       label: zjuthesis 版本号
       placeholder: v*.*.*
-  - type: dropdoown
+  - type: dropdown
     id: zjuthesis_majorformat_info
     validations:
       required: true
@@ -58,7 +58,7 @@ body:
         - physics
         - se
         - 其他（请在问题描述中标明）
-  - type: dropdoown
+  - type: dropdown
     id: zjuthesis_degree_info
     validations:
       required: true
@@ -68,7 +68,7 @@ body:
       options:
         - graduate
         - undergraduate
-  - type: dropdoown
+  - type: dropdown
     id: zjuthesis_type_info
     validations:
       required: true
@@ -78,7 +78,7 @@ body:
       options:
         - thesis
         - design
-  - type: dropdoown
+  - type: dropdown
     id: zjuthesis_period_info
     validations:
       required: true
@@ -88,7 +88,7 @@ body:
       options:
         - final
         - proposal
-  - type: dropdoown
+  - type: dropdown
     id: zjuthesis_blindreview_info
     validations:
       required: true
@@ -98,7 +98,7 @@ body:
       options:
         - true
         - false
-  - type: dropdoown
+  - type: dropdown
     id: zjuthesis_gradlevel_info
     validations:
       required: true
