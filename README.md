@@ -22,9 +22,10 @@ See [English template user manual](./docs/english.md) for more details.
 
 ## 使用
 
-zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
+zjuthesis 模板有三种使用方式，Overleaf，本地编译，或者 Container 编译：
    - Overleaf 是一个线上 LaTeX 编辑器，可以在不安装任何工具的情况下编写 LaTeX 文档，同时也可以和其他人共享文档，共同编辑。
    - 本地编译比 Overleaf 更快，而且本地编译可以使用 Git 来记录版本。推荐有能力的同学设置本地编译环境，并推荐使用 Visual Studio Code 配合 LaTeX workshop 插件 (vscode 使用方式见[FAQ](./docs/FAQ.md))。
+   - Container 编译是使用 GitHub 提供的 Codespace 搭配 Container 来编译，这个环境提供了浏览器内的 VS Code 界面以及 TeX Live 的编译环境。这种方式适合熟悉 Container 与 GitHub Codespace 相关用法的同学使用。
 
 ### Overleaf
 
@@ -84,20 +85,22 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 > - 本模板已经兼容 TeXLive 2021。TeXLive 2018 以及之前的版本复制伪粗体文字会产生乱码，建议使用本地 TeXLive 的同学使用最新版 TeXLive。
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板。
 
-#### 使用容器
+### 使用容器编译
 
-添加了容器使用的配置文件，支持在容器中安装TeX Live、项目使用的字体以及VS Code上的[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)插件，配合GitHub Codespaces可以做到开箱即用。
+本模板提供了一套配置文件，用以支持在容器中安装TeX Live，项目使用的字体，以及VS Code上的[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)插件，配合GitHub Codespaces可以做到开箱即用。感谢 [FUTURETECH6](https://github.com/FUTURETECH6) 同学贡献的[代码](https://github.com/TheNetAdmin/zjuthesis/pull/222)。
 
-Codespace使用方法：
+GitHub Codespace使用方法：
 
 1. 创建个人的项目（直接fork，或自行clone并修改remote）
-2. 在个人的项目主页点击"Code"
-3. 点击"Codespaces"
-4. 点击"New codespace"
-5. 等待容器构建（这一过程约要10分钟，因为要在标准Ubuntu的镜像中安装TeX Live）
-6. 构建完成后，可以选择在VS Code（需要[GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)插件）中或在浏览器中打开，然后按照在本地的使用方式使用
+1. 在个人的项目主页点击"Code"
+1. 点击"Codespaces"
+1. 点击"New codespace"
+1. 等待容器构建（这一过程约要10分钟，因为要在标准Ubuntu的镜像中安装TeX Live）
+1. 构建完成后，可以选择在VS Code（需要[GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)插件）中或在浏览器中打开，然后按照在本地的使用方式使用
 
-这一功能的初衷是为了方便性能较弱的设备也能利用免费的运算资源较快地完成编译，因此**强烈不建议**在本地使用。
+> **注意**
+>
+> - 这一功能的初衷是为了方便性能较弱的设备（例如低功耗笔记本电脑）也能利用免费的云运算资源较快地完成编译，因此**不建议**在本地性能较强的机器上使用（请改用"本地编译"）。
 
 ### 字数统计
 
