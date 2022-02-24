@@ -2,6 +2,7 @@
 dist             export-ignore
 out              export-ignore
 out-ci           export-ignore
+.devcontainer    export-ignore
 .git             export-ignore
 .github          export-ignore
 *.ttf*           export-ignore
