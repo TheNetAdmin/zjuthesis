@@ -84,6 +84,21 @@ zjuthesis 模板有两种使用方式，Overleaf 或本地编译：
 > - 本模板已经兼容 TeXLive 2021。TeXLive 2018 以及之前的版本复制伪粗体文字会产生乱码，建议使用本地 TeXLive 的同学使用最新版 TeXLive。
 > - 计算机专业的部分页面与学校通用格式不同，如果你是计算机专业的同学，请使用计算机专业的模板。
 
+#### 使用容器
+
+添加了容器使用的配置文件，支持在容器中安装TeX Live、项目使用的字体以及VS Code上的[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)插件，配合GitHub Codespaces可以做到开箱即用。
+
+Codespace使用方法：
+
+1. 创建个人的项目（直接fork，或自行clone并修改remote）
+2. 在个人的项目主页点击"Code"
+3. 点击"Codespaces"
+4. 点击"New codespace"
+5. 等待容器构建（这一过程约要10分钟，因为要在标准Ubuntu的镜像中安装TeX Live）
+6. 构建完成后，可以选择在VS Code（需要[GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)插件）中或在浏览器中打开，然后按照在本地的使用方式使用
+
+这一功能的初衷是为了方便性能较弱的设备也能利用免费的运算资源较快地完成编译，因此**强烈不建议**在本地使用。
+
 ### 字数统计
 
 本模板提供了一个脚本用于统计正文字数，请在根目录下使用 `latexmk` 编译一遍模板，然后执行脚本 `script/utils/word_count.sh`。
