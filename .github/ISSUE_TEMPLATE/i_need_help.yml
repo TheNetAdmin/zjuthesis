@@ -126,8 +126,11 @@ body:
     id: zjuthesis_logs
     attributes:
       label: 编译日志
-      description: 使用命令行编译一遍，然后将 out/zjuthesis.log 文件内容粘贴到此处。此文本框会自动转化为代码框，所以无需使用 ``` 来标识代码，直接粘贴文件内容到此处即可。
-      render: log
+      description: |
+        使用命令行编译一遍，然后将 out/zjuthesis.log 文件内容拖拽到此处。
+        Tip:
+        - 请先单击此文本框，然后再拖拽文件到此文本框
+        - 或者使用 Ctrl-C 复制文件，然后在此文本框内 Ctrl-V 粘贴
   - type: textarea
     id: problem_code
     attributes:
