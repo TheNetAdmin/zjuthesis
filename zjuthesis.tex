@@ -29,7 +29,7 @@
     MajorFormat     = general,
     Degree          = undergraduate,   % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
-    Period          = final,           % 'proposal' or 'final'
+    Period          = final,           % 'proposal' or 'paper' or 'final'
     BlindReview     = false,           % 'false'    or 'true'
     Language        = chinese,         % 'chinese'  or 'english'
     % Graduate Thesis Info
@@ -95,6 +95,8 @@
         \poststyle
         \inputpage{proposal/post}
     }
+
+    \ifthenelse{\equal{\Period}{proposal}}
     {
         % Thesis proposal
         \newcommand{\undergradcurrstage}{proposal}
@@ -114,6 +116,29 @@
         
         \poststyle
         \inputpage{proposal/post}
+    }
+
+    \ifthenelse{\equal{\Period}{paper}}
+    {
+        % paper only part
+        \newcommand{\undergradcurrstage}{paper}
+        \newrefsection
+        
+        \coverstyle
+        \inputpage{final/cover}
+
+        \prevstyle
+        \inputpage{final/previous}
+        \inputpage{final/toc}
+
+        \bodystyle
+        \cleardoublepage
+        
+        \inputbody{final/content}
+        \inputbody{final/post}
+
+        \poststyle
+        \inputpage{final/post}
     }
 }
 
