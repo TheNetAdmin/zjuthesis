@@ -1,57 +1,57 @@
 name: Release Code
 
-on: 
+on:
   push:
-    tags: 
-      - '*'
+    tags:
+      - "*"
 
 jobs:
   release_code:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v1
-    
-    - name: Pack Release Code
-      run: bash ./script/release/package_release.sh dist
+      - name: Checkout Repo
+        uses: actions/checkout@v1
 
-    - name: Pack Release Overleaf Code
-      run: bash ./script/release/package_overleaf.sh dist
-    
-    - name: Current version
-      run: echo $GITHUB_REF
+      - name: Pack Release Code
+        run: bash ./script/release/package_release.sh dist
 
-    - name: Download Fonts
-      run: ./script/ci/setup.sh
-    
-    - name: Pull TexLive Docker
-      uses: docker://adnrv/texlive:full
-    
-    - name: Build Undergrad in Docker
-      run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
-    
-    - name: Build Grad in Docker
-      run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
-    
-    - name: PDF Diff
-      run: bash script/ci/pdf-diff/diff_report.sh
-    
-    - name: Print Info
-      run: echo ${code_tag}
-      
-    - name: Release Code and Sample Files
-      if: "!contains(github.ref, 'rc')"
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "dist/*.pdf,dist/*.zip"
-        token: ${{ secrets.RELEASE_TOKEN }}
-        allowUpdates: true
-    
-    - name: Pre-Release Code and Sample Files
-      if: "contains(github.ref, 'rc')"
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "dist/*.pdf,dist/*.zip"
-        token: ${{ secrets.RELEASE_TOKEN }}
-        allowUpdates: true
-        prerelease: true
+      - name: Pack Release Overleaf Code
+        run: bash ./script/release/package_overleaf.sh dist
+
+      - name: Current version
+        run: echo $GITHUB_REF
+
+      - name: Download Fonts
+        run: ./script/ci/setup.sh
+
+      - name: Pull TexLive Docker
+        uses: docker://adnrv/texlive:full
+
+      - name: Build Undergrad in Docker
+        run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
+
+      - name: Build Grad in Docker
+        run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
+
+      - name: PDF Diff
+        run: bash script/ci/pdf-diff/diff_report.sh
+
+      - name: Print Info
+        run: echo ${code_tag}
+
+      - name: Release Code and Sample Files
+        if: "!contains(github.ref, 'rc')"
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "dist/*.pdf,dist/*.zip"
+          token: ${{ secrets.RELEASE_TOKEN }}
+          allowUpdates: true
+
+      - name: Pre-Release Code and Sample Files
+        if: "contains(github.ref, 'rc')"
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "dist/*.pdf,dist/*.zip"
+          token: ${{ secrets.RELEASE_TOKEN }}
+          allowUpdates: true
+          prerelease: true

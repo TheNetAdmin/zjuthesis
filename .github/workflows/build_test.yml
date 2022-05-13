@@ -12,7 +12,6 @@ on:
       - "**/*.md"
 
 jobs:
-
   ci_skip:
     runs-on: [ubuntu-latest]
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
@@ -22,122 +21,146 @@ jobs:
       - name: Current version
         run: echo ${GITHUB_REF}
 
+  build_all_without_diff:
+    runs-on: ubuntu-latest
+    needs: [ci_skip]
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v1
+      - name: Current version
+        run: echo $GITHUB_REF
+      - name: Download Fonts
+        run: setup_lipsum=n ./script/ci/setup.sh
+      - name: Build Grad in Docker
+        run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
+      - name: Build Undergrad in Docker
+        run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
+      - name: Upload Output Files
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist-all
+          path: dist
+      - name: Upload Log Files
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: out-ci-all
+          path: out-ci
+
   build_undergrad:
     runs-on: ubuntu-latest
     needs: [ci_skip]
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v1
-    - name: Current version
-      run: echo $GITHUB_REF
-    - name: Download Fonts
-      run: ./script/ci/setup.sh
-    - name: Build Test in Docker
-      run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
-    - name: Upload Output Files
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v1
-      with:
-        name: dist-undergrad
-        path: dist
-    - name: Upload Log Files
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v1
-      with:
-        name: out-ci-undergrad
-        path: out-ci
+      - name: Checkout Repo
+        uses: actions/checkout@v1
+      - name: Current version
+        run: echo $GITHUB_REF
+      - name: Download Fonts
+        run: ./script/ci/setup.sh
+      - name: Build Test in Docker
+        run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
+      - name: Upload Output Files
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist-undergrad
+          path: dist
+      - name: Upload Log Files
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: out-ci-undergrad
+          path: out-ci
 
   build_grad:
     runs-on: ubuntu-latest
     needs: [ci_skip]
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v1
-    - name: Current version
-      run: echo $GITHUB_REF
-    - name: Download Fonts
-      run: ./script/ci/setup.sh
-    - name: Build Test in Docker
-      run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
-    - name: Upload Output Files
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v1
-      with:
-        name: dist-grad
-        path: dist
-    - name: Upload Log Files
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v1
-      with:
-        name: out-ci-grad
-        path: out-ci
+      - name: Checkout Repo
+        uses: actions/checkout@v1
+      - name: Current version
+        run: echo $GITHUB_REF
+      - name: Download Fonts
+        run: ./script/ci/setup.sh
+      - name: Build Test in Docker
+        run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
+      - name: Upload Output Files
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist-grad
+          path: dist
+      - name: Upload Log Files
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: out-ci-grad
+          path: out-ci
 
   diff_pdf:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     needs: [build_grad, build_undergrad]
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v1
-    - name: Current version
-      run: echo $GITHUB_REF
-    - name: Download Artifacts
-      uses: actions/download-artifact@v2
-    - name: Move Artifacts
-      run: |
-        mkdir -p dist
-        mv dist-grad/*.pdf dist/ 
-        mv dist-undergrad/*.pdf dist/ 
-    - name: PDF Diff
-      run: bash script/ci/pdf-diff/diff_report.sh
-    - name: Upload PDF Diff Files
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v1
-      with:
-        name: pdf-diff
-        path: diff
-    
+      - name: Checkout Repo
+        uses: actions/checkout@v1
+      - name: Current version
+        run: echo $GITHUB_REF
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+      - name: Move Artifacts
+        run: |
+          mkdir -p dist
+          mv dist-grad/*.pdf dist/ 
+          mv dist-undergrad/*.pdf dist/
+      - name: PDF Diff
+        run: bash script/ci/pdf-diff/diff_report.sh
+      - name: Upload PDF Diff Files
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: pdf-diff
+          path: diff
 
   overleaf_update:
     runs-on: ubuntu-latest
-    needs: [diff_pdf]
+    needs: [diff_pdf, build_all_without_diff]
     if: "contains(github.repository_owner, 'TheNetAdmin')"
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v1
-    - name: Current version
-      run: echo $GITHUB_REF
-    - name: Git setup username
-      run: git config --global user.name "TheNetAdmin"
-    - name: Git setup email
-      run: git config --global user.email "zxwang42@gmail.com"
-    - name: Install Python packages
-      run: pip3 install pexpect click
-    - name: Clone Overleaf Repo
-      run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} clone
-    - name: Update Overleaf Repo
-      run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} update
-    - name: Push Overleaf Repo
-      run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} push
-    - name: Check result
-      run: ls -la ./zjuthesis
+      - name: Checkout Repo
+        uses: actions/checkout@v1
+      - name: Current version
+        run: echo $GITHUB_REF
+      - name: Git setup username
+        run: git config --global user.name "TheNetAdmin"
+      - name: Git setup email
+        run: git config --global user.email "zxwang42@gmail.com"
+      - name: Install Python packages
+        run: pip3 install pexpect click
+      - name: Clone Overleaf Repo
+        run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} clone
+      - name: Update Overleaf Repo
+        run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} update
+      - name: Push Overleaf Repo
+        run: python3 ./script/ci/overleaf/overleaf.py ${{ secrets.OVERLEAF_ID }} zjuthesis ${{ secrets.OVERLEAF_USER }} ${{ secrets.OVERLEAF_PASSWD }} push
+      - name: Check result
+        run: ls -la ./zjuthesis
 
   gitee_sync:
     runs-on: ubuntu-latest
     needs: [diff_pdf]
     if: "contains(github.repository_owner, 'TheNetAdmin')"
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v1
-    - name: Current version
-      run: echo $GITHUB_REF
-    - name: Sync to Gitee
-      uses: Yikun/hub-mirror-action@v1.1
-      with:
-        src: github/TheNetAdmin
-        dst: gitee/netadmin
-        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-        dst_token: ${{ secrets.GITEE_TOKEN }}
-        static_list: "zjuthesis"
-        
-
+      - name: Checkout Repo
+        uses: actions/checkout@v1
+      - name: Current version
+        run: echo $GITHUB_REF
+      - name: Sync to Gitee
+        uses: Yikun/hub-mirror-action@v1.1
+        with:
+          src: github/TheNetAdmin
+          dst: gitee/netadmin
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: "zjuthesis"

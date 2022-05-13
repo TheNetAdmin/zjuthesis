@@ -20,12 +20,12 @@ mkdir -p dist
 # Should improve the build_zjuthesis.sh::build_zjuthesis function
 build_zjuthesis $degree "general" "thesis" "final" "true" "doctor" "chinese"
 
-for major in ${main_majors[@]}; do
-    for period in ${periods[@]}; do
-        for type in ${types[@]}; do
-            build_zjuthesis $degree $major $type $period "false" "doctor" "chinese"
-        done
-    done
+for major  in "${main_majors[@]}"; do
+for period in "${periods[@]}";     do
+for type   in "${types[@]}";       do
+    build_zjuthesis $degree $major $type $period "false" "doctor" "chinese"
+done
+done
 done
 
 build_zjuthesis $degree "cs" "design" "proposal" "false" "doctor" "chinese"

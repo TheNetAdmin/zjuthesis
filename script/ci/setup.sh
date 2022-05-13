@@ -7,6 +7,7 @@ this_path="$(dirname "$(realpath "$0")")"
 project_path="$(realpath "$this_path/../../")"
 
 targets=${1:-all}
+setup_lipsum=${setup_lipsum:-y}
 
 if [ "$targets" == "all" ] || [ "$targets" == "fonts" ]; then
     echo "Setup fonts"
@@ -59,14 +60,15 @@ if [ "$targets" == "all" ] || [ "$targets" == "fonts" ]; then
 fi
 
 
-if [ "$targets" == "all" ] || [ "$targets" == "content" ]; then
-    echo "Setup testing content"
+if [ "$setup_lipsum" == "y" ]; then
+    if [ "$targets" == "all" ] || [ "$targets" == "content" ]; then
+        echo "Setup testing content"
 
-    echo "\usepackage{lipsum}" >> "$format_dir/../packages.tex"
-    echo "\usepackage{zhlipsum}" >> "$format_dir/../packages.tex"
+        echo "\usepackage{lipsum}" >> "$format_dir/../packages.tex"
+        echo "\usepackage{zhlipsum}" >> "$format_dir/../packages.tex"
 
-    cp $this_path/template/content.tex $project_path/body/graduate/content.tex
-    cp $this_path/template/content.tex $project_path/body/undergraduate/final/content.tex
-    cp $this_path/template/content.tex $project_path/body/undergraduate/proposal/content.tex
+        cp $this_path/template/content.tex $project_path/body/graduate/content.tex
+        cp $this_path/template/content.tex $project_path/body/undergraduate/final/content.tex
+        cp $this_path/template/content.tex $project_path/body/undergraduate/proposal/content.tex
+    fi
 fi
-
