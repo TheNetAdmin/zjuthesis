@@ -23,9 +23,10 @@ See [English template user manual](./docs/english.md) for more details.
 ## 使用
 
 zjuthesis 模板有三种使用方式，Overleaf，本地编译，或者 Container 编译：
-   - Overleaf 是一个线上 LaTeX 编辑器，可以在不安装任何工具的情况下编写 LaTeX 文档，同时也可以和其他人共享文档，共同编辑。
-   - 本地编译比 Overleaf 更快，而且本地编译可以使用 Git 来记录版本。推荐有能力的同学设置本地编译环境，并推荐使用 Visual Studio Code 配合 LaTeX workshop 插件 (vscode 使用方式见[FAQ](./docs/FAQ.md))。
-   - Container 编译是使用 GitHub 提供的 Codespace 搭配 Container 来编译，这个环境提供了浏览器内的 VS Code 界面以及 TeX Live 的编译环境。这种方式适合熟悉 Container 与 GitHub Codespace 相关用法的同学使用。
+
+- Overleaf 是一个线上 LaTeX 编辑器，可以在不安装任何工具的情况下编写 LaTeX 文档，同时也可以和其他人共享文档，共同编辑。
+- 本地编译比 Overleaf 更快，而且本地编译可以使用 Git 来记录版本。推荐有能力的同学设置本地编译环境，并推荐使用 Visual Studio Code 配合 LaTeX workshop 插件 (vscode 使用方式见[FAQ](./docs/FAQ.md))。
+- Container 编译是使用 GitHub 提供的 Codespace 搭配 Container 来编译，这个环境提供了浏览器内的 VS Code 界面以及 TeX Live 的编译环境。这种方式适合熟悉 Container 与 GitHub Codespace 相关用法的同学使用。
 
 ### Overleaf
 
@@ -49,28 +50,28 @@ zjuthesis 模板有三种使用方式，Overleaf，本地编译，或者 Contain
 
    - `Degree` 为 `undergraduate` 时，编译本科生论文：
 
-   | Field      | Option 1                            | Option 2                              |
-   | :--------- | :-----------------------------------| :------------------------------------ |
-   |Type        | thesis: 论文类                       | design: 设计类                         |
-   |Period      | proposal: 开题报告                   | final: 最终论文/设计                    |
-   |BlindReview | true: 生成盲审用 pdf（隐藏个人信息）   | false: 生成提交用 pdf                   |
-   |MajorFormat | general: 默认模板                    | 与 `config/format/major/` 下目录名相同  |
+   | Field       | Option 1                             | Option 2                               | Option 3                           |
+   | :---------- | :----------------------------------- | :------------------------------------- | :--------------------------------- |
+   | Type        | thesis: 论文类                       | design: 设计类                         |                                    |
+   | Period      | proposal: 开题报告                   | final: 最终论文/设计（含开题报告）     | paper: 最终论文/报告（无开题报告） |
+   | BlindReview | true: 生成盲审用 pdf（隐藏个人信息） | false: 生成提交用 pdf                  |                                    |
+   | MajorFormat | general: 默认模板                    | 与 `config/format/major/` 下目录名相同 |                                    |
 
    - `Degree` 为 `graduate` 时，编译硕士生/博士生论文：
 
 
-   | Field      | Option 1                            | Option 2                              |
-   | :--------- | :-----------------------------------| :------------------------------------ |
-   | Type       | thesis: 学术论文                     | design: 专业学术论文                    |
-   | BlindReview| true: 生成盲审用 pdf（隐藏个人信息）   | false: 生成提交用 pdf                   |
-   | MajorFormat| general: 默认模板                    | 与 `config/format/major/` 下目录名相同  |
-   | GradLevel  | master: 硕士                         | doctor: 博士                           |
+   | Field       | Option 1                             | Option 2                               |
+   | :---------- | :----------------------------------- | :------------------------------------- |
+   | Type        | thesis: 学术论文                     | design: 专业学术论文                   |
+   | BlindReview | true: 生成盲审用 pdf（隐藏个人信息） | false: 生成提交用 pdf                  |
+   | MajorFormat | general: 默认模板                    | 与 `config/format/major/` 下目录名相同 |
+   | GradLevel   | master: 硕士                         | doctor: 博士                           |
 
    - Debug 相关设置
 
-   | Field         | Option 1                              | Option 2                              |
-   | :------------ | :------------------------------------ | :------------------------------------ |
-   | PrintFilePath | true: 在每页侧边打印该页对应 TeX 文件路径 | false: 不打印此输出                    |
+   | Field         | Option 1                                  | Option 2            |
+   | :------------ | :---------------------------------------- | :------------------ |
+   | PrintFilePath | true: 在每页侧边打印该页对应 TeX 文件路径 | false: 不打印此输出 |
 
 1. 在 `body` 目录下编写内容
 1. 在 `pages` 目录下填写必要的内容，如审核评语等
@@ -111,15 +112,15 @@ GitHub Codespace使用方法：
 
 作者用于毕业答辩的一个 Slides 模板 (Microsoft PowerPoint 模板)
 
-   - [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
-   - [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide) 国内网络用这个链接下载比较快
+- [GitHub 下载链接](https://github.com/TheNetAdmin/zjuthesis/releases/tag/v2.1.1-slide)
+- [Gitee （国内镜像仓库）下载链接](https://gitee.com/netadmin/zjuthesis/releases/v2.1.1-slide) 国内网络用这个链接下载比较快
 
 [HGGshiwo](https://github.com/HGGshiwo) 同学于 2021 年开发了基于 Beamer 的 Slides 模板，有兴趣的同学可以参考如下几个 repo
 
-   - [Formal](https://github.com/HGGshiwo/BeamerthemeFormal) (内含对其他几个 Beamer 模板的简介)
-   - [Brief](https://github.com/HGGshiwo/BeamerthemeBrief)
-   - [Mixture](https://github.com/HGGshiwo/BeamerthemeMixture)
-   - [Classical](https://github.com/HGGshiwo/BeamerthemeClassical)
+- [Formal](https://github.com/HGGshiwo/BeamerthemeFormal) (内含对其他几个 Beamer 模板的简介)
+- [Brief](https://github.com/HGGshiwo/BeamerthemeBrief)
+- [Mixture](https://github.com/HGGshiwo/BeamerthemeMixture)
+- [Classical](https://github.com/HGGshiwo/BeamerthemeClassical)
 
 ## 参考文档
 
