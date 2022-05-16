@@ -149,7 +149,7 @@ jobs:
 
   gitee_sync:
     runs-on: ubuntu-latest
-    needs: [diff_pdf]
+    needs: [diff_pdf, build_all_without_diff]
     if: "contains(github.repository_owner, 'TheNetAdmin')"
     steps:
       - name: Checkout Repo
