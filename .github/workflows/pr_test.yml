@@ -6,7 +6,6 @@ jobs:
 
   build_all_without_diff:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v1
