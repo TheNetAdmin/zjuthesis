@@ -47,16 +47,16 @@
     {}
 
     \appto{\bodystyle}{
-        \ifthenelse{\equal{\undergradcurrstage}{final}}
+        \ifthenelse{\equal{\undergradcurrstage}{proposal}}
         {
             \defbibheading{bibliography}[\bibname]{
-                \sectionnonum{#1}
+                \section{#1}
                 \markboth{#1}{#1}
             }
         }
         {
             \defbibheading{bibliography}[\bibname]{
-                \section{#1}
+                \sectionnonum{#1}
                 \markboth{#1}{#1}
             }
         }
