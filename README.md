@@ -67,11 +67,12 @@ zjuthesis 模板有三种使用方式，Overleaf，本地编译，或者 Contain
    | MajorFormat | general: 默认模板                    | 与 `config/format/major/` 下目录名相同 |
    | GradLevel   | master: 硕士                         | doctor: 博士                           |
 
-   - Debug 相关设置
+   - 其他设置
 
    | Field         | Option 1                                  | Option 2            |
    | :------------ | :---------------------------------------- | :------------------ |
    | PrintFilePath | true: 在每页侧边打印该页对应 TeX 文件路径 | false: 不打印此输出 |
+   | TwoSide       | true: 章节末的偶数页留白，保证下章节的标题位于奇数页 | false: 取消偶数页留白 |
 
 1. 在 `body` 目录下编写内容
 1. 在 `pages` 目录下填写必要的内容，如审核评语等
