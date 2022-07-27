@@ -13,6 +13,9 @@
 
     \counterwithin*{equation}{section}
     \renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
+
+    \counterwithin*{algorithm}{section}
+    \renewcommand{\thealgorithm}{\arabic{section}.\arabic{algorithm}}
 }
 
 \newcommand{\chaptermajornumbering}
@@ -28,6 +31,9 @@
 
     \counterwithin*{equation}{chapter}
     \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
+
+    \counterwithin*{algorithm}{chapter}
+    \renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}}
 }
 
 \newcommand{\appendixsubsecmajornumbering}
@@ -51,6 +57,9 @@
 
     \counterwithin*{equation}{subsection}
     \renewcommand{\theequation}{\Alph{subsection}-\arabic{equation}}
+
+    \counterwithin*{algorithm}{subsection}
+    \renewcommand{\thealgorithm}{\Alph{subsection}.\arabic{algorithm}}
 }
 
 \newcommand{\appendixsecmajornumbering}
@@ -74,6 +83,9 @@
 
     \counterwithin*{equation}{section}
     \renewcommand{\theequation}{\Alph{section}-\arabic{equation}}
+
+    \counterwithin*{algorithm}{section}
+    \renewcommand{\thealgorithm}{\Alph{section}.\arabic{algorithm}}
 }
 
 \newcommand{\numberingstyle}

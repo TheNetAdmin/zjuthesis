@@ -92,10 +92,27 @@
   open
 }
 
+% TOC set up list of algorithms to use `tocloft` style
+% See: https://tex.stackexchange.com/a/147199
+\makeatletter
+\begingroup
+  \let\newcounter\@gobble
+  \let\setcounter\@gobbletwo
+  \globaldefs\@ne
+  \let\c@loadepth\@ne
+  \newlistof{algotocloft}{loa}{\listalgorithmname}
+\endgroup
+\let\l@algocf\l@algotocloft
+\let\l@algorithm\l@algotocloft
+\let\l@algorithms\l@algotocloft
+\makeatother
+\let\cftalgotocloftleader\cftsecleader
+
 % TOC title format
 \renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\bfseries}\renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftloftitlefont}{\hfill\zihao{3}\bfseries}\renewcommand{\cftafterloftitle}{\hfill}
 \renewcommand{\cftlottitlefont}{\hfill\zihao{3}\bfseries}\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand{\cftloatitlefont}{\hfill\zihao{3}\bfseries}\renewcommand{\cftafterloatitle}{\hfill}
 
 \setlength{\cftbeforetoctitleskip}{0pt}
 \setlength{\cftaftertoctitleskip}{0pt}
@@ -105,6 +122,9 @@
 
 \setlength{\cftbeforelottitleskip}{0pt}
 \setlength{\cftafterlottitleskip}{0pt}
+
+\setlength{\cftbeforeloatitleskip}{0pt}
+\setlength{\cftafterloatitleskip}{0pt}
 
 % TOC entry format
 \cftpagenumbersoff{part}
@@ -138,16 +158,22 @@
 \ifthenelse{\equal{\Degree}{graduate}}
 {
     % listoffigures
-    \newlength{\listoffiguresnamelen}
     \renewcommand{\cftfigpresnum}{\figurename\enspace}
+    \newlength{\listoffiguresnamelen}
     \settowidth{\listoffiguresnamelen}{\cftfigpresnum\cftfigaftersnum}
     \addtolength{\cftfignumwidth}{\listoffiguresnamelen}
 
     % listoftables
-    \newlength{\listoftablesnamelen}
     \renewcommand{\cfttabpresnum}{\tablename\enspace}
+    \newlength{\listoftablesnamelen}
     \settowidth{\listoftablesnamelen}{\cfttabpresnum\cfttabaftersnum}
     \addtolength{\cfttabnumwidth}{\listoftablesnamelen}
+
+    % listofalgorithms
+    \renewcommand{\cftalgotocloftpresnum}{\algotocloftname\enspace}
+    \newlength{\listofalgotocloftsnamelen}
+    \settowidth{\listofalgotocloftsnamelen}{\cftalgotocloftpresnum\cftalgotocloftaftersnum}
+    \addtolength{\cftalgotocloftnumwidth}{\listofalgotocloftsnamelen}
 }
 {}
 
