@@ -99,38 +99,28 @@
             申请人姓名： & \uline{\hfill} \\
             指导教师：   & \uline{\hfill} \\
             合作导师：   &  \uline{\hfill} \\
-            \ifthenelse{\equal{\Type}{design}}
-            {%
-                专业学位类别：  &  \uline{\hfill} \\
-                专业学位领域：  &  \uline{\hfill} \\
-            }
-            {%
-                学科(专业)：  &  \uline{\hfill} \\
-                研究方向：  &  \uline{\hfill} \\
-            }
-            所在学院：   &  \uline{\hfill} \\
         }
         {%
             申请人姓名： & \uline{\hfill \StudentName \hfill} \\
             指导教师：   & \uline{\hfill \AdvisorName \hfill} \\
             合作导师：   &  \uline{\hfill \ColaboratorName \hfill} \\
-            \ifthenelse{\equal{\Type}{design}}
-            {%
-                专业学位类别：  &  \uline{\hfill \Major \hfill} \\
-                专业学位领域：  &  \uline{\hfill \Topic \hfill} \\
-            }
-            {%
-                学科(专业)：  &  \uline{\hfill \Major \hfill} \\
-                研究方向：  &  \uline{\hfill \Topic \hfill} \\
-            }
-            \ifthenelse{\equal{\DepartmentLines}{1}}
-            {%   DepartmentLines == 1
-            所在学院：   &  \uline{\hfill \Department \hfill} \\
-            }
-            {%   DepartmentLines == 2
-            所在学院：   &  \uline{\hfill \DepartmentLineOne \hfill} \\
-                        &  \uline{\hfill \DepartmentLineTwo \hfill} \\
-            }
+        }
+        \ifthenelse{\equal{\Type}{design}}
+        {%
+            专业学位类别：  &  \uline{\hfill \Major \hfill} \\
+            专业学位领域：  &  \uline{\hfill \Topic \hfill} \\
+        }
+        {%
+            学科(专业)：  &  \uline{\hfill \Major \hfill} \\
+            研究方向：  &  \uline{\hfill \Topic \hfill} \\
+        }
+        \ifthenelse{\equal{\DepartmentLines}{1}}
+        {%   DepartmentLines == 1
+        所在学院：   &  \uline{\hfill \Department \hfill} \\
+        }
+        {%   DepartmentLines == 2
+        所在学院：   &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                    &  \uline{\hfill \DepartmentLineTwo \hfill} \\
         }
     \end{tabularx}
 \end{center}
