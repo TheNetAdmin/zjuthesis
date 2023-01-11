@@ -1,0 +1,23 @@
+\ifthenelse{\equal{\Degree}{graduate}}
+{}
+{
+    \ifthenelse{\equal{\Period}{proposal}}
+    {
+        \ifthenelse{\equal{\Type}{thesis}}
+        {
+            \renewcommand{\cftchapfont}         {\bfseries\zihao{-4}}
+            \renewcommand{\cftsecfont}          {\bfseries\zihao{-4}}
+            \renewcommand{\cftsubsecfont}       {\zihao{-4}}
+            \renewcommand{\cftsubsubsecfont}    {\zihao{-4}}
+        }
+        {}
+    }
+    {}
+
+    \appto{\bodystyle}{
+        \defbibheading{bibliography}[\bibname]{
+            \sectionnonum{#1}
+            \markboth{#1}{#1}
+        }
+    }
+}

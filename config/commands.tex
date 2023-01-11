@@ -216,8 +216,50 @@
 }
 
 % `thesis` commands
-\DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~}}
+\ifthenelse{\equal{\MajorFormat}{ee}}
 {
+  \DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~} O{~}}
+  {
+    \begin{center}
+        \begin{tabular}{| >{\songti \zihao{4}}c
+                        | >{\songti \zihao{5}}c
+                        | >{\songti \zihao{5}}c
+                        | >{\songti \zihao{5}}c 
+                        | >{\songti \zihao{5}}c|}
+            \hline
+            \multirow{2}*{\ 成绩比例\ }
+            & \ \ 文献综述\ \ 
+            & \ \ 开题报告\ \ 
+            & \ \ 外文翻译\ \ 
+            & \multirow{2}*{\ \ \ \ \ 合\ \ \ \ 计\ \ \ \ \ } \\
+
+            ~
+            & 占（10\%）
+            & 占（15\%）
+            & 占（5\%）
+            & ~ \\
+
+            \hline
+
+            \multirow{2}*{\ \ 分\ \ \ 值\ \ }
+            & \multirow{2}*{\zihao{4}#1}
+            & \multirow{2}*{\zihao{4}#2}
+            & \multirow{2}*{\zihao{4}#3}
+            & \multirow{2}*{\zihao{4}#4} \\
+
+            ~
+            & ~
+            & ~
+            & ~ 
+            & ~ \\
+            \hline
+        \end{tabular}
+    \end{center}
+  }
+}
+{
+  \DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~}}
+  {
     \begin{flushright}
         \begin{tabular}{| >{\fangsong \zihao{4}}c
                         | >{\fangsong \zihao{5}}c
@@ -248,6 +290,7 @@
             \hline
         \end{tabular}
     \end{flushright}
+  }
 }
 }
 {}
