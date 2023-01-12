@@ -2,3 +2,10 @@
 
 \inputpage{final/job}
 \inputpage{final/eval}
+\ifthenelse{\equal{\MajorFormat}{ee}}
+{
+  \newpage
+  \inputpage{final/eeopinion}
+  \newpage
+  \inputpage{final/eerecord}
+}{}
