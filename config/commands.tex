@@ -173,6 +173,55 @@
     \end{table}
 }
 
+\DeclareDocumentCommand{\eefinaleval}{O{~} O{~} O{~} O{~} O{~} O{~}}
+{
+  \begin{center}
+    \begin{tabular}{| >{\songti \zihao{5}}c
+                    | >{\songti \zihao{5}}c
+                    | >{\songti \zihao{5}}c
+                    | >{\songti \zihao{5}}c 
+                    | >{\songti \zihao{5}}c
+                    | >{\songti \zihao{5}}c
+                    | >{\songti \zihao{5}}c|}
+    \hline
+    \multirow{2}*{\textbf{成绩}}
+    & \textbf{文献综述}
+    & \textbf{开题报告}
+    & \textbf{外文翻译}
+    & \textbf{毕业设计（论文）质}
+    & \textbf{成果评分}
+    & \multirow{2}*{\textbf{总评成绩}} \\
+
+    \textbf{比例}
+    & \textbf{占（10\%）}
+    & \textbf{占（15\%）}
+    & \textbf{占（5\%）}
+    & \textbf{量及答辩占（62\%）}
+    & \textbf{占（8\%）}
+    & ~ \\
+
+    \hline
+
+    \multirow{2}*{分值}
+    & \multirow{2}*{\zihao{4}#1}
+    & \multirow{2}*{\zihao{4}#2}
+    & \multirow{2}*{\zihao{4}#3}
+    & \multirow{2}*{\zihao{4}#4}
+    & \multirow{2}*{\zihao{4}#5}
+    & \multirow{2}*{\zihao{4}#6} \\
+
+    ~
+    & ~
+    & ~
+    & ~ 
+    & ~ 
+    & ~ 
+    & ~ \\
+    \hline
+    \end{tabular}
+  \end{center}
+}
+
 % `design` commands
 \DeclareDocumentCommand{\designproposaleval}{O{~} O{~}}
 {
