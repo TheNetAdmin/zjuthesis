@@ -32,6 +32,8 @@
     Period          = final,           % 'proposal' or 'paper' or 'final'
     BlindReview     = false,           % 'false'    or 'true'
     Language        = chinese,         % 'chinese'  or 'english'
+    Phone           = 12345678901,     % 11 digits
+    Class           = 班级,
     % Graduate Thesis Info
     GradLevel       = master,          % 'master' or 'doctor'
     Topic           = 研究方向,
@@ -65,17 +67,23 @@
         \inputpage{final/toc}
 
         \bodystyle
+        \ifthenelse{\equal{\MajorFormat}{ee}}
+        {}
+        {
         \cleardoublepage
         \ifthenelse{\equal{\Type}{design}}
             {\part{毕业设计}}
             {\part{毕业论文}}
-        
+        }
         \inputbody{final/content}
         \inputbody{final/post}
 
         \poststyle
         \inputpage{final/post}
 
+        \ifthenelse{\equal{\MajorFormat}{ee}}
+        {}
+        {
         % Proposal part
         \renewcommand{\undergradcurrstage}{proposal}
         \newrefsection
@@ -94,6 +102,7 @@
 
         \poststyle
         \inputpage{proposal/post}
+        }
     }
 
     \ifthenelse{\equal{\Period}{proposal}}

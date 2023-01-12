@@ -1,0 +1,14 @@
+% ctex style settings
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{
+  \ifthenelse{\equal{\Period}{final}}{
+    \ctexset
+    {
+        section = 
+        {
+            format=\flushleft\zihao{3}\bfseries,
+            name={第,章}
+        }
+    }
+  }{}
+}{}

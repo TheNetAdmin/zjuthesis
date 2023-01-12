@@ -13,12 +13,18 @@
 
 \begin{center}
     \zihao{-1} \heiti \bfseries
-    \ifthenelse{\equal{\Type}{thesis}}
+    \ifthenelse{\equal{\MajorFormat}{ee}}
     {
-        本~科~生~毕~业~论~文
+      本~科~生~毕~业~设~计~（论文）
     }
     {
-        本~科~生~毕~业~设~计
+      \ifthenelse{\equal{\Type}{thesis}}
+      {
+          本~科~生~毕~业~论~文
+      }
+      {
+          本~科~生~毕~业~设~计
+      }
     }
 \end{center}
 
@@ -61,7 +67,13 @@
             年级与专业  &  \uline{\hfill} \\
             所在学院   &  \uline{\hfill} \\
             ~ & ~\\
-            递交日期 & \uline{\hfill} \\
+            \ifthenelse{\equal{\MajorFormat}{ee}}
+            {
+              提交日期 & \uline{\hfill \SubmitDate \hfill} \\
+            }
+            {
+              递交日期 & \uline{\hfill} \\
+            }
         \end{tabularx}
     \end{center}
 }
@@ -85,7 +97,13 @@
                         &  \uline{\hfill \DepartmentLineTwo \hfill} \\
                         ~ & ~\\
             }
-            递交日期 & \uline{\hfill \SubmitDate \hfill} \\
+            \ifthenelse{\equal{\MajorFormat}{ee}}
+            {
+              提交日期 & \uline{\hfill \SubmitDate \hfill} \\
+            }
+            {
+              递交日期 & \uline{\hfill \SubmitDate \hfill} \\
+            }
         \end{tabularx}
     \end{center}
 }

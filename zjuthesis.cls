@@ -20,6 +20,8 @@
 \DeclareStringOption{Title}
 \DeclareStringOption{TitleEng}
 \DeclareStringOption{SubmitDate}
+\DeclareStringOption{Phone}
+\DeclareStringOption{Class}
 \DeclareStringOption[undergraduate]{Degree}
 \DeclareStringOption[general]{MajorFormat}
 \DeclareStringOption[thesis]{Type}

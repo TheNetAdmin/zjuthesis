@@ -1,5 +1,4 @@
-\ifthenelse{\equal{\Degree}{graduate}}
-{}
+\ifthenelse{\equal{\Degree}{undergraduate}}
 {
     \ifthenelse{\equal{\Period}{proposal}}
     {
@@ -12,7 +11,11 @@
         }
         {}
     }
-    {}
+    {
+      % TODO: 
+      % 1. Set page margin in previous page style to 3.18cm
+      % 2. Cancel the header in 承诺书、致谢、摘要 and `Abstract` page
+    }
 
     \appto{\bodystyle}{
         \defbibheading{bibliography}[\bibname]{
@@ -20,4 +23,4 @@
             \markboth{#1}{#1}
         }
     }
-}
+}{}
