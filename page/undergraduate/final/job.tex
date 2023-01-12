@@ -1,12 +1,28 @@
 \cleardoublepage{}
-\sectionnonum{本科生毕业论文（设计）任务书}
+\ifthenelse{\equal{\MajorFormat}{ee}}
+{
+  \begin{center}
+    {\bfseries\fangsong\zihao{2} 本科生毕业论文（设计）任务书}
+  \end{center}
+}
+{
+  \sectionnonum{本科生毕业论文（设计）任务书}
+}
 
 {
     \bfseries
     \noindent 一、题目：\\
     \noindent 二、指导教师对毕业论文（设计）的进度安排及任务要求：\\
-
-    \vskip 50mm
+    \ifthenelse{\equal{\MajorFormat}{ee}}
+    {
+      \noindent 1、进度安排
+      \vskip 60mm
+      \noindent 2、任务要求
+      \vskip 40mm
+    }
+    {
+      \vskip 50mm
+    }
 
     \noindent 起讫日期 20 \quad 年 \quad  月 \quad  日 \quad 至 \quad 20 \quad  年 \quad  月  \quad 日
     \begin{flushright}

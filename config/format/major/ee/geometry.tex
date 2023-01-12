@@ -1,0 +1,23 @@
+% Set page layout
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{
+    % Set margins according to the MS template from EE website.
+    \geometry{
+        a4paper,
+        marginpar=0pt,
+        includeheadfoot,
+        vmargin={2.54cm, 2.54cm},
+        hmargin={3.18cm, 3.18cm},
+        headsep=4mm
+    }
+}
+{
+    \geometry{
+        a4paper,
+        marginpar=0pt,
+        includeheadfoot,
+        vmargin={2.0cm, 2.0cm},
+        hmargin={2.5cm, 2.5cm},
+        headsep=4mm
+    }
+}

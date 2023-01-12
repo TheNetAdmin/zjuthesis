@@ -64,11 +64,13 @@
 
         \prevstyle
         \inputpage{final/previous}
-        \inputpage{final/toc}
+        \ifthenelse{\equal{\MajorFormat}{ee}}
+        {}
+        {\inputpage{final/toc}}
 
         \bodystyle
         \ifthenelse{\equal{\MajorFormat}{ee}}
-        {}
+        {\inputpage{final/toc}}
         {
         \cleardoublepage
         \ifthenelse{\equal{\Type}{design}}
