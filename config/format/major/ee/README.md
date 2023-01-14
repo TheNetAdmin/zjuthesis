@@ -1,4 +1,4 @@
-使用电气工程学院毕业设计（论文）模板前，请**务必检查以下条目是否完成**：
+在提交电气工程学院毕业设计（论文）前，请**务必检查以下条目是否完成**：
 
 - [ ] [page/undergraduate/final/eechecklist.tex](../../../../page/undergraduate/final/eechecklist.tex)：将`教师职称`和`分数`替换为相应内容
 - [ ] [page/undergraduate/final/eeopinion.tex](../../../../page/undergraduate/final/eeopinion.tex)：将`【这里填职称】`和`【这里填单位】`两处替换为相应内容
