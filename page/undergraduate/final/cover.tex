@@ -2,7 +2,9 @@
 \setcounter{page}{-1}
 
 \begin{flushright}
-    {\bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{6}{\quad}}
+  \ifthenelse{\equal{\MajorFormat}{ee}}  
+  {\bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{3}{\quad}}
+  {\bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{7}{\quad}}
 \end{flushright}
 
 \vskip 10mm
@@ -68,12 +70,8 @@
             所在学院   &  \uline{\hfill} \\
             ~ & ~\\
             \ifthenelse{\equal{\MajorFormat}{ee}}
-            {
-              提交日期 & \uline{\hfill \SubmitDate \hfill} \\
-            }
-            {
-              递交日期 & \uline{\hfill} \\
-            }
+            {提交日期 & \uline{\hfill \SubmitDate \hfill} \\}
+            {递交日期 & \uline{\hfill} \\}
         \end{tabularx}
     \end{center}
 }
@@ -98,12 +96,8 @@
                         ~ & ~\\
             }
             \ifthenelse{\equal{\MajorFormat}{ee}}
-            {
-              提交日期 & \uline{\hfill \SubmitDate \hfill} \\
-            }
-            {
-              递交日期 & \uline{\hfill \SubmitDate \hfill} \\
-            }
+            {提交日期 & \uline{\hfill \SubmitDate \hfill} \\}
+            {递交日期 & \uline{\hfill \SubmitDate \hfill} \\}
         \end{tabularx}
     \end{center}
 }

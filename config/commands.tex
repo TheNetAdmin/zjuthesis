@@ -176,13 +176,14 @@
 \DeclareDocumentCommand{\eefinaleval}{O{~} O{~} O{~} O{~} O{~} O{~}}
 {
   \begin{center}
-    \begin{tabular}{| >{\songti \zihao{5}}c
+  \begin{adjustbox}{minipage=16cm, center}
+    \begin{tabularx}{\textwidth}{| >{\songti \zihao{5}}c
                     | >{\songti \zihao{5}}c
                     | >{\songti \zihao{5}}c
                     | >{\songti \zihao{5}}c 
                     | >{\songti \zihao{5}}c
                     | >{\songti \zihao{5}}c
-                    | >{\songti \zihao{5}}c|}
+                    | >{\songti \zihao{5}}X<{\centering}|}
     \hline
     \multirow{2}*{\textbf{成绩}}
     & \textbf{文献综述}
@@ -218,7 +219,8 @@
     & ~ 
     & ~ \\
     \hline
-    \end{tabular}
+    \end{tabularx}
+  \end{adjustbox}
   \end{center}
 }
 
