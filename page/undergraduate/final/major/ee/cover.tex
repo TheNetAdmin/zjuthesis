@@ -2,7 +2,7 @@
 \setcounter{page}{-1}
 
 \begin{flushright}
-    {\bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{6}{\quad}}
+  \bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{3}{\quad}
 \end{flushright}
 
 \vskip 10mm
@@ -13,13 +13,7 @@
 
 \begin{center}
     \zihao{-1} \heiti \bfseries
-    \ifthenelse{\equal{\Type}{thesis}}
-    {
-        本~科~生~毕~业~论~文
-    }
-    {
-        本~科~生~毕~业~设~计
-    }
+      本~科~生~毕~业~设~计~（论文）
 \end{center}
 
 \vskip 20pt
@@ -61,7 +55,7 @@
             年级与专业  &  \uline{\hfill} \\
             所在学院   &  \uline{\hfill} \\
             ~ & ~\\
-            递交日期 & \uline{\hfill} \\
+            提交日期 & \uline{\hfill \SubmitDate \hfill} \\
         \end{tabularx}
     \end{center}
 }
@@ -85,7 +79,7 @@
                         &  \uline{\hfill \DepartmentLineTwo \hfill} \\
                         ~ & ~\\
             }
-            递交日期 & \uline{\hfill \SubmitDate \hfill} \\
+            提交日期 & \uline{\hfill \SubmitDate \hfill} \\
         \end{tabularx}
     \end{center}
 }

@@ -32,8 +32,6 @@
     Period          = final,           % 'proposal' or 'paper' or 'final'
     BlindReview     = false,           % 'false'    or 'true'
     Language        = chinese,         % 'chinese'  or 'english'
-    Phone           = 12345678901,     % 11 digits
-    Class           = 班级,
     % Graduate Thesis Info
     GradLevel       = master,          % 'master' or 'doctor'
     Topic           = 研究方向,
@@ -60,51 +58,34 @@
         \newrefsection
         
         \coverstyle
-        \inputpage{final/cover}
+        \inputpage{final}{cover}
 
         \prevstyle
-        \inputpage{final/previous}
-        \ifthenelse{\equal{\MajorFormat}{ee}}
-        {}
-        {\inputpage{final/toc}}
+        \inputpage{final}{previous}
+        \inputpage{final}{toc}
 
         \bodystyle
-        \ifthenelse{\equal{\MajorFormat}{ee}}
-        {\inputpage{final/toc}}
-        {
-        \cleardoublepage
-        \ifthenelse{\equal{\Type}{design}}
-            {\part{毕业设计}}
-            {\part{毕业论文}}
-        }
+        \inputpage{final}{cover-part}
         \inputbody{final/content}
         \inputbody{final/post}
 
         \poststyle
-        \inputpage{final/post}
+        \inputpage{final}{post}
 
-        \ifthenelse{\equal{\MajorFormat}{ee}}
-        {}
-        {
         % Proposal part
         \renewcommand{\undergradcurrstage}{proposal}
         \newrefsection
 
         \coverstyle
-        \cleardoublepage
-        \ifthenelse{\equal{\Type}{design}}
-            {\part{毕业设计开题报告}}
-            {\part{毕业论文开题报告}}
-
-        \inputpage{proposal/cover}
-        \inputpage{proposal/previous}
+        \inputpage{proposal}{cover-part}
+        \inputpage{proposal}{cover}
+        \inputpage{proposal}{previous}
         
         \bodystyle
         \inputbody{proposal/content}
 
         \poststyle
-        \inputpage{proposal/post}
-        }
+        \inputpage{proposal}{post}
     }
 
     \ifthenelse{\equal{\Period}{proposal}}
@@ -113,20 +94,20 @@
         \newcommand{\undergradcurrstage}{proposal}
 
         \coverstyle
-        \inputpage{proposal/cover}
+        \inputpage{proposal}{cover}
     
         % 'proposal' previous part uses 'empty' page style,
         % as shown in cs undergrad template.
-        \inputpage{proposal/previous}
+        \inputpage{proposal}{previous}
         
         \prevstyle
-        \inputpage{proposal/toc}
+        \inputpage{proposal}{toc}
     
         \bodystyle
         \inputbody{proposal/content}
         
         \poststyle
-        \inputpage{proposal/post}
+        \inputpage{proposal}{post}
     }
 
     \ifthenelse{\equal{\Period}{paper}}
@@ -136,11 +117,11 @@
         \newrefsection
         
         \coverstyle
-        \inputpage{final/cover}
+        \inputpage{final}{cover}
 
         \prevstyle
-        \inputpage{final/previous}
-        \inputpage{final/toc}
+        \inputpage{final}{previous}
+        \inputpage{final}{toc}
 
         \bodystyle
         \cleardoublepage
@@ -149,7 +130,7 @@
         \inputbody{final/post}
 
         \poststyle
-        \inputpage{final/post}
+        \inputpage{final}{post}
     }
 }
 

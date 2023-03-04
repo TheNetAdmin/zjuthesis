@@ -16,7 +16,39 @@
 \ifthenelse{\equal{\Degree}{undergraduate}}
 {
     % undergraduate
-    \newcommand{\inputpage}[1]{\input{./page/undergraduate/#1}}
+    \newcommand{\inputpage}[2]
+    {
+        % Arguments
+        %    #1 [final|proposal]
+        %    #2 [filename.tex]
+        % Directory structure:
+        % graduate/undergraduate            [Degree     ] [required        ]
+        % |-- major
+        %     |-- general/cs/math/...       [MajorFormat] [optional        ]
+        %         |-- cover.tex/toc.tex/... [TeX Files  ] [template defined]
+        %
+        % Search from bottom-level to top-level:
+        % E.g:
+        %     With such dir:
+        %     undergraduate
+        %     |-- cover.tex
+        %     |-- toc.tex
+        %     |-- abstract.tex
+        %     |-- major
+        %         |-- ee
+        %             |-- abstract.tex
+        %     The input files are:
+        %         undergraduate/cover.tex
+        %         undergraduate/toc.tex
+        %         undergraduate/major/ee/abstract.tex
+        \IfFileExists{./#1/undergraduate/\MajorFormat/#2}
+        {
+            \input{./#1/undergraduate/\MajorFormat/#2}
+        }
+        {
+            \input{./#1/undergraduate/#2}
+        }
+    }
     \newcommand{\inputbody}[1]{\input{./body/undergraduate/#1}}
 
     % TODO: how to switch to \section* without breaking current formats?
@@ -129,18 +161,6 @@
     \end{flushright}
 }
 
-\newcommand{\eechecklistsig}[1]
-{
-  % For undergrad ee thesis
-    \begin{center}
-        \songti
-        \zihao{-4}
-        #1 \underline{\multido{}{7}{\quad}}
-        \multido{}{3}{\quad} 
-        检查日期：\underline{\multido{}{7}{\quad}}
-    \end{center}
-}
-
 \DeclareDocumentCommand{\finaleval}{O{~} O{~} O{~} O{~} O{~}}
 {
     \begin{table}[H]
@@ -171,57 +191,6 @@
             \hline
         \end{tabularx}
     \end{table}
-}
-
-\DeclareDocumentCommand{\eefinaleval}{O{~} O{~} O{~} O{~} O{~} O{~}}
-{
-  \begin{center}
-  \begin{adjustbox}{minipage=16cm, center}
-    \begin{tabularx}{\textwidth}{| >{\songti \zihao{5}}c
-                    | >{\songti \zihao{5}}c
-                    | >{\songti \zihao{5}}c
-                    | >{\songti \zihao{5}}c 
-                    | >{\songti \zihao{5}}c
-                    | >{\songti \zihao{5}}c
-                    | >{\songti \zihao{5}}X<{\centering}|}
-    \hline
-    \multirow{2}*{\textbf{成绩}}
-    & \textbf{文献综述}
-    & \textbf{开题报告}
-    & \textbf{外文翻译}
-    & \textbf{毕业设计（论文）质}
-    & \textbf{成果评分}
-    & \multirow{2}*{\textbf{总评成绩}} \\
-
-    \textbf{比例}
-    & \textbf{占（10\%）}
-    & \textbf{占（15\%）}
-    & \textbf{占（5\%）}
-    & \textbf{量及答辩占（62\%）}
-    & \textbf{占（8\%）}
-    & ~ \\
-
-    \hline
-
-    \multirow{2}*{分值}
-    & \multirow{2}*{\zihao{4}#1}
-    & \multirow{2}*{\zihao{4}#2}
-    & \multirow{2}*{\zihao{4}#3}
-    & \multirow{2}*{\zihao{4}#4}
-    & \multirow{2}*{\zihao{4}#5}
-    & \multirow{2}*{\zihao{4}#6} \\
-
-    ~
-    & ~
-    & ~
-    & ~ 
-    & ~ 
-    & ~ 
-    & ~ \\
-    \hline
-    \end{tabularx}
-  \end{adjustbox}
-  \end{center}
 }
 
 % `design` commands
@@ -279,62 +248,10 @@
 }
 
 % `thesis` commands
-\ifthenelse{\equal{\MajorFormat}{ee}}
+
+% `thesis` commands
+\DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~}}
 {
-  \DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~} O{~}}
-  {
-    \begin{center}
-        \begin{tabular}{| >{\songti \zihao{4}}c
-                        | >{\songti \zihao{5}}c
-                        | >{\songti \zihao{5}}c
-                        | >{\songti \zihao{5}}c 
-                        | >{\songti \zihao{5}}c|}
-            \hline
-            \multirow{2}*{\ 成绩比例\ }
-            & \ \ 文献综述\ \ 
-            & \ \ 开题报告\ \ 
-            & \ \ 外文翻译\ \ 
-            & \multirow{2}*{\ \ \ \ \ 合\ \ \ \ 计\ \ \ \ \ } \\
-
-            ~
-            & 占（10\%）
-            & 占（15\%）
-            & 占（5\%）
-            & ~ \\
-
-            \hline
-
-            \multirow{2}*{\ \ 分\ \ \ 值\ \ }
-            & \multirow{2}*{\zihao{4}#1}
-            & \multirow{2}*{\zihao{4}#2}
-            & \multirow{2}*{\zihao{4}#3}
-            & \multirow{2}*{\zihao{4}#4} \\
-
-            ~
-            & ~
-            & ~
-            & ~ 
-            & ~ \\
-            \hline
-        \end{tabular}
-    \end{center}
-  }
-
-  % For undergrad ee thesis
-  \DeclareDocumentCommand{\eethesischecklistinfo}{O{~} O{~}}
-  {
-      \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|}
-      \hline
-      学生姓名                      & \multicolumn{1}{p{2.1cm}|}{\songti \zihao{5}\StudentName}       & \multicolumn{1}{l|}{学号} & \StudentID & 专业年级小班               &   \Class   \\ \hline
-      指导教师                      & \multicolumn{1}{l|}{\songti \zihao{5}\AdvisorName}              & \multicolumn{1}{l|}{职称} & #1         & 学生联系电话               &   \Phone   \\ \hline
-      \multirow{2}{*}{毕业设计题目}  & \multicolumn{3}{l|}{\multirow{2}{*}{\songti \zihao{5}\Title}}                                           & \multirow{2}{*}{评定成绩} & \multirow{2}{*}{#2} \\
-                                   & \multicolumn{3}{l|}{}                                                                                   &                          &                   \\ \hline
-      \end{tabularx}
-  }
-}
-{
-  \DeclareDocumentCommand{\thesisproposaleval}{O{~} O{~} O{~}}
-  {
     \begin{flushright}
         \begin{tabular}{| >{\fangsong \zihao{4}}c
                         | >{\fangsong \zihao{5}}c
@@ -365,7 +282,6 @@
             \hline
         \end{tabular}
     \end{flushright}
-  }
 }
 }
 {}
