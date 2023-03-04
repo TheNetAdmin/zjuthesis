@@ -41,12 +41,12 @@
         %         undergraduate/cover.tex
         %         undergraduate/toc.tex
         %         undergraduate/major/ee/abstract.tex
-        \IfFileExists{./#1/undergraduate/\MajorFormat/#2}
+        \IfFileExists{./page/undergraduate/#1/\MajorFormat/#2}
         {
-            \input{./#1/undergraduate/\MajorFormat/#2}
+            \input{./page/undergraduate/#1/\MajorFormat/#2}
         }
         {
-            \input{./#1/undergraduate/#2}
+            \input{./page/undergraduate/#1/#2}
         }
     }
     \newcommand{\inputbody}[1]{\input{./body/undergraduate/#1}}
