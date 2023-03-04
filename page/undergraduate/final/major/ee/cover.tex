@@ -1,0 +1,85 @@
+\thispagestyle{empty}
+\setcounter{page}{-1}
+
+\begin{flushright}
+  \bfseries 涉密论文 $\square$ ~~ 公开论文 $\square$ \multido{}{3}{\quad}
+\end{flushright}
+
+\vskip 10mm
+
+\begin{center}
+    \includegraphics[width=0.5\paperwidth]{logo/zjuchar.pdf}
+\end{center}
+
+\begin{center}
+    \zihao{-1} \heiti \bfseries
+      本~科~生~毕~业~设~计~（论文）
+\end{center}
+
+\vskip 20pt
+
+\begin{center}
+    \includegraphics[width=0.17\paperwidth]{logo/zju.pdf}
+\end{center}
+
+\vskip 20pt
+
+% Define multi line title
+\ifthenelse{\equal{\TitleLines}{1}}
+{
+    % TitleLines == 1
+    \newcommand{\CoverTitle}{
+        题目      &  \uline{\hfill \Title{} \hfill} \\
+        ~ & ~\\
+    }
+}
+{
+    % TitleLines == 2
+    \newcommand{\CoverTitle}{
+        题目      &  \uline{\hfill \TitleLineOne{} \hfill} \\
+        ~        & \uline{\hfill \TitleLineTwo{} \hfill} \\
+    }
+}
+
+\ifthenelse{\equal{\BlindReview}{true}}
+{
+    % in blind review
+    \begin{center}
+        \bfseries \zihao{3}
+        \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
+            \fangsong
+            \CoverTitle
+            
+            姓名与学号 & \uline{\hfill} \\
+            指导教师   &  \uline{\hfill} \\
+            年级与专业  &  \uline{\hfill} \\
+            所在学院   &  \uline{\hfill} \\
+            ~ & ~\\
+            提交日期 & \uline{\hfill \SubmitDate \hfill} \\
+        \end{tabularx}
+    \end{center}
+}
+{
+    % not in blind review
+    \begin{center}
+        \bfseries \zihao{3}
+        \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
+            \CoverTitle
+            
+            姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
+            指导教师   &  \uline{\hfill \AdvisorName \hfill} \\
+            年级与专业  &  \uline{\hfill \mbox{\Grade}级\Major \hfill} \\
+            \ifthenelse{\equal{\DepartmentLines}{1}}
+            {%   DepartmentLines == 1
+            所在学院    &  \uline{\hfill \Department \hfill} \\
+                        ~ & ~\\
+            }
+            {%   DepartmentLines == 2
+            所在学院    &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                        &  \uline{\hfill \DepartmentLineTwo \hfill} \\
+                        ~ & ~\\
+            }
+            提交日期 & \uline{\hfill \SubmitDate \hfill} \\
+        \end{tabularx}
+    \end{center}
+}

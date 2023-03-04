@@ -1,0 +1,54 @@
+\definecolor{themeblue}{RGB}{0, 63, 136}
+\definecolor{themered}{RGB}{176, 31, 36}
+
+\definecolor{codecolorkeywords}{rgb}{0,0,0}
+\definecolor{codecolorcomments}{rgb}{0.5,0.5,0.5}
+\definecolor{codecolorstrings}{rgb}{0,0,0}
+\definecolor{codecolortypes}{rgb}{0,0,0}
+
+\lstloadlanguages{
+    C,
+    C++,
+    Python,
+    Java
+}
+
+\lstdefinestyle{codestyle}{
+    % Basic design
+    basicstyle=\ttfamily,
+    frame=tb,
+    %framesep=5pt,
+    framerule=.5pt,
+    rulecolor=\color{black},
+    abovecaptionskip=0pt,
+    belowcaptionskip=5pt,
+    % Code design
+    keywordstyle=\color{codecolorkeywords},
+    commentstyle=\color{codecolorcomments},
+    stringstyle=\color{codecolorstrings},
+    numberstyle=\small\color{gray},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=t,
+    keepspaces=true,
+    % Line numbers
+    %numbers=left,
+    numbersep=10pt,
+    %xleftmargin=.5em,
+    stepnumber=1,
+    firstnumber=1,
+    numberfirstline=true,
+    % Code
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    breaklines=true,
+}
+\lstset{style=codestyle}
+
+\DeclareCaptionFormat{codecaptionformat}{%
+  \parbox{\textwidth}{\centering#1#2\hspace{.5em}#3}
+}
+\DeclareCaptionFont{songti}{\songti}
+\captionsetup[lstlisting]{format=codecaptionformat, font={bf,songti,small}}

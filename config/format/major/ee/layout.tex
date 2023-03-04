@@ -1,0 +1,28 @@
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{
+    \ifthenelse{\equal{\Period}{proposal}}
+    {
+        \ifthenelse{\equal{\Type}{thesis}}
+        {
+            \renewcommand{\cftchapfont}         {\bfseries\zihao{-4}}
+            \renewcommand{\cftsecfont}          {\bfseries\zihao{-4}}
+            \renewcommand{\cftsubsecfont}       {\zihao{-4}}
+            \renewcommand{\cftsubsubsecfont}    {\zihao{-4}}
+        }
+        {}
+    }
+    {
+      \fancypagestyle{previous}
+      {
+          \fancyfoot{}
+          \fancyfoot[C]{\zihao{-5}\thepage}
+      }
+    }
+
+    \appto{\bodystyle}{
+        \defbibheading{bibliography}[\bibname]{
+            \sectionnonum{#1}
+            \markboth{#1}{#1}
+        }
+    }
+}{}

@@ -1,0 +1,89 @@
+\cleardoublepage{}
+
+\hskip 40mm
+
+\begin{center}
+    \includegraphics[width=0.5\paperwidth]{logo/zjuchar.pdf}
+\end{center}
+
+\begin{center}
+    \zihao{-1} \heiti \bfseries
+    \ifthenelse{\equal{\Type}{thesis}}
+    {
+        本~~科~~生~~毕~~业~~论~~文
+        \\ \vskip 24pt
+        文献综述和开题报告
+    }
+    {
+        本~~科~~生~~毕~~业~~设~~计
+        \\ \vskip 24pt
+        开题报告
+    }
+\end{center}
+
+\vskip 40pt
+
+\begin{center}
+    \includegraphics[width=0.17\paperwidth]{logo/zju.pdf}
+\end{center}
+
+\vskip 40pt
+\ifthenelse{\equal{\BlindReview}{true}}
+{
+    % in blind review
+    \begin{center}
+        \bfseries \zihao{3}
+        \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
+            \ifthenelse{\equal{\MajorFormat}{cs}}%
+            {%
+                \vspace{10.5pt} 学生姓名   & \uline{\hfill} \\
+                \vspace{10.5pt} 学生学号   & \uline{\hfill} \\
+                \vspace{10.5pt} 指导教师   & \uline{\hfill} \\
+                \vspace{10.5pt} 年级与专业 & \uline{\hfill} \\
+                所在学院   & \uline{\hfill} \\
+            }
+            {%
+                姓名与学号 & \uline{\hfill} \\
+                指导教师   & \uline{\hfill} \\
+                年级与专业 & \uline{\hfill} \\
+                所在学院   & \uline{\hfill} \\
+            }
+        \end{tabularx}
+    \end{center}
+}
+{
+    % not in blind review
+    \begin{center}
+        \bfseries \zihao{3}
+        \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
+            \ifthenelse{\equal{\MajorFormat}{cs}}%
+            {%
+                \vspace{10.5pt} 学生姓名   & \uline{\hfill \StudentName \hfill} \\
+                \vspace{10.5pt} 学生学号   & \uline{\hfill \StudentID \hfill} \\
+                \vspace{10.5pt} 指导教师   & \uline{\hfill \AdvisorName \hfill} \\
+                \vspace{10.5pt} 年级与专业 & \uline{\hfill \mbox{\Grade}级\Major \hfill} \\
+                所在学院   & \uline{\hfill \Department \hfill} \\
+            }
+            {%
+                姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
+                指导教师   & \uline{\hfill \AdvisorName \hfill}            \\
+                年级与专业 & \uline{\hfill \mbox{\Grade}级\Major \hfill}   \\
+                \ifthenelse{\equal{\DepartmentLines}{1}}
+                {%   DepartmentLines == 1
+                所在学院    &  \uline{\hfill \Department \hfill} \\
+                }
+                {%   DepartmentLines == 2
+                所在学院    &  \uline{\hfill \DepartmentLineOne \hfill} \\
+                            &  \uline{\hfill \DepartmentLineTwo \hfill} \\
+                }
+            }
+        \end{tabularx}
+    \end{center}
+   
+    \vskip 40pt
+
+    \zihao{4}
+    \begin{center}
+      \SubmitDate
+    \end{center}
+}
