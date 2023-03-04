@@ -1,4 +1,7 @@
-\cleardoublepage
-\ifthenelse{\equal{\Type}{design}}
-    {\part{毕业设计}}
-    {\part{毕业论文}}
+\ifthenelse{\equal{\Period}{final}}
+{%
+  \cleardoublepage
+  \ifthenelse{\equal{\Type}{design}}
+      {\part{毕业设计}}
+      {\part{毕业论文}}
+}{}

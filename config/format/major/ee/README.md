@@ -1,6 +1,10 @@
-# 提交前检查
+# 使用说明
 
-在提交电气工程学院毕业设计（论文）前，请**务必检查以下条目是否完成**：
+**请务必对照学院下发的Word模板校对格式！！！**
+
+**注意**：在`zjuthesis.tex`中，如果`Period`选为`final`，将会编译出毕业论文**和**开题报告（以part的形式组织），如果仅需要打印毕业论文，可以将`Period`选为`paper`。
+
+在提交电气工程学院毕业设计（论文）前，请**检查以下条目是否完成**：
 
 - [ ] [page/undergraduate/final/major/ee/eechecklist.tex](../../../../page/undergraduate/final/major/ee/eechecklist.tex)：将`教师职称`和`分数`替换为相应内容
 - [ ] [page/undergraduate/final/major/ee/eeopinion.tex](../../../../page/undergraduate/final/major/ee/eeopinion.tex)：将`【这里填职称】`和`【这里填单位】`两处替换为相应内容
@@ -19,4 +23,4 @@
   {\noindent \textbf{Key words:} xxx, xxx, xxx, xxx}
   ```
 
-如果编译后发现表格的排版混乱，这是因为某些栏目的字数过多。可以考虑用`{\zihao{6}内容}`缩小字号以腾出空间，或者自己想办法调整表格列宽。
+如果编译后发现表格的排版混乱，这是因为某些栏目的字数过多。可以考虑用`{\zihao{6}内容}`缩小字号以腾出空间，或者自行调整表格列宽。
