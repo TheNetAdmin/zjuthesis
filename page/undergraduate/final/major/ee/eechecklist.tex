@@ -7,7 +7,13 @@
 \begin{center}
   {\heiti\bfseries\zihao{3} 浙江大学本科生毕业设计（论文）装订内容检查表} \\ \vskip 2mm
   \songti\zihao{5} （此表请装订在论文首页，由指导教师在答辩结束后填写）\vskip 2mm
-  \eethesischecklistinfo[教师职称][分数]
+  \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|}
+    \hline
+    学生姓名                      & \multicolumn{1}{p{2.1cm}|}{\songti \zihao{5}\StudentName}       & \multicolumn{1}{l|}{学号} & \StudentID & 专业年级小班               &   【填入】   \\ \hline
+    指导教师                      & \multicolumn{1}{l|}{\songti \zihao{5}\AdvisorName}              & \multicolumn{1}{l|}{职称} & 【填入】         & 学生联系电话               &   【填入】   \\ \hline
+    \multirow{2}{*}{毕业设计题目}  & \multicolumn{3}{l|}{\multirow{2}{*}{\songti \zihao{5}\Title}}                                           & \multirow{2}{*}{评定成绩} & \multirow{2}{*}{【分数】} \\
+                                 & \multicolumn{3}{l|}{}                                                                                   &                          &                   \\ \hline
+  \end{tabularx}
 \end{center}
 
 \vskip 15mm
@@ -37,4 +43,12 @@
 
 \vskip 20mm
 
-\eechecklistsig{检查人（签名）}
+\begin{center}
+  \songti
+  \zihao{-4}
+  检查人（签名） \underline{\multido{}{7}{\quad}}
+  \multido{}{3}{\quad} 
+  检查日期：\underline{\multido{}{7}{\quad}}
+\end{center}
+
+\cleardoublepage
