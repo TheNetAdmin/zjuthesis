@@ -83,3 +83,11 @@
         \end{tabularx}
     \end{center}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actual previous pages (Their page style is empty)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\inputpage{final}{eechecklist}
+\inputpage{final}{promise}
+\ifthenelse{\equal{\BlindReview}{true}}{}{\inputbody{final/acknowledgement}}
+\inputbody{final/abstract}
