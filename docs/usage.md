@@ -2,10 +2,10 @@
 
 ## 使用
 
+1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装过程可以参考[浙江大学镜像站提供的文档](https://mirrors.zju.edu.cn/docs/CTAN)，以便在校内网下更快下载。
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)，
    每个专业模板都有预览 pdf 文件，可以单独下载查看。
    模板代码请下载 `zjuthesis-vx.x.x.zip` 文件。
-1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装所需的镜像文件可以选用浙江大学开源镜像站提供的[镜像](https://mirrors.zju.edu.cn/CTAN/systems/texlive/Images/)以便在校内网下更快下载。
 1. 在 `zjuthesis.tex` 中 `\documentclass[]{zjuthesis}` 部分填写个人信息，注意以下信息用于控制文档的生成：
 
    - `Degree` 为 `undergraduate` 时，编译本科生论文：

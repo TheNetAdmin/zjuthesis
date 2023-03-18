@@ -41,7 +41,7 @@ zjuthesis 模板有三种使用方式，Overleaf，本地编译，或者 Contain
 
 ### 本地编译
 
-1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎
+1. 安装 TeXLive 工具包，编译需要 XeTeX 引擎。安装过程可以参考[浙江大学镜像站提供的文档](https://mirrors.zju.edu.cn/docs/CTAN)，以便在校内网下更快下载。
 1. [下载模板代码](https://github.com/TheNetAdmin/zjuthesis/releases)，
    每个专业模板都有预览 pdf 文件，可以单独下载查看。
    模板代码请下载 `zjuthesis-v*.*.*.zip` 文件
