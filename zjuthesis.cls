@@ -49,19 +49,17 @@
 
 \ifthenelse{\equal{\TwoSide}{true}}
 {
-    \LoadClass[
-        zihao=-4,
-        UTF8,
+    \PassOptionsToClass{
         twoside,
         openright
-    ]{ctexrep}
+    }{ctexrep}
 }
-{
-    \LoadClass[
-        zihao=-4,
-        UTF8
-    ]{ctexrep}
-}
+{}
+
+\LoadClass[
+    zihao=-4,
+    UTF8
+]{ctexrep}
 
 \input{config/packages}
 
