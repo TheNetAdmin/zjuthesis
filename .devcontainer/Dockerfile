@@ -7,4 +7,4 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends texlive-full \
-    && sudo wget -P /usr/share/fonts https://github.com/dolbydu/font/raw/master/unicode/FangSong.ttf https://github.com/dolbydu/font/raw/master/unicode/SimSun.ttc https://github.com/dolbydu/font/raw/master/unicode/SimHei.ttf https://github.com/dolbydu/font/raw/master/unicode/Kaiti.ttf  https://www.freebestfonts.com/yone//down/times.ttf
+    && sudo git clone https://github.com/Haixing-Hu/latex-chinese-fonts /usr/share/fonts/latex-chinese-fonts
