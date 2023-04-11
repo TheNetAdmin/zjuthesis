@@ -2,24 +2,15 @@
 {
     \ifthenelse{\equal{\Period}{proposal}}
     {
-        \ifthenelse{\equal{\Type}{thesis}}
-        {
-            \renewcommand{\cftchapfont}         {\bfseries\zihao{-4}}
-            \renewcommand{\cftsecfont}          {\bfseries\zihao{-4}}
-            \renewcommand{\cftsubsecfont}       {\zihao{-4}}
-            \renewcommand{\cftsubsubsecfont}    {\zihao{-4}}
-        }
-        {}
+        \renewcommand{\cftchapfont}         {\bfseries\zihao{-4}}
+        \renewcommand{\cftsecfont}          {\bfseries\zihao{-4}}
+        \renewcommand{\cftsubsecfont}       {\zihao{-4}}
+        \renewcommand{\cftsubsubsecfont}    {\zihao{-4}}
     }
     {
       \setlength{\cftsecindent}       {0em}
       \setlength{\cftsubsecindent}    {2em}
       \setlength{\cftsubsubsecindent} {4em}
-      \fancypagestyle{previous}
-      {
-          \fancyfoot{}
-          \fancyfoot[C]{\zihao{-5}\thepage}
-      }
     }
 
     \appto{\bodystyle}{
