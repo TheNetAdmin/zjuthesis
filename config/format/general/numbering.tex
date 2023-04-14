@@ -62,6 +62,15 @@
     \renewcommand{\thealgorithm}{\Alph{subsection}.\arabic{algorithm}}
 }
 
+\newcommand{\removeappendixsubsecmajornumbering}
+{
+    \counterwithout*{figure}{subsection}
+    \counterwithout*{table}{subsection}
+    \counterwithout*{lstlisting}{subsection}
+    \counterwithout*{equation}{subsection}
+    \counterwithout*{algorithm}{subsection}
+}
+
 \newcommand{\appendixsecmajornumbering}
 {
     \ctexset{
@@ -86,6 +95,15 @@
 
     \counterwithin*{algorithm}{section}
     \renewcommand{\thealgorithm}{\Alph{section}.\arabic{algorithm}}
+}
+
+\newcommand{\removeappendixsecmajornumbering}
+{
+    \counterwithout*{figure}{section}
+    \counterwithout*{table}{section}
+    \counterwithout*{lstlisting}{section}
+    \counterwithout*{equation}{section}
+    \counterwithout*{algorithm}{section}
 }
 
 \newcommand{\numberingstyle}
