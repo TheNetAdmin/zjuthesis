@@ -24,6 +24,7 @@
 \DeclareStringOption[general]{MajorFormat}
 \DeclareStringOption[thesis]{Type}
 \DeclareStringOption[proposal]{Period}
+\DeclareStringOption{ProposalPart}
 \DeclareStringOption[chinese]{Language}
 \DeclareStringOption[doctor]{GradLevel}
 \DeclareStringOption{ColaboratorName}
@@ -37,6 +38,7 @@
 \wlog{MajorFormat: {\MajorFormat}}
 \wlog{Type: {\Type}}
 \wlog{Period: {\Period}}
+\wlog{ProposalPart: {\ProposalPart}}
 \wlog{BlindReview: {\BlindReview}}
 \wlog{Language: {\Language}}
 \wlog{GradLevel: {\GradLevel}}
