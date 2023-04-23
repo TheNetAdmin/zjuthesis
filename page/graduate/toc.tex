@@ -1,23 +1,35 @@
 \cleardoublepage
 
-\phantomsection
-\markloc
-\tableofcontents
+\ifbooltrue{ListOfContents}
+{
+    \phantomsection
+    \markloc
+    \tableofcontents
+}
 
 \begingroup
     \renewcommand*{\addvspace}[1]{}
-    \cleardoublepage
-    \phantomsection
-    \marklof
-    \listoffigures
+    \ifbooltrue{ListOfFigures}
+    {
+        \cleardoublepage
+        \phantomsection
+        \marklof
+        \listoffigures
+    }
 
-    \cleardoublepage
-    \phantomsection
-    \marklot
-    \listoftables
+    \ifbooltrue{ListOfTables}
+    {
+        \cleardoublepage
+        \phantomsection
+        \marklot
+        \listoftables
+    }
 
-    \cleardoublepage
-    \phantomsection
-    \markloa
-    \listofalgotocloft
+    \ifbooltrue{ListOfAlgorithms}
+    {
+        \cleardoublepage
+        \phantomsection
+        \markloa
+        \listofalgotocloft
+    }
 \endgroup

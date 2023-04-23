@@ -30,6 +30,10 @@
 \DeclareStringOption[false]{BlindReview}
 \DeclareStringOption[false]{PrintFilePath}
 \DeclareStringOption[true]{TwoSide}
+\DeclareBoolOption[true]{ListOfContents}
+\DeclareBoolOption[true]{ListOfFigures}
+\DeclareBoolOption[true]{ListOfTables}
+\DeclareBoolOption[false]{ListOfAlgorithms}
 
 \ProcessKeyvalOptions*
 

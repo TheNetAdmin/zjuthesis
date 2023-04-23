@@ -1,5 +1,8 @@
 % common commands
 
+\newcommand{\ifbooltrue}[2]{\ifthenelse{\boolean{#1}}{#2}{}}
+\newcommand{\ifboolfalse}[2]{\ifthenelse{\boolean{#1}}{}{#2}}
+
 \ifthenelse{\equal{\TwoSide}{true}}
 {
     % TwoSide settings
