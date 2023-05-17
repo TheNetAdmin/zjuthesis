@@ -83,7 +83,7 @@
 
    A: 使用 `\citeauthor{tikz}~\cite{tikz}` 即可。
 
-   如果需要对英文文献使用 `et al.` 的省略词，可以注释 `config/package.tex` 的 `biblatex` 包的 `gbcitelocal=chinese,` 一行。
+   如果需要对英文文献使用 `et al.` 的省略词，可以注释 `config/package.tex` 的 `biblatex` 包的 `gbcitelocal=chinese,` 一行。详见 [GitHub Pull Requests](https://github.com/TheNetAdmin/zjuthesis/pull/324)。
 
 ### 页眉与页脚
 
