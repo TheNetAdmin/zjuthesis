@@ -67,7 +67,14 @@
             {%
                 姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
                 指导教师   & \uline{\hfill \AdvisorName \hfill}            \\
-                年级与专业 & \uline{\hfill \mbox{\Grade}级\Major \hfill}   \\
+                \ifthenelse{\equal{\MajorLines}{1}}
+                {%   MajorLines == 1
+                年级与专业    &  \uline{\hfill \mbox{\Grade}级\Major \hfill} \\
+                }
+                {%   MajorLines == 2
+                年级与专业    &  \uline{\hfill \mbox{\Grade}级\MajorLineOne \hfill} \\
+                            &  \uline{\hfill \MajorLineTwo \hfill} \\
+                }
                 \ifthenelse{\equal{\DepartmentLines}{1}}
                 {%   DepartmentLines == 1
                 所在学院    &  \uline{\hfill \Department \hfill} \\
