@@ -255,7 +255,6 @@ TSWLatexianTemp*
 *.sta
 
 ### VisualStudioCode ###
-.vscode/*
 .history
 
 .venv
