@@ -79,6 +79,12 @@
    
    如果需要“非全大写”姓名格式，请在引用 `biblatex` 包时指定 `gbnamefmt=lowercase`，详见 [GitHub Issue](https://github.com/TheNetAdmin/zjuthesis/issues/23#issuecomment-602129192) 讨论。
 
+1. Q: 怎样在文中引用文献作者?
+
+   A: 使用 `\citeauthor{tikz}~\cite{tikz}` 即可。
+
+   如果需要对英文文献使用 `et al.` 的省略词，可以注释 `config/package.tex` 的 `biblatex` 包的 `gbcitelocal=chinese,` 一行。详见 [GitHub Pull Requests](https://github.com/TheNetAdmin/zjuthesis/pull/324)。
+
 ### 页眉与页脚
 
 1. Q: 如何定制页眉页脚（包括页码）？
