@@ -4,6 +4,9 @@
 \newcommand{\TitleLineTwo}{~}
 \newcommand{\TitleEngLineOne}{\TitleEng}
 \newcommand{\TitleEngLineTwo}{~}
+\newcommand{\MajorLines}{1}
+\newcommand{\MajorLineOne}{\Major}
+\newcommand{\MajorLineTwo}{~}
 \newcommand{\DepartmentLines}{1}
 \newcommand{\DepartmentLineOne}{\Department}
 \newcommand{\DepartmentLineTwo}{~}
@@ -18,6 +21,12 @@
     \renewcommand{\TitleEngLines}{2}
     \renewcommand{\TitleEngLineOne}{{#1}}
     \renewcommand{\TitleEngLineTwo}{{#2}}
+}
+
+\newcommand{\majortwolines}[2]{
+    \renewcommand{\MajorLines}{2}
+    \renewcommand{\MajorLineOne}{#1}
+    \renewcommand{\MajorLineTwo}{#2}
 }
 
 \newcommand{\departmenttwolines}[2]{
