@@ -48,7 +48,13 @@
 
 % Define multi line title
 
-
+\ifnumcomp{\TitleLines+\TitleEngLines}{=}{5}{
+    \renewcommand{\arraystretch}{0.8}
+}{
+    \ifnumcomp{\TitleLines+\TitleEngLines}{=}{6}{
+        \renewcommand{\arraystretch}{0.65}
+    }
+}
 
 \begin{center}
     \bfseries \zihao{-2}
@@ -62,9 +68,18 @@
             ~ & \uline{\hfill} \\
         }
         {
-            % TitleLines == 2
-            中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
-            ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+            \ifthenelse{\equal{\TitleLines}{2}}
+            {
+                % TitleLines == 2
+                中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+                ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+            }
+            {
+                % TitleLines == 3
+                中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+                ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+                ~            & \uline{\hfill \fangsong \TitleLineThree{} \hfill} \\
+            }
         }
 
         \ifthenelse{\equal{\TitleEngLines}{1}}
@@ -74,12 +89,23 @@
             ~ & \uline{\hfill} \\
         }
         {
-            % TitleEngLines == 2
-            英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
-            ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
+            \ifthenelse{\equal{\TitleEngLines}{2}}
+            {
+                % TitleEngLines == 2
+                英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
+                ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
+            }
+            {
+                % TitleEngLines == 3
+                英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
+                ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
+                ~            & \zihao{3} \uline{\hfill \TitleEngLineThree{} \hfill} \\
+            }
         }
     \end{tabularx}
 \end{center}
+
+\renewcommand{\arraystretch}{1}
 
 \ifthenelse{\equal{\DepartmentLines}{1}}
 {

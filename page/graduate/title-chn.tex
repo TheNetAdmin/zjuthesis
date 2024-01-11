@@ -1,5 +1,9 @@
 \cleardoublepage
 
+\ifnumcomp{\TitleLines}{=}{3}{
+    \renewcommand{\arraystretch}{0.75}
+}
+
 \begin{center}
     \bfseries \zihao{-2}
     \begin{tabularx}{.8\textwidth}{>{\fangsong}X<{\centering}}
@@ -10,12 +14,23 @@
             \uline{\hfill} \\
         }
         {
-            % TitleLines == 2
-            \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
-            \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+            \ifthenelse{\equal{\TitleLines}{2}}
+            {
+                % TitleLines == 2
+                \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+                \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+            }
+            {
+                % TitleLines == 3
+                \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+                \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+                \uline{\hfill \fangsong \TitleLineThree{} \hfill} \\
+            }
         }
     \end{tabularx}
 \end{center}
+
+\renewcommand{\arraystretch}{1}
 
 \vskip 20pt
 
