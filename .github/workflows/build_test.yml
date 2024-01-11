@@ -157,7 +157,7 @@ jobs:
       - name: Current version
         run: echo $GITHUB_REF
       - name: Sync to Gitee
-        uses: Yikun/hub-mirror-action@v1.1
+        uses: Yikun/hub-mirror-action@v1.3
         with:
           src: github/TheNetAdmin
           dst: gitee/netadmin
