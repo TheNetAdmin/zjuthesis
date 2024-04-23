@@ -204,7 +204,7 @@ colsample\_bytree  & 0.5-1.0(步长 =0.1)        & 0.8             \\
     {(a) the comparison between in-situ sea surface $p\mathrm{CO_2}$ and sea surface $p\mathrm{CO_2}$ predicted by the XGB-model for the 50 randomly selected cruises; (b) distribution of randomly selected 50 cruises and their residuals.}
 \end{figure}
 
-在训练过程中我们预留了五十条走航数据没有参与训练过程，用作独立测试集，此举可用于验证模型的外推能力。这50条随机抽选的航次分布情况如\autoref{fig:独立验证}-(b)所示，基本覆盖了南大洋的各个区域。 \autoref{fig:独立验证}-(a)中我们能看到模型能够很好地拟合，且能够抓住变化趋势。从数据角度来看，RMSE为18.40μatm，MAE为12.88μatm，$\rm R^2$为0.52，说明模型you较好的拟合效果。\autoref{fig:独立验证}-(b)为残差图，可以看到除去东经160°，南纬35°的近岸地区误差较大外，模型误差较小，说明该模型完全有把握地预测南大洋$p\mathrm{CO_2}$时空变化。
+在训练过程中我们预留了五十条走航数据没有参与训练过程，用作独立测试集，此举可用于验证模型的外推能力。这50条随机抽选的航次分布情况如\autoref{fig:独立验证}-(b)所示，基本覆盖了南大洋的各个区域。 \autoref{fig:独立验证}-(a)中我们能看到模型能够很好地拟合，且能够抓住变化趋势。从数据角度来看，RMSE为18.40μatm，MAE为12.88μatm，$\rm R^2$为0.52，说明模型有较好的拟合效果。\autoref{fig:独立验证}-(b)为残差图，可以看到除去东经160°，南纬35°的近岸地区误差较大外，模型误差较小，说明该模型完全有把握地预测南大洋$p\mathrm{CO_2}$时空变化。
 
 \subsubsection{敏感性验证}
 \begin{table}[htbp]
