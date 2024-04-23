@@ -3,10 +3,11 @@
 \begin{center}
     \zihao{-4} \songti
     \begin{tabularx}{\textwidth}{l l >{\raggedleft}X l}
-        分类号：           & \underline{按中国图书分类法，学位办网上可查}  &
+        分类号：           & \underline{X87}  &
         单位代码：         & \uline{\hfill 10335 \hfill} \\
-        密{\quad}级：      & \underline{注明密级与保密期限} &
-        学{\quad\quad}号： & \underline{\multido{}{4}{\quad}}
+        密{\quad}级：      & \underline{无} &
+        % 学{\quad\quad}号： & \underline{\multido{}{4}{\quad}}
+        学{\quad\quad}号： & \underline{\hfill 22134105 \hfill}
     \end{tabularx}
 \end{center}
 
@@ -58,7 +59,7 @@
 
 \begin{center}
     \bfseries \zihao{-2}
-    \begin{tabularx}{.8\textwidth}{>{\fangsong}l X<{\centering}}
+    \begin{tabularx}{\textwidth}{>{\hspace{-1em}\fangsong}l X<{\centering}}
         % If titles are too long for one row, please manually hardcode them in
         % multiple lines, as the english title example here.
         \ifthenelse{\equal{\TitleLines}{1}}
@@ -67,18 +68,17 @@
             中文论文题目：&  \uline{\hfill \fangsong \Title{} \hfill} \\
             ~ & \uline{\hfill} \\
         }
-        {
+        {   
             \ifthenelse{\equal{\TitleLines}{2}}
             {
-                % TitleLines == 2
-                中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
-                ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+            % TitleLines == 2
+            中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+            ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
             }
             {
-                % TitleLines == 3
-                中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
-                ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
-                ~            & \uline{\hfill \fangsong \TitleLineThree{} \hfill} \\
+            中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+            ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
+            ~            & \uline{\hfill \fangsong \TitleLineThree{} \hfill} \\
             }
         }
 
@@ -91,15 +91,15 @@
         {
             \ifthenelse{\equal{\TitleEngLines}{2}}
             {
-                % TitleEngLines == 2
-                英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
-                ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
+            % TitleEngLines == 2
+            英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
+            ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
             }
             {
-                % TitleEngLines == 3
-                英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
-                ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
-                ~            & \zihao{3} \uline{\hfill \TitleEngLineThree{} \hfill} \\
+            % TitleEngLines == 3
+            英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
+            ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
+            ~            & \zihao{3} \uline{\hfill \TitleEngLineThree{} \hfill} \\
             }
         }
     \end{tabularx}
@@ -124,12 +124,12 @@
         {%
             申请人姓名： & \uline{\hfill} \\
             指导教师：   & \uline{\hfill} \\
-            合作导师：   &  \uline{\hfill} \\
+            % 合作导师：   &  \uline{\hfill} \\
         }
         {%
             申请人姓名： & \uline{\hfill \StudentName \hfill} \\
             指导教师：   & \uline{\hfill \AdvisorName \hfill} \\
-            合作导师：   &  \uline{\hfill \ColaboratorName \hfill} \\
+            % 合作导师：   &  \uline{\hfill \ColaboratorName \hfill} \\
         }
         \ifthenelse{\equal{\Type}{design}}
         {%

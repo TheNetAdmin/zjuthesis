@@ -1,5 +1,42 @@
 \cleardoublepage
-\chapternonum{摘要}
+%\chapternonum{摘要}
+\chapternonumcenter{摘要}
+
+海洋在全球碳循环过程中扮演着关键角色，其中南大洋是全球海洋中最重要的碳汇之一。海表二氧化碳分压（partial pressure of $\mathrm{CO_2}$，$p\rm CO_2$）是指表层海水与大气中二氧化碳交换时的压强。通过计算海表与大气间的$p\mathrm{CO_2}$差值，我们可以估算出海洋吸收的碳量。目前，对南大洋$p\mathrm{CO_2}$领域的研究主要集中于建立回归模型的外推方法上，但由于受到太阳天顶角、薄云层和气溶胶等环境条件的影响，传统的被动遥感技术在南大洋高纬度冬季地区的应用受到限制，尤其是用于表征生物过程影响变量的叶绿素，从而导致了多数产品在南大洋的表现结果并不一致。因此，使用新的遥感数据来代替叶绿素对于准确理解南大洋区域$p\mathrm{CO_2}$的时空分布特征和年际变化趋势具有重要意义。
+
+本研究选取了35°S以南的南大洋为研究区域，并提出使用CALIPSO卫星的主动遥感数据——颗粒物后向散射系数（Retrieving Particulate Backscattering, $b_{bp}$）作为替代叶绿素的输入变量，以构建一套适用于南大洋$p\mathrm{CO_2}$连续时间反演的模型。模型使用SOCAT V2023数据集的$p\mathrm{CO_2}$作为目标变量，同时以$b_{bp}$、海表温度、混合层深度、海表面盐度、风速和二氧化碳摩尔分数作为输入变量。模型表现出色，训练集的RMSE为2.15μatm，MAE为1.45μatm，$\mathrm{R^2}$为0.99；验证集的RMSE为13.47μatm，MAE为8.21μatm，$\mathrm{R^2}$为0.82。我们还通过使用预留的航次作为独立验证集，验证了模型在预测$p\mathrm{CO_2}$方面的准确性。对模型敏感度的分析显示，模型足够稳健，在不确定性范围内也能准确预测。与其他多种算法相比，我们的算法在精度上表现最优。
+
+该模型成功地预测了2008年1月至2016年12月南大洋$p\mathrm{CO_2}$的时空分布，平均海表$p\mathrm{CO_2}$的年增长率为1.88μatm yr$^{-1}$，略低于大气的2.14μatm yr$^{-1}$，这表明南大洋的碳吸收能力正在逐年增加。在计算和预测海-气$\mathrm{CO_2}$通量时，结果显示南大洋在研究期间内能够吸收±1.37±0.04PgC yr$^{-1}$。根据高低纬度的差异，我们将南大洋分为高纬度区域和低纬度区域，低纬度的南大洋区域能够吸收-0.96±0.02PgC yr$^{-1}$，占总吸收量的70\%；高纬度区域约吸收了0.35±0.03PgC yr$^{-1}$。我们同时选择了多种基于回归方法的模型进行对比，发现大多数模型在南大洋冬季忽略了生物过程的作用，从而导致了南大洋高纬度区域碳吸收量的低估。
+
+本研究展示了主动遥感技术在获取极地生物地球化学关键参数方面的巨大潜力。这一技术有效地解决了极地地区被动遥感数据缺失的问题，克服了传统遥感方法在数据收集上的局限性。此外，主动遥感还打破了极地地区研究的季节性限制，使得我们可以在全年无间断地收集和分析数据。这不仅丰富了我们对极地生态环境的理解，也为及时了解极地环境变化提供了可能。更重要的是，主动遥感技术为海洋界监测碳汇循环提供了强有力的工具，这对于全球碳循环研究、气候变化监测等领域具有重要意义。总体而言，主动遥感技术为极地地区的研究揭开了全新的篇章，其未来的应用前景与发展潜力无疑令人瞩目，值得我们深入探索与期待。
+
+\textbf{关键词}：海表面二氧化碳分压；海洋遥感；主动遥感；极度梯度提升算法；颗粒物后向散射系数
 
 \cleardoublepage
-\chapternonum{Abstract}
+% \chapternonum{Abstract}
+\chapternonumcenter{Abstract}
+The oceans play a crucial role in the global carbon cycle, with the Southern Ocean being one of the most important carbon sinks worldwide. The partial pressure of carbon dioxide ($p\mathrm{CO_2}$) at the sea surface refers to the pressure exerted when carbon dioxide($\mathrm{CO_2}$) exchanges between the surface seawater and the atmosphere. By calculating the difference in $p\mathrm{CO_2}$ between the sea surface and the atmosphere, we can estimate the amount of carbon absorbed by the ocean. Currently, research on $p\mathrm{CO_2}$ in the Southern Ocean region mainly focuses on developing advanced regression models. Traditional passive remote sensing techniques are limited in their application in high-latitude winter areas of the Southern Ocean due to environmental factors such as solar zenith angle, thin cloud cover, and aerosols. Particularly, the performance of most products characterizing variables affected by biological processes, such as chlorophyll, is inconsistent in the Southern Ocean. Therefore, it is of great significance to use new remote sensing data instead of chlorophyll to accurately understand the spatial and temporal distribution characteristics and interannual variability trends of $p\mathrm{CO_2}$ in the Southern Ocean region.
+
+This study focuses on the Southern Ocean south of 35°S and proposes the use of active remote sensing data from the CALIOPSO satellite - Retrieving Particulate Backscattering ($b_{bp}$) as an alternative input variable to chlorophyll, to construct a model for continuous $p\mathrm{CO_2}$ inversion in the Southern Ocean. The model employs $p\mathrm{CO_2}$ data from the SOCAT V2023 dataset as the target variable, and utilizes $b_{bp}$, sea surface temperature, mixed layer depth, sea surface salinity, wind speed, and carbon dioxide molar fraction as input variables. The model demonstrates excellent performance, with RMSE of 2.15μatm and MAE of 1.45μatm, and an $\mathrm{R^2}$ of 0.99 for the training set; RMSE of 13.47 μatm, MAE of 8.21 μatm, and $\mathrm{R^2}$ of 0.82 for the validation set. Additionally, we validate the accuracy of the model in predicting $p\mathrm{CO_2}$ using reserved cruise data as an independent validation set. Sensitivity analysis of the model indicates robustness, as it accurately predicts even within uncertainty ranges. Compared to various other algorithms, our algorithm exhibits superior accuracy.
+
+The model successfully predicted the spatiotemporal distribution of $p\mathrm{CO_2}$ in the Southern Ocean from January 2008 to December 2016. The average annual growth rate of sea surface $p\mathrm{CO_2}$ was 1.88 μatm yr$^{-1}$, slightly lower than the atmospheric growth rate of 2.14 μatm yr$^{-1}$, indicating an increasing carbon uptake capacity in the Southern Ocean year by year. When calculating and predicting the sea-air $\mathrm{CO_2}$ flux, the results showed that the Southern Ocean was able to absorb -1.37±0.04 PgC yr$^{-1}$ during the study period. Based on differences between high and low latitudes, we divided the Southern Ocean into high-latitude and low-latitude regions. The low-latitude Southern Ocean region could absorb approximately -0.96±0.02 PgC yr$^{-1}$, accounting for 70\% of the total absorption, while the high-latitude region absorbed about -0.35±0.03 PgC yr$^{-1}$. We also compared various regression-based models and found that most models ignored the role of biological processes in the Southern Ocean winter, leading to an underestimation of carbon uptake in the high-latitude region of the Southern Ocean.
+
+This study demonstrates the significant potential of active remote sensing technology in acquiring key biogeochemical parameters in polar regions. This technology effectively addresses the problem of passive remote sensing data scarcity in polar regions and overcomes the limitations of traditional remote sensing methods in data collection. Moreover, active remote sensing breaks the seasonal constraints of polar region research, allowing us to collect and analyze data continuously throughout the year. This not only enriches our understanding of polar ecosystems but also enables timely monitoring of polar environmental changes. Importantly, active remote sensing technology provides a powerful tool for monitoring carbon sink cycling in the marine realm, which is of great significance for global carbon cycle research, climate change monitoring, and other fields. Overall, active remote sensing technology opens a new chapter in polar region research, and its future prospects and development potential are undoubtedly promising, deserving further exploration and anticipation.
+
+\textbf{Keywords}:Sea surface carbon dioxide partial pressure; ocean remote sensing; active remote sensing; extreme gradient boosting algorithm; particulate backscattering coefficient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

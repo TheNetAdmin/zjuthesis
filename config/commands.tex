@@ -144,6 +144,18 @@
         \markboth{#1}{#1}
         \chapter*{#1}
     }
+    
+    % 新定义的“居中”的chapternonum
+    \newcommand{\chapternonumcenter}[1]
+    {
+        \phantomsection
+        \addcontentsline{toc}{chapter}{#1}
+        \markboth{#1}{#1}
+        \begin{center}
+            \bfseries \zihao{3} #1	
+        \end{center}	
+        \setcounter{chapter}{0}
+    }
 
     \newcommand{\sectionnonum}[1]
     {
@@ -294,3 +306,5 @@
   \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
   \setcounter{tocdepth}{#1}%
 }
+% 定义新的列类型m{宽度}，使内容垂直居中  
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}  
