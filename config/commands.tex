@@ -164,6 +164,15 @@
     \end{flushright}
 }
 
+\newcommand{\signaturewithdate}[4]
+{
+    \begin{flushright}
+        \bfseries \zihao{-4}
+        #1 \underline{\multido{}{5}{\quad}} \\
+        #2 年 #3 月 #4 日
+    \end{flushright}
+}
+
 \DeclareDocumentCommand{\finaleval}{O{~} O{~} O{~} O{~} O{~}}
 {
     \begin{table}[H]
