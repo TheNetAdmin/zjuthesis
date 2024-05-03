@@ -1,23 +1,61 @@
 \cleardoublepage
 
-\ifthenelse{\equal{\Type}{thesis}}
+\ifthenelse{\equal{\Period}{proposal}}
 {
-    % `thesis` content
-    \inputbody{proposal/review/review}
-    \inputbody{proposal/proposal/proposal}
-    \inputbody{proposal/translation/translation}
-    \inputbody{proposal/original/original}
-}
+  \ifthenelse{\equal{\Type}{thesis}}
+  {
+      % `thesis` content
+      \inputbody{proposal/review/review}
+      \inputbody{proposal/proposal/proposal}
+      \inputbody{proposal/translation/translation}
+      \inputbody{proposal/original/original}
+  }
+  {
+      \ifthenelse{\equal{\Type}{design}}
+      {
+          % `design` content
+          \inputbody{proposal/proposal/proposal}
+          \inputbody{proposal/translation/translation}
+          \inputbody{proposal/original/original}
+          \inputbody{proposal/midcheck/midcheck}
+      }
+      {
+          % Wrong Input
+      }
+  }
+}{}
+\ifthenelse{\equal{\Period}{proposal_divided}}
 {
-    \ifthenelse{\equal{\Type}{design}}
+  \ifthenelse{\equal{\Type}{thesis}}
+  {
+    \ifthenelse{\equal{\ProposalPart}{review}}
     {
-        % `design` content
-        \inputbody{proposal/proposal/proposal}
-        \inputbody{proposal/translation/translation}
-        \inputbody{proposal/original/original}
-        \inputbody{proposal/midcheck/midcheck}
-    }
+      \inputbody{proposal/review/review}
+    }{}
+    \ifthenelse{\equal{\ProposalPart}{proposal}}
     {
-        % Wrong Input
-    }
-}
+      \inputbody{proposal/proposal/proposal}
+    }{}
+    \ifthenelse{\equal{\ProposalPart}{translation}}
+    {
+      \inputbody{proposal/translation/translation}
+      \inputbody{proposal/original/original}
+    }{}
+  }{}
+  \ifthenelse{\equal{\Type}{design}}
+  {
+    \ifthenelse{\equal{\ProposalPart}{proposal}}
+    {
+      \inputbody{proposal/proposal/proposal}
+    }{}
+    \ifthenelse{\equal{\ProposalPart}{translation}}
+    {
+      \inputbody{proposal/translation/translation}
+      \inputbody{proposal/original/original}
+    }{}
+    \ifthenelse{\equal{\ProposalPart}{midcheck}}
+    {
+      \inputbody{proposal/midcheck/midcheck}
+    }{}
+  }{}
+}{}
