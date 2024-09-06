@@ -25,9 +25,9 @@ if [ "$targets" == "all" ] || [ "$targets" == "fonts" ]; then
     echo "Getting SimSun fonts"
     wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E5%AE%8B%E4%BD%93/SimSun.ttc
     echo "Getting SimHei fonts"
-    wget -c https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E9%BB%91%E4%BD%93/SimHei.ttf
+    wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E9%BB%91%E4%BD%93/SimHei.ttf
     echo "Getting SimKai fonts"
-    wget -c https://raw.githubusercontent.com//Haixing-Hu/latex-chinese-fonts/master/chinese/%E6%A5%B7%E4%BD%93/Kaiti.ttf
+    wget -c https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/master/chinese/%E6%A5%B7%E4%BD%93/Kaiti.ttf
     wget -c https://raw.githubusercontent.com/Halfish/lstm-ctc-ocr/master/fonts/simkai.ttf
     popd
 
