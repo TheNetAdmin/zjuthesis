@@ -10,6 +10,8 @@
     family=zjuthesis,
     prefix=
 }
+\DeclareStringOption{ClassNumber}
+\DeclareStringOption{Security}
 \DeclareStringOption{StudentName}
 \DeclareStringOption{StudentID}
 \DeclareStringOption{AdvisorName}
