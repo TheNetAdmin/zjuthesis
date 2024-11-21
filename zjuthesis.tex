@@ -31,7 +31,8 @@
     MajorFormat     = general,
     Degree          = undergraduate,   % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
-    Period          = final,           % 'proposal' or 'paper' or 'final'
+    Period          = final,           % 'proposal' or 'paper' or 'final' or 'proposal_divided'
+    ProposalPart    = review,          % only for 'proposal_divided'. 'review' of 'proposal' or ' translation' or 'midcheck'.
     BlindReview     = false,           % 'false'    or 'true'
     Language        = chinese,         % 'chinese'  or 'english'
     % Graduate Thesis Info
@@ -122,6 +123,25 @@
         
         \poststyle
         \inputpage{proposal}{post}
+    }
+
+    \ifthenelse{\equal{\Period}{proposal_divided}}
+    {
+        % Thesis proposal
+        \newcommand{\undergradcurrstage}{proposal_divided}
+
+        \coverstyle
+        \inputpage{proposal}{cover}
+    
+        % 'proposal' previous part uses 'empty' page style,
+        % as shown in cs undergrad template.
+        \inputpage{proposal}{previous}
+        
+        \prevstyle
+        \inputpage{proposal}{toc}
+    
+        \bodystyle
+        \inputbody{proposal/content}
     }
 
     \ifthenelse{\equal{\Period}{paper}}
