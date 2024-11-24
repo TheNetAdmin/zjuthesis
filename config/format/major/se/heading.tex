@@ -8,7 +8,35 @@
         chapter = 
         {
             format=\centering\zihao{-2}\bfseries,
-            name={第,章}
+            name={第,章},
+            beforeskip=0pt,
+            afterskip=16pt
+        },
+        section =
+        {
+            format=\raggedright\zihao{-3}\bfseries,
+            name={},
+            number=\arabic{chapter}.\arabic{section},
+            beforeskip=13pt,
+            afterskip=13pt
+        },
+        subsection =
+        {
+            format=\raggedright\zihao{4}\bfseries,
+            name={},
+            number=\arabic{chapter}.\arabic{section}.\arabic{subsection},
+            beforeskip=13pt,
+            afterskip=13pt
+        },
+        subsubsection =
+        {
+            format=\raggedright\zihao{-4}\bfseries,
+            name={},
+            aftername=\quad,
+            numbering=true,
+            number=\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection},
+            beforeskip=0pt,
+            afterskip=0pt
         }
     }
 }
