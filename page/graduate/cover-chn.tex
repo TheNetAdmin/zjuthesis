@@ -10,7 +10,15 @@
         分类号：           & \underline{\hfill \ClassNumber \hfill}  &
         单位代码：         & \uline{\hfill 10335 \hfill} \\
         密{\quad}级：      & \underline{\hfill \Security \hfill} &
-        学{\quad\quad}号： & \underline{\hfill \StudentID \hfill}
+        学{\quad\quad}号： & \underline{
+            \ifthenelse{\equal{\BlindReview}{true}}
+            {
+                \multido{}{4}{\quad}
+            }
+            {
+                \hfill \StudentID \hfill
+            }
+        }
     \end{tabularx}
 \end{center}
 
