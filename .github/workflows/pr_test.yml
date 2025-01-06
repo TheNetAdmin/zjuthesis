@@ -19,13 +19,13 @@ jobs:
         run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
       - name: Upload Output Files
         if: ${{ always() }}
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: dist-all
           path: dist
       - name: Upload Log Files
         if: ${{ always() }}
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: out-ci-all
           path: out-ci
@@ -43,13 +43,13 @@ jobs:
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_undergrad.sh
     - name: Upload Output Files
       if: ${{ always() }}
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: dist-undergrad
         path: dist
     - name: Upload Log Files
       if: ${{ always() }}
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: out-ci-undergrad
         path: out-ci
@@ -67,13 +67,13 @@ jobs:
       run: docker run --mount src=$GITHUB_WORKSPACE/,target=/zjuthesis,type=bind adnrv/texlive:full /zjuthesis/script/ci/github-action/build_grad.sh
     - name: Upload Output Files
       if: ${{ always() }}
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: dist-grad
         path: dist
     - name: Upload Log Files
       if: ${{ always() }}
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: out-ci-grad
         path: out-ci
@@ -87,7 +87,7 @@ jobs:
     - name: Current version
       run: echo $GITHUB_REF
     - name: Download Artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
     - name: Move Artifacts
       run: |
         mkdir -p dist
@@ -97,7 +97,7 @@ jobs:
       run: bash script/ci/pdf-diff/diff_report.sh
     - name: Upload PDF Diff Files
       if: ${{ always() }}
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: pdf-diff
         path: diff
