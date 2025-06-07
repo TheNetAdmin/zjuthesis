@@ -177,10 +177,63 @@
 }
 {}
 
+\makeatletter
+\newcounter{blankpages}
+\setcounter{blankpages}{0}
+\newcounter{actualpage}
+\setcounter{actualpage}{0}
+\makeatother
+
 \newcommand{\resetpagecounter}
 {
     \setcounter{page}{1}
+    \setcounter{blankpages}{0}
+    \setcounter{actualpage}{1}
 }
+
+\newcommand{\minuspagecounter}
+{
+    \setcounter{page}{-1}
+    \setcounter{blankpages}{0}
+    \setcounter{actualpage}{-1}
+}
+
+\ifTrueBlankPage
+    \makeatletter
+    \apptocmd{\stepcounter}
+    {
+        \setcounter{actualpage}{\value{page}}%
+        \addtocounter{actualpage}{-\value{blankpages}}%
+    }{}{}
+
+    \renewcommand{\cleardoublepage}
+    {
+        \clearpage
+        \if@twoside
+            \ifodd\value{page}
+            \else
+            \refstepcounter{blankpages}
+            \begingroup
+                \hbox{}
+                \thispagestyle{empty}
+                \newpage
+            \endgroup
+            \fi
+        \fi
+    }
+
+    \let\origpagenumbering\pagenumbering
+
+    \renewcommand{\pagenumbering}[1]
+    {
+        \origpagenumbering{#1}
+        \renewcommand{\thepage}
+        {
+            \csname #1\endcsname{actualpage}
+        }
+    }
+    \makeatother
+\fi
 
 \newcommand{\coverstyle}
 {
