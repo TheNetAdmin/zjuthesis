@@ -15,20 +15,18 @@
     \zihao{-1} \heiti \bfseries
     \ifthenelse{\equal{\Type}{thesis}}
     {
-        本~科~生~毕~业~论~文
+        本~ ~科~ ~生~ ~毕~ ~业~ ~论~ ~文
     }
     {
-        本~科~生~毕~业~设~计
+        本~ ~科~ ~生~ ~毕~ ~业~ ~设~ ~计
     }
 \end{center}
 
-\vskip 20pt
+\vskip 10pt
 
 \begin{center}
     \includegraphics[width=0.17\paperwidth]{logo/zju.pdf}
 \end{center}
-
-\vskip 20pt
 
 % Define multi line title
 \ifthenelse{\equal{\TitleLines}{1}}
@@ -55,13 +53,14 @@
         \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
             \fangsong
             \CoverTitle
-            
-            姓名与学号 & \uline{\hfill} \\
+
+            学生姓名 & \uline{\hfill} \\
+            学生学号 & \uline{\hfill} \\
             指导教师   &  \uline{\hfill} \\
             年级与专业  &  \uline{\hfill} \\
             所在学院   &  \uline{\hfill} \\
             ~ & ~\\
-            递交日期 & \uline{\hfill} \\
+            提交日期 & \uline{\hfill} \\
         \end{tabularx}
     \end{center}
 }
@@ -71,8 +70,9 @@
         \bfseries \zihao{3}
         \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
             \CoverTitle
-            
-            姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
+
+            学生姓名 & \uline{\hfill \StudentName \hfill} \\
+            学生学号 & \uline{\hfill \StudentID \hfill} \\
             指导教师   &  \uline{\hfill \AdvisorName \hfill} \\
             \ifthenelse{\equal{\MajorLines}{1}}
             {%   MajorLines == 1
@@ -92,7 +92,7 @@
                         &  \uline{\hfill \DepartmentLineTwo \hfill} \\
                         ~ & ~\\
             }
-            递交日期 & \uline{\hfill \SubmitDate \hfill} \\
+            提交日期 & \uline{\hfill \SubmitDate \hfill} \\
         \end{tabularx}
     \end{center}
 }
