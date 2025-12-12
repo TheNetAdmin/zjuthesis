@@ -50,11 +50,12 @@ zjuthesis 模板有三种使用方式，Overleaf，本地编译，或者 Contain
 
    - `Degree` 为 `undergraduate` 时，编译本科生论文：
 
-   | Field       | Option 1                             | Option 2                               | Option 3                           |
-   | :---------- | :----------------------------------- | :------------------------------------- | :--------------------------------- |
-   | Type        | thesis: 论文类                       | design: 设计类                         |                                    |
-   | Period      | proposal: 开题报告                   | final: 最终论文/设计（含开题报告）     | paper: 最终论文/报告（无开题报告） |
-   | BlindReview | true: 生成盲审用 pdf（隐藏个人信息） | false: 生成提交用 pdf                  |                                    |
+   | Field       | Option 1                             | Option 2                               | Option 3                           | Option 4                               |
+   | :---------- | :----------------------------------- | :------------------------------------- | :------------------------------------- | :------------------------------------- |
+   | Type        | thesis: 论文类                       | design: 设计类                         |                                    |                                    |
+   | Period      | proposal: 开题报告                    | final: 最终论文/设计（含开题报告）       | paper: 最终论文/报告（无开题报告）     | proposal_divided: 开题报告 (借助ProposalPart实现分别导出) |
+   | ProposalPart      | review: 仅生成文献综述                   | proposal: 仅生成开题报告     | translation: 仅生成文献翻译 | midcheck: 仅生成中期检查 |
+   | BlindReview | true: 生成盲审用 pdf（隐藏个人信息） | false: 生成提交用 pdf                  |                                    |                                    |
    | MajorFormat | general: 默认模板                    | 与 `config/format/major/` 下目录名相同 |                                    |
 
    - `Degree` 为 `graduate` 时，编译硕士生/博士生论文：
