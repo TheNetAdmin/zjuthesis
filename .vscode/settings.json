@@ -1,4 +1,10 @@
 {
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk"
+        }
+    ],
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk (latexmkrc)",
