@@ -1,5 +1,6 @@
 \cleardoublepage
 \chapternonum{缩略词表}
+
 \begin{center}
     % uncomment line 5 if you want to set the fontsize of the table.
     % \zihao{-4}
@@ -19,6 +20,11 @@
         \endfoot
         \bottomrule
         \endlastfoot
+        % =================================================
+        % Abbreviations table:
+        %
+        % Option 1: Manual input (for few abbreviations)
+        %   Example:
         ZJU&Zhejiang University&浙江大学\\
         ZJU&Zhejiang University&浙江大学\\
         ZJU&Zhejiang University&浙江大学\\
@@ -27,5 +33,22 @@
         ZJU&Zhejiang University&浙江大学\\
         ZJU&Zhejiang University&浙江大学\\
         ZJU&Zhejiang University&浙江大学\\
+        %
+        % Option 2: Auto-read from CSV (recommended for many abbreviations)
+        %   - Usage: comment lines 28-35 (Manual input abbreviations) and uncomment lines 45-52, add abbreviations in 
+		%            page/graduate/abbreviations.csv
+        %   - File: page/graduate/abbreviations.csv
+        %   - Columns: abbrev, english, chinese
+        %   - LaTeX will automatically sort by 'abbrev' and output the table.
+        %
+        % Example usage (auto-sorted CSV):
+        % \DTLloaddb{abbr}{page/graduate/abbreviations.csv}
+        % \DTLsort{abbrev}{abbr}
+        % \DTLforeach*{abbr}{\abbrev=abbrev,\english=english,\chinese=chinese}{%
+        % \abbrev       & \english            & \chinese
+        %     \DTLiflastrow{}{
+        % \\
+        %     }
+        % }
 	\end{longtable}
 \end{center}
